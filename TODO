@@ -8,6 +8,8 @@ Better geometry management.
 
 Add a status bar (error messages, ...).
 
+Add a settings dialog (rounding yes/no, display color, ...).
+
 Have a "log" window where intermediate results get "printed",
 like a roll of paper.
 
