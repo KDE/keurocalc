@@ -8,12 +8,8 @@ KDE_ICON = keurocalc
 mydatadir = $(kde_datadir)/keurocalc
 mydata_DATA = splash.png currencies.xml
 
-install-data-local:
-	$(mkinstalldirs) $(kde_appsdir)/Applications/
-	$(INSTALL_DATA) $(srcdir)/keurocalc.desktop $(kde_appsdir)/Applications/keurocalc.desktop
-
-uninstall-local:
-	-rm -f $(kde_appsdir)/Applications/keurocalc.desktop
+appsdir = $(kde_appsdir)/Applications
+apps_DATA = keurocalc.desktop
 
 ####### kdevelop will overwrite this part!!! (end)############
 
