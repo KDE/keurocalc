@@ -1091,6 +1091,7 @@ void KEuroCalc::selectCurrency(int position)
 	}
 	currencyValue = referenceValue * currencyRate * currencyPrecision;
 	displayNewResult();
+	setFocus();
 }
 
 // Initialize the buttons without translation and the buttons with UTF-8
