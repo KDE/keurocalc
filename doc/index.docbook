@@ -16,7 +16,7 @@
 <firstname>Éric</firstname>
 <surname>Bischoff</surname>
 <affiliation>
-<address><email>e.bischoff@noos.fr</email></address>
+<address><email>e.bischoff@_NOSPAM_noos.fr</email></address>
 </affiliation>
 </author>
 </authorgroup>
@@ -32,22 +32,21 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2004-02-08</date>
-<releaseinfo>0.08.00</releaseinfo>
+<date>2004-04-17</date>
+<releaseinfo>0.09.00</releaseinfo>
 
 <abstract>
 <para>
-&keurocalc; is a pocket currency converter and calculator specially
-designed for the Euro. This documentation describes &keurocalc;
-version 0.8.0.
+&keurocalc; is an universal pocket currency converter and calculator.
+This documentation describes &keurocalc; version 0.9.0.
 </para>
 </abstract>
 
 <keywordset>
 <keyword>KDE</keyword>
-<keyword>kdeutils</keyword>
-<keyword>KEuro</keyword>
-<keyword>Euro</keyword>
+<keyword>extragear</keyword>
+<keyword>KEuroCalc</keyword>
+<keyword>currency</keyword>
 <keyword>converter</keyword>
 <keyword>calculator</keyword>
 </keywordset>
@@ -58,13 +57,12 @@ version 0.8.0.
 <title>Introduction</title>
 
 <para>
-&keurocalc; is a pocket currency converter and calculator specially
-designed for the Euro.
+&keurocalc; is an universal pocket currency converter and calculator.
 </para>
 
 <para>
 On the 1st of January, 2002, 12 European countries united their national
-currencies into a single one, the Euro (€). The same will probably happen
+currencies into a single one, the euro (€). The same will probably happen
 in 2006 in many Eastern Euroean countries. &keurocalc; helps:
 
 <variablelist>
@@ -90,11 +88,17 @@ currency at any stage of calculations.</para></listitem>
 <term>At any time</term>
 <listitem>
 <para><itemizedlist>
-<listitem><para>To do conversions between the Euro and other currencies,
-like the US dollar, according to the daily exchange rate defined by the
-<ulink url="http://www.ecb.int">European Central Bank (ECB)</ulink>.</para></listitem>
-<listitem><para>To do conversions between any two currencies, be they part of the
-Euro or not.</para></listitem>
+<listitem><para>To do conversions between the euro and other currencies,
+like the British Pound, according to the daily exchange rate defined by the
+<ulink url="http://www.ecb.int/stats/eurofxref/">European Central Bank (ECB)</ulink>.</para></listitem>
+<listitem><para>To do conversions between any two currencies that are part of the list
+published the ECB.</para></listitem>
+<listitem><para>To do conversions between the US dollar and other currencies
+according to the daily exchange rate defined by the
+<ulink url="/http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
+Federal Reserve Bank (NY FRB)</ulink>.</para></listitem>
+<listitem><para>To do conversions between any two currencies that are part of the list
+published the NY FRB.</para></listitem>
 </itemizedlist></para>
 </listitem>
 </varlistentry>
@@ -104,15 +108,15 @@ Euro or not.</para></listitem>
 
 <para>&keurocalc; has the following advantages in term of comfort and
 usability:
-	
+
 <itemizedlist>
 <listitem><para>You see every intermediary value and the result
-in both the other currency and in Euro</para></listitem>
+in both the reference currency (euro or dollar) and in the other currency</para></listitem>
 <listitem><para>There is a separate input area where you can
 type a new value while still having the previous result visible</para></listitem>
 <listitem><para>The ergonomy is very close to usual pocket calculators,
-despite the fact that any value you type can be a value in Euro, a value in
-the other currency, a percentage or a quantity.</para></listitem>
+despite the fact that any value you type can be a value in the reference currency (euro
+or dollar), a value in the other currency, a percentage or an unit-less quantity.</para></listitem>
 <listitem><para>You press the keys in the order you would speak
 aloud what you're doing</para></listitem>
 <listitem><para>If you make mistakes, a special correction button enables you
@@ -120,15 +124,16 @@ to correct your last input data, as long as you didn't validate</para></listitem
 <listitem><para>The numbers are displayed according to your locale settings:
 with either a decimal comma or a decimal dot according to your &kcontrol;
 settings</para></listitem>
-<listitem><para>When you quit &keurocalc;, it remembers the last currency you used
-and restarts with this currency next time you run it</para></listitem>
+<listitem><para>You can decide which reference currency you want to use (euro
+or dollar), which other currency to start with when you launch &keurocalc;, and
+which rounding method to use.</para></listitem>
 </itemizedlist>
 </para>
 
 <para>&keurocalc; allows the following operations:
 
 <itemizedlist>
-<listitem><para>Conversions from and to the Euro</para></listitem>
+<listitem><para>Conversions from and to the referencee currency (euro or dollar)</para></listitem>
 <listitem><para>Systematical rounding of the displayed result, but
 computations internally done with the precision of the mathematical libraries</para></listitem>
 <listitem><para>Usual additions, substractions, multiplications and divisions</para></listitem>
@@ -148,19 +153,20 @@ of the mathematical library</para></listitem>
 <listitem><para>Inflationist currencies like Turkish Lira cannot
 be handled due to limited siplay size</para></listitem>
 <listitem><para>The list of currencies is fixed</para></listitem>
-<listitem><para>The user cannot choose to round to closer smallest
-available coin or banknote</para></listitem>
+<listitem><para>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.)</para></listitem>
 </itemizedlist>
 </para>
 
-<warning><para>&keurocalc; never guarantees the accuracy of the result.
-You are always invited to verify your computations by some other means.
-As the <link linkend="credits">license</link> agreement states, there's no
-liability of the authors if the results are not correct or as
-expected. Also, please notice that the variable exchange rates are downloaded
-in an uncrypted and therefore unsafe manner from the European Central Bank:
-some "man-in-the-middle" attaquant may confuse KEuroCalc by forging wrong
-exchange rates, or more simply a transmission error is always possible.</para></warning>
+<warning><para>&keurocalc; never guarantees the exactness of the exchange rates
+nor the accuracy of the result. You are always invited to verify your
+computations by some other means. As the <link linkend="credits">license</link>
+agreement states, there's no liability of the authors if the results are not
+correct or as expected. Also, please notice that the variable exchange rates
+are downloaded in an uncrypted and therefore unsecure manner from the data
+sources (European Central Bank and New York Fedeeral Reserve Bank).
+Some "man-in-the-middle" attacker may confuse KEuroCalc by forging wrong
+exchange rates. More simply, a transmission error is always possible.</para></warning>
 
 </chapter>
 
@@ -176,10 +182,13 @@ exchange rates, or more simply a transmission error is always possible.</para></
 
 
 <procedure>
-<title>To convert 1000 Belgian Francs into Euros</title>
+<title>To convert 1000 Belgian francs into euros</title>
 <step><para>Select the <guilabel>BEF - Belgian franc</guilabel> (<foreignphrase>francs
 belges</foreignphrase>) item in the <guibutton>Currencies</guibutton>
-drop down list on the bottom.</para></step>
+drop down list on the bottom. If that choice is not available, press the
+<guibutton>Settings..</guibutton> button and select 
+<guilabel>Euro, no network access (fixed rates only)</guilabel> to make the
+correct rates list appear.</para></step>
 <step><para>Type <userinput>1000</userinput> on the keyboard or use the
 corresponding numerical buttons. The digits appear while you are typing them in
 the <guilabel>Input</guilabel> display. If you make a mistake while typing the digits
@@ -191,9 +200,10 @@ key.</para></step>
 </procedure>
 
 <procedure>
-<title>To convert 25 Euros into Belgian Francs</title>
-<step><para>Select the <guilabel>BEF - Belgian franc</guilabel> item in
-the <guibutton>Currencies</guibutton> drop down list on the bottom.
+<title>To convert 25 euros into Belgian francs</title>
+<step><para>If the fixed rates currencies are available, select the
+<guilabel>BEF - Belgian franc</guilabel> item in the
+<guibutton>Currencies</guibutton> drop down list on the bottom.
 You can skip this step if it's already the selected currency</para></step>
 <step><para>Type <userinput>25</userinput>.</para></step>
 <step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
@@ -211,16 +221,16 @@ for Italian Liras it's 1 L for example.</para></step>
 <para>You could also have typed: <userinput>25 Enter E</userinput>.</para>
 
 <procedure>
-<title>To convert 120 German Marks into Spanish Pesetas</title>
-<step><para>Select the <guilabel>DEM - German deutschmark</guilabel> item in
+<title>To convert 120 German marks into Spanish pesetas</title>
+<step><para>If the fixed rates currencies are available, select the
+<guilabel>DEM - German deutschmark</guilabel> item in
 the <guilabel>Currencies</guilabel> drop down list.</para></step>
 <step><para>Type <userinput>120</userinput>.</para></step>
 <step><para>Press the <guibutton>DM</guibutton> button or the <keycap>D</keycap>
 or <keycap>M</keycap> keys.</para></step>
 <step><para>Just select the <guilabel>ESP - Spanish peseta</guilabel> item
-to see the same
-amount of 61.36 € converted into pesetas in the <guilabel>Results</guilabel>
-area.</para></step>
+to see the same amount of 61.36 € converted into pesetas in the
+<guilabel>Results</guilabel> area.</para></step>
 </procedure>
 
 </sect1>
@@ -239,9 +249,14 @@ result <computeroutput>8</computeroutput>appears on the right.</para></step>
 </procedure>
 
 <procedure>
-<title>You received 100 US dollars and paid 32.50 Euros for a book,
+<title>You received 100 US dollars and paid 32.50 euros for a book,
 how much do you have left in your bank account?</title>
-<step><para>Select the <guilabel>USD - US dollars</guilabel> item in the scroll down list on the bottom.
+<step><para>Make sure that the variable exchange rates are available. If not, press
+the <guibutton>Settings...</guibutton> to select either 
+<guilabel>Euro, European Central Bank</guilabel> or
+<guilabel>Dollar, New York Federal Reserve Bank</guilabel>.
+Now select the <guilabel>USD - US dollars</guilabel> or the <guilabel>EUR - EU euro</guilabel>
+item in the scroll down list on the bottom.
 If you have no Internet access, that item won't be available as the latest variable
 rates between the euro and the dollar cannot be determined.</para></step>
 <step><para>Type <userinput>100</userinput> and then press <guibutton>$</guibutton>.</para></step>
@@ -252,12 +267,14 @@ the <computeroutput>-</computeroutput> sign in the leftmost part of the
 and then press <guibutton>€</guibutton>.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right.
 The exact value might depend on latest exchange rates. Notice that during the whole computation
-you've been able to read the values both in Euro and in US dollars.</para></step>
+you've been able to read the values both in euro and in US dollars. Pay attention to the fact
+that different data sources (ECB or NY FRB) might not provide the same conversion rate between
+the euro and the dollar.</para></step>
 </procedure>
 
 <procedure>
-<title>You pay a 32.50 € book with a 500 FF banknote. How much is the
-clerk supposed to give you back, in Euro notes and coins?</title>
+<title>You pay a 32.50 € book with a 500 FF banknote. How much was the
+clerk supposed to give you back, in euro notes and coins?</title>
 <step><para>Select the <guilabel>FRF - French francs</guilabel> item in the drop down list
 if not already selected.</para></step>
 <step><para>Type <userinput>32.50</userinput> or <userinput>32,50</userinput>
@@ -271,7 +288,7 @@ change money has to be given back to the customer. The <guibutton>+/-</guibutton
 button or the <keycap>S</keycap> key permit you to change the sign of the result.</para></step>
 </procedure>
 
-<note><para>Don't try to add euros to simple values (with no currency unit), it won't work, for
+<note><para>Do not try to add euros to simple values (with no currency unit), it won't work, for
 the same reason you cannot add 5 meters to 3 kilograms.</para></note>
 
 </sect1>
@@ -282,7 +299,8 @@ the same reason you cannot add 5 meters to 3 kilograms.</para></note>
 <procedure>
 <title>You buy 3.2 kilograms of apples at 2 € per kilogram. How much does
 the whole cost in Australian dollars?</title>
-<step><para>Select the <guilabel>AUD - Australian dollars</guilabel> item if available and if not already selected.</para></step>
+<step><para>Select the <guilabel>AUD - Australian dollars</guilabel> item if
+available and if not already selected.</para></step>
 <step><para>Type <userinput>2</userinput> and press <guibutton>€</guibutton>.</para></step>
 <step><para>Press the <guibutton>X</guibutton> button or the <keycap>*</keycap>
 key. Notice the <computeroutput>X</computeroutput> sign at the left of
@@ -296,17 +314,17 @@ or the <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
 <para>It was also possible to type in the following order:
 <userinput>3.2 = * 2 €</userinput> or even <userinput>3.2 * 2 €</userinput>.</para>
 
-<note><para>Of course it's not possible to multiply X Euros by Y dollars,
+<note><para>Of course it's not possible to multiply X euros by Y dollars,
 just the same as you don't multiply 10 fingers by 2 ears.
 </para></note>
 
 </sect1>
 
 <sect1 id="usage-percentage">
-<title>Using percentages</title>
+<title>Using Percentages</title>
 
 <procedure>
-<title>How much is 20% of 3000 Yen?</title>
+<title>How much is 20% of 3000 yen?</title>
 <step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
 if not already selected.</para></step>
 <step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
@@ -318,7 +336,7 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 </procedure>
 
 <procedure>
-<title>How much is 3000 Yen plus 20%?</title>
+<title>How much is 3000 yen plus 20%?</title>
 <step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
 if not already selected.</para></step>
 <step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
@@ -332,7 +350,7 @@ lines.</para></step>
 </procedure>
 
 <procedure>
-<title>How much is 3000 Yen minus 20%?</title>
+<title>How much is 3000 yen minus 20%?</title>
 <step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
 if not already selected.</para></step>
 <step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
@@ -361,10 +379,10 @@ other memory keys now become available.</para></step>
 (Memory Recall) button.</para></step>
 </procedure>
 
-<para>Internally, the values are recalled with no unit or in Euros with
+<para>Internally, the values are recalled with no unit or in euros with
 the maximum precision allowed by the mathematical library. In some rare cases,
 this might lead to rounding problems if the stored value is a round value in a
-currency different than the Euro.</para>
+currency different than the euro.</para>
 
 <procedure>
 <title>How do I clear the memory?</title>
@@ -446,8 +464,8 @@ computes the difference in the reverse order.</para>
 <member>Space bar</member>
 <member>When focus is on a push button, presses this button</member>
 
-<member><keycap>E</keycap></member>
-<member>Validation of input number considered as a value expressed in Euros</member>
+<member><keycap>E</keycap> or <keycap>$</keycap></member>
+<member>Validation of input number considered as a value expressed in the reference currency (euro or dollar)</member>
 
 <member><keycap>S</keycap></member>
 <member>Change sign of the result</member>
@@ -474,8 +492,8 @@ computes the difference in the reverse order.</para>
 <member><guibutton>AC</guibutton></member>
 <member>Clear all: both input and result area</member>
 
-<member><guibutton>€</guibutton></member>
-<member>Validation of input number considered as a value expressed in Euros</member>
+<member><guibutton>€</guibutton> or <guilabel>$</guilabel></member>
+<member>Validation of input number considered as a value expressed in the reference currency (euro or dollar)</member>
 
 <member>The button labeled with the name of an other currency</member>
 <member>Validation of input number considered as a number in the other currency</member>
@@ -509,6 +527,118 @@ computes the difference in the reverse order.</para>
 </simplelist>
 
 </sect1>
+
+<sect1 id="settings">
+<title>The Settings Dialog</title>
+
+<mediaobject>
+<imageobject><imagedata fileref="settings.png" format="PNG" /></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title>Reference currency, rates origin</title>
+
+<para>This setting defines the reference currency (euro or dollar), and where from
+&keurocalc; should download the exchange rates between the reference currency and
+other currencies. The following choices are available:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Euro, no network access (fixed rates only)</guilabel></term>
+<listitem>
+<para>Euro is the reference currency. No variable rate is downloaded nor used.
+The only available currencies are the ones that have a fixed conversion
+rate with the Euro.</para>
+<para>This setting is adapted to computers with no network access.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Euro, European Central Bank</guilabel></term>
+<listitem>
+<para>Euro is the reference currency. The fixed exchage rates are available.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ecb.int/stats/eurofxref/">European Central Bank (ECB)</ulink>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Dollar, New York Federal Reserve Bank</guilabel></term>
+<listitem>
+<para>Dollar is the reference currency. There are no fixed exchange rates.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
+Federal Reserve Bank (NY FRB)</ulink>.</para>
+<para>Currently, &keurocalc; has a problem determining the date of the latest
+exchange rates published by that bank, because of time zone offsets and non-working
+days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
+not optimal.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title>Default currency</title>
+
+<para>This setting defines the other currency that is used when &keurocalc; starts up or when the
+user validates the new settings.</para>
+
+<para>Notice that the selected currency might not be provided by the selected
+rates source. In that case, the first available currency in the list is used.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title>Rounding</title>
+
+<para>This setting defines how the results should be presented in the display area. Internally,
+all computations are done with the precision offered by the mathematical library, but it
+usually makes no sense presenting tenths of cents. The following rounding methods are
+available:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Official rounding rules</guilabel></term>
+<listitem>
+<para>The EU conversion rules or other official conversion rules are used. It
+means that the result is rounded to the next unit for currencies like the
+Japanese yen or the Italian lira, and rounded to the next hundredth of unit
+("cents") for currencies like the euro or the dollar.</para>
+<para>For example, 158.323 yen would be rounded to 158 yen. 12.537 euro
+would be rounded to 12.54 euro.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Smallest coin method</guilabel></term>
+<listitem>
+<para>The result is rounded to the next value of the smallest coin that
+circulates in the country that uses that currency. For disappeared currencies
+like the Italian lira, it uses the smallest coin that used to circulate before
+the currency has been withdrawn : in the case of the Italian lira, it was the
+10 lira coin.</para>
+<para>For example, 1235.9 Italian lira would be rounded to 1240 lira. 55 462.2
+Romanian lev would be rouunded to 55 500 lev.</para>
+<para>We lack information about the smallest coins that exist in every country.
+Please send bug reports if &keurocalc; uses incorrect values for the smallest
+available coin in your country, and we will enter that information.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>No rounding at all</guilabel></term>
+<listitem>
+<para>The computed value is displayed unchanged, as a floating dot number.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+</sect1>
 </chapter>
 
 <chapter id="credits">
@@ -520,12 +650,13 @@ computes the difference in the reverse order.</para>
 <para>Program copyright 2001-2004 the &keurocalc; developers:
 
 <itemizedlist>
-<listitem><para>Éric Bischoff <email>e.bischoff@noos.fr</email> - design and implementation</para></listitem>
-<listitem><para>Melchior Franz <email>a8603365@unet.univie.ac.at</email> - design and testing</para></listitem>
+<listitem><para>Éric Bischoff <email>e.bischoff@_NOSPAM_noos.fr</email> - design and implementation</para></listitem>
+<listitem><para>Melchior Franz <email>a8603365@_NOSPAM_unet.univie.ac.at</email> - design and testing</para></listitem>
+<listitem><para>Bas Willems <email>cybersurfer@_NOSPAM_euronet.nl</email> - graphical artwork</para></listitem>
 </itemizedlist></para>
 
 <para>Documentation copyright 2001-2004 Éric Bischoff
-<email>e.bischoff@noos.fr</email>.</para>
+<email>e.bischoff@_NOSPAM_noos.fr</email>.</para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
@@ -541,8 +672,9 @@ computes the difference in the reverse order.</para>
 <title>How to obtain &keurocalc;</title>
 
 <para>
-&keurocalc; is can be downloaded from its home page
-<ulink url="http://opensource.bureau-cornavin.com/keurocalc/">http://opensource.bureau-cornavin.com/keurocalc/</ulink>.
+&keurocalc; is part of the <ulink url="http://extragear.kde.org/">KDE extragear 3</ulink>
+package. The latest version of &keurocalc; can be downloaded from its
+<ulink url="http://opensource.bureau-cornavin.com/keurocalc/">home page</ulink>.
 </para>
 
 </sect1>
