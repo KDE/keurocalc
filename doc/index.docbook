@@ -29,14 +29,14 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2001-12-15</date>
-<releaseinfo>0.05.00</releaseinfo>
+<date>2001-12-17</date>
+<releaseinfo>0.05.01</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is a pocket currency converter and calculator specially
 designed for the Euro. This documentation describes &keurocalc;
-version 0.5.
+version 0.5.1.
 </para>
 </abstract>
 
@@ -180,6 +180,8 @@ to the closest tenth of Belgian Francs. The rounding unit depends on
 the currency: for Belgian Francs it's 0.10 FB, for French Francs it's 0.01 FF,
 for Italian Liras it's 100 L for example.</para></step>
 </procedure>
+
+<para>You could also have typed: <userinput>25 Enter E</userinput></para>
 
 <procedure>
 <title>To convert 120 German Marks into Spanish Pesetas</title>
@@ -384,10 +386,12 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 
 <para>&keurocalc;</para>
 
-<para>Program copyright 2001 the &keurocalc; developers;:</para>
+<para>Program copyright 2001 the &keurocalc; developers:
 
-<para>Éric Bischoff <email>e.bischoff@noos.fr</email> - design and implementation</para>
-<para>Melchior Franz <email>a8603365@unet.univie.ac.at</email> - design and testing</para>
+<itemizedlist>
+<listitem><para>Éric Bischoff <email>e.bischoff@noos.fr</email> - design and implementation</para></listitem>
+<listitem><para>Melchior Franz <email>a8603365@unet.univie.ac.at</email> - design and testing</para></listitem>
+</itemizedlist></para>
 
 <para>Documentation copyright 2001 Éric Bischoff
 <email>e.bischoff@noos.fr</email>.</para>
