@@ -5,6 +5,8 @@ Find a solution for the Turkish Lira (doesn't fit in display).
 
 Problem with non-working days at New York Federal Reserve Bank.
 
+Fonts too large at some places.
+
 
 FUNCTIONALITY
 =============
@@ -41,7 +43,7 @@ SYSTEM INTEGRATION
 
 Allow cut and paste of data.
 
-Let keurocalc offer rates services to other programss like kspread.
+Let keurocalc offer rates services to other programs like kspread.
 
 Let keurocalc act as a desktop panel applet.
 
