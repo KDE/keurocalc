@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY keurocalc '<application>KEuroCalc</application>'>
   <!ENTITY kappname "&keurocalc;">
   <!ENTITY % addindex "IGNORE">
@@ -32,7 +32,7 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2004-04-17</date>
+<date>2004-04-29</date>
 <releaseinfo>0.09.00</releaseinfo>
 
 <abstract>
@@ -63,16 +63,16 @@ This documentation describes &keurocalc; version 0.9.0.
 <para>
 On the 1st of January, 2002, 12 European countries united their national
 currencies into a single one, the euro (€). The same will probably happen
-in 2006 in many Eastern Euroean countries. &keurocalc; helps:
+in 2006 in many Eastern European countries. &keurocalc; helps:
 
 <variablelist>
 <varlistentry>
 <term>During the transition periods</term>
 <listitem>
 <para><itemizedlist>
-<listitem><para>To verify one's bank account, when paying both in Euro and
+<listitem><para>To verify one's bank account, when paying both in Euros and
 in the old currency (Italian liras, for example).</para></listitem>
-<listitem><para>To verify one's shopping, and compute the returned money if paying
+<listitem><para>To verify one's shopping, and compute the change if paying
 with a banknote labeled in the old currency.</para></listitem>
 </itemizedlist></para>
 </listitem>
@@ -110,7 +110,7 @@ published the NY FRB.</para></listitem>
 usability:
 
 <itemizedlist>
-<listitem><para>You see every intermediary value and the result
+<listitem><para>You see every intermediate value and the result
 in both the reference currency (euro or dollar) and in the other currency.</para></listitem>
 <listitem><para>There is a separate input area where you can
 type a new value while still having the previous result visible.</para></listitem>
@@ -122,7 +122,7 @@ aloud what you're doing.</para></listitem>
 <listitem><para>If you make mistakes, a special correction button enables you
 to correct your last input data, as long as you didn't validate.</para></listitem>
 <listitem><para>The numbers are displayed according to your locale settings:
-with either a decimal comma or a decimal dot according to your &kcontrol;
+with either a comma or a dot as a dedcimal point, according to your &kcontrol;
 settings.</para></listitem>
 <listitem><para>You can decide which reference currency you want to use (euro
 or dollar), which other currency to start with when you launch &keurocalc;, and
@@ -133,25 +133,25 @@ which rounding method to use.</para></listitem>
 <para>&keurocalc; allows the following operations:
 
 <itemizedlist>
-<listitem><para>Conversions from and to the referencee currency (euro or dollar).</para></listitem>
-<listitem><para>Systematical rounding of the displayed result, but
-computations internally done with the precision of the mathematical libraries.</para></listitem>
+<listitem><para>Conversions from and to the reference currency (euro or dollar).</para></listitem>
+<listitem><para>Systematic rounding of the displayed result, but
+computations done internally with the precision of the mathematical libraries.</para></listitem>
 <listitem><para>Usual additions, substractions, multiplications and divisions.</para></listitem>
 <listitem><para>Apply a percentage, add a percentage,
 or substract a percentage.</para></listitem>
 <listitem><para>Possibility to store values in an intermediate memory,
-or use that memory as an additive accumulator.</para></listitem>
+or use that memory as a running total.</para></listitem>
 </itemizedlist>
 </para>
 
 <para>Here are some limitations of &keurocalc;:
 
 <itemizedlist>
-<listitem><para>No parenthesized nor complex expressions.</para></listitem>
+<listitem><para>No parenthesized or complex expressions.</para></listitem>
 <listitem><para>Some roundings go wrong due to the limitations
 of the mathematical library.</para></listitem>
 <listitem><para>Inflationist currencies like Turkish Lira cannot
-be handled due to limited siplay size.</para></listitem>
+be handled due to limited display size.</para></listitem>
 <listitem><para>New York Federal Reserve Bank rates are not available
 during the non-working days (Christmas, Easter, etc.).</para></listitem>
 </itemizedlist>
@@ -162,9 +162,9 @@ nor the accuracy of the result. You are always invited to verify your
 computations by some other means. As the <link linkend="credits">license</link>
 agreement states, there's no liability of the authors if the results are not
 correct or as expected. Also, please notice that the variable exchange rates
-are downloaded in an uncrypted and therefore unsecure manner from the data
-sources (European Central Bank and New York Fedeeral Reserve Bank).
-Some "man-in-the-middle" attacker may confuse &keurocalc; by forging wrong
+are downloaded in an unencrypted and therefore unsecure manner from the data
+sources (European Central Bank and New York Federal Reserve Bank).
+Some <quote>man-in-the-middle</quote> attacker may confuse &keurocalc; by forging
 exchange rates. More simply, a transmission error is always possible.</para></warning>
 
 </chapter>
@@ -212,7 +212,7 @@ the input as a number expressed in the currency, so <keycap>B</keycap>
 or <keycap>X</keycap> would have worked as well.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
 1008.50 FB or 1008,50 FB. The exact value is 1008.4975, but it's rounded
-to the closest hundredth of Belgian Francs. The rounding unit depends on
+to the closest hundredth of a Belgian Franc. The rounding unit depends on
 the currency and on the rounding method: with the official rounding rules,
 for Belgian Francs it's 0.01 FB, for Italian Liras it's 1 L for example.</para></step>
 </procedure>
@@ -244,7 +244,7 @@ Notice that in the result field, <computeroutput>3</computeroutput>
 is a simple value displayed on just one line, with no monetary unit.</para></step>
 <step><para>Type <userinput>5</userinput> and then press the
 <guibutton>Enter</guibutton> button or the <keycap>Enter</keycap> key. The
-result <computeroutput>8</computeroutput>appears on the right.</para></step>
+result <computeroutput>8</computeroutput> appears on the right.</para></step>
 </procedure>
 
 <procedure>
@@ -287,7 +287,7 @@ change money has to be given back to the customer. The <guibutton>+/-</guibutton
 button or the <keycap>S</keycap> key permit you to change the sign of the result.</para></step>
 </procedure>
 
-<note><para>Do not try to add euros to simple values (with no currency unit), it won't work, for
+<note><para>Do not try to add euros to simple values (with no currency unit): it won't work, for
 the same reason you cannot add 5 meters to 3 kilograms.</para></note>
 
 </sect1>
@@ -310,11 +310,11 @@ or the <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
 <step><para>The result in Australian dollars matches <computeroutput>6.4 €</computeroutput>.</para></step>
 </procedure>
 
-<para>It was also possible to type in the following order:
+<para>You could also have used the following order:
 <userinput>3.2 = * 2 €</userinput> or even <userinput>3.2 * 2 €</userinput>.</para>
 
 <note><para>Of course it's not possible to multiply X euros by Y dollars,
-just the same as you don't multiply 10 fingers by 2 ears.
+just as you don't multiply 10 fingers by 2 ears.
 </para></note>
 
 </sect1>
@@ -329,7 +329,7 @@ if not already selected.</para></step>
 <step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
 button or the <keycap>Y</keycap> key.</para></step>
 <step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
-button or the <keycap>%</keycap> key. Same as with multiplications, the
+button or the <keycap>%</keycap> key. As with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <step><para>Look at the result: it is equivalent to 600 yen.</para></step>
 </procedure>
@@ -342,10 +342,10 @@ if not already selected.</para></step>
 button or the <keycap>Y</keycap> key.</para></step>
 <step><para>Press the <guibutton>+</guibutton> button or the <keycap>+</keycap> key.</para></step>
 <step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
-button or the <keycap>%</keycap> key. Same as with multiplications, the
+button or the <keycap>%</keycap> key. As with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: 26.96 € or 3600 ¥ at the date of writing these
-lines.</para></step>
+<step><para>Look at the result: 26.96 € or 3600 ¥ at
+the time of writing.</para></step>
 </procedure>
 
 <procedure>
@@ -353,10 +353,10 @@ lines.</para></step>
 <step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
 if not already selected.</para></step>
 <step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
-button or the <keycap>rY</keycap> key.</para></step>
-<step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
+button or the <keycap>Y</keycap> key.</para></step>
+<step><para>Press the <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
 <step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
-button or the <keycap>%</keycap> key. Same as with multiplications, the
+button or the <keycap>%</keycap> key. As with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <step><para>Look at the result: 17.97 € or 2400 ¥ at the date of writing these
 lines.</para></step>
@@ -370,7 +370,7 @@ lines.</para></step>
 <procedure>
 <title>How do I store now and recall later some value?</title>
 <step><para>Do your computations.</para></step>
-<step><para>Press <userinput>Min</userinput> (Memory in) button to store the
+<step><para>Press <guibutton>Min</guibutton> (Memory in) button to store the
 value in the <guilabel>Result</guilabel> area. Please notice that the
 other memory keys now become available.</para></step>
 <step><para>Do some other work with the calculator.</para></step>
@@ -380,7 +380,7 @@ other memory keys now become available.</para></step>
 
 <para>Internally, the values are recalled with no unit or in the reference currency (euro or dollar) with
 the maximum precision allowed by the mathematical library. In some rare cases,
-this might lead to rounding problems if the stored value is a round value in a
+this might lead to rounding problems if the stored value is a rounded value in a
 non-reference currency.</para>
 
 <procedure>
@@ -421,7 +421,7 @@ computes the difference in the reverse order.</para>
 <title>Command Reference</title>
 
 <sect1 id="reference-keys">
-<title>Predefined Key Bindings</title>
+<title>Default Shortcuts</title>
 
 <simplelist type="horiz" columns="2">
 <member><keycombo action="simul">&Alt; <keycap>F4</keycap></keycombo></member>
@@ -537,7 +537,8 @@ computes the difference in the reverse order.</para>
 <sect2 id="settings-reference">
 <title>Reference currency, rates origin</title>
 
-<para>This setting defines the reference currency (euro or dollar), and where from
+<para>This setting defines the reference currency (euro or dollar),
+and from where 
 &keurocalc; should download the exchange rates between the reference currency and
 other currencies. The following choices are available:</para>
 
@@ -545,7 +546,7 @@ other currencies. The following choices are available:</para>
 <varlistentry>
 <term><guilabel>Euro, no network access (fixed rates only)</guilabel></term>
 <listitem>
-<para>Euro is the reference currency. No variable rate is downloaded nor used.
+<para>Euro is the reference currency. No variable rate is downloaded or used.
 The only available currencies are the ones that have a fixed conversion
 rate with the Euro.</para>
 <para>This setting is adapted to computers with no network access.</para>
@@ -605,7 +606,7 @@ available:</para>
 <para>The EU conversion rules or other official conversion rules are used. It
 means that the result is rounded to the next unit for currencies like the
 Japanese yen or the Italian lira, and rounded to the next hundredth of unit
-("cents") for currencies like the euro or the dollar.</para>
+(<quote>cents</quote>) for currencies like the euro or the dollar.</para>
 <para>For example, 158.323 yen would be rounded to 158 yen. 12.537 euro
 would be rounded to 12.54 euro.</para>
 </listitem>
@@ -617,7 +618,7 @@ would be rounded to 12.54 euro.</para>
 <para>The result is rounded to the next value of the smallest coin that
 circulates in the country that uses that currency. For disappeared currencies
 like the Italian lira, it uses the smallest coin that used to circulate before
-the currency has been withdrawn : in the case of the Italian lira, it was the
+the currency has been withdrawn: in the case of the Italian lira, it was the
 10 lira coin.</para>
 <para>For example, 1235.9 Italian lira would be rounded to 1240 lira. 55 462.2
 Romanian lev would be rouunded to 55 500 lev.</para>
@@ -630,7 +631,7 @@ available coin in your country, and we will enter that information.</para>
 <varlistentry>
 <term><guilabel>No rounding at all</guilabel></term>
 <listitem>
-<para>The computed value is displayed unchanged, as a floating dot number.</para>
+<para>The computed value is displayed unchanged, as a floating point number.</para>
 </listitem>
 </varlistentry>
 
@@ -657,6 +658,7 @@ available coin in your country, and we will enter that information.</para>
 <para>Documentation copyright 2001-2004 Éric Bischoff
 <email>e.bischoff@_NOSPAM_noos.fr</email>.</para>
 
+<para>Documentation reviewed by &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
 &underFDL;
