@@ -70,7 +70,7 @@ in 2006 in many Eastern European countries. &keurocalc; helps:
 <term>During the transition periods</term>
 <listitem>
 <para><itemizedlist>
-<listitem><para>To verify one's bank account, when paying both in Euros and
+<listitem><para>To verify one's bank account, when paying both in euros and
 in the old currency (Italian liras, for example).</para></listitem>
 <listitem><para>To verify one's shopping, and compute the change if paying
 with a banknote labeled in the old currency.</para></listitem>
@@ -548,7 +548,7 @@ other currencies. The following choices are available:</para>
 <listitem>
 <para>Euro is the reference currency. No variable rate is downloaded or used.
 The only available currencies are the ones that have a fixed conversion
-rate with the Euro.</para>
+rate with the euro.</para>
 <para>This setting is adapted to computers with no network access.</para>
 </listitem>
 </varlistentry>
