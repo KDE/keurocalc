@@ -1,0 +1,502 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+  <!ENTITY keurocalc '<application>KEuroCalc</application>'>
+  <!ENTITY kappname "&keurocalc;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title>The &keurocalc; Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Éric</firstname>
+<surname>Bischoff</surname>
+<affiliation>
+<address><email>e.bischoff@noos.fr</email></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
+<copyright>
+<year>2001</year>
+<holder>Éric Bischoff</holder>
+</copyright>
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2001-12-13</date>
+<releaseinfo>0.04.00</releaseinfo>
+
+<abstract>
+<para>
+&keurocalc; is a pocket currency converter and calculator specially
+designed for the Euro. This documentation describes &keurocalc;
+version 0.4.
+</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>kdeutils</keyword>
+<keyword>KEuro</keyword>
+<keyword>Euro</keyword>
+<keyword>converter</keyword>
+<keyword>calculator</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>
+&keurocalc; is a pocket currency converter and calculator specially
+designed for the Euro.
+</para>
+
+<para>
+On the 1st of January, 2002, 12 European countries unite their national
+currencies into a single one, the Euro (€). &keurocalc; helps:
+
+<variablelist>
+<varlistentry>
+<term>During the transition period</term>
+<listitem>
+<para>(a few months at beginning 2002, depending on the country)
+<itemizedlist>
+<listitem><para>To verify one's bank account, when paying both in Euro and
+in the old currency (Italian liras, for example)</para></listitem>
+<listitem><para>To verify one's shopping, and compute the returned money if paying
+with a banknote labeled in the old currency</para></listitem>
+<listitem><para>To do conversions between two old currencies, like French Franc
+and German Deutschmark</para></listitem>
+</itemizedlist></para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Many years after the transition period</term>
+<listitem><para>To get an idea of the value of the things in the old
+currency at any stage of calculations.</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+<para>&keurocalc; has the following advantages in term of comfort and
+usability:
+	
+<itemizedlist>
+<listitem><para>You see every intermediary value and the result
+in both the old currency and in Euro</para></listitem>
+<listitem><para>There is a separate input area where you can
+type a new value while still having the previous result visible</para></listitem>
+<listitem><para>The ergonomy is very close to usual pocket calculators,
+despite the fact that any value you type can be a value in Euro, a value in
+the old currency, a percentage or a quantity.</para></listitem>
+<listitem><para>You press the keys in the order just like you would speak
+out what you're doing</para></listitem>
+<listitem><para>If you do mistakes, a special correction button enables you
+to correct your last input data as long as you didn't validate</para></listitem>
+<listitem><para>The numbers are diplayed accordingly to your locale settings:
+with either a decimal comma or a decimal dot accordingly to your &kcontrol;
+settings</para></listitem>
+<listitem><para>When you quit &keurocalc;, it remembers the last currency you used
+and restarts with this currency next time you run it</para></listitem>
+</itemizedlist>
+</para>
+
+<para>&keurocalc; allows the following operations:
+
+<itemizedlist>
+<listitem><para>Conversions from and to the Euro</para></listitem>
+<listitem><para>Systematical rounding of the displayed result, but
+computations internally done with the precision of the mathematical libraries</para></listitem>
+<listitem><para>Usual additions, substractions, multiplications and divisions</para></listitem>
+<listitem><para>Possibility to apply a percentage, add a percentage,
+or substract a percentage</para></listitem>
+</itemizedlist>
+</para>
+
+<para>Here are some limitations of &keurocalc;:
+
+<itemizedlist>
+<listitem><para>No parenthesized nor complex expressions</para></listitem>
+<listitem><para>No support for very big amounts due to the limitations
+of the mathematical library</para></listitem>
+</itemizedlist>
+</para>
+
+<warning><para>&keurocalc; never guarantees the accuracy of the result.
+You are always invited to verify your computations by some other means.
+As the <link linkend="credits">license</link> agreement states, there's no
+liability of the authors if the results are not correct or as
+expected.</para></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title>Using &keurocalc;</title>
+
+<mediaobject>
+<imageobject><imagedata fileref="screenshot.png" format="PNG" /></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title>Performing Conversions</title>
+
+
+<procedure>
+<title>To convert 1000 Belgian Francs into Euros</title>
+<step><para>Select <guilabel>FB</guilabel> (Belgian Francs, <foreignphrase>francs
+belges</foreignphrase>) radio button on the bottom, in the
+<guilabel><accel>C</accel>urrency</guilabel> list.</para></step>
+<step><para>Type <userinput>1000</userinput> on the keyboard or use the
+corresponding numerical buttons. The digits appear while you are typing them in
+the <guilabel>Input</guilabel> display. If you do a mistake while typing the digits
+use the &Backspace; key or the <guibutton>&lt;-</guibutton> button.</para></step>
+<step><para>Press the <guibutton>€</guibutton> button or the <keycap>E</keycap>
+key.</para></step>
+<step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
+24.79 € or 24,79 € accordingly to your locale settings.</para></step> 
+</procedure>
+
+<procedure>
+<title>To convert 25 Euros into Belgian Francs</title>
+<step><para>Select <guilabel>FB</guilabel> radio button on the bottom.
+You can skip this step if it's already the selected currency</para></step>
+<step><para>Type <userinput>25</userinput>.</para></step>
+<step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
+key. In fact, any key that is not already reserved for some other
+usage will validate
+the input as a number expressed in the currency, so <keycap>B</keycap>
+or <keycap>X</keycap> would have worked as well.</para></step>
+<step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
+1008.50 FB or 1008,50 FB. The exact value is 1008.4975, but it's rounded
+to the closest tenth of Belgian Francs. The rounding unit depends on
+the currency: for Belgian Francs it's 0.10 FB, for French Francs it's 0.01 FF,
+for Italian Liras it's 100 L for example.</para></step>
+</procedure>
+
+<procedure>
+<title>To convert 120 German Marks into Spanish Pesetas</title>
+<step><para>Select <guilabel>DM</guilabel> radio button in
+<guilabel><accel>C</accel>urrency</guilabel> area.</para></step>
+<step><para>Type <userinput>120</userinput>.</para></step>
+<step><para>Press the <guibutton>DM</guibutton> button or the <keycap>D</keycap>
+or <keycap>M</keycap> keys.</para></step>
+<step><para>Just select <guilabel>PTA</guilabel> radio button to see the same
+amount of 61.36 € converted into pesetas in the <guilabel>Results</guilabel>
+area.</para></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title>Adding and Substracting</title>
+
+<procedure>
+<title>How much is 3 + 5?</title>
+<step><para>Type <userinput>3</userinput> and then press <guibutton>+</guibutton>.
+Remark that in the result field, <computeroutput>3</computeroutput>
+is a simple value displayed on just one line, with no monetary unit.</para></step>
+<step><para>Type <userinput>5</userinput> and then press <guibutton>=</guibutton>.
+The result <computeroutput>8</computeroutput>appears on the
+right.</para></step>
+</procedure>
+
+<procedure>
+<title>You received 1000 French Francs and paid 32.50 Euros for a book,
+how much have you left on your bank account?</title>
+<step><para>Select <guilabel>FF</guilabel> radio button on the bottom.</para></step>
+<step><para>Type <userinput>1000</userinput> and then press <guibutton>FF</guibutton>.</para></step>
+<step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key. Remark
+the <computeroutput>-</computeroutput> sign in the leftmost part of the
+<guilabel>Input</guilabel> display.</para></step>
+<step><para>Type <userinput>32,50</userinput> or <userinput>32.50</userinput>
+and then press <guibutton>€</guibutton>.</para></step>
+<step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
+119.95 € / 786.81 FF. Remark that during the whole computation
+you've been able to read the values both in Euro and in French Francs.</para></step>
+</procedure>
+
+<procedure>
+<title>You pay a 32.50 € book with a 500 FF banknote. How much is the
+clerk supposed to give you back, in Euro notes and coins?</title>
+<step><para>Select <guilabel>FF</guilabel> radio button if not already selected.</para></step>
+<step><para>Type <userinput>32.50</userinput> or <userinput>32,50</userinput>
+and then press <guibutton>€</guibutton>. You can also type <userinput>32.5</userinput>
+without the trailing <userinput>0</userinput>.</para></step>
+<step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
+<step><para>Type <userinput>500</userinput> and press <guibutton>FF</guibutton>
+button or <keycap>F</keycap> key.</para></step>
+<step><para>The result <computeroutput>-286.81 €</computeroutput> is negative, indicating that
+change money has to be given back to the customer. The <guibutton>+/-</guibutton>
+button or the <keycap>S</keycap> key permit you to change the sign of the result.</para></step>
+</procedure>
+
+<note><para>Don't try to add euros to simple values, it won't work, for
+the same reason you cannot multiply 5 apples by 3 bananas.</para></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title>Multiplying and Dividing</title>
+
+<procedure>
+<title>You buy 3.2 kilograms of apples at 2 € per kilogram. How much does
+the whole cost in Austrian Schillings?</title>
+<step><para>Select <guilabel>öS</guilabel> radio button if not already selected.</para></step>
+<step><para>Type <userinput>2</userinput> and press <guibutton>€</guibutton>.</para></step>
+<step><para>Press <guibutton>*</guibutton> button or <keycap>*</keycap>
+key. Remark the <computeroutput>*</computeroutput> sign at the left of
+the <guilabel>Input</guilabel> display.</para></step>
+<step><para>Now type <userinput>3.2</userinput> followed by <guibutton>=</guibutton> button
+or <keycap>U</keycap> key: this means <quote>3.2 units</quote> at
+2 € each.</para></step>
+<step><para>The result <computeroutput>88.10 öS</computeroutput> matches
+<computeroutput>6.4 €</computeroutput>.</para></step>
+</procedure>
+
+<para>It was also possible to type in the following order:
+<userinput>3.2 = * 2 €</userinput> or even <userinput>3.2 * 2 €</userinput>.</para>
+
+<note><para>Of course it's not possible to multiply X Euros by Y Schillings,
+just the same as you don't multiply 10 fingers by 2 ears.
+</para></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title>Using percentages</title>
+
+<procedure>
+<title>How much is 20% of 3000 Greek Drachmas?</title>
+<step><para>Select <guilabel>DR</guilabel> radio button if not already selected.</para></step>
+<step><para>Type <userinput>3000</userinput> and press <guibutton>DR</guibutton>
+button or <keycap>D</keycap> key. Don't press <keycap>R</keycap>
+key, it would reset the calculator...</para></step>
+<step><para>Enter <userinput>20</userinput> and press <guibutton>%</guibutton>
+button or <keycap>%</keycap> key. Same as with multiplications, the
+value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
+<step><para>Look at the result: 1.76 € or 600 Drachmas.</para></step>
+</procedure>
+
+<procedure>
+<title>How much is 3000 Greek Drachmas plus 20%?</title>
+<step><para>Select <guilabel>DR</guilabel> radio button if not already selected.</para></step>
+<step><para>Type <userinput>3000</userinput> and press <guibutton>DR</guibutton>
+button or <keycap>D</keycap> key.</para></step>
+<step><para>Press <guibutton>+</guibutton> button or <keycap>+</keycap> key.</para></step>
+<step><para>Enter <userinput>20</userinput> and press <guibutton>%</guibutton>
+button or <keycap>%</keycap> key. Same as with multiplications, the
+value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
+<step><para>Look at the result: 10.56 € or 3600 Drachmas.</para></step>
+</procedure>
+
+<procedure>
+<title>How much is 3000 Greek Drachmas minus 20%?</title>
+<step><para>Select <guilabel>DR</guilabel> radio button if not already selected.</para></step>
+<step><para>Type <userinput>3000</userinput> and press <guibutton>DR</guibutton>
+button or <keycap>D</keycap> key.</para></step>
+<step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
+<step><para>Enter <userinput>20</userinput> and press <guibutton>%</guibutton>
+button or <keycap>%</keycap> key. Same as with multiplications, the
+value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
+<step><para>Look at the result: 7.04 € or 2400 Drachmas.</para></step>
+</procedure>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title>Command Reference</title>
+
+<sect1 id="reference-keys">
+<title>Predefined Key Bindings</title>
+
+<simplelist type="horiz" columns="2">
+<member><keycombo action="simul">&Alt; <keycap>F4</keycap></keycombo></member>
+<member>Exists from &keurocalc;</member>
+
+<member><keycombo action="simul">&Alt; <keycap>A</keycap></keycombo></member>
+<member>Displays these help pages</member>
+
+<member><keycombo action="simul">&Alt; <keycap>C</keycap></keycombo></member>
+<member>Goes to the currency selection area</member>
+
+<member><keycombo action="simul">&Alt; <keycap>H</keycap></keycombo></member>
+<member>Displays the <guilabel>About</guilabel> box</member>
+
+<member><keycap>0</keycap> - <keycap>9</keycap></member>
+<member>Input digits</member>
+
+<member><keycap>.</keycap> and <keycap>,</keycap></member>
+<member>Decimal separator</member>
+
+<member><keycap>+</keycap>, <keycap>-</keycap>, <keycap>*</keycap> and <keycap>/</keycap></member>
+<member>Operators: addition, substraction, multiplication and division</member>
+
+<member><keycap>=</keycap></member>
+<member>Validation of input number considered as a simple, unitless, value</member>
+
+<member><keycap>%</keycap></member>
+<member>Validation of input number considered as a percentage</member>
+
+<member>&Backspace;</member>
+<member>Removal of last input: digits, decimal separator or operator</member>
+
+<member><keycap>Tab</keycap> and <keycombo action="simul">&Shift; <keycap>Tab</keycap></keycombo> keys</member>
+<member>Moves from one button to the next or previous one</member>
+
+<member>Arrow keys</member>
+<member>In the currency selection area, moves from one currency to the other</member>
+
+<member>Space bar</member>
+<member>When focus is on a push button, presses this button</member>
+
+<member><keycap>E</keycap></member>
+<member>Validation of input number considered as a value expressed in Euros</member>
+
+<member><keycap>S</keycap></member>
+<member>Change sign of the result</member>
+
+<member>Any other key</member>
+<member>Validation of input number considered as a number in the old currency</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title>The buttons</title>
+
+<para></para>
+
+</sect1>
+</chapter>
+
+<chapter id="faq">
+<title>Questions and Answers</title>
+
+<!-- (OPTIONAL but recommended) This chapter should include all of the silly
+(and not-so-silly) newbie questions that fill up your mailbox. This chapter
+should be reserved for BRIEF questions and answers! If one question uses more
+than a page or so then it should probably be part of the
+"Using this Application" chapter instead. You should use links to
+cross-reference questions to the parts of your documentation that answer them.
+This is also a great place to provide pointers to other FAQ's if your users
+must do some complicated configuration on other programs in order for your
+application work. -->
+
+&reporting.bugs;
+&updating.documentation;
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para>My Mouse doesn't work. How do I quit &keurocalc;?</para>
+</question>
+<answer>
+<para>You silly goose! Check out the <link linkend="reference">Reference
+</link> section for the answer.</para>
+</answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para>Why can't I twiddle my documents?</para>
+</question>
+<answer>
+<para>You can only twiddle your documents if you have the foobar.lib
+installed.</para>
+</answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title>Credits and License</title>
+
+<para>&keurocalc;</para>
+
+<para>Program copyright 2001 the &keurocalc; developers;:</para>
+
+<para>Éric Bischoff <email>e.bischoff@noos.fr</email> - design and implementation</para>
+<para>Melchior Franz <email>a8603365@unet.univie.ac.at</email> - design and testing</para>
+
+<para>Documentation copyright 2001 Éric Bischoff
+<email>e.bischoff@noos.fr</email>.</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;
+&underGPL;
+
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+
+<sect1 id="getting-keurocalc">
+<title>How to obtain &keurocalc;</title>
+
+<para>
+&keurocalc; is part of the KDE project
+<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
+&keurocalc; can be found in the kdeutils package on
+<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>, the
+main ftp site of the KDE project.</para>
+
+</sect1>
+
+<sect1 id="requirements">
+<title>Requirements</title>
+
+<para>In order to successfully use &keurocalc;, you need KDE 2.2.1.</para>
+
+<para>All required libraries as well as &keurocalc; itself can be found
+on <ulink url="ftp://ftp.kde.org">ft.kde.org</ulink>, the &FTP; site
+of the &kde; project.</para>
+
+</sect1>
+
+<sect1 id="compilation">
+<title>Compilation and Installation</title>
+
+<para>
+In order to compile and install &keurocalc; on your system, type the
+following in the base directory of the kdeutils distribution:
+
+<screen width="40">
+<prompt>%</prompt> <userinput>./configure</userinput>
+<prompt>%</prompt> <userinput>make</userinput>
+<prompt>%</prompt> <userinput>make install</userinput>
+</screen>
+</para>
+
+<para>Since &keurocalc; uses autoconf and automake you should have not trouble compiling it.
+Should you run into problems please report them to the KDE mailing lists.</para>
+
+</sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
