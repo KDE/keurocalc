@@ -768,7 +768,7 @@ void KEuroCalc::displayNewResult()
 	else
 	{
 		rounding = euroValue >= 0.0? 0.5: -0.5;
-		roundedEuroValue = rint(euroValue * 100.0 + rounding)
+		roundedEuroValue = floor(euroValue * 100.0 + rounding)
 				 / 100.0;
 		euroDisplay.setNum( roundedEuroValue, 'f', 2 );
 		pos = euroDisplay.find('.');
@@ -778,7 +778,7 @@ void KEuroCalc::displayNewResult()
 					    KGlobal::locale()->decimalSymbol() );
 
 		rounding = currencyValue >= 0.0? 0.5: -0.5;
-		roundedCurrencyValue = rint(currencyValue * 100.0 / currencyPrecision + rounding)
+		roundedCurrencyValue = floor(currencyValue * 100.0 / currencyPrecision + rounding)
 				     / 100.0 * currencyPrecision;
 		currencyDisplay.setNum( roundedCurrencyValue, 'f', currencyPrecision < 100.0? 2: 0 );
 		pos = currencyDisplay.find('.');
