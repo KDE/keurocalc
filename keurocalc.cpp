@@ -573,7 +573,7 @@ void KEuroCalc::initButtons()
 	PercentButton->setText( QString::fromUtf8( "%" ) );
 	SimpleValueButton->setText( QString::fromUtf8( "=" ) );
 	PlusMinusButton->setText( QString::fromUtf8( "+/-" ) );
-	ResetButton->setText( QString::fromUtf8( "&CA" ) );
+	ResetButton->setText( QString::fromUtf8( "&AC" ) );
 }
 
 // Input a digit ('0' to '9' or '.')
