@@ -72,6 +72,7 @@ KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 	CurrencyList->setCurrentItem( position );
 
 	setFixedSize(size());
+	setFocusPolicy( StrongFocus );
 }
 
 // Destructor
