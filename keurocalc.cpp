@@ -17,6 +17,7 @@
 
 #include <stdlib.h>
 
+#include <qfile.h>
 #include <qlabel.h>
 #include <qpushbutton.h>
 #include <qcombobox.h>
@@ -26,6 +27,8 @@
 #include <kaboutapplication.h>
 #include <kglobal.h>
 #include <kconfig.h>
+#include <kmessagebox.h>
+#include <kstandarddirs.h>
 
 #include <math.h>
 
@@ -34,7 +37,9 @@
 #include "preferences.h"
 #include "currencies.h"
 
-extern currencyStruc currency[CURRENCIES];
+extern int numCurrencies;
+extern int dollarCurrency, euroCurrency;
+extern currencyStruc currency[100];
 
 static const char
 	*euroSymbol = " €",
@@ -59,6 +64,11 @@ KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 	simpleMemory = 0.0;
 	referenceMemory = 0.0;
 
+	if ( !readCurrencies() )
+	{
+		KMessageBox::error( 0, i18n( "Cannot load currencies.xml" ) );
+		exit(1);
+	}
 	readOptions( reference, currencyNum, rounding );
 
 	displayNewCurrency();
@@ -99,10 +109,10 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 	else oldReference = EURO_ECB;
 
 	option = config->readEntry("Currency", "USD");
-	for (oldCurrency = 0; oldCurrency < CURRENCIES; oldCurrency++)
-		if ( option == QString::fromUtf8( currency[oldCurrency].code ) )
+	for (oldCurrency = 0; oldCurrency < numCurrencies; oldCurrency++)
+		if ( option == currency[oldCurrency].code )
 			break;
-	if ( oldCurrency == CURRENCIES ) oldCurrency = DOLLAR_CURRENCY;
+	if ( oldCurrency == numCurrencies ) oldCurrency = dollarCurrency;
 
 	option = config->readEntry("Rounding", "OFFICIAL_RULES");
 	if (option == "OFFICIAL_RULES")
@@ -133,7 +143,7 @@ void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding)
 			config->writeEntry("Reference", "DOLLAR_NY_FRB");
 	}
 
-	config->writeEntry("Currency", QString::fromUtf8(currency[newCurrency].code) );
+	config->writeEntry("Currency", currency[newCurrency].code );
 
 	switch (newRounding)
 	{	case OFFICIAL_RULES:
@@ -244,6 +254,64 @@ void KEuroCalc::keyPressEvent(QKeyEvent *e)
 	}
 }
 
+// Read currencies list
+bool KEuroCalc::readCurrencies()
+{
+	QDomDocument document( "currencies" );
+	QFile file( locate( "data", "keurocalc/currencies.xml" ));
+
+	if ( !file.open( IO_ReadOnly ) ) return false;
+	if ( !document.setContent( &file ) ) { file.close(); return false; }
+	file.close();
+
+	QDomNodeList currenciesList = document.elementsByTagName( "currency" );
+	int num;
+
+	numCurrencies = currenciesList.count();
+	for (num = 0; num < numCurrencies; num++)
+	{
+		QDomElement elt = (const QDomElement &) currenciesList.item(num);
+
+		if ( !elt.hasAttribute( "symbol" ) )
+			return false;
+		currency[num].symbol =  elt.attribute( "symbol" );
+
+		if ( !elt.hasAttribute( "code" ) )
+			return false;
+		currency[num].code =  elt.attribute( "code" );
+		if ( currency[num].code == "USD" )
+			dollarCurrency = num;
+		else if ( currency[num].code == "EUR" )
+			euroCurrency = num;
+
+		if ( !elt.hasAttribute( "official-rules-precision" ) )
+			return false;
+		currency[num].officialRulesPrecision = elt.attribute( "official-rules-precision" ).toDouble();
+
+		if ( !elt.hasAttribute( "smallest-coin-precision" ) )
+			return false;
+		currency[num].smallestCoinPrecision = elt.attribute( "smallest-coin-precision" ).toDouble();
+
+		if ( !elt.hasAttribute( "name" ) )
+			return false;
+		currency[num].name =  i18n( elt.attribute( "name" ).utf8() );
+
+		if ( elt.hasAttribute( "new-york-name" ) )
+			currency[num].newYorkName = elt.attribute( "new-york-name" );
+		else
+			currency[num].newYorkName = "N/A";
+
+		if ( elt.hasAttribute( "fixed-rate" ) )
+			currency[num].fixedRate = elt.attribute( "fixed-rate" ).toDouble();
+		else
+			currency[num].fixedRate = 0.0;
+
+		currency[num].rate = 1.0;
+		currency[num].position = -1;
+	}
+	return true;
+}
+
 // Add fixed rates
 void KEuroCalc::addFixedRates()
 {
@@ -251,7 +319,7 @@ void KEuroCalc::addFixedRates()
 	double currencyPrecision;
 
 	position = 0;
-	for (num = 0; num < CURRENCIES; num++)
+	for (num = 0; num < numCurrencies; num++)
 		if ( currency[num].fixedRate )
 	{
 		switch (rounding)
@@ -269,10 +337,7 @@ void KEuroCalc::addFixedRates()
 			currency[num].fixedRate / currencyPrecision;
 		currency[num].position = position++;
 		CurrencyList->insertItem
-			( QString::fromUtf8( currency[num].code ) +
-			  QString::fromUtf8( " - " ) +
-			  i18n( currency[num].name )
-			);
+			( currency[num].code + " - " + currency[num].name );
 	}
 }
 
@@ -287,7 +352,9 @@ void KEuroCalc::httpData(KIO::Job *job, const QByteArray &array)
 void KEuroCalc::httpResultECB(KIO::Job *job)
 {
 	QDomDocument document( "rates" );
+
 	document.setContent( variableRates, true );
+
 	QDomNodeList ratesList = document.elementsByTagName( "Cube" );
 	bool date = false;
 	int num, position;
@@ -306,10 +373,10 @@ void KEuroCalc::httpResultECB(KIO::Job *job)
 		else if ( elt.hasAttribute( "currency" ) && elt.hasAttribute( "rate" ) )
 		{
 			QString code(elt.attribute( "currency" ));
-			for (num = 0; num < CURRENCIES; num++)
-				if ( code == QString::fromUtf8( currency[num].code ) )
+			for (num = 0; num < numCurrencies; num++)
+				if ( code == currency[num].code )
 					break;
-			if ( num < CURRENCIES )
+			if ( num < numCurrencies )
 			{
 				switch (rounding)
 				{
@@ -328,27 +395,27 @@ void KEuroCalc::httpResultECB(KIO::Job *job)
 			}
 		}
 	}
-	position = FIXED_CURRENCIES + 1;
-	for (num = 0; num < CURRENCIES; num++)
+	position = CurrencyList->count();
+	for (num = 0; num < numCurrencies; num++)
 		if (currency[num].position == -2)
 	{
 		currency[num].position = position++;
 		CurrencyList->insertItem
-			( QString::fromUtf8( currency[num].code ) +
-			  " - " +
-			  i18n( currency[num].name ) );
+			( currency[num].code + " - " + currency[num].name );
 	}
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 	variableRates = "";
-	newRatesList( EURO_CURRENCY );
+	newRatesList( euroCurrency );
 }
 
 // Finished receiving data from New York Federal Reserve Bank
 void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 {
 	QDomDocument document( "rates" );
+
 	document.setContent( variableRates, true );
+
 	QDomNodeList ratesList = document.elementsByTagName( "Rate" );
 	bool date = false;
 	int num, position;
@@ -368,10 +435,10 @@ void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 				    countryElement = (const QDomElement &) countryElements.item(0),
 				    valueElement = (const QDomElement &) valueElements.item(0);
 			QString newYorkName( countryElement.attribute( "UnitName" ) + "/" + countryElement.text() );
-			for (num = 0; num < CURRENCIES; num++)
+			for (num = 0; num < numCurrencies; num++)
 				if ( newYorkName == currency[num].newYorkName )
 					break;
-			if ( num < CURRENCIES )
+			if ( num < numCurrencies )
 			{
 				switch (rounding)
 				{
@@ -399,19 +466,17 @@ void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 		}
 	}
 	position = 0;
-	for (num = 0; num < CURRENCIES; num++)
+	for (num = 0; num < numCurrencies; num++)
 		if (currency[num].position == -2)
 	{
 		currency[num].position = position++;
 		CurrencyList->insertItem
-			( QString::fromUtf8( currency[num].code ) +
-			  " - " +
-			  i18n( currency[num].name ) );
+			( currency[num].code + " - " + currency[num].name);
 	}
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 	variableRates = "";
-	newRatesList( DOLLAR_CURRENCY );
+	newRatesList( dollarCurrency );
 }
 
 // Dot button or key pressed
@@ -1069,10 +1134,10 @@ void KEuroCalc::selectCurrency(int position)
 	int num;
 	double currencyRate, currencyPrecision;
 
-	for (num = 0; num < CURRENCIES; num++)
+	for (num = 0; num < numCurrencies; num++)
 		if (currency[num].position == position)
 			break;
-	if ( num == CURRENCIES ) return;
+	if ( num == numCurrencies ) return;
 	currencyNum = num;
 
 	displayNewCurrency();
@@ -1157,7 +1222,7 @@ void KEuroCalc::startDownload()
 	QDate yesterday;
 	KIO::SimpleJob *job;
 
-	for (num = 0; num < CURRENCIES; num++)
+	for (num = 0; num < numCurrencies; num++)
 	{
 		currency[num].rate = 1.0;
 		currency[num].position = -1;
@@ -1166,12 +1231,11 @@ void KEuroCalc::startDownload()
 	{
 		case EURO_FIXED:
 			addFixedRates();
-			newRatesList( EURO_CURRENCY );
+			newRatesList( euroCurrency );
 			break;
 		case EURO_ECB:
 			addFixedRates();
-			CurrencyList->insertItem( QString::fromUtf8
-				( "--------------------------------------------" ) );
+			CurrencyList->insertItem( "--------------------------------------------" );
 			job = KIO::get( KURL( urlECB ), true, false );
 			connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
 				 this, SLOT(httpData(KIO::Job *, const QByteArray &))
@@ -1203,20 +1267,18 @@ void KEuroCalc::newRatesList(int defaultCurrency)
 	position = currency[currencyNum].position;
 	if (position < 0)			// If current currency does not exist in new rates list, change current currency
 	{
-		for (currencyNum = 0; currencyNum < CURRENCIES; currencyNum++)
+		for (currencyNum = 0; currencyNum < numCurrencies; currencyNum++)
 		{
 			position = currency[currencyNum].position;
 			if (position == 0) break;
 		}
-		if (currencyNum == CURRENCIES)	// Handle case of empty list (no currencies at all)
+		if ( currencyNum == numCurrencies )	// Handle case of empty list (no currencies at all)
 		{
 			currencyNum = defaultCurrency;
 			currency[currencyNum].rate = 1.0;
 			currency[currencyNum].position = position = 0;
 			CurrencyList->insertItem
-				( QString::fromUtf8( currency[currencyNum].code ) +
-				  " - " +
-				  i18n( currency[currencyNum].name ) );
+				( currency[currencyNum].code + " - " + currency[currencyNum].name );
 		}
 	}
 	CurrencyList->setCurrentItem( position );
@@ -1352,7 +1414,7 @@ void KEuroCalc::displayNewResult()
 		double currencyPrecision;
 		float roundedReferenceValue, roundedCurrencyValue;
 		QString referenceDisplay, currencyDisplay;
-		char referenceSymbol[8], currencySymbol[8];
+		QString referenceSymbol, currencySymbol;
 
 		if (rounding != NO_ROUNDING)
 		{
@@ -1361,7 +1423,7 @@ void KEuroCalc::displayNewResult()
 		}
 		else referenceDisplay.setNum( referenceValue );
 		normalize( referenceDisplay );
-		strcpy( referenceSymbol, reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
+		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
 
 		switch (rounding)
 		{
@@ -1381,20 +1443,20 @@ void KEuroCalc::displayNewResult()
 				currencyDisplay.setNum( currencyValue );
 		}
 		normalize( currencyDisplay );
-		strcpy( currencySymbol, currency[currencyNum].symbol );
+		currencySymbol = currency[currencyNum].symbol;
 
-		ResultDisplay->setText( referenceDisplay + QString::fromUtf8( referenceSymbol ) + "\n" +
-					currencyDisplay + " " + QString::fromUtf8( currencySymbol ) );
+		ResultDisplay->setText( referenceDisplay + referenceSymbol + "\n" +
+					currencyDisplay + " " + currencySymbol );
 	}
 }
 
 // Update the currency button accordingly to new currency
 void KEuroCalc::displayNewCurrency()
 {
-	char referenceSymbol[8], currencySymbol[8];
+	QString referenceSymbol, currencySymbol;
 
-	strcpy( currencySymbol, currency[currencyNum].symbol );
-	CurrencyButton->setText( QString::fromUtf8( currencySymbol ) );
+	currencySymbol = currency[currencyNum].symbol;
+	CurrencyButton->setText( currencySymbol );
 	if ( currency[currencyNum].position >= 0 )
 	{
 		double currencyRate, currencyPrecision;
@@ -1413,9 +1475,9 @@ void KEuroCalc::displayNewCurrency()
 				currencyPrecision = 1.0;
 		}
 		rate.setNum( currencyRate * currencyPrecision ); 
-		strcpy( referenceSymbol, reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
-		RateLabel->setText( "1" + QString::fromUtf8( referenceSymbol ) + " = " +
-				    rate + " " + QString::fromUtf8( currencySymbol ) ); 
+		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
+		RateLabel->setText
+			( "1" + referenceSymbol + " = " + rate + " " + currencySymbol ); 
 	}
 	else RateLabel->setText( "" );
 }

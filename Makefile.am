@@ -16,6 +16,7 @@ install-data-local:
 	$(INSTALL_DATA) $(srcdir)/cr16-app-keurocalc.png $(kde_icondir)/crystalsvg/16x16/apps/keurocalc.png
 	$(mkinstalldirs) $(kde_datadir)/keurocalc/
 	$(INSTALL_DATA) $(srcdir)/splash.png $(kde_datadir)/keurocalc/splash.png
+	$(INSTALL_DATA) $(srcdir)/currencies.xml $(kde_datadir)/keurocalc/currencies.xml
 
 uninstall-local:
 	-rm -f $(kde_appsdir)/Applications/keurocalc.desktop
@@ -52,5 +53,5 @@ keurocalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 #rc_DATA = keurocalcui.rc
 
 messages: calculator.cpp settingsdialog.cpp
-	$(XGETTEXT) --from-code=utf-8 -ki18n -ktr2i18n -kI18N_NOOP calculator.cpp $(keurocalc_SOURCES) -o ../po/keurocalc.pot
+	$(XGETTEXT) --from-code=utf-8 -ki18n -ktr2i18n -kI18N_NOOP calculator.cpp settingsdialog.cpp $(keurocalc_SOURCES) -o ../po/keurocalc.pot
 

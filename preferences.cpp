@@ -25,7 +25,8 @@
 #include "keurocalc.h"
 #include "currencies.h"
 
-extern currencyStruc currency[CURRENCIES];
+extern int numCurrencies;
+extern currencyStruc currency[100];
 
 // Constructor
 Preferences::Preferences(KEuroCalc *parent, const char *name)
@@ -37,12 +38,9 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 
 	referenceGroup->setButton( oldReference );
 
-	for (int num = 0; num < CURRENCIES; num++)
+	for (int num = 0; num < numCurrencies; num++)
 		defaultCurrencyList->insertItem
-			( QString::fromUtf8( currency[num].code ) +
-			  QString::fromUtf8( " - " ) +
-			  i18n( currency[num].name )
-			);
+			( currency[num].code + " - " + currency[num].name );
 	defaultCurrencyList->setCurrentItem( oldCurrency );
 
 	roundingGroup->setButton( oldRounding );

@@ -96,6 +96,7 @@ private:
     int currencyNum;
     int rounding;
 
+    bool readCurrencies();
     void addFixedRates();
     void initButtons();
     void startDownload();

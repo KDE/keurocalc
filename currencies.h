@@ -18,30 +18,27 @@
 #ifndef CURRENCY_H
 #define CURRENCY_H
 
+#include <qstring.h>
+
 #define EURO_FIXED 0
 #define EURO_ECB 1
 #define DOLLAR_NY_FRB 2
 
-#define CURRENCIES 49
-#define FIXED_CURRENCIES 12
-#define EURO_CURRENCY 14
-#define DOLLAR_CURRENCY 46
-
-struct currencyStruc {
-	double fixedRate;
-	const char *symbol;
-	const char *code;
-	double officialRulesPrecision;
-	double smallestCoinPrecision;
-	const char *name;
-	const char *newYorkName;
-	double rate;
-	int position;
-};
-
 #define OFFICIAL_RULES 0
 #define SMALLEST_COIN 1
 #define NO_ROUNDING 2
+
+struct currencyStruc {
+	QString symbol;
+	QString code;
+	double officialRulesPrecision;
+	double smallestCoinPrecision;
+	QString name;
+	QString newYorkName;
+	double fixedRate;
+	double rate;
+	int position;
+};
 
 #endif
 
