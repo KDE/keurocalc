@@ -288,8 +288,16 @@ void KEuroCalc::validateEuro()
 			}
 			break;
 		case '/':
-			KApplication().beep();
-			return;
+			if (!isSimpleValue && inputValue != 0.0)
+			{
+				isSimpleValue = true;
+				simpleValue = euroValue / inputValue;
+			}
+			else
+			{
+				KApplication().beep();
+				return;
+			}
 	}
 	resetInput();
 	displayNewResult();
@@ -339,8 +347,16 @@ void KEuroCalc::validateCurrency()
 			}
 			break;
 		case '/':
-			KApplication().beep();
-			return;
+			if (!isSimpleValue && inputValue != 0.0)
+			{
+				isSimpleValue = true;
+				simpleValue = currencyValue / inputValue;
+			}
+			else
+			{
+				KApplication().beep();
+				return;
+			}
 	}
 	resetInput();
 	displayNewResult();
