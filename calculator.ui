@@ -1126,9 +1126,6 @@
         <property name="text">
             <string>&amp;About...</string>
         </property>
-        <property name="accel">
-            <string>Alt+A</string>
-        </property>
         <property name="toolTip" stdset="0">
             <string>Display about box</string>
         </property>
@@ -1148,9 +1145,6 @@
         <property name="text">
             <string>&amp;Help...</string>
         </property>
-        <property name="accel">
-            <string>Alt+H</string>
-        </property>
         <property name="toolTip" stdset="0">
             <string>Display help pages</string>
         </property>
@@ -1169,9 +1163,6 @@
         </property>
         <property name="text">
             <string>&amp;Settings...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+S</string>
         </property>
         <property name="toolTip" stdset="0">
             <string>Configure KEuroCalc</string>
