@@ -27,6 +27,7 @@
 #include <klocale.h>
 #include <kglobal.h>
 #include <kconfig.h>
+#include <math.h>
 
 #include "keurocalc.h"
 #include "keurocalc.moc"
@@ -766,7 +767,7 @@ void KEuroCalc::displayNewResult()
 	else
 	{
 		rounding = euroValue >= 0.0? 0.5: -0.5;
-		roundedEuroValue = int(euroValue * 100.0 + rounding)
+		roundedEuroValue = rint(euroValue * 100.0 + rounding)
 				 / 100.0;
 		euroDisplay.setNum( roundedEuroValue, 'f', 2 );
 		pos = euroDisplay.find('.');
@@ -776,7 +777,7 @@ void KEuroCalc::displayNewResult()
 					    KGlobal::locale()->decimalSymbol() );
 
 		rounding = currencyValue >= 0.0? 0.5: -0.5;
-		roundedCurrencyValue = int(currencyValue * 100.0 / currencyPrecision + rounding)
+		roundedCurrencyValue = rint(currencyValue * 100.0 / currencyPrecision + rounding)
 				     / 100.0 * currencyPrecision;
 		currencyDisplay.setNum( roundedCurrencyValue, 'f', currencyPrecision < 100.0? 2: 0 );
 		pos = currencyDisplay.find('.');
