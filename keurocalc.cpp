@@ -216,6 +216,7 @@ void KEuroCalc::keyPressEvent(QKeyEvent *e)
 			BackspaceButton->animateClick();
 			break;
 		case Key_E:
+		case Key_Dollar:
 			ReferenceButton->animateClick();
 			break;
 		case Key_Percent:
