@@ -29,14 +29,14 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2001-12-13</date>
-<releaseinfo>0.04.00</releaseinfo>
+<date>2001-12-15</date>
+<releaseinfo>0.05.00</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is a pocket currency converter and calculator specially
 designed for the Euro. This documentation describes &keurocalc;
-version 0.4.
+version 0.5.
 </para>
 </abstract>
 
@@ -203,9 +203,9 @@ area.</para></step>
 <step><para>Type <userinput>3</userinput> and then press <guibutton>+</guibutton>.
 Remark that in the result field, <computeroutput>3</computeroutput>
 is a simple value displayed on just one line, with no monetary unit.</para></step>
-<step><para>Type <userinput>5</userinput> and then press <guibutton>=</guibutton>.
-The result <computeroutput>8</computeroutput>appears on the
-right.</para></step>
+<step><para>Type <userinput>5</userinput> and then press
+<guibutton>Enter</guibutton> button or <keycap>Enter</keycap> key. The
+result <computeroutput>8</computeroutput>appears on the right.</para></step>
 </procedure>
 
 <procedure>
@@ -254,8 +254,8 @@ the whole cost in Austrian Schillings?</title>
 <step><para>Press <guibutton>*</guibutton> button or <keycap>*</keycap>
 key. Remark the <computeroutput>*</computeroutput> sign at the left of
 the <guilabel>Input</guilabel> display.</para></step>
-<step><para>Now type <userinput>3.2</userinput> followed by <guibutton>=</guibutton> button
-or <keycap>U</keycap> key: this means <quote>3.2 units</quote> at
+<step><para>Now type <userinput>3.2</userinput> followed by <guibutton>Enter</guibutton> button
+or <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
 2 € each.</para></step>
 <step><para>The result <computeroutput>88.10 öS</computeroutput> matches
 <computeroutput>6.4 €</computeroutput>.</para></step>
@@ -340,7 +340,7 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <member><keycap>+</keycap>, <keycap>-</keycap>, <keycap>*</keycap> and <keycap>/</keycap></member>
 <member>Operators: addition, substraction, multiplication and division</member>
 
-<member><keycap>=</keycap></member>
+<member><keycap>Enter</keycap> and <keycap>Return</keycap></member>
 <member>Validation of input number considered as a simple, unitless, value</member>
 
 <member><keycap>%</keycap></member>
@@ -378,50 +378,7 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 </sect1>
 </chapter>
 
-<chapter id="faq">
-<title>Questions and Answers</title>
-
-<!-- (OPTIONAL but recommended) This chapter should include all of the silly
-(and not-so-silly) newbie questions that fill up your mailbox. This chapter
-should be reserved for BRIEF questions and answers! If one question uses more
-than a page or so then it should probably be part of the
-"Using this Application" chapter instead. You should use links to
-cross-reference questions to the parts of your documentation that answer them.
-This is also a great place to provide pointers to other FAQ's if your users
-must do some complicated configuration on other programs in order for your
-application work. -->
-
-&reporting.bugs;
-&updating.documentation;
-
-<qandaset id="faqlist">
-<qandaentry>
-<question>
-<para>My Mouse doesn't work. How do I quit &keurocalc;?</para>
-</question>
-<answer>
-<para>You silly goose! Check out the <link linkend="reference">Reference
-</link> section for the answer.</para>
-</answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para>Why can't I twiddle my documents?</para>
-</question>
-<answer>
-<para>You can only twiddle your documents if you have the foobar.lib
-installed.</para>
-</answer>
-</qandaentry>
-</qandaset>
-</chapter>
-
 <chapter id="credits">
-
-<!-- Include credits for the programmers, documentation writers, and
-contributors here. The license for your software should then be included below
-the credits with a reference to the appropriate license file included in the KDE
-distribution. -->
 
 <title>Credits and License</title>
 
