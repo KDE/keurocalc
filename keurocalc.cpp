@@ -36,6 +36,8 @@
 
 #define CURRENCIES 49
 #define FIXED_CURRENCIES 12
+#define EURO_CURRENCY FIXED_CURRENCIES
+#define DOLLAR_CURRENCY (FIXED_CURRENCIES + 1)
 #define VARIABLE_CURRENCIES 37
 
 static struct currencyStruc {
@@ -61,6 +63,8 @@ static struct currencyStruc {
 	{ 40.3399, "FLux", "LUF",   1.0,  10.0, I18N_NOOP("Luxembourg franc"), "N/A", -1 },
 	{ 2.20371,   "Fl", "NLG",   1.0,   1.0, I18N_NOOP("Dutch gulden"), "N/A", -1 },
 	{ 2.00482,  "Esc", "PTE", 100.0, 100.0, I18N_NOOP("Portuguese escudo"), "N/A", -1 },
+	{     1.0," €", "EUR",   1.0,   1.0, I18N_NOOP("EU euro"), "Euro_European Monetary Union", -1 },
+	{     1.0,    "$", "USD",   1.0,   1.0, I18N_NOOP("US dollar"), "N/A", -1 },
 	{     1.0,   "A$", "AUD",   1.0,   1.0, I18N_NOOP("Australian dollar"), "Dollar_Australia", -1 },
 	{     1.0,   "Lv", "BGN",   1.0,   1.0, I18N_NOOP("Bulgarian lev"), "N/A", -1 },
 	{     1.0,   "R$", "BRL",   1.0,   1.0, I18N_NOOP("Brazilian real"), "Real_Brazil", -1 },
@@ -71,7 +75,6 @@ static struct currencyStruc {
 	{     1.0,    "K", "CZK",   1.0,   1.0, I18N_NOOP("Czech koruna"), "N/A", -1 },
 	{     1.0,  "DKr", "DKK",   1.0,   1.0, I18N_NOOP("Danish krone"), "Krone_Denmark", -1 },
 	{     1.0,  "EKr", "EEK",   1.0,   1.0, I18N_NOOP("Estonian kroon"), "N/A", -1 },
-	{     1.0," €", "EUR",   1.0,   1.0, I18N_NOOP("EU euro"), "Euro_European Monetary Union", -1 },
 	{     1.0,   "£", "GBP",   1.0,   1.0, I18N_NOOP("Great Britain pound"), "Pound_United Kingdom", -1 },
 	{     1.0,  "HK$", "HKD",   1.0,   1.0, I18N_NOOP("Hong kong dollar"), "Dollar_Hong Kong", -1 },
 	{     1.0,   "Ht", "HUF", 100.0, 100.0, I18N_NOOP("Hungarian forint"), "N/A", -1 },
@@ -95,7 +98,6 @@ static struct currencyStruc {
 	{     1.0,   "Sk", "SKK",   1.0,   1.0, I18N_NOOP("Slovakian koruna"), "N/A", -1 },
 	{     1.0,   "Bt", "THB",   1.0,   1.0, I18N_NOOP("Thailandese baht"), "Baht_Thailand", -1 },
 	{     1.0,   "Bt", "TWD",   1.0,   1.0, I18N_NOOP("Taiwanese new dollar"), "N.T. Dollar_Taiwan", -1 },
-	{     1.0,    "$", "USD",   1.0,   1.0, I18N_NOOP("US dollar"), "N/A", -1 },
 	{     1.0,    "$", "VEB",1000.0,1000.0, I18N_NOOP("Venezuelian bolivar"), "Bolivar_Venezuela", -1 },
 	{     1.0,    "R", "ZAR",   1.0,   1.0, I18N_NOOP("South African rand"), "Rand_South Africa", -1 }
 };
@@ -104,7 +106,7 @@ static const char
 	*euroSymbol = " €",
 	*dollarSymbol = " $",
 	*urlECB = "http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml",
-	*urlNYFRB = "http://www.ny.frb.org/markets/fxrates/FXtoXML.cfm?FEXdate=%04d%%2D%02d%%2D%02d&FEXtime=1200";
+	*urlNYFRB = "http://www.ny.frb.org/markets/fxrates/FXtoXML.cfm?FEXdate=%04d-%02d-%02d&FEXtime=1200";
 
 KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 	: Calculator( parent, name ),
@@ -145,6 +147,9 @@ void KEuroCalc::setPreferences(int newReference)
 	writeOptions();
 
 	CurrencyList->clear();
+	for (int num = 0; num < CURRENCIES; num++)
+		currency[num].position = -1;
+
 	initButtons();
 	reset();
 }
@@ -274,12 +279,8 @@ void KEuroCalc::httpResultECB(KIO::Job *job)
 	}
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
-
-	position = currency[currencyNum].position;
-	if (position < 0) position = 0;
-	CurrencyList->setCurrentItem( position );
-	displayNewCurrency();
-	displayNewResult();
+	variableRates = "";
+	newRatesList(EURO_CURRENCY);
 }
 
 void KEuroCalc::httpResultNYFRB(KIO::Job *job)
@@ -329,12 +330,8 @@ void KEuroCalc::httpResultNYFRB(KIO::Job *job)
 	}
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
-
-	position = currency[currencyNum].position;
-	if (position < 0) position = 0;
-	CurrencyList->setCurrentItem( position );
-	displayNewCurrency();
-	displayNewResult();
+	variableRates = "";
+	newRatesList(DOLLAR_CURRENCY);
 }
 
 void KEuroCalc::inputDot()
@@ -985,12 +982,9 @@ void KEuroCalc::initButtons()
 				);
 		}
 	}
-	else
-	{
-		for (int num = 0; num < FIXED_CURRENCIES; num++)
-			currency[num].position = -1;
-	}
-	if (reference == euroECB)
+	if (reference == euroFixed)
+		newRatesList(EURO_CURRENCY);
+	else if (reference == euroECB)
 	{
 		CurrencyList->insertItem( QString::fromUtf8
 			( "--------------------------------------------" ) );
@@ -1005,7 +999,12 @@ void KEuroCalc::initButtons()
 	else if (reference == dollarNYFRB)
 	{
 		char url[128];
-		sprintf(url, urlNYFRB, 2004, 4, 9);
+		QDate yesterday;
+		// This is suboptimal: we should guess the date of latest working day at 12:00 in New York local time
+		// Or much better: use a URL that does not depend on that date...
+
+		yesterday = QDate::currentDate().addDays(-1);
+		sprintf(url, urlNYFRB, yesterday.year(), yesterday.month(), yesterday.day());
 		KIO::SimpleJob *job = KIO::get( KURL( url ), true, false );
 		connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
 			 this, SLOT(httpData(KIO::Job *, const QByteArray &))
@@ -1039,6 +1038,35 @@ void KEuroCalc::initButtons()
 	ReferenceButton->setText( QString::fromUtf8( reference == dollarNYFRB? dollarSymbol: euroSymbol ) );
 	PercentButton->setText( QString::fromUtf8( "%" ) );
 	PlusMinusButton->setText( QString::fromUtf8( "+/-" ) );
+}
+
+// The rates list has changed, refresh the display
+void KEuroCalc::newRatesList(int defaultCurrency)
+{
+	int position;
+
+	position = currency[currencyNum].position;
+	if (position < 0)			// If current currency does not exist in new rates list, change current currency
+	{
+		for (currencyNum = 0; currencyNum < CURRENCIES; currencyNum++)
+		{
+			position = currency[currencyNum].position;
+			if (position == 0) break;
+		}
+		if (currencyNum == CURRENCIES)	// Handle case of empty list (no currencies at all)
+		{
+			currencyNum = defaultCurrency;
+			currency[currencyNum].rate = 1.0;
+			currency[currencyNum].position = position = 0;
+			CurrencyList->insertItem
+				( QString::fromUtf8( currency[currencyNum].code ) +
+				  " - " +
+				  i18n( currency[currencyNum].name ) );
+		}
+	}
+	CurrencyList->setCurrentItem( position );
+	displayNewCurrency();
+	displayNewResult();
 }
 
 // Input a digit ('0' to '9' or '.')

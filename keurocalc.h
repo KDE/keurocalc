@@ -100,6 +100,7 @@ private:
     void readOptions();
     void writeOptions();
     void initButtons();
+    void newRatesList(int defaultCurrency); 
     void inputDigit( char c );
     void inputCorrect();
     void inputOperator( char c );
