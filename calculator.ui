@@ -436,7 +436,7 @@
         </property>
         <property>
             <name>toolTip</name>
-            <string>Substract</string>
+            <string>Subtract</string>
         </property>
     </widget>
     <widget>
@@ -827,7 +827,7 @@
             </property>
             <property>
                 <name>toolTip</name>
-                <string>Luxemburg franc</string>
+                <string>Luxembourg franc</string>
             </property>
         </widget>
         <widget>
