@@ -468,11 +468,13 @@ void KEuroCalc::validateSimpleValue()
 // Change the sign of the result
 void KEuroCalc::changeSign()
 {
-	double inputValue = atof( inputDisplay );
-
-	euroValue = -euroValue;
-	currencyValue = euroValue * currencyRate * currencyPrecision;
-	
+	if (simpleValue)
+		simpleValue = -simpleValue;
+	else
+	{
+		euroValue = -euroValue;
+		currencyValue = euroValue * currencyRate * currencyPrecision;
+	}
 	displayNewResult();
 }
 
