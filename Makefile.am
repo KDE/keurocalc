@@ -47,11 +47,8 @@ METASOURCES = AUTO
 # the library search path. 
 keurocalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
-# Uncomment the following two lines if you add a ui.rc file for your application to make use of
-# KDE
-#rcdir = $(kde_datadir)/keurocalc
-#rc_DATA = keurocalcui.rc
+names.cpp: currencies.xml
+	grep '[^-]name =' currencies.xml | sed 's/name = */I18N_NOOP(/; s/ *$$/);/' > names.cpp
 
-messages: calculator.cpp settingsdialog.cpp
-	$(XGETTEXT) --from-code=utf-8 -ki18n -ktr2i18n -kI18N_NOOP calculator.cpp settingsdialog.cpp $(keurocalc_SOURCES) -o ../po/keurocalc.pot
-
+messages: calculator.cpp settingsdialog.cpp names.cpp
+	$(XGETTEXT) -ki18n -ktr2i18n -kI18N_NOOP *.cpp -o ../po/keurocalc.pot
