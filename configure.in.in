@@ -1,4 +1,4 @@
 #MIN_CONFIG
 
-AM_INIT_AUTOMAKE(keurocalc,0.9.0)
+AM_INIT_AUTOMAKE(keurocalc,0.9.1)
 

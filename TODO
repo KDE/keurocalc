@@ -17,17 +17,23 @@ Allow more data sources:
 - Bank of Canada
   http://www.bankofcanada.ca/en/financial_markets/csv/exchange_eng.csv
 
-Allow using the exchange rates of some date in the past.
+Allow querying the exchange rates of some date in the past.
 
 Add buttons to selectively clear input, display or memory.
 
-Add setting for display color
+Add setting for display color.
 
 Do not show all currencies in the default currency setting,
 only the ones that the selected data source offers.
 
 Have a "tape" window where intermediate results get "printed",
 like a roll of paper.
+
+Add a button to show rates in a separate window.
+
+Add a button to refresh rates.
+
+Allow to store rates for offline use (laptops) or archiving.
 
 
 SYSTEM INTEGRATION
@@ -37,7 +43,7 @@ Allow cut and paste of data.
 
 Let keurocalc offer rates services to other programss like kspread.
 
-Let keurocalc offer a desktop panel applet.
+Let keurocalc act as a desktop panel applet.
 
 
 COSMETICAL
