@@ -491,7 +491,7 @@ computes the difference in the reverse order.</para>
 <member><guibutton>AC</guibutton></member>
 <member>Clear all: both input and result area</member>
 
-<member><guibutton>€</guibutton> or <guilabel>$</guilabel></member>
+<member><guibutton>€</guibutton> or <guibutton>$</guibutton></member>
 <member>Validation of input number considered as a value expressed in the reference currency (euro or dollar)</member>
 
 <member>The button labeled with the name of an other currency</member>
