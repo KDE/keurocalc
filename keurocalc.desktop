@@ -1,0 +1,28 @@
+# KDE Config File  
+[Desktop Entry]
+Type=Application
+Exec=keurocalc -caption "%c" %i %m  
+Icon=keurocalc.png
+MiniIcon=keurocalc.png
+DocPath=keurocalc/index.html
+Terminal=0
+Name=KEuroCalc
+Name[xx]=xx
+Comment=A cash converter for Euro
+Comment[az]=Euro üçün məzənnə dəyişdirici vasitə
+Comment[da]=Konvertering af kontanter til Euro
+Comment[es]=Un conversor de monedas para el Euro
+Comment[lv]=Valūtas konvertors priekš Euro
+Comment[nl]=Euro-omrekenprogramma
+Comment[sk]=Prevodník európskych mien pre Euro
+Comment[xh]=Umguquleli wemali we Euro
+Comment[xx]=xx
+Keywords=converter,euro,money,cash,calculator
+Keywords[az]=dönüşdürücü,euro,pul,nəqd,hesablayıcı,kalkulyator
+Keywords[da]=konvertér,euro,penge,kontanter,regnemaskine
+Keywords[es]=conversor,euro,monedas,dinero,calculadora
+Keywords[lv]=converter,euro,nauda,cash,kalkulators
+Keywords[nl]=omrekenen,euro,geld,calculator,rekenmachine,guldens
+Keywords[sk]=prevod,euro,mena,peniaze,kalkulačka
+Keywords[xh]=umguquli, yuro, imali, inkozo, ujmatshini wokubala
+Keywords[xx]=xx

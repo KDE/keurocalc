@@ -1,0 +1,18 @@
+Write documentation.
+
+Put a white space at thousands boundaries.
+
+Allow cut and paste of data.
+
+Better geometry management.
+
+Add a status bar (error messages, ...).
+
+Have a "log" window where intermediate results get "printed",
+like a roll of paper.
+
+Download recent currency rates over the internet for currencies "out"
+of the Euroland.
+
+Make keurocalc become a kparts component that can be included in
+kspread for example.
