@@ -7,14 +7,21 @@ Find a solution for the Turkish Lira (doesn't fit in display)
 FUNCTIONALITY
 =============
 
-Allow alternative data sources : PACIFIC Exchange Rate Service, Bank of
-Canada.
+Allow alternative data sources:
+- PACIFIC Exchange Rate Service
+  http://fx.sauder.ubc.ca/today.html
+- US Federal reserve
+  http://www.federalreserve.gov/releases/H10/Update/h10daily.txt
+- Bank of Canada
+  http://www.bankofcanada.ca/en/financial_markets/csv/exchange_eng.csv
 
 Allow using the exchange rates of some date in the past.
 
 Add buttons to selectively clear input, display or memory.
 
-Add a settings dialog (rounding legal/nextcoin/no, display color, ...).
+Add settings:
+- rounding legal/nextcoin/no
+- display color
 
 Have a "tape" window where intermediate results get "printed",
 like a roll of paper.

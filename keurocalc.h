@@ -27,7 +27,6 @@ class KLocale;
 
 #include "calculator.h"
 
-/** Keuro is the base class of the project */
 class KEuroCalc : public Calculator
 {
   Q_OBJECT 
@@ -36,10 +35,13 @@ public:
     KEuroCalc(QWidget* parent=0, const char *name=0);
     ~KEuroCalc();
     virtual void keyPressEvent( QKeyEvent *e );    
+    inline int getReference() const {return reference;}
+    void setPreferences(int newReference);
 
 public slots:
     virtual void httpData(KIO::Job *, const QByteArray &); 
-    virtual void httpResult(KIO::Job *); 
+    virtual void httpResultECB(KIO::Job *); 
+    virtual void httpResultNYFRB(KIO::Job *); 
     virtual void inputDot();
     virtual void inputZero();
     virtual void inputOne();
@@ -56,7 +58,7 @@ public slots:
     virtual void inputAsterisk();
     virtual void inputSlash();
     virtual void inputBackspace();
-    virtual void validateEuro();
+    virtual void validateReference();
     virtual void validateCurrency();
     virtual void validatePercent();
     virtual void validateSimpleValue();
@@ -68,6 +70,7 @@ public slots:
     virtual void reset();
     virtual void displayAbout();
     virtual void displayHelp();
+    virtual void displaySettings();
     virtual void selectCurrency(int position);
 
 private:  
@@ -81,20 +84,21 @@ private:
 
     bool isSimpleValue;
     double simpleValue,
-           euroValue,
+           referenceValue,
            currencyValue;
     bool memorySet,
          isSimpleMemory;
     double simpleMemory,
-           euroMemory;
+           referenceMemory;
 
-    double currencyRate,
-           currencyFactor;
-    char currencySymbol[8];
-    double currencyPrecision;
+    int currencyNum;
+    enum referenceMode { euroFixed,
+	   euroECB,
+	   dollarNYFRB
+    } reference;
 
-    void readOptions( int &currencyNum );
-    void writeOptions( int currencyNum );
+    void readOptions();
+    void writeOptions();
     void initButtons();
     void inputDigit( char c );
     void inputCorrect();
@@ -102,8 +106,8 @@ private:
     void resetInput();
     void displayNewInput();
     void displayNewResult();
-    void displayNewCurrency( int currencyNum );
-    void displayMemoryButtons( );
+    void displayNewCurrency();
+    void displayMemoryButtons();
     void normalize( QString &numberDisplay );
 };
 

@@ -32,99 +32,121 @@
 
 #include "keurocalc.h"
 #include "keurocalc.moc"
+#include "preferences.h"
 
-#define CURRENCIES 39
+#define CURRENCIES 49
 #define FIXED_CURRENCIES 12
-#define VARIABLE_CURRENCIES 27
+#define VARIABLE_CURRENCIES 37
 
 static struct currencyStruc {
 	double rate;
 	const char *symbol;
 	const char *code;
-	double euRulesPrecision;
+	double rulesPrecision;
 	double smallestCoinPrecision;
 	const char *name;
+	const char *newYorkName;
 	int position;
 } currency[CURRENCIES] =
 {
-	{ 13.7603,  "öS", "ATS",   1.0,  10.0, I18N_NOOP("Austrian schilling"), 0 },
-	{ 40.3399,   "FB", "BEF",   1.0,  10.0, I18N_NOOP("Belgian franc"), 1 },
-	{ 1.95583,   "DM", "DEM",   1.0,   1.0, I18N_NOOP("German deutschmark"), 2 },
-	{ 1.66386,  "Pts", "ESP", 100.0, 100.0, I18N_NOOP("Spanish peseta"), 3 },
-	{ 5.94573,   "mk", "FIM",   1.0,   1.0, I18N_NOOP("Finnish markka"), 4 },
-	{ 6.55957,   "FF", "FRF",   1.0,   1.0, I18N_NOOP("French franc"), 5 },
-	{ 3.40750,   "Dr", "GRD", 100.0, 100.0, I18N_NOOP("Greek drachma"), 6 },
-	{ .787564, "£IR", "IEP",   1.0,   1.0, I18N_NOOP("Irish punt"), 7 },
-	{ 19.3627,    "L", "ITL", 100.0,1000.0, I18N_NOOP("Italian lira"), 8 },
-	{ 40.3399, "FLux", "LUF",   1.0,  10.0, I18N_NOOP("Luxembourg franc"), 9 },
-	{ 2.20371,   "Fl", "NLG",   1.0,   1.0, I18N_NOOP("Dutch gulden"), 10 },
-	{ 2.00482,  "Esc", "PTE", 100.0, 100.0, I18N_NOOP("Portuguese escudo"), 11 },
-	{     1.0,   "A$", "AUD",   1.0,   1.0, I18N_NOOP("Australian dollar"), -1 },
-	{     1.0,   "Lv", "BGN",   1.0,   1.0, I18N_NOOP("Bulgarian lev"), -1 },
-	{     1.0, "Can$", "CAD",   1.0,   1.0, I18N_NOOP("Canadian dollar"), -1 },
-	{     1.0,   "FS", "CHF",   1.0,   1.0, I18N_NOOP("Swiss franc"), -1 },
-	{     1.0,  "£C", "CYP",   1.0,   1.0, I18N_NOOP("Cyprus pound"), -1 },
-	{     1.0,    "K", "CZK",   1.0,   1.0, I18N_NOOP("Czech koruna"), -1 },
-	{     1.0,  "DKr", "DKK",   1.0,   1.0, I18N_NOOP("Danish krone"), -1 },
-	{     1.0,  "EKr", "EEK",   1.0,   1.0, I18N_NOOP("Estonian kroon"), -1 },
-	{     1.0,   "£", "GBP",   1.0,   1.0, I18N_NOOP("Great Britain pound"), -1 },
-	{     1.0,  "HK$", "HKD",   1.0,   1.0, I18N_NOOP("Hong kong dollar"), -1 },
-	{     1.0,   "Ht", "HUF", 100.0, 100.0, I18N_NOOP("Hungarian forint"), -1 },
-	{     1.0,  "Ikr", "ISK",   1.0,   1.0, I18N_NOOP("Icelandic krona"), -1 },
-	{     1.0,   "¥", "JPY", 100.0, 100.0, I18N_NOOP("Japanese yen"), -1 },
-	{     1.0,    "W", "KRW",1000.0,1000.0, I18N_NOOP("South Korean won"), -1 }, // should be "₩"
-	{     1.0,   "lt", "LTL",   1.0,   1.0, I18N_NOOP("Latvian lats"), -1 },
-	{     1.0,   "Ls", "LVL",   1.0,   1.0, I18N_NOOP("Lithuanian litas"), -1 },
-	{     1.0,   "Lm", "MTL",   1.0,   1.0, I18N_NOOP("Maltese lira"), -1 },
-	{     1.0,  "NKr", "NOK",   1.0,   1.0, I18N_NOOP("Norvegian krone"), -1 },
-	{     1.0,  "NZ$", "NZD",   1.0,   1.0, I18N_NOOP("New Zealand dollar"), -1 },
-	{     1.0, "zł", "PLN",   1.0,   1.0, I18N_NOOP("Polish sloty"), -1 },
-	{     1.0,    "L", "ROL",  10.0,10000., I18N_NOOP("Romanian leu"), -1 },
-	{     1.0,  "SKr", "SEK",   1.0,   1.0, I18N_NOOP("Swedish krona"), -1 },
-	{     1.0,   "S$", "SGB",   1.0,   1.0, I18N_NOOP("Singapore dollar"), -1 },
-	{     1.0,  "SIT", "SIT",   1.0,   1.0, I18N_NOOP("Slovenian tolar"), -1 },
-	{     1.0,   "Sk", "SKK",   1.0,   1.0, I18N_NOOP("Slovakian koruna"), -1 },
-	{     1.0,    "$", "USD",   1.0,   1.0, I18N_NOOP("US dollar"), -1 },
-	{     1.0,    "R", "ZAR",   1.0,   1.0, I18N_NOOP("South African rand"), -1 }
+	{ 13.7603,  "öS", "ATS",   1.0,  10.0, I18N_NOOP("Austrian schilling"), "N/A", -1 },
+	{ 40.3399,   "FB", "BEF",   1.0,  10.0, I18N_NOOP("Belgian franc"), "N/A", -1 },
+	{ 1.95583,   "DM", "DEM",   1.0,   1.0, I18N_NOOP("German deutschmark"), "N/A", -1 },
+	{ 1.66386,  "Pts", "ESP", 100.0, 100.0, I18N_NOOP("Spanish peseta"), "N/A", -1 },
+	{ 5.94573,   "mk", "FIM",   1.0,   1.0, I18N_NOOP("Finnish markka"), "N/A", -1 },
+	{ 6.55957,   "FF", "FRF",   1.0,   1.0, I18N_NOOP("French franc"), "N/A", -1 },
+	{ 3.40750,   "Dr", "GRD", 100.0, 100.0, I18N_NOOP("Greek drachma"), "N/A", -1 },
+	{ .787564, "£IR", "IEP",   1.0,   1.0, I18N_NOOP("Irish punt"), "N/A", -1 },
+	{ 19.3627,    "L", "ITL", 100.0,1000.0, I18N_NOOP("Italian lira"), "N/A", -1 },
+	{ 40.3399, "FLux", "LUF",   1.0,  10.0, I18N_NOOP("Luxembourg franc"), "N/A", -1 },
+	{ 2.20371,   "Fl", "NLG",   1.0,   1.0, I18N_NOOP("Dutch gulden"), "N/A", -1 },
+	{ 2.00482,  "Esc", "PTE", 100.0, 100.0, I18N_NOOP("Portuguese escudo"), "N/A", -1 },
+	{     1.0,   "A$", "AUD",   1.0,   1.0, I18N_NOOP("Australian dollar"), "Dollar_Australia", -1 },
+	{     1.0,   "Lv", "BGN",   1.0,   1.0, I18N_NOOP("Bulgarian lev"), "N/A", -1 },
+	{     1.0,   "R$", "BRL",   1.0,   1.0, I18N_NOOP("Brazilian real"), "Real_Brazil", -1 },
+	{     1.0, "Can$", "CAD",   1.0,   1.0, I18N_NOOP("Canadian dollar"), "Dollar_Canada", -1 },
+	{     1.0,   "FS", "CHF",   1.0,   1.0, I18N_NOOP("Swiss franc"), "Franc_Switzerland", -1 },
+	{     1.0,    "Y", "CNY",   1.0,   1.0, I18N_NOOP("Chinese yuan"), "Yuan_China, P.R.", -1 },
+	{     1.0,  "£C", "CYP",   1.0,   1.0, I18N_NOOP("Cyprus pound"), "N/A", -1 },
+	{     1.0,    "K", "CZK",   1.0,   1.0, I18N_NOOP("Czech koruna"), "N/A", -1 },
+	{     1.0,  "DKr", "DKK",   1.0,   1.0, I18N_NOOP("Danish krone"), "Krone_Denmark", -1 },
+	{     1.0,  "EKr", "EEK",   1.0,   1.0, I18N_NOOP("Estonian kroon"), "N/A", -1 },
+	{     1.0," €", "EUR",   1.0,   1.0, I18N_NOOP("EU euro"), "Euro_European Monetary Union", -1 },
+	{     1.0,   "£", "GBP",   1.0,   1.0, I18N_NOOP("Great Britain pound"), "Pound_United Kingdom", -1 },
+	{     1.0,  "HK$", "HKD",   1.0,   1.0, I18N_NOOP("Hong kong dollar"), "Dollar_Hong Kong", -1 },
+	{     1.0,   "Ht", "HUF", 100.0, 100.0, I18N_NOOP("Hungarian forint"), "N/A", -1 },
+	{     1.0,   "Rs", "INR",   1.0,   1.0, I18N_NOOP("Indian rupee"), "Rupee_India", -1 },
+	{     1.0,  "Ikr", "ISK",   1.0,   1.0, I18N_NOOP("Icelandic krona"), "N/A", -1 },
+	{     1.0,   "¥", "JPY", 100.0, 100.0, I18N_NOOP("Japanese yen"), "Yen_Japan", -1 },
+	{     1.0,    "W", "KRW",1000.0,1000.0, I18N_NOOP("South Korean won"), "Won_South Korea", -1 }, // should be "₩"
+	{     1.0, "SLRs", "LKR",   1.0,   1.0, I18N_NOOP("Sri Lankan rupee"), "Rupee_Sri Lanka", -1 },
+	{     1.0,   "lt", "LTL",   1.0,   1.0, I18N_NOOP("Latvian lats"), "N/A", -1 },
+	{     1.0,   "Ls", "LVL",   1.0,   1.0, I18N_NOOP("Lithuanian litas"), "N/A", -1 },
+	{     1.0,   "Lm", "MTL",   1.0,   1.0, I18N_NOOP("Maltese lira"), "N/A", -1 },
+	{     1.0, "Mex$", "MXN",   1.0,   1.0, I18N_NOOP("Mexican peso"), "Peso_Mexico", -1 },
+	{     1.0,   "MR", "MYR",   1.0,   1.0, I18N_NOOP("Malaysian ringgit"), "Ringgit_Malaysia", -1 },
+	{     1.0,  "NKr", "NOK",   1.0,   1.0, I18N_NOOP("Norvegian krone"), "Krone_Norway", -1 },
+	{     1.0,  "NZ$", "NZD",   1.0,   1.0, I18N_NOOP("New Zealand dollar"), "Dollar_New Zealand", -1 },
+	{     1.0, "zł", "PLN",   1.0,   1.0, I18N_NOOP("Polish sloty"), "N/A", -1 },
+	{     1.0,    "L", "ROL",  10.0,10000., I18N_NOOP("Romanian leu"), "N/A", -1 },
+	{     1.0,  "SKr", "SEK",   1.0,   1.0, I18N_NOOP("Swedish krona"), "Krona_Sweden", -1 },
+	{     1.0,   "S$", "SGB",   1.0,   1.0, I18N_NOOP("Singapore dollar"), "Dollar_Singapore", -1 },
+	{     1.0,  "SIT", "SIT",   1.0,   1.0, I18N_NOOP("Slovenian tolar"), "N/A", -1 },
+	{     1.0,   "Sk", "SKK",   1.0,   1.0, I18N_NOOP("Slovakian koruna"), "N/A", -1 },
+	{     1.0,   "Bt", "THB",   1.0,   1.0, I18N_NOOP("Thailandese baht"), "Baht_Thailand", -1 },
+	{     1.0,   "Bt", "TWD",   1.0,   1.0, I18N_NOOP("Taiwanese new dollar"), "N.T. Dollar_Taiwan", -1 },
+	{     1.0,    "$", "USD",   1.0,   1.0, I18N_NOOP("US dollar"), "N/A", -1 },
+	{     1.0,    "$", "VEB",1000.0,1000.0, I18N_NOOP("Venezuelian bolivar"), "Bolivar_Venezuela", -1 },
+	{     1.0,    "R", "ZAR",   1.0,   1.0, I18N_NOOP("South African rand"), "Rand_South Africa", -1 }
 };
 
 static const char
 	*euroSymbol = " €",
-	*ratesUrl = "http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml";
+	*dollarSymbol = " $",
+	*urlECB = "http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml",
+	*urlNYFRB = "http://www.ny.frb.org/markets/fxrates/FXtoXML.cfm?FEXdate=%04d%%2D%02d%%2D%02d&FEXtime=1200";
 
 KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 	: Calculator( parent, name ),
 	  variableRates()
 {
-	int currencyNum, position;
+	int position;
 
 	isSimpleValue = false;
 	simpleValue = 0.0;
-	euroValue = 0.0;
+	referenceValue = 0.0;
 	currencyValue = 0.0;
 
 	memorySet = false;
 	isSimpleMemory = false;
 	simpleMemory = 0.0;
-	euroMemory = 0.0;
+	referenceMemory = 0.0;
 
-	readOptions( currencyNum );
-	position = currency[currencyNum].position;
-	if (position < 0)
-		currencyNum = position = 0;
-	CurrencyList->setCurrentItem( position );
-	displayNewCurrency( currencyNum );
+	readOptions();
+
+	displayNewCurrency();
 	displayNewResult();
-
 	resetInput();
-
 	initButtons();
+
+	position = currency[currencyNum].position;
+	if (position < 0) position = 0;
+	CurrencyList->setCurrentItem( position );
 
 	setFixedSize(size());
 }
 
 KEuroCalc::~KEuroCalc()
 {
+}
+
+void KEuroCalc::setPreferences(int newReference)
+{	reference = (enum referenceMode) newReference;
+	writeOptions();
+
+	CurrencyList->clear();
+	initButtons();
+	reset();
 }
 
 void KEuroCalc::keyPressEvent(QKeyEvent *e)
@@ -181,7 +203,7 @@ void KEuroCalc::keyPressEvent(QKeyEvent *e)
 			BackspaceButton->animateClick();
 			break;
 		case Key_E:
-			EuroButton->animateClick();
+			ReferenceButton->animateClick();
 			break;
 		case Key_Percent:
 			PercentButton->animateClick();
@@ -213,14 +235,13 @@ void KEuroCalc::httpData(KIO::Job *job, const QByteArray &array)
 	variableRates += QString(array);
 }
 
-void KEuroCalc::httpResult(KIO::Job *job)
+void KEuroCalc::httpResultECB(KIO::Job *job)
 {
 	QDomDocument document( "rates" );
 	document.setContent( variableRates, true );
 	QDomNodeList ratesList = document.elementsByTagName( "Cube" );
 	bool date = false;
-	int position = FIXED_CURRENCIES + 1;
-	int currencyNum;
+	int num, position = FIXED_CURRENCIES + 1;
 
 	job = 0; // Unused parameter
 
@@ -235,31 +256,84 @@ void KEuroCalc::httpResult(KIO::Job *job)
 		else if ( elt.hasAttribute( "currency" ) && elt.hasAttribute( "rate" ) )
 		{
 			QString code(elt.attribute( "currency" ));
-			for (currencyNum = FIXED_CURRENCIES; currencyNum < CURRENCIES; currencyNum++)
-				if ( code == QString::fromUtf8( currency[currencyNum].code ) )
+			for (num = FIXED_CURRENCIES; num < CURRENCIES; num++)
+				if ( code == QString::fromUtf8( currency[num].code ) )
 					break;
-			if ( currencyNum < CURRENCIES )
+			if ( num < CURRENCIES )
 			{
-				currency[currencyNum].rate =
+				currency[num].rate =
 					elt.attribute( "rate" ).toDouble() /
-					currency[currencyNum].euRulesPrecision;
-				currency[currencyNum].position = position++;
+					currency[num].rulesPrecision;
+				currency[num].position = position++;
 				CurrencyList->insertItem
-					( QString::fromUtf8( currency[currencyNum].code ) +
+					( QString::fromUtf8( currency[num].code ) +
 					  " - " +
-					  i18n( currency[currencyNum].name ) );
+					  i18n( currency[num].name ) );
 			}
 		}
 	}
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 
-	readOptions( currencyNum );
 	position = currency[currencyNum].position;
-	if (position < 0)
-		currencyNum = position = 0;
+	if (position < 0) position = 0;
 	CurrencyList->setCurrentItem( position );
-	displayNewCurrency( currencyNum );
+	displayNewCurrency();
+	displayNewResult();
+}
+
+void KEuroCalc::httpResultNYFRB(KIO::Job *job)
+{
+	QDomDocument document( "rates" );
+	document.setContent( variableRates, true );
+	QDomNodeList ratesList = document.elementsByTagName( "Rate" );
+	bool date = false;
+	int num, position = 0;
+
+	job = 0; // Unused parameter
+
+	for (uint i = 0; i < ratesList.count(); i++)
+	{
+		QDomElement elt = (const QDomElement &) ratesList.item(i);
+		QDomNodeList dateElements = elt.elementsByTagName( "Date" ),
+			     countryElements = elt.elementsByTagName( "Country" ),
+			     valueElements = elt.elementsByTagName( "Value" );
+		if (dateElements.count() == 1 && countryElements.count() == 1 && valueElements.count() == 1)
+		{
+			QDomElement dateElement = (const QDomElement &) dateElements.item(0),
+				    countryElement = (const QDomElement &) countryElements.item(0),
+				    valueElement = (const QDomElement &) valueElements.item(0);
+			QString newYorkName( countryElement.attribute( "UnitName" ) + "_" + countryElement.text() );
+			for (num = FIXED_CURRENCIES; num < CURRENCIES; num++)
+				if ( newYorkName == currency[num].newYorkName )
+					break;
+			if ( num < CURRENCIES )
+			{
+				currency[num].rate =
+					( valueElement.attribute( "InUsd" ) == "false" ?
+					  valueElement.text().toDouble() :
+					  1.0 / valueElement.text().toDouble()
+					) / currency[num].rulesPrecision;
+				currency[num].position = position++;
+				CurrencyList->insertItem
+					( QString::fromUtf8( currency[num].code ) +
+					  " - " +
+					  i18n( currency[num].name ) );
+				if ( !date )
+				{
+					DateLabel->setText( dateElement.text() );
+					date = true;
+				}
+			}
+		}
+	}
+	if ( !date )
+		DateLabel->setText( i18n( "Not loaded" ) );
+
+	position = currency[currencyNum].position;
+	if (position < 0) position = 0;
+	CurrencyList->setCurrentItem( position );
+	displayNewCurrency();
 	displayNewResult();
 }
 
@@ -345,17 +419,19 @@ void KEuroCalc::inputBackspace()
 }
 
 // Convert to euro, and add or substract too if needed
-void KEuroCalc::validateEuro()
+void KEuroCalc::validateReference()
 {
-	double inputValue = atof( inputDisplay );
+	double inputValue = atof( inputDisplay ),
+	       currencyRate = currency[currencyNum].rate,
+	       currencyPrecision = currency[currencyNum].rulesPrecision;
 
 	if ( inputDisplay[10] == ' ' )
 	{
 		if ( isSimpleValue && *operatorDisplay == ' ' )
 		{
 			isSimpleValue = false;
-			euroValue = simpleValue;
-			currencyValue = euroValue * currencyRate * currencyPrecision;
+			referenceValue = simpleValue;
+			currencyValue = referenceValue * currencyRate * currencyPrecision;
 			displayNewResult();
 		}
 		else KApplication::beep();
@@ -366,8 +442,8 @@ void KEuroCalc::validateEuro()
 	{
 		case ' ':
 			isSimpleValue = false;
-			euroValue = inputValue;
-			currencyValue = euroValue * currencyRate * currencyPrecision;
+			referenceValue = inputValue;
+			currencyValue = referenceValue * currencyRate * currencyPrecision;
 			break;
 		case '+':
 			if ( isSimpleValue )
@@ -375,8 +451,8 @@ void KEuroCalc::validateEuro()
 				KApplication::beep();
 				return;
 			}
-			euroValue += inputValue;
-			currencyValue = euroValue * currencyRate * currencyPrecision;
+			referenceValue += inputValue;
+			currencyValue = referenceValue * currencyRate * currencyPrecision;
 			break;
 		case '-':
 			if ( isSimpleValue )
@@ -384,15 +460,15 @@ void KEuroCalc::validateEuro()
 				KApplication::beep();
 				return;
 			}
-			euroValue -= inputValue;
-			currencyValue = euroValue * currencyRate * currencyPrecision;
+			referenceValue -= inputValue;
+			currencyValue = referenceValue * currencyRate * currencyPrecision;
 			break;
 		case 'x':
 			if ( isSimpleValue )
 			{
 				isSimpleValue = false;
-				euroValue = simpleValue * inputValue;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue = simpleValue * inputValue;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			else
 			{
@@ -404,7 +480,7 @@ void KEuroCalc::validateEuro()
 			if ( !isSimpleValue && inputValue != 0.0 )
 			{
 				isSimpleValue = true;
-				simpleValue = euroValue / inputValue;
+				simpleValue = referenceValue / inputValue;
 			}
 			else
 			{
@@ -420,7 +496,9 @@ void KEuroCalc::validateEuro()
 // Convert to currency, and add or substract too if needed
 void KEuroCalc::validateCurrency()
 {
-	double inputValue = atof( inputDisplay );
+	double inputValue = atof( inputDisplay ),
+	       currencyRate = currency[currencyNum].rate,
+	       currencyPrecision = currency[currencyNum].rulesPrecision;
 
 	if ( inputDisplay[10] == ' ' )
 	{
@@ -428,7 +506,7 @@ void KEuroCalc::validateCurrency()
 		{
 			isSimpleValue = false;
 			currencyValue = simpleValue;
-			euroValue = currencyValue / currencyRate / currencyPrecision;
+			referenceValue = currencyValue / currencyRate / currencyPrecision;
 			displayNewResult();
 		}
 		else KApplication::beep();
@@ -440,7 +518,7 @@ void KEuroCalc::validateCurrency()
 		case ' ':
 			isSimpleValue = false;
 			currencyValue = inputValue;
-			euroValue = currencyValue / currencyRate / currencyPrecision;
+			referenceValue = currencyValue / currencyRate / currencyPrecision;
 			break;
 		case '+':
 			if ( isSimpleValue )
@@ -449,7 +527,7 @@ void KEuroCalc::validateCurrency()
 				return;
 			}
 			currencyValue += inputValue;
-			euroValue = currencyValue / currencyRate / currencyPrecision;
+			referenceValue = currencyValue / currencyRate / currencyPrecision;
 			break;
 		case '-':
 			if ( isSimpleValue )
@@ -458,14 +536,14 @@ void KEuroCalc::validateCurrency()
 				return;
 			}
 			currencyValue -= inputValue;
-			euroValue = currencyValue / currencyRate / currencyPrecision;
+			referenceValue = currencyValue / currencyRate / currencyPrecision;
 			break;
 		case 'x':
 			if ( isSimpleValue )
 			{
 				isSimpleValue = false;
 				currencyValue = simpleValue * inputValue;
-				euroValue = currencyValue / currencyRate / currencyPrecision;
+				referenceValue = currencyValue / currencyRate / currencyPrecision;
 			}
 			else
 			{
@@ -493,7 +571,9 @@ void KEuroCalc::validateCurrency()
 // Apply percentage, and add or substract too if needed
 void KEuroCalc::validatePercent()
 {
-	double inputValue = atof( inputDisplay );
+	double inputValue = atof( inputDisplay ),
+	       currencyRate = currency[currencyNum].rate,
+	       currencyPrecision = currency[currencyNum].rulesPrecision;
 
 	if ( inputDisplay[10] == ' ' )
 	{
@@ -508,8 +588,8 @@ void KEuroCalc::validatePercent()
 				simpleValue = (inputValue * simpleValue) / 100.0;
 			else
 			{
-				euroValue = (inputValue * euroValue) / 100.0;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue = (inputValue * referenceValue) / 100.0;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case '+':
@@ -517,8 +597,8 @@ void KEuroCalc::validatePercent()
 				simpleValue = ((100.0 + inputValue) * simpleValue) / 100.0;
 			else
 			{
-				euroValue = ((100.0 + inputValue) * euroValue) / 100.0;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue = ((100.0 + inputValue) * referenceValue) / 100.0;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case '-':
@@ -526,8 +606,8 @@ void KEuroCalc::validatePercent()
 				simpleValue = ((100.0 - inputValue) * simpleValue) / 100.0;
 			else
 			{
-				euroValue = ((100.0 - inputValue) * euroValue) / 100.0;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue = ((100.0 - inputValue) * referenceValue) / 100.0;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case 'x':
@@ -542,7 +622,9 @@ void KEuroCalc::validatePercent()
 // Enter a simple value, and multiply or divide too if needed.
 void KEuroCalc::validateSimpleValue()
 {
-	double inputValue = atof( inputDisplay );
+	double inputValue = atof( inputDisplay ),
+	       currencyRate = currency[currencyNum].rate,
+	       currencyPrecision = currency[currencyNum].rulesPrecision;
 
 	if ( inputDisplay[10] == ' ' )
 	{
@@ -579,8 +661,8 @@ void KEuroCalc::validateSimpleValue()
 				simpleValue *= inputValue;
 			else
 			{
-				euroValue *= inputValue;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue *= inputValue;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case '/':
@@ -593,8 +675,8 @@ void KEuroCalc::validateSimpleValue()
 				simpleValue /= inputValue;
 			else
 			{
-				euroValue /= inputValue;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue /= inputValue;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		default:
@@ -609,12 +691,15 @@ void KEuroCalc::validateSimpleValue()
 // Change the sign of the result
 void KEuroCalc::changeSign()
 {
+	double currencyRate = currency[currencyNum].rate,
+	       currencyPrecision = currency[currencyNum].rulesPrecision;
+
 	if ( isSimpleValue )
 		simpleValue = -simpleValue;
 	else
 	{
-		euroValue = -euroValue;
-		currencyValue = euroValue * currencyRate * currencyPrecision;
+		referenceValue = -referenceValue;
+		currencyValue = referenceValue * currencyRate * currencyPrecision;
 	}
 	displayNewResult();
 }
@@ -625,7 +710,7 @@ void KEuroCalc::memoryInput()
 	memorySet = true;
 	isSimpleMemory = isSimpleValue;
 	simpleMemory = simpleValue;
-	euroMemory = euroValue;
+	referenceMemory = referenceValue;
 
 	displayMemoryButtons();
 }
@@ -633,6 +718,9 @@ void KEuroCalc::memoryInput()
 // Transfer from memory to display
 void KEuroCalc::memoryRecall()
 {
+	double currencyRate = currency[currencyNum].rate,
+	       currencyPrecision = currency[currencyNum].rulesPrecision;
+
 	if ( !memorySet )
 	{
 		KApplication::beep();
@@ -647,8 +735,8 @@ void KEuroCalc::memoryRecall()
 				simpleValue = simpleMemory;
 			else
 			{
-				euroValue = euroMemory;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue = referenceMemory;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case '+':
@@ -661,8 +749,8 @@ void KEuroCalc::memoryRecall()
 				simpleValue += simpleMemory;
 			else
 			{
-				euroValue += euroMemory;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue += referenceMemory;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case '-':
@@ -675,8 +763,8 @@ void KEuroCalc::memoryRecall()
 				simpleValue -= simpleMemory;
 			else
 			{
-				euroValue -= euroMemory;
-				currencyValue = euroValue * currencyRate * currencyPrecision;
+				referenceValue -= referenceMemory;
+				currencyValue = referenceValue * currencyRate * currencyPrecision;
 			}
 			break;
 		case 'x':
@@ -686,8 +774,8 @@ void KEuroCalc::memoryRecall()
 					simpleValue *= simpleMemory;
 				else
 				{
-					euroValue *= simpleMemory;
-					currencyValue = euroValue * currencyRate * currencyPrecision;
+					referenceValue *= simpleMemory;
+					currencyValue = referenceValue * currencyRate * currencyPrecision;
 				}
 			}
 			else
@@ -695,8 +783,8 @@ void KEuroCalc::memoryRecall()
 				if ( isSimpleValue )
 				{
 					isSimpleValue = false;
-					euroValue = simpleValue * euroMemory;
-					currencyValue = euroValue * currencyRate * currencyPrecision;
+					referenceValue = simpleValue * referenceMemory;
+					currencyValue = referenceValue * currencyRate * currencyPrecision;
 				}
 				else
 				{
@@ -717,16 +805,16 @@ void KEuroCalc::memoryRecall()
 					simpleValue /= simpleMemory;
 				else
 				{
-					euroValue /= simpleMemory;
-					currencyValue = euroValue * currencyRate * currencyPrecision;
+					referenceValue /= simpleMemory;
+					currencyValue = referenceValue * currencyRate * currencyPrecision;
 				}
 			}
 			else
 			{
-				if ( !isSimpleValue && euroMemory != 0.0 )
+				if ( !isSimpleValue && referenceMemory != 0.0 )
 				{
 					isSimpleValue = true;
-					simpleValue = euroValue / euroMemory;
+					simpleValue = referenceValue / referenceMemory;
 				}
 				else
 				{
@@ -751,7 +839,7 @@ void KEuroCalc::memoryPlus()
 	if ( isSimpleMemory )
 		simpleMemory += simpleValue;
 	else
-		euroMemory += euroValue;
+		referenceMemory += referenceValue;
 }
 
 void KEuroCalc::memoryMinus()
@@ -764,7 +852,7 @@ void KEuroCalc::memoryMinus()
 	if ( isSimpleMemory )
 		simpleMemory -= simpleValue;
 	else
-		euroMemory -= euroValue;
+		referenceMemory -= referenceValue;
 }
 
 // Reset both input, result and memory
@@ -774,7 +862,7 @@ void KEuroCalc::reset()
 
 	isSimpleValue = false;
 	simpleValue = 0.0;
-	euroValue = 0.0;
+	referenceValue = 0.0;
 	currencyValue = 0.0;
 
 	displayNewResult();
@@ -782,7 +870,7 @@ void KEuroCalc::reset()
 	memorySet = false;
 	isSimpleMemory = false;
 	simpleMemory = 0.0;
-	euroMemory = 0.0;
+	referenceMemory = 0.0;
 
 	displayMemoryButtons();
 }
@@ -802,26 +890,36 @@ void KEuroCalc::displayHelp()
 	kapp->invokeHelp();
 }
 
-// Select currency accordingly to radio button number
+// Display settings pages
+void KEuroCalc::displaySettings()
+{
+	Preferences *d = new Preferences(this);
+	d->exec();
+	delete d;
+	SettingsButton->setDown( false );
+}
+
+// Select currency accordingly to drop down list position
 void KEuroCalc::selectCurrency(int position)
 {
-	int currencyNum;
+	int num;
 
-	for (currencyNum = 0; currencyNum < CURRENCIES; currencyNum++)
-		if (currency[currencyNum].position == position)
+	for (num = 0; num < CURRENCIES; num++)
+		if (currency[num].position == position)
 			break;
-	if (currencyNum == CURRENCIES) return;
+	if ( num == CURRENCIES ) return;
+	currencyNum = num;
 
-	displayNewCurrency( currencyNum );
+	displayNewCurrency();
 
-	currencyValue = euroValue * currencyRate * currencyPrecision;
+	currencyValue = referenceValue * currency[currencyNum].rate * currency[currencyNum].rulesPrecision;
 	displayNewResult();
 
-	writeOptions( currencyNum );
+	writeOptions();
 }
 
 // Read options from preferences file
-void KEuroCalc::readOptions(int &currencyNum)
+void KEuroCalc::readOptions()
 {
 	KConfig *config;
 	QString option;
@@ -829,23 +927,44 @@ void KEuroCalc::readOptions(int &currencyNum)
 	config = KApplication::kApplication()->config();
 
 	config->setGroup("General");
-	option = config->readEntry("Currency", "ATS");
 
+	option = config->readEntry("Currency", "N/A");
 	for (currencyNum = 0; currencyNum < CURRENCIES; currencyNum++)
 		if ( option == QString::fromUtf8( currency[currencyNum].code ) )
 			break;
 	if ( currencyNum == CURRENCIES ) currencyNum = 0;
+
+	option = config->readEntry("Reference", "euroECB");
+	if (option == "euroFixed")
+		reference = euroFixed;
+	else if (option == "euroECB")
+		reference = euroECB;
+	else if (option == "dollarNYFRB")
+		reference = dollarNYFRB;
+	else reference = euroECB;
 }
 
 // Write options to preferences file
-void KEuroCalc::writeOptions( int currencyNum )
+void KEuroCalc::writeOptions()
 {
 	KConfig *config;
 
 	config = KApplication::kApplication()->config();
 
 	config->setGroup("General");
+
 	config->writeEntry("Currency", QString::fromUtf8(currency[currencyNum].code) );
+
+	switch (reference)
+	{	case euroFixed:
+			config->writeEntry("Reference", "euroFixed");
+			break;
+		case euroECB:
+			config->writeEntry("Reference", "euroECB");
+			break;
+		case dollarNYFRB:
+			config->writeEntry("Reference", "dollarNYFRB");
+	}
 
 	config->sync();
 }
@@ -854,21 +973,47 @@ void KEuroCalc::writeOptions( int currencyNum )
 // text not correctly handled by uic
 void KEuroCalc::initButtons()
 {
-	for (int currencyNum = 0; currencyNum < FIXED_CURRENCIES; currencyNum++)
-		CurrencyList->insertItem
-			( QString::fromUtf8( currency[currencyNum].code ) +
-			  QString::fromUtf8( " - " ) +
-			  i18n( currency[currencyNum].name ) );
-	CurrencyList->insertItem( QString::fromUtf8
-		( "--------------------------------------------" ) );
-
-	KIO::SimpleJob *job = KIO::get( KURL( ratesUrl ), true, false );
-	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
-		 this, SLOT(httpData(KIO::Job *, const QByteArray &))
-		);
-	connect( job, SIGNAL(result(KIO::Job *)),
-		 this, SLOT(httpResult(KIO::Job *))
-		);
+	if (reference == euroFixed || reference == euroECB)
+	{
+		for (int num = 0; num < FIXED_CURRENCIES; num++)
+		{
+			currency[num].position = num;
+			CurrencyList->insertItem
+				( QString::fromUtf8( currency[num].code ) +
+				  QString::fromUtf8( " - " ) +
+				  i18n( currency[num].name )
+				);
+		}
+	}
+	else
+	{
+		for (int num = 0; num < FIXED_CURRENCIES; num++)
+			currency[num].position = -1;
+	}
+	if (reference == euroECB)
+	{
+		CurrencyList->insertItem( QString::fromUtf8
+			( "--------------------------------------------" ) );
+		KIO::SimpleJob *job = KIO::get( KURL( urlECB ), true, false );
+		connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
+			 this, SLOT(httpData(KIO::Job *, const QByteArray &))
+			);
+		connect( job, SIGNAL(result(KIO::Job *)),
+			 this, SLOT(httpResultECB(KIO::Job *))
+			);
+	}
+	else if (reference == dollarNYFRB)
+	{
+		char url[128];
+		sprintf(url, urlNYFRB, 2004, 4, 9);
+		KIO::SimpleJob *job = KIO::get( KURL( url ), true, false );
+		connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
+			 this, SLOT(httpData(KIO::Job *, const QByteArray &))
+			);
+		connect( job, SIGNAL(result(KIO::Job *)),
+			 this, SLOT(httpResultNYFRB(KIO::Job *))
+			);
+	}
 
 	DotButton->setText( KGlobal::locale()->decimalSymbol() );
 	ZeroButton->setText( QString::fromUtf8( "0" ) );
@@ -891,7 +1036,7 @@ void KEuroCalc::initButtons()
 	AsteriskButton->setText( QString::fromUtf8( "X" ) );
 	MinusButton->setText( QString::fromUtf8( "-" ) );
 	PlusButton->setText( QString::fromUtf8( "+" ) );
-	EuroButton->setText( QString::fromUtf8( euroSymbol ) );
+	ReferenceButton->setText( QString::fromUtf8( reference == dollarNYFRB? dollarSymbol: euroSymbol ) );
 	PercentButton->setText( QString::fromUtf8( "%" ) );
 	PlusMinusButton->setText( QString::fromUtf8( "+/-" ) );
 }
@@ -1011,46 +1156,52 @@ void KEuroCalc::displayNewInput()
 // Display latest computed value in results area
 void KEuroCalc::displayNewResult()
 {
-	float roundedEuroValue, roundedCurrencyValue;
-	QString simpleDisplay,
-	        euroDisplay, currencyDisplay;
-
 	if ( isSimpleValue )
 	{
+		QString simpleDisplay;
+
 		simpleDisplay.setNum( simpleValue );
 		normalize( simpleDisplay );
 		ResultDisplay->setText( simpleDisplay );
 	}
 	else
 	{
-		roundedEuroValue = floor(euroValue * 100.0 + 0.5)
+		float roundedReferenceValue, roundedCurrencyValue;
+		double currencyPrecision;
+		char currencySymbol[8];
+		QString euroDisplay, currencyDisplay;
+
+		roundedReferenceValue = floor(referenceValue * 100.0 + 0.5)
 				 / 100.0;
-		euroDisplay.setNum( roundedEuroValue, 'f', 2 );
+		euroDisplay.setNum( roundedReferenceValue, 'f', 2 );
 		normalize( euroDisplay );
 
+		currencyPrecision = currency[currencyNum].rulesPrecision;
+		strcpy( currencySymbol, currency[currencyNum].symbol );
 		roundedCurrencyValue = floor(currencyValue * 100.0 / currencyPrecision + 0.5)
 				     / 100.0 * currencyPrecision;
 		currencyDisplay.setNum( roundedCurrencyValue, 'f', currencyPrecision < 100.0? 2: 0 );
 		normalize( currencyDisplay );
 
-		ResultDisplay->setText( euroDisplay + QString::fromUtf8( euroSymbol ) + "\n" +
+		ResultDisplay->setText( euroDisplay + QString::fromUtf8( reference == dollarNYFRB ? dollarSymbol: euroSymbol ) + "\n" +
 					currencyDisplay + " " + QString::fromUtf8( currencySymbol ) );
 	}
 }
 
 // Update the currency button accordingly to new currency
-void KEuroCalc::displayNewCurrency( int currencyNum )
+void KEuroCalc::displayNewCurrency()
 {
-	currencyRate = currency[currencyNum].rate;
-	strcpy( currencySymbol, currency[currencyNum].symbol );
-	currencyPrecision = currency[currencyNum].euRulesPrecision;
+	double currencyRate = currency[currencyNum].rate;
+	double currencyPrecision = currency[currencyNum].rulesPrecision;
+	char currencySymbol[8];
 
+	strcpy( currencySymbol, currency[currencyNum].symbol );
 	CurrencyButton->setText( QString::fromUtf8( currencySymbol ) );
 	if ( currency[currencyNum].position >= 0 )
 	{
 		QString rate;
 		rate.setNum( currencyRate * currencyPrecision ); 
-		RateLabel->setText( "1" + QString::fromUtf8( euroSymbol ) + " = " +
+		RateLabel->setText( "1" + QString::fromUtf8( reference == dollarNYFRB ? dollarSymbol: euroSymbol ) + " = " +
 				    rate + " " + QString::fromUtf8( currencySymbol ) ); 
 	}
 	else RateLabel->setText( "" );

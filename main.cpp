@@ -36,7 +36,7 @@ static KCmdLineOptions options[] =
 int main(int argc, char *argv[])
 {
 	KAboutData aboutData( "keurocalc", I18N_NOOP("KEuroCalc"),
-	"0.8.2", description, KAboutData::License_GPL,
+	"0.9.0", description, KAboutData::License_GPL,
 	"(c) 2001-2004, the KEuroCalc developers", text);
 	aboutData.addAuthor("Éric Bischoff", I18N_NOOP("Design and implementation"), "e.bischoff@noos.fr");
 	aboutData.addCredit("Melchior Franz", I18N_NOOP("Design and testing"), "a8603365@unet.univie.ac.at");

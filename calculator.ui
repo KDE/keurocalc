@@ -8,12 +8,12 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>371</width>
-            <height>275</height>
+            <width>369</width>
+            <height>294</height>
         </rect>
     </property>
     <property name="caption">
-        <string>Euro Calculator</string>
+        <string>Currency Calculator</string>
     </property>
     <widget class="QPushButton">
         <property name="name">
@@ -804,22 +804,6 @@
             </property>
         </widget>
     </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>RateLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>240</y>
-                <width>170</width>
-                <height>16</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
     <widget class="QGroupBox">
         <property name="name">
             <cstring>GroupBox5</cstring>
@@ -1174,66 +1158,6 @@
     </widget>
     <widget class="QPushButton">
         <property name="name">
-            <cstring>HelpButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>290</x>
-                <y>140</y>
-                <width>70</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>&amp;Help...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+H</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Display help pages</string>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>FlagPixmap</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>290</x>
-                <y>180</y>
-                <width>70</width>
-                <height>50</height>
-            </rect>
-        </property>
-        <property name="pixmap">
-            <pixmap>image0</pixmap>
-        </property>
-        <property name="scaledContents">
-            <bool>true</bool>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>DateLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>210</x>
-                <y>240</y>
-                <width>150</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Loading...</string>
-        </property>
-        <property name="alignment">
-            <set>AlignVCenter|AlignRight</set>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
             <cstring>MInputButton</cstring>
         </property>
         <property name="geometry">
@@ -1401,7 +1325,7 @@
     </widget>
     <widget class="QPushButton">
         <property name="name">
-            <cstring>EuroButton</cstring>
+            <cstring>ReferenceButton</cstring>
         </property>
         <property name="geometry">
             <rect>
@@ -1415,7 +1339,7 @@
             <string></string>
         </property>
         <property name="toolTip" stdset="0">
-            <string>Enter value expressed in Euro</string>
+            <string>Enter value expressed in reference currency</string>
         </property>
     </widget>
     <widget class="QPushButton">
@@ -1520,6 +1444,60 @@
             <string></string>
         </property>
     </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>FlagPixmap</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>290</x>
+                <y>210</y>
+                <width>70</width>
+                <height>50</height>
+            </rect>
+        </property>
+        <property name="pixmap">
+            <pixmap>image0</pixmap>
+        </property>
+        <property name="scaledContents">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>DateLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>210</x>
+                <y>270</y>
+                <width>150</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Loading...</string>
+        </property>
+        <property name="alignment">
+            <set>AlignVCenter|AlignRight</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>RateLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>270</y>
+                <width>170</width>
+                <height>16</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+    </widget>
     <widget class="QComboBox">
         <property name="name">
             <cstring>CurrencyList</cstring>
@@ -1527,13 +1505,57 @@
         <property name="geometry">
             <rect>
                 <x>10</x>
-                <y>210</y>
+                <y>220</y>
                 <width>230</width>
                 <height>20</height>
             </rect>
         </property>
         <property name="toolTip" stdset="0">
             <string>Currencies</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>HelpButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>290</x>
+                <y>140</y>
+                <width>70</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Help...</string>
+        </property>
+        <property name="accel">
+            <string>Alt+H</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Display help pages</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>SettingsButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>290</x>
+                <y>170</y>
+                <width>70</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Settings...</string>
+        </property>
+        <property name="accel">
+            <string>Alt+S</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Configure KEuroCalc</string>
         </property>
     </widget>
 </widget>
@@ -1628,10 +1650,10 @@
         <slot>reset()</slot>
     </connection>
     <connection>
-        <sender>EuroButton</sender>
+        <sender>ReferenceButton</sender>
         <signal>pressed()</signal>
         <receiver>Calculator</receiver>
-        <slot>validateEuro()</slot>
+        <slot>validateReference()</slot>
     </connection>
     <connection>
         <sender>SlashButton</sender>
@@ -1717,6 +1739,12 @@
         <receiver>Calculator</receiver>
         <slot>selectCurrency(int)</slot>
     </connection>
+    <connection>
+        <sender>SettingsButton</sender>
+        <signal>pressed()</signal>
+        <receiver>Calculator</receiver>
+        <slot>displaySettings()</slot>
+    </connection>
 </connections>
 <tabstops>
     <tabstop>DotButton</tabstop>
@@ -1730,7 +1758,7 @@
     <tabstop>SevenButton</tabstop>
     <tabstop>EightButton</tabstop>
     <tabstop>NineButton</tabstop>
-    <tabstop>EuroButton</tabstop>
+    <tabstop>ReferenceButton</tabstop>
     <tabstop>CurrencyButton</tabstop>
     <tabstop>PercentButton</tabstop>
     <tabstop>SimpleValueButton</tabstop>
@@ -1744,9 +1772,6 @@
     <tabstop>AboutButton</tabstop>
     <tabstop>HelpButton</tabstop>
 </tabstops>
-<includes>
-    <include location="local" impldecl="in implementation">calculator.ui.h</include>
-</includes>
 <slots>
     <slot>changeSign()</slot>
     <slot>displayHelp()</slot>
@@ -1770,7 +1795,7 @@
     <slot>reset()</slot>
     <slot>selectCurrency( int )</slot>
     <slot>validateCurrency()</slot>
-    <slot>validateEuro()</slot>
+    <slot>validateReference()</slot>
     <slot>validatePercent()</slot>
     <slot>validateSimpleValue()</slot>
     <slot>memoryInput()</slot>
@@ -1778,6 +1803,7 @@
     <slot>memoryMinus()</slot>
     <slot>memoryPlus()</slot>
     <slot>CurrencyList_activated( int )</slot>
+    <slot>displaySettings()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>
