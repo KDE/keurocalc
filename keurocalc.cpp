@@ -587,7 +587,7 @@ void KEuroCalc::inputDigit(char c)
 			switch ( c )
 			{
 				case '.':
-					inputDisplay[11] = '0';
+					inputDisplay[9] = '0';
 					inputDisplay[10] = c;
 					inputPos = afterUnits;
 					break;
