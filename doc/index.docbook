@@ -184,7 +184,7 @@ exchange rates. More simply, a transmission error is always possible.</para></wa
 <procedure>
 <title>To convert 1000 Belgian francs into euros</title>
 <step><para>Select the <guilabel>BEF - Belgian franc</guilabel> (<foreignphrase>francs
-belges</foreignphrase>) item in the <guibutton>Currencies</guibutton>
+belges</foreignphrase>) item in the currencies
 drop down list on the bottom. If that choice is not available, press the
 <guibutton>Settings..</guibutton> button and select 
 <guilabel>Euro, no network access (fixed rates only)</guilabel> to make the
@@ -203,7 +203,7 @@ key.</para></step>
 <title>To convert 25 euros into Belgian francs</title>
 <step><para>If the fixed rates currencies are available, select the
 <guilabel>BEF - Belgian franc</guilabel> item in the
-<guibutton>Currencies</guibutton> drop down list on the bottom.
+currencies drop down list on the bottom.
 You can skip this step if it's already the selected currency</para></step>
 <step><para>Type <userinput>25</userinput>.</para></step>
 <step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
@@ -224,7 +224,7 @@ for Belgian Francs it's 0.01 FB, for Italian Liras it's 1 L for example.</para><
 <title>To convert 120 German marks into Spanish pesetas</title>
 <step><para>If the fixed rates currencies are available, select the
 <guilabel>DEM - German deutschmark</guilabel> item in
-the <guilabel>Currencies</guilabel> drop down list.</para></step>
+the currencies drop down list.</para></step>
 <step><para>Type <userinput>120</userinput>.</para></step>
 <step><para>Press the <guibutton>DM</guibutton> button or the <keycap>D</keycap>
 or <keycap>M</keycap> keys.</para></step>
@@ -275,8 +275,8 @@ the euro and the dollar.</para></step>
 <procedure>
 <title>You pay a 32.50 € book with a 500 FF banknote. How much was the
 clerk supposed to give you back, in euro notes and coins?</title>
-<step><para>Select the <guilabel>FRF - French francs</guilabel> item in the drop down list
-if not already selected.</para></step>
+<step><para>Select the <guilabel>FRF - French francs</guilabel> item in the
+currencies drop down list if not already selected.</para></step>
 <step><para>Type <userinput>32.50</userinput> or <userinput>32,50</userinput>
 and then press <guibutton>€</guibutton>. You can also type <userinput>32.5</userinput>
 without the trailing <userinput>0</userinput>.</para></step>
