@@ -71,7 +71,7 @@
 		name = "Cyprus pound"
 		/>
 	<currency
-		symbol = "K"
+		symbol = "Kč"
 		code = "CZK"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
