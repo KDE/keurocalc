@@ -250,7 +250,7 @@ void KEuroCalc::addFixedRates()
 
 	position = 0;
 	for (num = 0; num < CURRENCIES; num++)
-		if (currency[num].fixedRate != 1.0)
+		if ( currency[num].fixedRate )
 	{
 		switch (rounding)
 		{
