@@ -214,8 +214,8 @@ or <keycap>X</keycap> would have worked as well.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
 1008.50 FB or 1008,50 FB. The exact value is 1008.4975, but it's rounded
 to the closest hundredth of Belgian Francs. The rounding unit depends on
-the currency: for Belgian Francs it's 0.01 FB,
-for Italian Liras it's 1 L for example.</para></step>
+the currency and on the rounding method: with the official rounding rules,
+for Belgian Francs it's 0.01 FB, for Italian Liras it's 1 L for example.</para></step>
 </procedure>
 
 <para>You could also have typed: <userinput>25 Enter E</userinput>.</para>
@@ -379,10 +379,10 @@ other memory keys now become available.</para></step>
 (Memory Recall) button.</para></step>
 </procedure>
 
-<para>Internally, the values are recalled with no unit or in euros with
+<para>Internally, the values are recalled with no unit or in the reference currency (euro or dollar) with
 the maximum precision allowed by the mathematical library. In some rare cases,
 this might lead to rounding problems if the stored value is a round value in a
-currency different than the euro.</para>
+non-reference currency.</para>
 
 <procedure>
 <title>How do I clear the memory?</title>
