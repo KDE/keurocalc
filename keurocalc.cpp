@@ -23,7 +23,7 @@
 #include <qcombobox.h>
 #include <qdom.h>
 
-#include <kapp.h>
+#include <kapplication.h>
 #include <kaboutapplication.h>
 #include <kglobal.h>
 #include <kconfig.h>

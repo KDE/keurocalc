@@ -20,7 +20,7 @@
 
 class KLocale;
 
-#include <kapp.h>
+#include <kapplication.h>
 #include <kio/job.h>
 
 #include <qwidget.h>
