@@ -254,7 +254,7 @@ how much do you have left in your bank account?</title>
 the <guibutton>Settings...</guibutton> to select either 
 <guilabel>Euro, European Central Bank</guilabel> or
 <guilabel>Dollar, New York Federal Reserve Bank</guilabel>.
-Now select the <guilabel>USD - US dollars</guilabel> or the <guilabel>EUR - EU euro</guilabel>
+Now select the <guilabel>USD - US dollar</guilabel> or the <guilabel>EUR - EU euro</guilabel>
 item in the scroll down list on the bottom.
 If you have no Internet access, that item won't be available as the latest variable
 rates between the euro and the dollar cannot be determined.</para></step>
@@ -298,7 +298,7 @@ the same reason you cannot add 5 meters to 3 kilograms.</para></note>
 <procedure>
 <title>You buy 3.2 kilograms of apples at 2 € per kilogram. How much does
 the whole cost in Australian dollars?</title>
-<step><para>Select the <guilabel>AUD - Australian dollars</guilabel> item if
+<step><para>Select the <guilabel>AUD - Australian dollar</guilabel> item if
 available and if not already selected.</para></step>
 <step><para>Type <userinput>2</userinput> and press <guibutton>€</guibutton>.</para></step>
 <step><para>Press the <guibutton>X</guibutton> button or the <keycap>*</keycap>
