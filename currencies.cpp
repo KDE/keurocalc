@@ -56,7 +56,7 @@ currencyStruc currency[CURRENCIES] =
 	{     0.0, "Mex$", "MXN",   1.0,   1.0, I18N_NOOP("Mexican peso"), "Peso/Mexico", 1.0, -1 }, // 32
 	{     0.0,   "MR", "MYR",   1.0,   1.0, I18N_NOOP("Malaysian ringgit"), "Ringgit/Malaysia", 1.0, -1 }, // 33
 	{ 2.20371,   "Fl", "NLG",   1.0,   1.0, I18N_NOOP("Dutch gulden"), "N/A", 1.0, -1 }, // 34
-	{     0.0,  "NKr", "NOK",   1.0,   1.0, I18N_NOOP("Norvegian krone"), "Krone/Norway", 1.0, -1 }, // 35
+	{     0.0,  "NKr", "NOK",   1.0,  50.0, I18N_NOOP("Norvegian krone"), "Krone/Norway", 1.0, -1 }, // 35
 	{     0.0,  "NZ$", "NZD",   1.0,   1.0, I18N_NOOP("New Zealand dollar"), "Dollar/New Zealand", 1.0, -1 }, // 36
 	{     0.0, "zł", "PLN",   1.0,   1.0, I18N_NOOP("Polish sloty"), "N/A", 1.0, -1 }, // 37
 	{ 2.00482,  "Esc", "PTE", 100.0, 100.0, I18N_NOOP("Portuguese escudo"), "N/A", 1.0, -1 }, // 38
