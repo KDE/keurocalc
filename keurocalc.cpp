@@ -266,6 +266,7 @@ bool KEuroCalc::readCurrencies()
 
 	QDomNodeList currenciesList = document.elementsByTagName( "currency" );
 	int num;
+	QString name;
 
 	numCurrencies = currenciesList.count();
 	for (num = 0; num < numCurrencies; num++)
@@ -294,7 +295,8 @@ bool KEuroCalc::readCurrencies()
 
 		if ( !elt.hasAttribute( "name" ) )
 			return false;
-		currency[num].name =  i18n( elt.attribute( "name" ).utf8() );
+		name = elt.attribute( "name" );
+		currency[num].name = i18n( name.utf8() );
 
 		if ( elt.hasAttribute( "new-york-name" ) )
 			currency[num].newYorkName = elt.attribute( "new-york-name" );
