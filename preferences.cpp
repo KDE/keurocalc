@@ -26,7 +26,7 @@
 #include "currencies.h"
 
 extern int numCurrencies;
-extern currencyStruc currency[100];
+extern currencyStruc *currency;
 
 // Constructor
 Preferences::Preferences(KEuroCalc *parent, const char *name)

@@ -39,7 +39,7 @@
 
 extern int numCurrencies;
 extern int dollarCurrency, euroCurrency;
-extern currencyStruc currency[100];
+extern currencyStruc *currency;
 
 static const char
 	*euroSymbol = " €",
@@ -269,6 +269,7 @@ bool KEuroCalc::readCurrencies()
 	QString name;
 
 	numCurrencies = currenciesList.count();
+	currency = new currencyStruc[numCurrencies];
 	for (num = 0; num < numCurrencies; num++)
 	{
 		QDomElement elt = (const QDomElement &) currenciesList.item(num);

@@ -19,4 +19,4 @@
 
 int numCurrencies;
 int dollarCurrency, euroCurrency;
-currencyStruc currency[100];
+currencyStruc *currency = 0;
