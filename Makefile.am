@@ -3,7 +3,7 @@ bin_PROGRAMS = keurocalc
 keurocalc_SOURCES = calculator.ui settingsdialog.ui currencies.cpp keurocalc.cpp preferences.cpp main.cpp 
 keurocalc_LDADD   =  $(LIB_QT) $(LIB_KDECORE) $(LIB_KDEUI) $(LIB_KIO) $(LIBSOCKET)
 
-EXTRA_DIST = keurocalc.desktop lo32-app-keurocalc.png lo16-app-keurocalc.png
+EXTRA_DIST = keurocalc.desktop lo32-app-keurocalc.png lo16-app-keurocalc.png splash.png
 
 install-data-local:
 	$(mkinstalldirs) $(kde_appsdir)/Applications/
@@ -12,11 +12,14 @@ install-data-local:
 	$(INSTALL_DATA) $(srcdir)/lo32-app-keurocalc.png $(kde_icondir)/locolor/32x32/apps/keurocalc.png
 	$(mkinstalldirs) $(kde_icondir)/locolor/16x16/apps/
 	$(INSTALL_DATA) $(srcdir)/lo16-app-keurocalc.png $(kde_icondir)/locolor/16x16/apps/keurocalc.png
+	$(mkinstalldirs) $(kde_datadir)/keurocalc/
+	$(INSTALL_DATA) $(srcdir)/splash.png $(kde_datadir)/keurocalc/splash.png
 
 uninstall-local:
 	-rm -f $(kde_appsdir)/Applications/keurocalc.desktop
 	-rm -f $(kde_icondir)/locolor/32x32/apps/keurocalc.png
 	-rm -f $(kde_icondir)/locolor/16x16/apps/keurocalc.png
+	-rm -f $(kde_datadir)/keurocalc/
 
 ####### kdevelop will overwrite this part!!! (end)############
 # this 10 paths are KDE specific. Use them:

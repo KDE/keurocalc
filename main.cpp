@@ -21,6 +21,7 @@
 #include <kaboutdata.h>
 #include <klocale.h>
 #include <ksplashscreen.h>
+#include <kstandarddirs.h>
 
 #include <qtextcodec.h>
 
@@ -40,10 +41,8 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
-	KEuroCalc *keurocalc;
 	KAboutData aboutData( "keurocalc", name, "0.9.0", description,
 	 	              KAboutData::License_GPL, copyright, text);
-
 	aboutData.addAuthor("Éric Bischoff", I18N_NOOP("Design and implementation"), "e.bischoff@noos.fr");
 	aboutData.addCredit("Melchior Franz", I18N_NOOP("Design and testing"), "a8603365@unet.univie.ac.at");
 	aboutData.addCredit("Bas Willems", I18N_NOOP("Graphical artwork"), "cybersurfer@euronet.nl");
@@ -51,9 +50,13 @@ int main(int argc, char *argv[])
 	KCmdLineArgs::addCmdLineOptions( options );
 
 	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
-	KApplication a;
 
-	KSplashScreen *splash = new KSplashScreen( QPixmap( "splash.png" ) );
+	KApplication a;
+	KSplashScreen *splash;
+	KEuroCalc *keurocalc;
+
+	splash = new KSplashScreen( QPixmap( locate( "data", "keurocalc/splash.png" ) ) );
+
 	splash->message(i18n(description) + "\n" + i18n(copyright), Qt::AlignBottom);
 	splash->show();
 
