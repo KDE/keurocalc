@@ -165,7 +165,7 @@ agreement states, there's no liability of the authors if the results are not
 correct or as expected. Also, please notice that the variable exchange rates
 are downloaded in an uncrypted and therefore unsecure manner from the data
 sources (European Central Bank and New York Fedeeral Reserve Bank).
-Some "man-in-the-middle" attacker may confuse KEuroCalc by forging wrong
+Some "man-in-the-middle" attacker may confuse &keurocalc; by forging wrong
 exchange rates. More simply, a transmission error is always possible.</para></warning>
 
 </chapter>
