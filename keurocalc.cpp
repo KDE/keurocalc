@@ -272,7 +272,7 @@ bool KEuroCalc::readCurrencies()
 	currency = new currencyStruc[numCurrencies];
 	for (num = 0; num < numCurrencies; num++)
 	{
-		QDomElement elt = (const QDomElement &) currenciesList.item(num);
+		QDomElement elt = currenciesList.item(num).toElement();
 
 		if ( !elt.hasAttribute( "symbol" ) )
 			return false;
@@ -367,7 +367,7 @@ void KEuroCalc::httpResultECB(KIO::Job *job)
 
 	for (uint i = 0; i < ratesList.count(); i++)
 	{
-		QDomElement elt = (const QDomElement &) ratesList.item(i);
+		QDomElement elt = ratesList.item(i).toElement();
 		if ( elt.hasAttribute( "time" ) )
 		{
 			DateLabel->setText( elt.attribute( "time" ) );
@@ -428,15 +428,15 @@ void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 
 	for (uint i = 0; i < ratesList.count(); i++)
 	{
-		QDomElement elt = (const QDomElement &) ratesList.item(i);
+		QDomElement elt = ratesList.item(i).toElement();
 		QDomNodeList dateElements = elt.elementsByTagName( "Date" ),
 			     countryElements = elt.elementsByTagName( "Country" ),
 			     valueElements = elt.elementsByTagName( "Value" );
 		if (dateElements.count() == 1 && countryElements.count() == 1 && valueElements.count() == 1)
 		{
-			QDomElement dateElement = (const QDomElement &) dateElements.item(0),
-				    countryElement = (const QDomElement &) countryElements.item(0),
-				    valueElement = (const QDomElement &) valueElements.item(0);
+			QDomElement dateElement = dateElements.item(0).toElement(),
+				    countryElement = countryElements.item(0).toElement(),
+				    valueElement = valueElements.item(0).toElement();
 			QString newYorkName( countryElement.attribute( "UnitName" ) + "/" + countryElement.text() );
 			for (num = 0; num < numCurrencies; num++)
 				if ( newYorkName == currency[num].newYorkName )
