@@ -95,7 +95,7 @@ like the British Pound, according to the daily exchange rate defined by the
 published the ECB.</para></listitem>
 <listitem><para>To do conversions between the US dollar and other currencies
 according to the daily exchange rate defined by the
-<ulink url="/http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
 Federal Reserve Bank (NY FRB)</ulink>.</para></listitem>
 <listitem><para>To do conversions between any two currencies that are part of the list
 published the NY FRB.</para></listitem>
