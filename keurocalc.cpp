@@ -1113,7 +1113,7 @@ void KEuroCalc::initButtons()
 	switch ( rounding )
 	{
 		case OFFICIAL_RULES:
-			RoundingLabel->setText( i18n( "Off. rules" ) );
+			RoundingLabel->setText( i18n( "Official rules" ) );
 			break;
 		case SMALLEST_COIN:
 			RoundingLabel->setText( i18n( "Smallest coin" ) );
