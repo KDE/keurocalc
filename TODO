@@ -3,15 +3,17 @@ BUGS
 
 Find a solution for the Turkish Lira (doesn't fit in display)
 
+Problem with non-working days at New York Federal Reserve Bank
+
 
 FUNCTIONALITY
 =============
 
-Allow alternative data sources:
-- PACIFIC Exchange Rate Service
-  http://fx.sauder.ubc.ca/today.html
+Allow more data sources:
 - US Federal reserve
   http://www.federalreserve.gov/releases/H10/Update/h10daily.txt
+- PACIFIC Exchange Rate Service
+  http://fx.sauder.ubc.ca/today.html
 - Bank of Canada
   http://www.bankofcanada.ca/en/financial_markets/csv/exchange_eng.csv
 
@@ -20,6 +22,7 @@ Allow using the exchange rates of some date in the past.
 Add buttons to selectively clear input, display or memory.
 
 Add settings:
+- preferred currency
 - rounding legal/nextcoin/no
 - display color
 
@@ -39,9 +42,12 @@ kspread for example.
 COSMETICAL
 ==========
 
+Display the current data source
+
 Display the currencies sorted by their code in the drop-down list.
 
 Better geometry management.
 
 Add country flags.
 
+Replace Europe flag with money picture

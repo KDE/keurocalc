@@ -63,43 +63,43 @@ static struct currencyStruc {
 	{ 40.3399, "FLux", "LUF",   1.0,  10.0, I18N_NOOP("Luxembourg franc"), "N/A", -1 },
 	{ 2.20371,   "Fl", "NLG",   1.0,   1.0, I18N_NOOP("Dutch gulden"), "N/A", -1 },
 	{ 2.00482,  "Esc", "PTE", 100.0, 100.0, I18N_NOOP("Portuguese escudo"), "N/A", -1 },
-	{     1.0," €", "EUR",   1.0,   1.0, I18N_NOOP("EU euro"), "Euro_European Monetary Union", -1 },
+	{     1.0," €", "EUR",   1.0,   1.0, I18N_NOOP("EU euro"), "Euro/European Monetary Union", -1 },
 	{     1.0,    "$", "USD",   1.0,   1.0, I18N_NOOP("US dollar"), "N/A", -1 },
-	{     1.0,   "A$", "AUD",   1.0,   1.0, I18N_NOOP("Australian dollar"), "Dollar_Australia", -1 },
+	{     1.0,   "A$", "AUD",   1.0,   1.0, I18N_NOOP("Australian dollar"), "Dollar/Australia", -1 },
 	{     1.0,   "Lv", "BGN",   1.0,   1.0, I18N_NOOP("Bulgarian lev"), "N/A", -1 },
-	{     1.0,   "R$", "BRL",   1.0,   1.0, I18N_NOOP("Brazilian real"), "Real_Brazil", -1 },
-	{     1.0, "Can$", "CAD",   1.0,   1.0, I18N_NOOP("Canadian dollar"), "Dollar_Canada", -1 },
-	{     1.0,   "FS", "CHF",   1.0,   1.0, I18N_NOOP("Swiss franc"), "Franc_Switzerland", -1 },
-	{     1.0,    "Y", "CNY",   1.0,   1.0, I18N_NOOP("Chinese yuan"), "Yuan_China, P.R.", -1 },
+	{     1.0,   "R$", "BRL",   1.0,   1.0, I18N_NOOP("Brazilian real"), "Real/Brazil", -1 },
+	{     1.0, "Can$", "CAD",   1.0,   1.0, I18N_NOOP("Canadian dollar"), "Dollar/Canada", -1 },
+	{     1.0,   "FS", "CHF",   1.0,   1.0, I18N_NOOP("Swiss franc"), "Franc/Switzerland", -1 },
+	{     1.0,    "Y", "CNY",   1.0,   1.0, I18N_NOOP("Chinese yuan"), "Yuan/China, P.R.", -1 },
 	{     1.0,  "£C", "CYP",   1.0,   1.0, I18N_NOOP("Cyprus pound"), "N/A", -1 },
 	{     1.0,    "K", "CZK",   1.0,   1.0, I18N_NOOP("Czech koruna"), "N/A", -1 },
-	{     1.0,  "DKr", "DKK",   1.0,   1.0, I18N_NOOP("Danish krone"), "Krone_Denmark", -1 },
+	{     1.0,  "DKr", "DKK",   1.0,   1.0, I18N_NOOP("Danish krone"), "Krone/Denmark", -1 },
 	{     1.0,  "EKr", "EEK",   1.0,   1.0, I18N_NOOP("Estonian kroon"), "N/A", -1 },
-	{     1.0,   "£", "GBP",   1.0,   1.0, I18N_NOOP("Great Britain pound"), "Pound_United Kingdom", -1 },
-	{     1.0,  "HK$", "HKD",   1.0,   1.0, I18N_NOOP("Hong kong dollar"), "Dollar_Hong Kong", -1 },
+	{     1.0,   "£", "GBP",   1.0,   1.0, I18N_NOOP("Great Britain pound"), "Pound/United Kingdom", -1 },
+	{     1.0,  "HK$", "HKD",   1.0,   1.0, I18N_NOOP("Hong kong dollar"), "Dollar/Hong Kong", -1 },
 	{     1.0,   "Ht", "HUF", 100.0, 100.0, I18N_NOOP("Hungarian forint"), "N/A", -1 },
-	{     1.0,   "Rs", "INR",   1.0,   1.0, I18N_NOOP("Indian rupee"), "Rupee_India", -1 },
+	{     1.0,   "Rs", "INR",   1.0,   1.0, I18N_NOOP("Indian rupee"), "Rupee/India", -1 },
 	{     1.0,  "Ikr", "ISK",   1.0,   1.0, I18N_NOOP("Icelandic krona"), "N/A", -1 },
-	{     1.0,   "¥", "JPY", 100.0, 100.0, I18N_NOOP("Japanese yen"), "Yen_Japan", -1 },
-	{     1.0,    "W", "KRW",1000.0,1000.0, I18N_NOOP("South Korean won"), "Won_South Korea", -1 }, // should be "₩"
-	{     1.0, "SLRs", "LKR",   1.0,   1.0, I18N_NOOP("Sri Lankan rupee"), "Rupee_Sri Lanka", -1 },
+	{     1.0,   "¥", "JPY", 100.0, 100.0, I18N_NOOP("Japanese yen"), "Yen/Japan", -1 },
+	{     1.0,    "W", "KRW",1000.0,1000.0, I18N_NOOP("South Korean won"), "Won/South Korea", -1 }, // should be "₩"
+	{     1.0, "SLRs", "LKR",   1.0,   1.0, I18N_NOOP("Sri Lankan rupee"), "Rupee/Sri Lanka", -1 },
 	{     1.0,   "lt", "LTL",   1.0,   1.0, I18N_NOOP("Latvian lats"), "N/A", -1 },
 	{     1.0,   "Ls", "LVL",   1.0,   1.0, I18N_NOOP("Lithuanian litas"), "N/A", -1 },
 	{     1.0,   "Lm", "MTL",   1.0,   1.0, I18N_NOOP("Maltese lira"), "N/A", -1 },
-	{     1.0, "Mex$", "MXN",   1.0,   1.0, I18N_NOOP("Mexican peso"), "Peso_Mexico", -1 },
-	{     1.0,   "MR", "MYR",   1.0,   1.0, I18N_NOOP("Malaysian ringgit"), "Ringgit_Malaysia", -1 },
-	{     1.0,  "NKr", "NOK",   1.0,   1.0, I18N_NOOP("Norvegian krone"), "Krone_Norway", -1 },
-	{     1.0,  "NZ$", "NZD",   1.0,   1.0, I18N_NOOP("New Zealand dollar"), "Dollar_New Zealand", -1 },
+	{     1.0, "Mex$", "MXN",   1.0,   1.0, I18N_NOOP("Mexican peso"), "Peso/Mexico", -1 },
+	{     1.0,   "MR", "MYR",   1.0,   1.0, I18N_NOOP("Malaysian ringgit"), "Ringgit/Malaysia", -1 },
+	{     1.0,  "NKr", "NOK",   1.0,   1.0, I18N_NOOP("Norvegian krone"), "Krone/Norway", -1 },
+	{     1.0,  "NZ$", "NZD",   1.0,   1.0, I18N_NOOP("New Zealand dollar"), "Dollar/New Zealand", -1 },
 	{     1.0, "zł", "PLN",   1.0,   1.0, I18N_NOOP("Polish sloty"), "N/A", -1 },
 	{     1.0,    "L", "ROL",  10.0,10000., I18N_NOOP("Romanian leu"), "N/A", -1 },
-	{     1.0,  "SKr", "SEK",   1.0,   1.0, I18N_NOOP("Swedish krona"), "Krona_Sweden", -1 },
-	{     1.0,   "S$", "SGB",   1.0,   1.0, I18N_NOOP("Singapore dollar"), "Dollar_Singapore", -1 },
+	{     1.0,  "SKr", "SEK",   1.0,   1.0, I18N_NOOP("Swedish krona"), "Krona/Sweden", -1 },
+	{     1.0,   "S$", "SGB",   1.0,   1.0, I18N_NOOP("Singapore dollar"), "Dollar/Singapore", -1 },
 	{     1.0,  "SIT", "SIT",   1.0,   1.0, I18N_NOOP("Slovenian tolar"), "N/A", -1 },
 	{     1.0,   "Sk", "SKK",   1.0,   1.0, I18N_NOOP("Slovakian koruna"), "N/A", -1 },
-	{     1.0,   "Bt", "THB",   1.0,   1.0, I18N_NOOP("Thailandese baht"), "Baht_Thailand", -1 },
-	{     1.0,   "Bt", "TWD",   1.0,   1.0, I18N_NOOP("Taiwanese new dollar"), "N.T. Dollar_Taiwan", -1 },
-	{     1.0,    "$", "VEB",1000.0,1000.0, I18N_NOOP("Venezuelian bolivar"), "Bolivar_Venezuela", -1 },
-	{     1.0,    "R", "ZAR",   1.0,   1.0, I18N_NOOP("South African rand"), "Rand_South Africa", -1 }
+	{     1.0,   "Bt", "THB",   1.0,   1.0, I18N_NOOP("Thailandese baht"), "Baht/Thailand", -1 },
+	{     1.0,   "Bt", "TWD",   1.0,   1.0, I18N_NOOP("Taiwanese new dollar"), "N.T. Dollar/Taiwan", -1 },
+	{     1.0,    "$", "VEB",1000.0,1000.0, I18N_NOOP("Venezuelian bolivar"), "Bolivar/Venezuela", -1 },
+	{     1.0,    "R", "ZAR",   1.0,   1.0, I18N_NOOP("South African rand"), "Rand/South Africa", -1 }
 };
 
 static const char
@@ -280,7 +280,7 @@ void KEuroCalc::httpResultECB(KIO::Job *job)
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 	variableRates = "";
-	newRatesList(EURO_CURRENCY);
+	newRatesList( EURO_CURRENCY );
 }
 
 void KEuroCalc::httpResultNYFRB(KIO::Job *job)
@@ -304,7 +304,7 @@ void KEuroCalc::httpResultNYFRB(KIO::Job *job)
 			QDomElement dateElement = (const QDomElement &) dateElements.item(0),
 				    countryElement = (const QDomElement &) countryElements.item(0),
 				    valueElement = (const QDomElement &) valueElements.item(0);
-			QString newYorkName( countryElement.attribute( "UnitName" ) + "_" + countryElement.text() );
+			QString newYorkName( countryElement.attribute( "UnitName" ) + "/" + countryElement.text() );
 			for (num = FIXED_CURRENCIES; num < CURRENCIES; num++)
 				if ( newYorkName == currency[num].newYorkName )
 					break;
@@ -331,7 +331,7 @@ void KEuroCalc::httpResultNYFRB(KIO::Job *job)
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 	variableRates = "";
-	newRatesList(DOLLAR_CURRENCY);
+	newRatesList( DOLLAR_CURRENCY );
 }
 
 void KEuroCalc::inputDot()
@@ -983,7 +983,7 @@ void KEuroCalc::initButtons()
 		}
 	}
 	if (reference == euroFixed)
-		newRatesList(EURO_CURRENCY);
+		newRatesList( EURO_CURRENCY );
 	else if (reference == euroECB)
 	{
 		CurrencyList->insertItem( QString::fromUtf8
