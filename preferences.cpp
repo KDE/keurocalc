@@ -16,7 +16,7 @@
  ***************************************************************************/
 
 #include <qbuttongroup.h>
-#include <qcombobox.h>
+#include <qlistbox.h>
 
 #include <klocale.h>
 
@@ -27,10 +27,15 @@
 
 extern currencyStruc currency[CURRENCIES];
 
+// Constructor
 Preferences::Preferences(KEuroCalc *parent, const char *name)
 	: SettingsDialog( parent, name )
 {
-	referenceGroup->setButton( parent->getReference() );	
+	int oldReference, oldCurrency, oldRounding;
+
+	parent->readOptions( oldReference, oldCurrency,  oldRounding );
+
+	referenceGroup->setButton( oldReference );
 
 	for (int num = 0; num < CURRENCIES; num++)
 		defaultCurrencyList->insertItem
@@ -38,24 +43,31 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 			  QString::fromUtf8( " - " ) +
 			  i18n( currency[num].name )
 			);
-	defaultCurrencyList->setCurrentItem( parent->getCurrencyNum() );
+	defaultCurrencyList->setCurrentItem( oldCurrency );
+
+	roundingGroup->setButton( oldRounding );
 }
 
+// Destructor
 Preferences::~Preferences()
 {
 }
 
+// OK button pressed
 void Preferences::ok()
 {
 	KEuroCalc *calc = (KEuroCalc *) parentWidget();
+	int newReference = referenceGroup->selectedId(),
+	    newCurrency = defaultCurrencyList->currentItem(),
+	    newRounding = roundingGroup->selectedId();
 
-	calc->setPreferences
-		( referenceGroup->selectedId(),
-	 	  defaultCurrencyList->currentItem()
-		);
+	calc->writeOptions( newReference, newCurrency, newRounding );
+	calc->setPreferences( newReference, newCurrency, newRounding );
+
 	close();
 }
 
+// Cancel button pressed
 void Preferences::cancel()
 {
 	close();

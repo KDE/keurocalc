@@ -18,22 +18,30 @@
 #ifndef CURRENCY_H
 #define CURRENCY_H
 
+#define EURO_FIXED 0
+#define EURO_ECB 1
+#define DOLLAR_NY_FRB 2
+
 #define CURRENCIES 49
 #define FIXED_CURRENCIES 12
-#define EURO_CURRENCY FIXED_CURRENCIES
-#define DOLLAR_CURRENCY (FIXED_CURRENCIES + 1)
-#define VARIABLE_CURRENCIES 37
+#define EURO_CURRENCY 14
+#define DOLLAR_CURRENCY 46
 
 struct currencyStruc {
-	double rate;
+	double fixedRate;
 	const char *symbol;
 	const char *code;
-	double rulesPrecision;
+	double officialRulesPrecision;
 	double smallestCoinPrecision;
 	const char *name;
 	const char *newYorkName;
+	double rate;
 	int position;
 };
+
+#define OFFICIAL_RULES 0
+#define SMALLEST_COIN 1
+#define NO_ROUNDING 2
 
 #endif
 

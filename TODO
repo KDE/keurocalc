@@ -21,9 +21,9 @@ Allow using the exchange rates of some date in the past.
 
 Add buttons to selectively clear input, display or memory.
 
-Add settings:
-- rounding legal/nextcoin/no
-- display color
+Add setting for display color
+
+Show rounding method in status bar
 
 Do not show all currencies in the default currency setting,
 only the ones that the selected data source offers.
@@ -37,8 +37,7 @@ SYSTEM INTEGRATION
 
 Allow cut and paste of data.
 
-Make keurocalc become a kparts component that can be included in
-kspread for example.
+Let keurocalc offer rates services to other programss like kspread.
 
 Let keurocalc offer a desktop panel applet.
 
@@ -47,8 +46,6 @@ COSMETICAL
 ==========
 
 Non-blocking wait during the splash screen.
-
-Display the currencies sorted by their code in the drop-down lists.
 
 Better geometry management.
 

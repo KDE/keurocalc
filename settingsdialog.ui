@@ -8,13 +8,29 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>550</width>
-            <height>233</height>
+            <width>504</width>
+            <height>280</height>
         </rect>
     </property>
     <property name="caption">
         <string>Settings...</string>
     </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>defaultCurrencyText</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>110</y>
+                <width>260</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Default currency</string>
+        </property>
+    </widget>
     <widget class="QButtonGroup">
         <property name="name">
             <cstring>referenceGroup</cstring>
@@ -36,28 +52,6 @@
         <property name="title">
             <string>Reference currency, rates origin</string>
         </property>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>radioButtonEuroFixed</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>20</y>
-                    <width>260</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property name="text">
-                <string>Euro, no network access (fixed rates only)</string>
-            </property>
-            <property name="accel">
-                <string></string>
-            </property>
-            <property name="buttonGroupId">
-                <number>0</number>
-            </property>
-        </widget>
         <widget class="QRadioButton">
             <property name="name">
                 <cstring>radioButtonEuroECB</cstring>
@@ -88,6 +82,28 @@
         </widget>
         <widget class="QRadioButton">
             <property name="name">
+                <cstring>radioButtonEuroFixed</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>260</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Euro, no network access (fixed rates only)</string>
+            </property>
+            <property name="accel">
+                <string></string>
+            </property>
+            <property name="buttonGroupId">
+                <number>0</number>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
                 <cstring>radioButtonDollarNYFRB</cstring>
             </property>
             <property name="geometry">
@@ -111,35 +127,124 @@
     </widget>
     <widget class="QButtonGroup">
         <property name="name">
-            <cstring>buttonGroup1</cstring>
+            <cstring>roundingGroup</cstring>
         </property>
         <property name="geometry">
             <rect>
                 <x>300</x>
                 <y>10</y>
-                <width>240</width>
-                <height>50</height>
+                <width>190</width>
+                <height>90</height>
             </rect>
         </property>
         <property name="title">
-            <string>Precision</string>
+            <string>Rounding</string>
         </property>
-        <widget class="QLabel">
+        <widget class="QRadioButton">
             <property name="name">
-                <cstring>textLabel1</cstring>
+                <cstring>radioButtonOfficialRules</cstring>
             </property>
             <property name="geometry">
                 <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>220</width>
+                    <width>170</width>
                     <height>20</height>
                 </rect>
             </property>
             <property name="text">
-                <string>&lt;i&gt;This setting is not available yet&lt;/i&gt;</string>
+                <string>Official rounding rules</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>0</number>
             </property>
         </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>radioButtonSmallestCoin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>40</y>
+                    <width>170</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Smallest coin method</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>1</number>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>radioButtonNoRounding</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>60</y>
+                    <width>170</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>No rounding at all</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>2</number>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QListBox">
+        <property name="name">
+            <cstring>defaultCurrencyList</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>130</y>
+                <width>280</width>
+                <height>80</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>CancelButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>270</x>
+                <y>240</y>
+                <width>70</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Cancel</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>OKButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>240</y>
+                <width>54</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+        <property name="default">
+            <bool>true</bool>
+        </property>
     </widget>
     <widget class="QButtonGroup">
         <property name="name">
@@ -148,9 +253,9 @@
         <property name="geometry">
             <rect>
                 <x>300</x>
-                <y>100</y>
-                <width>240</width>
-                <height>50</height>
+                <y>120</y>
+                <width>190</width>
+                <height>90</height>
             </rect>
         </property>
         <property name="title">
@@ -164,78 +269,14 @@
                 <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>220</width>
-                    <height>20</height>
+                    <width>170</width>
+                    <height>50</height>
                 </rect>
             </property>
             <property name="text">
                 <string>&lt;i&gt;This setting is not available yet&lt;/i&gt;</string>
             </property>
         </widget>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>OKButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>190</x>
-                <y>190</y>
-                <width>54</width>
-                <height>25</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>OK</string>
-        </property>
-        <property name="default">
-            <bool>true</bool>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>CancelButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>290</x>
-                <y>190</y>
-                <width>70</width>
-                <height>25</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Cancel</string>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>defaultCurrencyText</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>20</x>
-                <y>110</y>
-                <width>260</width>
-                <height>21</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Default currency</string>
-        </property>
-    </widget>
-    <widget class="QComboBox">
-        <property name="name">
-            <cstring>defaultCurrencyList</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>20</x>
-                <y>130</y>
-                <width>260</width>
-                <height>21</height>
-            </rect>
-        </property>
     </widget>
 </widget>
 <connections>
@@ -253,36 +294,6 @@
     </connection>
 </connections>
 <slots>
-    <slot>changeSign()</slot>
-    <slot>displayHelp()</slot>
-    <slot>inputAsterisk()</slot>
-    <slot>inputBackspace()</slot>
-    <slot>inputDot()</slot>
-    <slot>inputEight()</slot>
-    <slot>inputFive()</slot>
-    <slot>inputFour()</slot>
-    <slot>inputMinus()</slot>
-    <slot>inputNine()</slot>
-    <slot>inputOne()</slot>
-    <slot>inputPlus()</slot>
-    <slot>inputSeven()</slot>
-    <slot>inputSix()</slot>
-    <slot>inputSlash()</slot>
-    <slot>inputThree()</slot>
-    <slot>inputTwo()</slot>
-    <slot>inputZero()</slot>
-    <slot>displayAbout()</slot>
-    <slot>reset()</slot>
-    <slot>selectCurrency( int )</slot>
-    <slot>validateCurrency()</slot>
-    <slot>validateEuro()</slot>
-    <slot>validatePercent()</slot>
-    <slot>validateSimpleValue()</slot>
-    <slot>memoryInput()</slot>
-    <slot>memoryRecall()</slot>
-    <slot>memoryMinus()</slot>
-    <slot>memoryPlus()</slot>
-    <slot>CurrencyList_activated( int )</slot>
     <slot>ok()</slot>
     <slot>cancel()</slot>
 </slots>

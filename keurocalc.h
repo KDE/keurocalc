@@ -35,14 +35,14 @@ public:
     KEuroCalc(QWidget* parent=0, const char *name=0);
     ~KEuroCalc();
     virtual void keyPressEvent( QKeyEvent *e );    
-    inline int getReference() const {return reference;}
-    inline int getCurrencyNum() const {return currencyNum;}
-    void setPreferences(int newReference, int newCurrency);
+    void readOptions(int &oldReference, int &oldCurrency, int &oldRounding);
+    void writeOptions(int newReference, int newCurrency, int newRounding);
+    void setPreferences(int newReference, int newCurrency, int newRounding);
 
 public slots:
     virtual void httpData(KIO::Job *, const QByteArray &); 
     virtual void httpResultECB(KIO::Job *); 
-    virtual void httpResultNYFRB(KIO::Job *); 
+    virtual void httpResultNY_FRB(KIO::Job *); 
     virtual void inputDot();
     virtual void inputZero();
     virtual void inputOne();
@@ -92,15 +92,13 @@ private:
     double simpleMemory,
            referenceMemory;
 
+    int reference;
     int currencyNum;
-    enum referenceMode { euroFixed,
-	   euroECB,
-	   dollarNYFRB
-    } reference;
+    int rounding;
 
-    void readOptions();
-    void writeOptions();
+    void addFixedRates();
     void initButtons();
+    void startDownload();
     void newRatesList(int defaultCurrency); 
     void inputDigit( char c );
     void inputCorrect();
