@@ -928,6 +928,7 @@ void KEuroCalc::initButtons()
 	{
 		CurrencyList->insertItem( QString::fromUtf8
 			( "--------------------------------------------" ) );
+		DateLabel->setText( i18n( "Loading..." ) );
 		KIO::SimpleJob *job = KIO::get( KURL( urlECB ), true, false );
 		connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
 			 this, SLOT(httpData(KIO::Job *, const QByteArray &))
@@ -943,6 +944,7 @@ void KEuroCalc::initButtons()
 		// This is suboptimal: we should guess the date of latest working day at 12:00 in New York local time
 		// Or much better: use a URL that does not depend on that date...
 
+		DateLabel->setText( i18n( "Loading..." ) );
 		yesterday = QDate::currentDate().addDays(-1);
 		sprintf(url, urlNYFRB, yesterday.year(), yesterday.month(), yesterday.day());
 		KIO::SimpleJob *job = KIO::get( KURL( url ), true, false );
