@@ -143,7 +143,8 @@ void KEuroCalc::keyPressEvent(QKeyEvent *e)
 		case Key_Percent:
 			PercentButton->animateClick();
 			break;
-		case Key_Equal:
+		case Key_Enter:
+		case Key_Return:
 			SimpleValueButton->animateClick();
 			break;
 		case Key_S:
@@ -230,7 +231,7 @@ void KEuroCalc::inputMinus()
 
 void KEuroCalc::inputAsterisk()
 {
-	inputOperator('*');
+	inputOperator('x');
 }
 
 void KEuroCalc::inputSlash()
@@ -248,6 +249,19 @@ void KEuroCalc::inputBackspace()
 void KEuroCalc::validateEuro()
 {
 	double inputValue = atof( inputDisplay );
+
+	if (inputDisplay[10] == ' ')
+	{
+		if (isSimpleValue && *operatorDisplay == ' ')
+		{
+			isSimpleValue = false;
+			euroValue = simpleValue;
+			currencyValue = euroValue * currencyRate * currencyPrecision;
+			displayNewResult();
+		}
+		else KApplication().beep();
+		return;
+	}
 
 	switch ( *operatorDisplay )
 	{
@@ -274,7 +288,7 @@ void KEuroCalc::validateEuro()
 			euroValue -= inputValue;
 			currencyValue = euroValue * currencyRate * currencyPrecision;
 			break;
-		case '*':
+		case 'x':
 			if (isSimpleValue)
 			{
 				isSimpleValue = false;
@@ -308,6 +322,19 @@ void KEuroCalc::validateCurrency()
 {
 	double inputValue = atof( inputDisplay );
 
+	if (inputDisplay[10] == ' ')
+	{
+		if (isSimpleValue && *operatorDisplay == ' ')
+		{
+			isSimpleValue = false;
+			currencyValue = simpleValue;
+			euroValue = currencyValue / currencyRate / currencyPrecision;
+			displayNewResult();
+		}
+		else KApplication().beep();
+		return;
+	}
+
 	switch ( *operatorDisplay )
 	{
 		case ' ':
@@ -333,7 +360,7 @@ void KEuroCalc::validateCurrency()
 			currencyValue -= inputValue;
 			euroValue = currencyValue / currencyRate / currencyPrecision;
 			break;
-		case '*':
+		case 'x':
 			if (isSimpleValue)
 			{
 				isSimpleValue = false;
@@ -367,6 +394,12 @@ void KEuroCalc::validatePercent()
 {
 	double inputValue = atof( inputDisplay );
 
+	if (inputDisplay[10] == ' ')
+	{
+		KApplication().beep();
+		return;
+	}
+
 	switch ( *operatorDisplay )
 	{
 		case ' ':
@@ -396,7 +429,7 @@ void KEuroCalc::validatePercent()
 				currencyValue = euroValue * currencyRate * currencyPrecision;
 			}
 			break;
-		case '*':
+		case 'x':
 		case '/':
 			KApplication().beep();
 			return;
@@ -409,6 +442,12 @@ void KEuroCalc::validatePercent()
 void KEuroCalc::validateSimpleValue()
 {
 	double inputValue = atof( inputDisplay );
+
+	if (inputDisplay[10] == ' ')
+	{
+		KApplication().beep();
+		return;
+	}
 
 	switch ( *operatorDisplay )
 	{
@@ -434,7 +473,7 @@ void KEuroCalc::validateSimpleValue()
 				return;
 			}
 			break;
-		case '*':
+		case 'x':
 			if ( isSimpleValue )
 				simpleValue *= inputValue;
 			else
@@ -468,7 +507,7 @@ void KEuroCalc::validateSimpleValue()
 // Change the sign of the result
 void KEuroCalc::changeSign()
 {
-	if (simpleValue)
+	if ( isSimpleValue )
 		simpleValue = -simpleValue;
 	else
 	{
@@ -589,7 +628,6 @@ void KEuroCalc::initButtons()
 	PlusButton->setText( QString::fromUtf8( "+" ) );
 	EuroButton->setText( QString::fromUtf8( euroSymbol ) );
 	PercentButton->setText( QString::fromUtf8( "%" ) );
-	SimpleValueButton->setText( QString::fromUtf8( "=" ) );
 	PlusMinusButton->setText( QString::fromUtf8( "+/-" ) );
 	ResetButton->setText( QString::fromUtf8( "AC" ) );
 }
@@ -657,7 +695,7 @@ void KEuroCalc::inputCorrect()
 	switch ( inputPos )
 	{
 		case atUnits:
-			if (inputDisplay[9] == ' ' && inputDisplay[10] == '0')
+			if (inputDisplay[10] == ' ')
 				*operatorDisplay = ' ';
 			break;
 		case beforeUnits:
@@ -666,21 +704,20 @@ void KEuroCalc::inputCorrect()
 			d = inputDisplay + 10;
 			while ( d > inputDisplay) *d-- = *s--;
 			*d = ' ';
-			if (inputDisplay[10] == ' ') inputDisplay[10] = '0';
 			break;
 	}
 	inputPos =
-		inputDisplay[9] == ' ' && inputDisplay[10] == '0'?
+		inputDisplay[10] == ' '?
 		atUnits:
 		(QString(inputDisplay).find('.') == -1? beforeUnits: afterUnits);
 
 	displayNewInput();
 }
 
-// Input an operator ('+', '-', '*' or '/')
+// Input an operator ('+', '-', 'x' or '/')
 void KEuroCalc::inputOperator(char c)
 {
-	if (inputDisplay[9] != ' ' || inputDisplay[10] != '0')
+	if (inputDisplay[10] != ' ')
 		validateSimpleValue();
 
 	*operatorDisplay = c;
@@ -692,7 +729,7 @@ void KEuroCalc::inputOperator(char c)
 void KEuroCalc::resetInput()
 {
 	strcpy(operatorDisplay, " ");
-	strcpy( inputDisplay, "          0" );
+	strcpy( inputDisplay, "           " );
 	inputPos = atUnits;
 	OperatorDisplay->setText( operatorDisplay );
 	InputDisplay->setText( inputDisplay );

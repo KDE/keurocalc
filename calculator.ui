@@ -11,8 +11,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>339</width>
-            <height>282</height>
+            <width>341</width>
+            <height>279</height>
         </rect>
     </property>
     <property stdset="1">
@@ -1613,91 +1613,6 @@
         <class>QPushButton</class>
         <property stdset="1">
             <name>name</name>
-            <cstring>EuroButton</cstring>
-        </property>
-        <property stdset="1">
-            <name>geometry</name>
-            <rect>
-                <x>160</x>
-                <y>80</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property stdset="1">
-            <name>text</name>
-            <string></string>
-        </property>
-        <property>
-            <name>toolTip</name>
-            <string>Enter value expressed in Euro</string>
-        </property>
-    </widget>
-    <widget>
-        <class>QPushButton</class>
-        <property stdset="1">
-            <name>name</name>
-            <cstring>CurrencyButton</cstring>
-        </property>
-        <property stdset="1">
-            <name>geometry</name>
-            <rect>
-                <x>160</x>
-                <y>110</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property stdset="1">
-            <name>text</name>
-            <string></string>
-        </property>
-        <property stdset="1">
-            <name>default</name>
-            <bool>false</bool>
-        </property>
-        <property>
-            <name>toolTip</name>
-            <string>Enter value expressed in currency</string>
-        </property>
-    </widget>
-    <widget>
-        <class>QPushButton</class>
-        <property stdset="1">
-            <name>name</name>
-            <cstring>SimpleValueButton</cstring>
-        </property>
-        <property stdset="1">
-            <name>enabled</name>
-            <bool>true</bool>
-        </property>
-        <property stdset="1">
-            <name>geometry</name>
-            <rect>
-                <x>160</x>
-                <y>140</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property stdset="1">
-            <name>text</name>
-            <string></string>
-            <comment>Enter input key</comment>
-        </property>
-        <property stdset="1">
-            <name>default</name>
-            <bool>false</bool>
-        </property>
-        <property>
-            <name>toolTip</name>
-            <string>Enter simple value</string>
-        </property>
-    </widget>
-    <widget>
-        <class>QPushButton</class>
-        <property stdset="1">
-            <name>name</name>
             <cstring>PlusMinusButton</cstring>
         </property>
         <property stdset="1">
@@ -1746,30 +1661,6 @@
         <class>QPushButton</class>
         <property stdset="1">
             <name>name</name>
-            <cstring>ResetButton</cstring>
-        </property>
-        <property stdset="1">
-            <name>geometry</name>
-            <rect>
-                <x>110</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property stdset="1">
-            <name>text</name>
-            <string></string>
-        </property>
-        <property>
-            <name>toolTip</name>
-            <string>Reset both input and result</string>
-        </property>
-    </widget>
-    <widget>
-        <class>QPushButton</class>
-        <property stdset="1">
-            <name>name</name>
             <cstring>BackspaceButton</cstring>
         </property>
         <property stdset="1">
@@ -1808,6 +1699,115 @@
         <property stdset="1">
             <name>text</name>
             <string></string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>SimpleValueButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>enabled</name>
+            <bool>true</bool>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>160</x>
+                <y>140</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>Enter</string>
+            <comment>Enter button</comment>
+        </property>
+        <property stdset="1">
+            <name>default</name>
+            <bool>false</bool>
+        </property>
+        <property>
+            <name>toolTip</name>
+            <string>Enter simple value</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>CurrencyButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>160</x>
+                <y>110</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string></string>
+        </property>
+        <property stdset="1">
+            <name>default</name>
+            <bool>false</bool>
+        </property>
+        <property>
+            <name>toolTip</name>
+            <string>Enter value expressed in currency</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>EuroButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>160</x>
+                <y>80</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string></string>
+        </property>
+        <property>
+            <name>toolTip</name>
+            <string>Enter value expressed in Euro</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>ResetButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>110</x>
+                <y>170</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string></string>
+        </property>
+        <property>
+            <name>toolTip</name>
+            <string>Reset both input and result</string>
         </property>
     </widget>
 </widget>
