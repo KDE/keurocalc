@@ -1,9 +1,9 @@
 ####### kdevelop will overwrite this part!!! (begin)##########
 bin_PROGRAMS = keurocalc
-keurocalc_SOURCES = calculator.ui settingsdialog.ui keurocalc.cpp preferences.cpp main.cpp 
+keurocalc_SOURCES = calculator.ui settingsdialog.ui currencies.cpp keurocalc.cpp preferences.cpp main.cpp 
 keurocalc_LDADD   =  $(LIB_QT) $(LIB_KDECORE) $(LIB_KDEUI) $(LIB_KIO) $(LIBSOCKET)
 
-EXTRA_DIST = keurocalc.h keurocalc.desktop lo32-app-keurocalc.png lo16-app-keurocalc.png
+EXTRA_DIST = keurocalc.desktop lo32-app-keurocalc.png lo16-app-keurocalc.png
 
 install-data-local:
 	$(mkinstalldirs) $(kde_appsdir)/Applications/

@@ -1,7 +1,7 @@
 /***************************************************************************
-                      preferences.h  -  preferences widget
+                           currencies.h  -  list of currencies
                              -------------------
-    begin                : lun avr 12 18:25:02 CET 2004
+    begin                : sam déc  1 23:40:19 CET 2001
     copyright            : (C) 2001-2004 by Éric Bischoff
     email                : e.bischoff@noos.fr
  ***************************************************************************/
@@ -15,24 +15,25 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef KPREF_H
-#define KPREF_H
+#ifndef CURRENCY_H
+#define CURRENCY_H
 
-#include "settingsdialog.h"
+#define CURRENCIES 49
+#define FIXED_CURRENCIES 12
+#define EURO_CURRENCY FIXED_CURRENCIES
+#define DOLLAR_CURRENCY (FIXED_CURRENCIES + 1)
+#define VARIABLE_CURRENCIES 37
 
-class KEuroCalc;
-
-class Preferences : public SettingsDialog
-{
-  Q_OBJECT 
-
-public:
-    Preferences(KEuroCalc *parent, const char *name=0);
-    ~Preferences();
-
-public slots:
-    virtual void ok();
-    virtual void cancel();
+struct currencyStruc {
+	double rate;
+	const char *symbol;
+	const char *code;
+	double rulesPrecision;
+	double smallestCoinPrecision;
+	const char *name;
+	const char *newYorkName;
+	int position;
 };
 
 #endif
+

@@ -16,15 +16,29 @@
  ***************************************************************************/
 
 #include <qbuttongroup.h>
+#include <qcombobox.h>
+
+#include <klocale.h>
 
 #include "preferences.h"
 #include "preferences.moc"
 #include "keurocalc.h"
+#include "currencies.h"
+
+extern currencyStruc currency[CURRENCIES];
 
 Preferences::Preferences(KEuroCalc *parent, const char *name)
 	: SettingsDialog( parent, name )
 {
 	referenceGroup->setButton( parent->getReference() );	
+
+	for (int num = 0; num < CURRENCIES; num++)
+		defaultCurrencyList->insertItem
+			( QString::fromUtf8( currency[num].code ) +
+			  QString::fromUtf8( " - " ) +
+			  i18n( currency[num].name )
+			);
+	defaultCurrencyList->setCurrentItem( parent->getCurrencyNum() );
 }
 
 Preferences::~Preferences()
@@ -35,7 +49,10 @@ void Preferences::ok()
 {
 	KEuroCalc *calc = (KEuroCalc *) parentWidget();
 
-	calc->setPreferences( referenceGroup->selectedId() );
+	calc->setPreferences
+		( referenceGroup->selectedId(),
+	 	  defaultCurrencyList->currentItem()
+		);
 	close();
 }
 

@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>299</width>
-            <height>285</height>
+            <width>550</width>
+            <height>233</height>
         </rect>
     </property>
     <property name="caption">
@@ -26,6 +26,12 @@
                 <width>280</width>
                 <height>90</height>
             </rect>
+        </property>
+        <property name="frameShape">
+            <enum>GroupBoxPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Sunken</enum>
         </property>
         <property name="title">
             <string>Reference currency, rates origin</string>
@@ -105,13 +111,13 @@
     </widget>
     <widget class="QButtonGroup">
         <property name="name">
-            <cstring>buttonGroup2</cstring>
+            <cstring>buttonGroup1</cstring>
         </property>
         <property name="geometry">
             <rect>
-                <x>10</x>
-                <y>110</y>
-                <width>280</width>
+                <x>300</x>
+                <y>10</y>
+                <width>240</width>
                 <height>50</height>
             </rect>
         </property>
@@ -126,7 +132,39 @@
                 <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>260</width>
+                    <width>220</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>&lt;i&gt;This setting is not available yet&lt;/i&gt;</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>buttonGroup2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>300</x>
+                <y>100</y>
+                <width>240</width>
+                <height>50</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Display color</string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel2</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>220</width>
                     <height>20</height>
                 </rect>
             </property>
@@ -141,10 +179,10 @@
         </property>
         <property name="geometry">
             <rect>
-                <x>60</x>
-                <y>240</y>
-                <width>70</width>
-                <height>30</height>
+                <x>190</x>
+                <y>190</y>
+                <width>54</width>
+                <height>25</height>
             </rect>
         </property>
         <property name="text">
@@ -160,14 +198,43 @@
         </property>
         <property name="geometry">
             <rect>
-                <x>160</x>
-                <y>240</y>
+                <x>290</x>
+                <y>190</y>
                 <width>70</width>
-                <height>30</height>
+                <height>25</height>
             </rect>
         </property>
         <property name="text">
             <string>Cancel</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>defaultCurrencyText</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>110</y>
+                <width>260</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Default currency</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>defaultCurrencyList</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>130</y>
+                <width>260</width>
+                <height>21</height>
+            </rect>
         </property>
     </widget>
 </widget>

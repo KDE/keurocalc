@@ -36,7 +36,8 @@ public:
     ~KEuroCalc();
     virtual void keyPressEvent( QKeyEvent *e );    
     inline int getReference() const {return reference;}
-    void setPreferences(int newReference);
+    inline int getCurrencyNum() const {return currencyNum;}
+    void setPreferences(int newReference, int newCurrency);
 
 public slots:
     virtual void httpData(KIO::Job *, const QByteArray &); 
