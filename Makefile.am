@@ -1,10 +1,9 @@
 ####### kdevelop will overwrite this part!!! (begin)##########
 bin_PROGRAMS = keurocalc
 keurocalc_SOURCES = calculator.ui keurocalc.cpp main.cpp 
-keurocalc_LDADD   =  $(LIB_QT) $(LIB_KDECORE) $(LIB_KDEUI)  $(LIBSOCKET)
+keurocalc_LDADD   =  $(LIB_QT) $(LIB_KDECORE) $(LIB_KDEUI) $(LIB_KIO) $(LIBSOCKET)
 
-
-EXTRA_DIST = main.cpp keurocalc.cpp keurocalc.h keurocalc.desktop lo32-app-keurocalc.png lo16-app-keurocalc.png calculator.ui 
+EXTRA_DIST = keurocalc.h keurocalc.desktop lo32-app-keurocalc.png lo16-app-keurocalc.png
 
 install-data-local:
 	$(mkinstalldirs) $(kde_appsdir)/Applications/
@@ -46,10 +45,6 @@ keurocalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 #rcdir = $(kde_datadir)/keurocalc
 #rc_DATA = keurocalcui.rc
 
-
-messages: rc.cpp
-	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name \*.C`; \
-	if test -n "$$LIST"; then \
-	 $(XGETTEXT) $$LIST -o $(podir)/keurocalc.pot; \
-	fi
+messages: calculator.cpp
+	$(XGETTEXT) --from-code=utf-8 -ki18n -ktr2i18n -kI18N_NOOP calculator.cpp $(keurocalc_SOURCES) -o ../po/keurocalc.pot
 

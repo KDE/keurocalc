@@ -25,18 +25,21 @@
 
 <copyright>
 <year>2001</year>
+<year>2002</year>
+<year>2003</year>
+<year>2004</year>
 <holder>Éric Bischoff</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2001-12-17</date>
-<releaseinfo>0.05.01</releaseinfo>
+<date>2004-02-08</date>
+<releaseinfo>0.08.00</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is a pocket currency converter and calculator specially
 designed for the Euro. This documentation describes &keurocalc;
-version 0.5.1.
+version 0.8.0.
 </para>
 </abstract>
 
@@ -60,29 +63,42 @@ designed for the Euro.
 </para>
 
 <para>
-On the 1st of January, 2002, 12 European countries unite their national
-currencies into a single one, the Euro (€). &keurocalc; helps:
+On the 1st of January, 2002, 12 European countries united their national
+currencies into a single one, the Euro (€). The same will probably happen
+in 2006 in many Eastern Euroean countries. &keurocalc; helps:
 
 <variablelist>
 <varlistentry>
-<term>During the transition period</term>
+<term>During the transition periods</term>
 <listitem>
-<para>(a few months at beginning 2002, depending on the country)
-<itemizedlist>
+<para><itemizedlist>
 <listitem><para>To verify one's bank account, when paying both in Euro and
 in the old currency (Italian liras, for example)</para></listitem>
 <listitem><para>To verify one's shopping, and compute the returned money if paying
 with a banknote labeled in the old currency</para></listitem>
-<listitem><para>To do conversions between two old currencies, like French Franc
-and German Deutschmark</para></listitem>
-</itemizedlist></para></listitem>
+</itemizedlist></para>
+</listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Many years after the transition period</term>
+<term>Many years after the transition periods</term>
 <listitem><para>To get an idea of the value of the things in the old
 currency at any stage of calculations.</para></listitem>
 </varlistentry>
+
+<varlistentry>
+<term>At any time</term>
+<listitem>
+<para><itemizedlist>
+<listitem><para>To do conversions between the Euro and other currencies,
+like the US dollar, according to the daily exchange rate defined by the
+<ulink url="http://www.ecb.int">European Central Bank (ECB)</ulink>.</para></listitem>
+<listitem><para>To do conversions between any two currencies, be they part of the
+Euro or not.</para></listitem>
+</itemizedlist></para>
+</listitem>
+</varlistentry>
+
 </variablelist>
 </para>
 
@@ -91,18 +107,18 @@ usability:
 	
 <itemizedlist>
 <listitem><para>You see every intermediary value and the result
-in both the old currency and in Euro</para></listitem>
+in both the other currency and in Euro</para></listitem>
 <listitem><para>There is a separate input area where you can
 type a new value while still having the previous result visible</para></listitem>
 <listitem><para>The ergonomy is very close to usual pocket calculators,
 despite the fact that any value you type can be a value in Euro, a value in
-the old currency, a percentage or a quantity.</para></listitem>
-<listitem><para>You press the keys in the order just like you would speak
-out what you're doing</para></listitem>
-<listitem><para>If you do mistakes, a special correction button enables you
-to correct your last input data as long as you didn't validate</para></listitem>
-<listitem><para>The numbers are diplayed accordingly to your locale settings:
-with either a decimal comma or a decimal dot accordingly to your &kcontrol;
+the other currency, a percentage or a quantity.</para></listitem>
+<listitem><para>You press the keys in the order you would speak
+aloud what you're doing</para></listitem>
+<listitem><para>If you make mistakes, a special correction button enables you
+to correct your last input data, as long as you didn't validate</para></listitem>
+<listitem><para>The numbers are displayed according to your locale settings:
+with either a decimal comma or a decimal dot according to your &kcontrol;
 settings</para></listitem>
 <listitem><para>When you quit &keurocalc;, it remembers the last currency you used
 and restarts with this currency next time you run it</para></listitem>
@@ -118,6 +134,8 @@ computations internally done with the precision of the mathematical libraries</p
 <listitem><para>Usual additions, substractions, multiplications and divisions</para></listitem>
 <listitem><para>Possibility to apply a percentage, add a percentage,
 or substract a percentage</para></listitem>
+<listitem><para>Possibility to store values in an intermediate memory,
+or use that memory as an additive accumulator</para></listitem>
 </itemizedlist>
 </para>
 
@@ -125,8 +143,13 @@ or substract a percentage</para></listitem>
 
 <itemizedlist>
 <listitem><para>No parenthesized nor complex expressions</para></listitem>
-<listitem><para>No support for very big amounts due to the limitations
+<listitem><para>Some roundings go wrong due to the limitations
 of the mathematical library</para></listitem>
+<listitem><para>Inflationist currencies like Turkish Lira cannot
+be handled due to limited siplay size</para></listitem>
+<listitem><para>The list of currencies is fixed</para></listitem>
+<listitem><para>The user cannot choose to round to closer smallest
+available coin or banknote</para></listitem>
 </itemizedlist>
 </para>
 
@@ -134,7 +157,10 @@ of the mathematical library</para></listitem>
 You are always invited to verify your computations by some other means.
 As the <link linkend="credits">license</link> agreement states, there's no
 liability of the authors if the results are not correct or as
-expected.</para></warning>
+expected. Also, please notice that the variable exchange rates are downloaded
+in an uncrypted and therefore unsafe manner from the European Central Bank:
+some "man-in-the-middle" attaquant may confuse KEuroCalc by forging wrong
+exchange rates, or more simply a transmission error is always possible.</para></warning>
 
 </chapter>
 
@@ -151,22 +177,23 @@ expected.</para></warning>
 
 <procedure>
 <title>To convert 1000 Belgian Francs into Euros</title>
-<step><para>Select <guilabel>FB</guilabel> (Belgian Francs, <foreignphrase>francs
-belges</foreignphrase>) radio button on the bottom, in the
-<guilabel><accel>C</accel>urrency</guilabel> list.</para></step>
+<step><para>Select the <guilabel>BEF - Belgian franc</guilabel> (<foreignphrase>francs
+belges</foreignphrase>) item in the <guibutton>Currencies</guibutton>
+drop down list on the bottom.</para></step>
 <step><para>Type <userinput>1000</userinput> on the keyboard or use the
 corresponding numerical buttons. The digits appear while you are typing them in
-the <guilabel>Input</guilabel> display. If you do a mistake while typing the digits
+the <guilabel>Input</guilabel> display. If you make a mistake while typing the digits
 use the &Backspace; key or the <guibutton>&lt;-</guibutton> button.</para></step>
 <step><para>Press the <guibutton>€</guibutton> button or the <keycap>E</keycap>
 key.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
-24.79 € or 24,79 € accordingly to your locale settings.</para></step> 
+24.79 € or 24,79 € according to our locale settings.</para></step> 
 </procedure>
 
 <procedure>
 <title>To convert 25 Euros into Belgian Francs</title>
-<step><para>Select <guilabel>FB</guilabel> radio button on the bottom.
+<step><para>Select the <guilabel>BEF - Belgian franc</guilabel> item in
+the <guibutton>Currencies</guibutton> drop down list on the bottom.
 You can skip this step if it's already the selected currency</para></step>
 <step><para>Type <userinput>25</userinput>.</para></step>
 <step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
@@ -176,21 +203,22 @@ the input as a number expressed in the currency, so <keycap>B</keycap>
 or <keycap>X</keycap> would have worked as well.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
 1008.50 FB or 1008,50 FB. The exact value is 1008.4975, but it's rounded
-to the closest tenth of Belgian Francs. The rounding unit depends on
-the currency: for Belgian Francs it's 0.10 FB, for French Francs it's 0.01 FF,
-for Italian Liras it's 100 L for example.</para></step>
+to the closest hundredth of Belgian Francs. The rounding unit depends on
+the currency: for Belgian Francs it's 0.01 FB,
+for Italian Liras it's 1 L for example.</para></step>
 </procedure>
 
-<para>You could also have typed: <userinput>25 Enter E</userinput></para>
+<para>You could also have typed: <userinput>25 Enter E</userinput>.</para>
 
 <procedure>
 <title>To convert 120 German Marks into Spanish Pesetas</title>
-<step><para>Select <guilabel>DM</guilabel> radio button in
-<guilabel><accel>C</accel>urrency</guilabel> area.</para></step>
+<step><para>Select the <guilabel>DEM - German deutschmark</guilabel> item in
+the <guilabel>Currencies</guilabel> drop down list.</para></step>
 <step><para>Type <userinput>120</userinput>.</para></step>
 <step><para>Press the <guibutton>DM</guibutton> button or the <keycap>D</keycap>
 or <keycap>M</keycap> keys.</para></step>
-<step><para>Just select <guilabel>PTA</guilabel> radio button to see the same
+<step><para>Just select the <guilabel>ESP - Spanish peseta</guilabel> item
+to see the same
 amount of 61.36 € converted into pesetas in the <guilabel>Results</guilabel>
 area.</para></step>
 </procedure>
@@ -203,45 +231,48 @@ area.</para></step>
 <procedure>
 <title>How much is 3 + 5?</title>
 <step><para>Type <userinput>3</userinput> and then press <guibutton>+</guibutton>.
-Remark that in the result field, <computeroutput>3</computeroutput>
+Notice that in the result field, <computeroutput>3</computeroutput>
 is a simple value displayed on just one line, with no monetary unit.</para></step>
-<step><para>Type <userinput>5</userinput> and then press
-<guibutton>Enter</guibutton> button or <keycap>Enter</keycap> key. The
+<step><para>Type <userinput>5</userinput> and then press the
+<guibutton>Enter</guibutton> button or the <keycap>Enter</keycap> key. The
 result <computeroutput>8</computeroutput>appears on the right.</para></step>
 </procedure>
 
 <procedure>
-<title>You received 1000 French Francs and paid 32.50 Euros for a book,
-how much have you left on your bank account?</title>
-<step><para>Select <guilabel>FF</guilabel> radio button on the bottom.</para></step>
-<step><para>Type <userinput>1000</userinput> and then press <guibutton>FF</guibutton>.</para></step>
-<step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key. Remark
+<title>You received 100 US dollars and paid 32.50 Euros for a book,
+how much do you have left in your bank account?</title>
+<step><para>Select the <guilabel>USD - US dollars</guilabel> item in the scroll down list on the bottom.
+If you have no Internet access, that item won't be available as the latest variable
+rates between the euro and the dollar cannot be determined.</para></step>
+<step><para>Type <userinput>100</userinput> and then press <guibutton>$</guibutton>.</para></step>
+<step><para>Press the <guibutton>-</guibutton> button or the <keycap>-</keycap> key. Notice
 the <computeroutput>-</computeroutput> sign in the leftmost part of the
 <guilabel>Input</guilabel> display.</para></step>
 <step><para>Type <userinput>32,50</userinput> or <userinput>32.50</userinput>
 and then press <guibutton>€</guibutton>.</para></step>
-<step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
-119.95 € / 786.81 FF. Remark that during the whole computation
-you've been able to read the values both in Euro and in French Francs.</para></step>
+<step><para>Read the result in the <guilabel>Result</guilabel> display on the right.
+The exact value might depend on latest exchange rates. Notice that during the whole computation
+you've been able to read the values both in Euro and in US dollars.</para></step>
 </procedure>
 
 <procedure>
 <title>You pay a 32.50 € book with a 500 FF banknote. How much is the
 clerk supposed to give you back, in Euro notes and coins?</title>
-<step><para>Select <guilabel>FF</guilabel> radio button if not already selected.</para></step>
+<step><para>Select the <guilabel>FRF - French francs</guilabel> item in the drop down list
+if not already selected.</para></step>
 <step><para>Type <userinput>32.50</userinput> or <userinput>32,50</userinput>
 and then press <guibutton>€</guibutton>. You can also type <userinput>32.5</userinput>
 without the trailing <userinput>0</userinput>.</para></step>
-<step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
-<step><para>Type <userinput>500</userinput> and press <guibutton>FF</guibutton>
-button or <keycap>F</keycap> key.</para></step>
-<step><para>The result <computeroutput>-286.81 €</computeroutput> is negative, indicating that
+<step><para>Press the <guibutton>-</guibutton> button or the <keycap>-</keycap> key.</para></step>
+<step><para>Type <userinput>500</userinput> and press the <guibutton>FF</guibutton>
+button or the <keycap>F</keycap> key.</para></step>
+<step><para>The result <computeroutput>-43.72 €</computeroutput> is negative, indicating that
 change money has to be given back to the customer. The <guibutton>+/-</guibutton>
 button or the <keycap>S</keycap> key permit you to change the sign of the result.</para></step>
 </procedure>
 
-<note><para>Don't try to add euros to simple values, it won't work, for
-the same reason you cannot multiply 5 apples by 3 bananas.</para></note>
+<note><para>Don't try to add euros to simple values (with no currency unit), it won't work, for
+the same reason you cannot add 5 meters to 3 kilograms.</para></note>
 
 </sect1>
 
@@ -250,23 +281,22 @@ the same reason you cannot multiply 5 apples by 3 bananas.</para></note>
 
 <procedure>
 <title>You buy 3.2 kilograms of apples at 2 € per kilogram. How much does
-the whole cost in Austrian Schillings?</title>
-<step><para>Select <guilabel>öS</guilabel> radio button if not already selected.</para></step>
+the whole cost in Australian dollars?</title>
+<step><para>Select the <guilabel>AUD - Australian dollars</guilabel> item if available and if not already selected.</para></step>
 <step><para>Type <userinput>2</userinput> and press <guibutton>€</guibutton>.</para></step>
-<step><para>Press <guibutton>*</guibutton> button or <keycap>*</keycap>
-key. Remark the <computeroutput>*</computeroutput> sign at the left of
+<step><para>Press the <guibutton>X</guibutton> button or the <keycap>*</keycap>
+key. Notice the <computeroutput>X</computeroutput> sign at the left of
 the <guilabel>Input</guilabel> display.</para></step>
-<step><para>Now type <userinput>3.2</userinput> followed by <guibutton>Enter</guibutton> button
-or <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
+<step><para>Now type <userinput>3.2</userinput> followed by the <guibutton>Enter</guibutton> button
+or the <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
 2 € each.</para></step>
-<step><para>The result <computeroutput>88.10 öS</computeroutput> matches
-<computeroutput>6.4 €</computeroutput>.</para></step>
+<step><para>The result in Australian dollars matches <computeroutput>6.4 €</computeroutput>.</para></step>
 </procedure>
 
 <para>It was also possible to type in the following order:
 <userinput>3.2 = * 2 €</userinput> or even <userinput>3.2 * 2 €</userinput>.</para>
 
-<note><para>Of course it's not possible to multiply X Euros by Y Schillings,
+<note><para>Of course it's not possible to multiply X Euros by Y dollars,
 just the same as you don't multiply 10 fingers by 2 ears.
 </para></note>
 
@@ -276,40 +306,96 @@ just the same as you don't multiply 10 fingers by 2 ears.
 <title>Using percentages</title>
 
 <procedure>
-<title>How much is 20% of 3000 Greek Drachmas?</title>
-<step><para>Select <guilabel>DR</guilabel> radio button if not already selected.</para></step>
-<step><para>Type <userinput>3000</userinput> and press <guibutton>DR</guibutton>
-button or <keycap>D</keycap> key. Don't press <keycap>R</keycap>
-key, it would reset the calculator...</para></step>
-<step><para>Enter <userinput>20</userinput> and press <guibutton>%</guibutton>
-button or <keycap>%</keycap> key. Same as with multiplications, the
+<title>How much is 20% of 3000 Yen?</title>
+<step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
+if not already selected.</para></step>
+<step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
+button or the <keycap>Y</keycap> key.</para></step>
+<step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
+button or the <keycap>%</keycap> key. Same as with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: 1.76 € or 600 Drachmas.</para></step>
+<step><para>Look at the result: it is equivalent to 600 Yen.</para></step>
 </procedure>
 
 <procedure>
-<title>How much is 3000 Greek Drachmas plus 20%?</title>
-<step><para>Select <guilabel>DR</guilabel> radio button if not already selected.</para></step>
-<step><para>Type <userinput>3000</userinput> and press <guibutton>DR</guibutton>
-button or <keycap>D</keycap> key.</para></step>
-<step><para>Press <guibutton>+</guibutton> button or <keycap>+</keycap> key.</para></step>
-<step><para>Enter <userinput>20</userinput> and press <guibutton>%</guibutton>
-button or <keycap>%</keycap> key. Same as with multiplications, the
+<title>How much is 3000 Yen plus 20%?</title>
+<step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
+if not already selected.</para></step>
+<step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
+button or the <keycap>Y</keycap> key.</para></step>
+<step><para>Press the <guibutton>+</guibutton> button or the <keycap>+</keycap> key.</para></step>
+<step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
+button or the <keycap>%</keycap> key. Same as with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: 10.56 € or 3600 Drachmas.</para></step>
+<step><para>Look at the result: 26.96 € or 3600 ¥ at the date of writing these
+lines.</para></step>
 </procedure>
 
 <procedure>
-<title>How much is 3000 Greek Drachmas minus 20%?</title>
-<step><para>Select <guilabel>DR</guilabel> radio button if not already selected.</para></step>
-<step><para>Type <userinput>3000</userinput> and press <guibutton>DR</guibutton>
-button or <keycap>D</keycap> key.</para></step>
+<title>How much is 3000 Yen minus 20%?</title>
+<step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
+if not already selected.</para></step>
+<step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
+button or the <keycap>rY</keycap> key.</para></step>
 <step><para>Press <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
-<step><para>Enter <userinput>20</userinput> and press <guibutton>%</guibutton>
-button or <keycap>%</keycap> key. Same as with multiplications, the
+<step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
+button or the <keycap>%</keycap> key. Same as with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: 7.04 € or 2400 Drachmas.</para></step>
+<step><para>Look at the result: 17.97 € or 2400 ¥ at the date of writing these
+lines.</para></step>
 </procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title>Using Intermediate Memory</title>
+
+<procedure>
+<title>How do I store now and recall later some value?</title>
+<step><para>Do your computations.</para></step>
+<step><para>Press <userinput>Min</userinput> (Memory in) button to store the
+value in the <guilabel>Result</guilabel> area. Please notice that the
+other memory keys now become available.</para></step>
+<step><para>Do some other work with the calculator.</para></step>
+<step><para>Recall the value from the memory by pressing the <guibutton>MR</guibutton>
+(Memory Recall) button.</para></step>
+</procedure>
+
+<para>Internally, the values are recalled with no unit or in Euros with
+the maximum precision allowed by the mathematical library. In some rare cases,
+this might lead to rounding problems if the stored value is a round value in a
+currency different than the Euro.</para>
+
+<procedure>
+<title>How do I clear the memory?</title>
+<step><para>Press the <guibutton>Reset</guibutton> button. Please notice that
+the <guibutton>Reset</guibutton> clears everything: the input, the result and
+the memory.</para></step>
+</procedure>
+
+<procedure>
+<title>How do I compute 3.1 * 5.2 € + 2.7 * 8.9 €?</title>
+<step><para>First compute the first half: <userinput>3.1 * 5.2 €</userinput>.</para></step>
+<step><para>Store the result in memory with <guibutton>Min</guibutton> button.</para></step>
+<step><para>Now compute the other half: <userinput>2.7 * 8.9 €?</userinput>.</para></step>
+<step><para>Add the result to the memory with <guibutton>M+</guibutton> button.</para></step>
+<step><para>Recall the sum with <guibutton>MR</guibutton> button.</para></step>
+</procedure>
+
+<para>There are other solutions like <userinput>3.1 * 5.2 € Min
+2.7 * 8.9 €? + MR</userinput>.</para>
+
+<procedure>
+<title>How do I compute 3.1 * 5.2 € - 2.7 * 8.9 €?</title>
+<step><para>First compute the first half: <userinput>3.1 * 5.2 €</userinput>.</para></step>
+<step><para>Store the result in memory with <guibutton>Min</guibutton> button.</para></step>
+<step><para>Now compute the other half: <userinput>2.7 * 8.9 €?</userinput>.</para></step>
+<step><para>Substract the result from the memory with <guibutton>M-</guibutton> button.</para></step>
+<step><para>Recall the sum with <guibutton>MR</guibutton> button.</para></step>
+</procedure>
+
+<para>The sequence <userinput>3.1 * 5.2 € Min 2.7 * 8.9 €? - MR</userinput>
+computes the difference in the reverse order.</para>
 
 </sect1>
 </chapter>
@@ -322,7 +408,7 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 
 <simplelist type="horiz" columns="2">
 <member><keycombo action="simul">&Alt; <keycap>F4</keycap></keycombo></member>
-<member>Exists from &keurocalc;</member>
+<member>Exits from &keurocalc;</member>
 
 <member><keycombo action="simul">&Alt; <keycap>A</keycap></keycombo></member>
 <member>Displays these help pages</member>
@@ -336,7 +422,7 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <member><keycap>0</keycap> - <keycap>9</keycap></member>
 <member>Input digits</member>
 
-<member><keycap>.</keycap> and <keycap>,</keycap></member>
+<member><keycap>.</keycap> or <keycap>,</keycap></member>
 <member>Decimal separator</member>
 
 <member><keycap>+</keycap>, <keycap>-</keycap>, <keycap>*</keycap> and <keycap>/</keycap></member>
@@ -367,7 +453,7 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <member>Change sign of the result</member>
 
 <member>Any other key</member>
-<member>Validation of input number considered as a number in the old currency</member>
+<member>Validation of input number considered as a number in the other currency</member>
 </simplelist>
 
 </sect1>
@@ -375,7 +461,52 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <sect1 id="reference-buttons">
 <title>The buttons</title>
 
-<para></para>
+<simplelist type="horiz" columns="2">
+<member><guibutton>0</guibutton> to <guibutton>9</guibutton></member>
+<member>Input digits</member>
+
+<member><guibutton>.</guibutton> or <guibutton>,</guibutton></member>
+<member>Decimal separator</member>
+
+<member><guibutton>&lt;-</guibutton></member>
+<member>Removal of last input: digits, decimal separator or operator</member>
+
+<member><guibutton>AC</guibutton></member>
+<member>Clear all: both input and result area</member>
+
+<member><guibutton>€</guibutton></member>
+<member>Validation of input number considered as a value expressed in Euros</member>
+
+<member>The button labeled with the name of an other currency</member>
+<member>Validation of input number considered as a number in the other currency</member>
+
+<member><guibutton>Enter</guibutton></member>
+<member>Validation of input number considered as a simple, unitless, value</member>
+
+<member><guibutton>%</guibutton></member>
+<member>Validation of input number considered as a percentage</member>
+
+<member><guibutton>+/-</guibutton></member>
+<member>Change sign of the result</member>
+
+<member><guibutton>Min</guibutton>, <guibutton>MR</guibutton>, <guibutton>M+</guibutton> and <guibutton>-</guibutton></member>
+<member>Store result in memory, recall memory into result, add result to memory and substract result from memory</member>
+
+<member><guibutton>/</guibutton>, <guibutton>X</guibutton>, <guibutton>-</guibutton> and <guibutton>+</guibutton></member>
+<member>Operators: addition, substraction, multiplication and division</member>
+
+<member><guibutton>Reset</guibutton></member>
+<member>Reset both input, result and memory</member>
+
+<member><guibutton><accel>A</accel>bout</guibutton></member>
+<member>Displays the <guilabel>About</guilabel> box</member>
+
+<member><guibutton><accel>H</accel>elp</guibutton></member>
+<member>Displays these help pages</member>
+
+<member>The drop down list with currency codes and names</member>
+<member>Selects an other currency to work with</member>
+</simplelist>
 
 </sect1>
 </chapter>
@@ -386,14 +517,14 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 
 <para>&keurocalc;</para>
 
-<para>Program copyright 2001 the &keurocalc; developers:
+<para>Program copyright 2001-2004 the &keurocalc; developers:
 
 <itemizedlist>
 <listitem><para>Éric Bischoff <email>e.bischoff@noos.fr</email> - design and implementation</para></listitem>
 <listitem><para>Melchior Franz <email>a8603365@unet.univie.ac.at</email> - design and testing</para></listitem>
 </itemizedlist></para>
 
-<para>Documentation copyright 2001 Éric Bischoff
+<para>Documentation copyright 2001-2004 Éric Bischoff
 <email>e.bischoff@noos.fr</email>.</para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
@@ -410,21 +541,19 @@ value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
 <title>How to obtain &keurocalc;</title>
 
 <para>
-&keurocalc; is part of the KDE project
-<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
-&keurocalc; can be found in the kdeutils package on
-<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>, the
-main ftp site of the KDE project.</para>
+&keurocalc; is can be downloaded from its home page
+<ulink url="http://opensource.bureau-cornavin.com/keurocalc/">http://opensource.bureau-cornavin.com/keurocalc/</ulink>.
+</para>
 
 </sect1>
 
 <sect1 id="requirements">
 <title>Requirements</title>
 
-<para>In order to successfully use &keurocalc;, you need KDE 2.2.1.</para>
+<para>In order to successfully use &keurocalc;, you need KDE 3.2.</para>
 
-<para>All required libraries as well as &keurocalc; itself can be found
-on <ulink url="ftp://ftp.kde.org">ft.kde.org</ulink>, the &FTP; site
+<para>All required libraries can be found
+on <ulink url="ftp://ftp.kde.org">ftp.kde.org</ulink>, the &FTP; site
 of the &kde; project.</para>
 
 </sect1>
@@ -434,7 +563,7 @@ of the &kde; project.</para>
 
 <para>
 In order to compile and install &keurocalc; on your system, type the
-following in the base directory of the kdeutils distribution:
+following in the base directory of the &keurocalc; distribution:
 
 <screen width="40">
 <prompt>%</prompt> <userinput>./configure</userinput>
@@ -444,7 +573,7 @@ following in the base directory of the kdeutils distribution:
 </para>
 
 <para>Since &keurocalc; uses autoconf and automake you should have not trouble compiling it.
-Should you run into problems please report them to the KDE mailing lists.</para>
+Should you run into problems please report them to &keurocalc;'s author.</para>
 
 </sect1>
 

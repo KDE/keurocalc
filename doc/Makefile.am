@@ -1,4 +1,2 @@
-
 KDE_LANG = en
-KDE_DOCS = AUTO
-
+KDE_DOCS = keurocalc

@@ -1,20 +1,40 @@
-Write documentation.
+BUGS
+====
 
-Put a white space at thousands boundaries.
+Find a solution for the Turkish Lira (doesn't fit in display)
+
+
+FUNCTIONALITY
+=============
+
+Allow alternative data sources : PACIFIC Exchange Rate Service, Bank of
+Canada.
+
+Allow using the exchange rates of some date in the past.
+
+Add buttons to selectively clear input, display or memory.
+
+Add a settings dialog (rounding legal/nextcoin/no, display color, ...).
+
+Have a "tape" window where intermediate results get "printed",
+like a roll of paper.
+
+
+SYSTEM INTEGRATION
+==================
 
 Allow cut and paste of data.
 
-Better geometry management.
-
-Add a status bar (error messages, ...).
-
-Add a settings dialog (rounding yes/no, display color, ...).
-
-Have a "log" window where intermediate results get "printed",
-like a roll of paper.
-
-Download recent currency rates over the internet for currencies "out"
-of the Euroland.
-
 Make keurocalc become a kparts component that can be included in
 kspread for example.
+
+
+COSMETICAL
+==========
+
+Display the currencies sorted by their code in the drop-down list.
+
+Better geometry management.
+
+Add country flags.
+

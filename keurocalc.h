@@ -2,7 +2,7 @@
                           keurocalc.h  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001 by Éric Bischoff
+    copyright            : (C) 2001-2004 by Éric Bischoff
     email                : e.bischoff@noos.fr
  ***************************************************************************/
 
@@ -21,6 +21,8 @@
 class KLocale;
 
 #include <kapp.h>
+#include <kio/job.h>
+
 #include <qwidget.h>
 
 #include "calculator.h"
@@ -36,6 +38,8 @@ public:
     virtual void keyPressEvent( QKeyEvent *e );    
 
 public slots:
+    virtual void httpData(KIO::Job *, const QByteArray &); 
+    virtual void httpResult(KIO::Job *); 
     virtual void inputDot();
     virtual void inputZero();
     virtual void inputOne();
@@ -57,12 +61,17 @@ public slots:
     virtual void validatePercent();
     virtual void validateSimpleValue();
     virtual void changeSign();
+    virtual void memoryInput();
+    virtual void memoryRecall();
+    virtual void memoryPlus();
+    virtual void memoryMinus();
     virtual void reset();
     virtual void displayAbout();
     virtual void displayHelp();
-    virtual void selectCurrency(int currencyNum);
+    virtual void selectCurrency(int position);
 
 private:  
+    QString variableRates;
     char operatorDisplay[2],
          inputDisplay[12];
     enum { beforeUnits,
@@ -71,25 +80,31 @@ private:
     } inputPos;
 
     bool isSimpleValue;
-    double simpleValue;
-    double euroValue,
+    double simpleValue,
+           euroValue,
            currencyValue;
+    bool memorySet,
+         isSimpleMemory;
+    double simpleMemory,
+           euroMemory;
 
     double currencyRate,
            currencyFactor;
     char currencySymbol[8];
     double currencyPrecision;
 
-    void readOptions(int &currencyNum);
-    void writeOptions(int currencyNum);
+    void readOptions( int &currencyNum );
+    void writeOptions( int currencyNum );
     void initButtons();
-    void inputDigit(char c);
+    void inputDigit( char c );
     void inputCorrect();
-    void inputOperator(char c);
+    void inputOperator( char c );
     void resetInput();
     void displayNewInput();
     void displayNewResult();
-    void displayNewCurrency();
+    void displayNewCurrency( int currencyNum );
+    void displayMemoryButtons( );
+    void normalize( QString &numberDisplay );
 };
 
 #endif

@@ -1,8 +1,8 @@
 /***************************************************************************
                           main.cpp  -  main program
                              -------------------
-    begin                : sam dÃ©c  1 23:40:19 CET 2001
-    copyright            : (C) 2001 by Ã‰ric Bischoff
+    begin                : sam déc  1 23:40:19 CET 2001
+    copyright            : (C) 2001-2004 by Éric Bischoff
     email                : e.bischoff@noos.fr
  ***************************************************************************/
 
@@ -19,6 +19,8 @@
 #include <kaboutdata.h>
 #include <klocale.h>
 
+#include <qtextcodec.h>
+
 #include "keurocalc.h"
 
 static const char *description =
@@ -34,12 +36,14 @@ static KCmdLineOptions options[] =
 int main(int argc, char *argv[])
 {
 	KAboutData aboutData( "keurocalc", I18N_NOOP("KEuroCalc"),
-	"0.5.1", description, KAboutData::License_GPL,
-	"(c) 2001, the KEuroCalc developers", text);
+	"0.8.2", description, KAboutData::License_GPL,
+	"(c) 2001-2004, the KEuroCalc developers", text);
 	aboutData.addAuthor("Ã‰ric Bischoff", I18N_NOOP("Design and implementation"), "e.bischoff@noos.fr");
 	aboutData.addCredit("Melchior Franz", I18N_NOOP("Design and testing"), "a8603365@unet.univie.ac.at");
 	KCmdLineArgs::init( argc, argv, &aboutData );
 	KCmdLineArgs::addCmdLineOptions( options );
+
+	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
 
 	KApplication a;
 	KEuroCalc *keurocalc = new KEuroCalc();
