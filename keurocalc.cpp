@@ -537,6 +537,7 @@ void KEuroCalc::displayAbout()
 	KAboutApplication *d = new KAboutApplication;
 	d->exec();
 	delete d;
+	AboutButton->setDown(false);
 }
 
 // Display help pages
