@@ -71,9 +71,9 @@ in 2006 in many Eastern Euroean countries. &keurocalc; helps:
 <listitem>
 <para><itemizedlist>
 <listitem><para>To verify one's bank account, when paying both in Euro and
-in the old currency (Italian liras, for example)</para></listitem>
+in the old currency (Italian liras, for example).</para></listitem>
 <listitem><para>To verify one's shopping, and compute the returned money if paying
-with a banknote labeled in the old currency</para></listitem>
+with a banknote labeled in the old currency.</para></listitem>
 </itemizedlist></para>
 </listitem>
 </varlistentry>
@@ -111,19 +111,19 @@ usability:
 
 <itemizedlist>
 <listitem><para>You see every intermediary value and the result
-in both the reference currency (euro or dollar) and in the other currency</para></listitem>
+in both the reference currency (euro or dollar) and in the other currency.</para></listitem>
 <listitem><para>There is a separate input area where you can
-type a new value while still having the previous result visible</para></listitem>
+type a new value while still having the previous result visible.</para></listitem>
 <listitem><para>The ergonomy is very close to usual pocket calculators,
 despite the fact that any value you type can be a value in the reference currency (euro
 or dollar), a value in the other currency, a percentage or an unit-less quantity.</para></listitem>
 <listitem><para>You press the keys in the order you would speak
-aloud what you're doing</para></listitem>
+aloud what you're doing.</para></listitem>
 <listitem><para>If you make mistakes, a special correction button enables you
-to correct your last input data, as long as you didn't validate</para></listitem>
+to correct your last input data, as long as you didn't validate.</para></listitem>
 <listitem><para>The numbers are displayed according to your locale settings:
 with either a decimal comma or a decimal dot according to your &kcontrol;
-settings</para></listitem>
+settings.</para></listitem>
 <listitem><para>You can decide which reference currency you want to use (euro
 or dollar), which other currency to start with when you launch &keurocalc;, and
 which rounding method to use.</para></listitem>
@@ -133,28 +133,27 @@ which rounding method to use.</para></listitem>
 <para>&keurocalc; allows the following operations:
 
 <itemizedlist>
-<listitem><para>Conversions from and to the referencee currency (euro or dollar)</para></listitem>
+<listitem><para>Conversions from and to the referencee currency (euro or dollar).</para></listitem>
 <listitem><para>Systematical rounding of the displayed result, but
-computations internally done with the precision of the mathematical libraries</para></listitem>
-<listitem><para>Usual additions, substractions, multiplications and divisions</para></listitem>
-<listitem><para>Possibility to apply a percentage, add a percentage,
-or substract a percentage</para></listitem>
+computations internally done with the precision of the mathematical libraries.</para></listitem>
+<listitem><para>Usual additions, substractions, multiplications and divisions.</para></listitem>
+<listitem><para>Apply a percentage, add a percentage,
+or substract a percentage.</para></listitem>
 <listitem><para>Possibility to store values in an intermediate memory,
-or use that memory as an additive accumulator</para></listitem>
+or use that memory as an additive accumulator.</para></listitem>
 </itemizedlist>
 </para>
 
 <para>Here are some limitations of &keurocalc;:
 
 <itemizedlist>
-<listitem><para>No parenthesized nor complex expressions</para></listitem>
+<listitem><para>No parenthesized nor complex expressions.</para></listitem>
 <listitem><para>Some roundings go wrong due to the limitations
-of the mathematical library</para></listitem>
+of the mathematical library.</para></listitem>
 <listitem><para>Inflationist currencies like Turkish Lira cannot
-be handled due to limited siplay size</para></listitem>
-<listitem><para>The list of currencies is fixed</para></listitem>
+be handled due to limited siplay size.</para></listitem>
 <listitem><para>New York Federal Reserve Bank rates are not available
-during the non-working days (Christmas, Easter, etc.)</para></listitem>
+during the non-working days (Christmas, Easter, etc.).</para></listitem>
 </itemizedlist>
 </para>
 
@@ -332,7 +331,7 @@ button or the <keycap>Y</keycap> key.</para></step>
 <step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
 button or the <keycap>%</keycap> key. Same as with multiplications, the
 value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: it is equivalent to 600 Yen.</para></step>
+<step><para>Look at the result: it is equivalent to 600 yen.</para></step>
 </procedure>
 
 <procedure>
