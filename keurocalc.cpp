@@ -58,7 +58,7 @@ KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
   : Calculator( parent, name )
 {
 	int currencyNum;
-	
+
 	readOptions( currencyNum );
 
 	resetInput();
@@ -534,9 +534,8 @@ void KEuroCalc::reset()
 void KEuroCalc::displayAbout()
 {
 	KAboutApplication *d = new KAboutApplication;
-	d->show();
+	d->exec();
 	delete d;
-	AboutButton->setDown(false);
 }
 
 // Display help pages
