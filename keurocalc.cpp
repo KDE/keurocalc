@@ -277,6 +277,7 @@ void KEuroCalc::httpResultECB(KIO::Job *job)
 			}
 		}
 	}
+	SourceLabel->setText( i18n( "ECB" ) );
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 	variableRates = "";
@@ -328,6 +329,7 @@ void KEuroCalc::httpResultNYFRB(KIO::Job *job)
 			}
 		}
 	}
+	SourceLabel->setText( i18n( "NY FRB" ) );
 	if ( !date )
 		DateLabel->setText( i18n( "Not loaded" ) );
 	variableRates = "";
@@ -983,7 +985,11 @@ void KEuroCalc::initButtons()
 		}
 	}
 	if (reference == euroFixed)
+	{
+		SourceLabel->setText( i18n( "Fixed" ) );
+		DateLabel->setText( "" );
 		newRatesList( EURO_CURRENCY );
+	}
 	else if (reference == euroECB)
 	{
 		CurrencyList->insertItem( QString::fromUtf8

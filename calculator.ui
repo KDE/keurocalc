@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>369</width>
-            <height>294</height>
+            <width>372</width>
+            <height>297</height>
         </rect>
     </property>
     <property name="caption">
@@ -804,13 +804,484 @@
             </property>
         </widget>
     </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>ZeroButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>170</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>PlusMinusButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>170</x>
+                <y>170</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Change sign</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>PercentButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>170</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Apply percentage value</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>AsteriskButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>110</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Multiply</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>MinusButton</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>140</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Subtract</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>ReferenceButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>80</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Enter value expressed in reference currency</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>SlashButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>80</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Divide</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>MPlusButton</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>230</x>
+                <y>170</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Add to memory</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>PlusButton</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>170</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Add</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>SimpleValueButton</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>140</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Enter</string>
+            <comment>Enter button</comment>
+        </property>
+        <property name="default">
+            <bool>false</bool>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Enter simple value</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>MRecallButton</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>230</x>
+                <y>110</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Recall from memory</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>MMinusButton</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>230</x>
+                <y>140</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Substract from memory</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>CurrencyButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>110</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="default">
+            <bool>false</bool>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Enter value expressed in currency</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>MInputButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>230</x>
+                <y>80</y>
+                <width>30</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Store in memory</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>ResetButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>270</x>
+                <y>80</y>
+                <width>90</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Reset</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Reset both input, result and memory</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>AboutButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>270</x>
+                <y>110</y>
+                <width>90</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;About...</string>
+        </property>
+        <property name="accel">
+            <string>Alt+A</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Display about box</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>HelpButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>270</x>
+                <y>140</y>
+                <width>90</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Help...</string>
+        </property>
+        <property name="accel">
+            <string>Alt+H</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Display help pages</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>CurrencyList</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>220</y>
+                <width>250</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Currencies</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>SettingsButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>270</x>
+                <y>170</y>
+                <width>90</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Settings...</string>
+        </property>
+        <property name="accel">
+            <string>Alt+S</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Configure KEuroCalc</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>FlagPixmap</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>270</x>
+                <y>210</y>
+                <width>88</width>
+                <height>50</height>
+            </rect>
+        </property>
+        <property name="pixmap">
+            <pixmap>image0</pixmap>
+        </property>
+        <property name="scaledContents">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>DateLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>270</y>
+                <width>100</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>LineEditPanel</enum>
+        </property>
+        <property name="alignment">
+            <set>AlignVCenter|AlignRight</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>SourceLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>150</x>
+                <y>270</y>
+                <width>100</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>LineEditPanel</enum>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>RateLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>270</y>
+                <width>130</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>LineEditPanel</enum>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="alignment">
+            <set>AlignVCenter|AlignLeft</set>
+        </property>
+    </widget>
     <widget class="QGroupBox">
         <property name="name">
             <cstring>GroupBox5</cstring>
         </property>
         <property name="geometry">
             <rect>
-                <x>160</x>
+                <x>170</x>
                 <y>0</y>
                 <width>180</width>
                 <height>80</height>
@@ -1114,449 +1585,6 @@
             <property name="vAlign" stdset="0">
             </property>
         </widget>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ZeroButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>170</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>FlagPixmap</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>290</x>
-                <y>210</y>
-                <width>70</width>
-                <height>50</height>
-            </rect>
-        </property>
-        <property name="pixmap">
-            <pixmap>image0</pixmap>
-        </property>
-        <property name="scaledContents">
-            <bool>true</bool>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>DateLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>210</x>
-                <y>270</y>
-                <width>150</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Loading...</string>
-        </property>
-        <property name="alignment">
-            <set>AlignVCenter|AlignRight</set>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>RateLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>270</y>
-                <width>170</width>
-                <height>16</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QComboBox">
-        <property name="name">
-            <cstring>CurrencyList</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>220</y>
-                <width>230</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Currencies</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MInputButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>240</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Store in memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>AsteriskButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>210</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Multiply</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MinusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>true</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>210</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Subtract</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>PlusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>true</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>210</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Add</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MPlusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>false</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>240</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Add to memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SlashButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>210</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Divide</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MMinusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>false</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>240</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Substract from memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MRecallButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>false</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>240</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Recall from memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ReferenceButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>150</x>
-                <y>80</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Enter value expressed in reference currency</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SimpleValueButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>true</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>150</x>
-                <y>140</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Enter</string>
-            <comment>Enter button</comment>
-        </property>
-        <property name="default">
-            <bool>false</bool>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Enter simple value</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>CurrencyButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>150</x>
-                <y>110</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="default">
-            <bool>false</bool>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Enter value expressed in currency</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>PlusMinusButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>180</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Change sign</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>PercentButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>150</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Apply percentage value</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ResetButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>280</x>
-                <y>80</y>
-                <width>80</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Reset</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Reset both input, result and memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>AboutButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>280</x>
-                <y>110</y>
-                <width>80</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>&amp;About...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+A</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Display about box</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>HelpButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>280</x>
-                <y>140</y>
-                <width>80</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>&amp;Help...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+H</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Display help pages</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SettingsButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>280</x>
-                <y>170</y>
-                <width>80</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>&amp;Settings...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+S</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Configure KEuroCalc</string>
-        </property>
     </widget>
 </widget>
 <images>
