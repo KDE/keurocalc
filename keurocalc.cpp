@@ -1095,7 +1095,7 @@ void KEuroCalc::selectCurrency(int position)
 // text not correctly handled by uic
 void KEuroCalc::initButtons()
 {
-	switch (reference)
+	switch ( reference )
 	{
 		case EURO_FIXED:
 			SourceLabel->setText( i18n( "Fixed" ) );
@@ -1108,6 +1108,17 @@ void KEuroCalc::initButtons()
 		case DOLLAR_NY_FRB:
 			SourceLabel->setText( i18n( "NY FRB" ) );
 			DateLabel->setText( i18n( "Loading..." ) );
+	}
+	switch ( rounding )
+	{
+		case OFFICIAL_RULES:
+			RoundingLabel->setText( i18n( "Off. rules" ) );
+			break;
+		case SMALLEST_COIN:
+			RoundingLabel->setText( i18n( "Smallest coin" ) );
+			break;
+		case NO_ROUNDING:
+			RoundingLabel->setText( i18n( "No rounding" ) );
 	}
 	DotButton->setText( KGlobal::locale()->decimalSymbol() );
 	ZeroButton->setText( QString::fromUtf8( "0" ) );

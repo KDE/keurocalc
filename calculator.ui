@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>372</width>
-            <height>317</height>
+            <height>321</height>
         </rect>
     </property>
     <property name="caption">
@@ -1507,34 +1507,31 @@
             <bool>true</bool>
         </property>
     </widget>
-    <widget class="QLabel">
+    <widget class="QComboBox">
         <property name="name">
-            <cstring>DateLabel</cstring>
+            <cstring>CurrencyList</cstring>
         </property>
         <property name="geometry">
             <rect>
-                <x>260</x>
-                <y>290</y>
-                <width>100</width>
+                <x>10</x>
+                <y>210</y>
+                <width>250</width>
                 <height>20</height>
             </rect>
         </property>
-        <property name="frameShape">
-            <enum>LineEditPanel</enum>
-        </property>
-        <property name="alignment">
-            <set>AlignVCenter|AlignRight</set>
+        <property name="toolTip" stdset="0">
+            <string>Currencies</string>
         </property>
     </widget>
     <widget class="QLabel">
         <property name="name">
-            <cstring>SourceLabel</cstring>
+            <cstring>RateLabel</cstring>
         </property>
         <property name="geometry">
             <rect>
-                <x>150</x>
+                <x>10</x>
                 <y>290</y>
-                <width>100</width>
+                <width>110</width>
                 <height>20</height>
             </rect>
         </property>
@@ -1550,13 +1547,13 @@
     </widget>
     <widget class="QLabel">
         <property name="name">
-            <cstring>RateLabel</cstring>
+            <cstring>RoundingLabel</cstring>
         </property>
         <property name="geometry">
             <rect>
-                <x>10</x>
+                <x>130</x>
                 <y>290</y>
-                <width>130</width>
+                <width>80</width>
                 <height>20</height>
             </rect>
         </property>
@@ -1567,23 +1564,48 @@
             <string></string>
         </property>
         <property name="alignment">
-            <set>AlignVCenter|AlignLeft</set>
+            <set>AlignCenter</set>
         </property>
     </widget>
-    <widget class="QComboBox">
+    <widget class="QLabel">
         <property name="name">
-            <cstring>CurrencyList</cstring>
+            <cstring>SourceLabel</cstring>
         </property>
         <property name="geometry">
             <rect>
-                <x>10</x>
-                <y>210</y>
-                <width>250</width>
-                <height>30</height>
+                <x>220</x>
+                <y>290</y>
+                <width>50</width>
+                <height>20</height>
             </rect>
         </property>
-        <property name="toolTip" stdset="0">
-            <string>Currencies</string>
+        <property name="frameShape">
+            <enum>LineEditPanel</enum>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>DateLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>280</x>
+                <y>290</y>
+                <width>80</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>LineEditPanel</enum>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
         </property>
     </widget>
 </widget>
