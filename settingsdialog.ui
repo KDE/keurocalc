@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>504</width>
-            <height>280</height>
+            <width>540</width>
+            <height>282</height>
         </rect>
     </property>
     <property name="caption">
@@ -33,13 +33,86 @@
     </widget>
     <widget class="QButtonGroup">
         <property name="name">
+            <cstring>roundingGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>330</x>
+                <y>10</y>
+                <width>200</width>
+                <height>90</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Rounding</string>
+        </property>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>radioButtonOfficialRules</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>180</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Official rounding rules</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>0</number>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>radioButtonSmallestCoin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>40</y>
+                    <width>180</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Smallest coin method</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>1</number>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>radioButtonNoRounding</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>60</y>
+                    <width>180</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>No rounding at all</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>2</number>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
             <cstring>referenceGroup</cstring>
         </property>
         <property name="geometry">
             <rect>
                 <x>10</x>
                 <y>10</y>
-                <width>280</width>
+                <width>310</width>
                 <height>90</height>
             </rect>
         </property>
@@ -63,7 +136,7 @@
                 <rect>
                     <x>10</x>
                     <y>40</y>
-                    <width>260</width>
+                    <width>280</width>
                     <height>21</height>
                 </rect>
             </property>
@@ -88,7 +161,7 @@
                 <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>260</width>
+                    <width>280</width>
                     <height>21</height>
                 </rect>
             </property>
@@ -110,7 +183,7 @@
                 <rect>
                     <x>10</x>
                     <y>60</y>
-                    <width>260</width>
+                    <width>280</width>
                     <height>21</height>
                 </rect>
             </property>
@@ -125,79 +198,6 @@
             </property>
         </widget>
     </widget>
-    <widget class="QButtonGroup">
-        <property name="name">
-            <cstring>roundingGroup</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>300</x>
-                <y>10</y>
-                <width>190</width>
-                <height>90</height>
-            </rect>
-        </property>
-        <property name="title">
-            <string>Rounding</string>
-        </property>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>radioButtonOfficialRules</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>20</y>
-                    <width>170</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property name="text">
-                <string>Official rounding rules</string>
-            </property>
-            <property name="buttonGroupId">
-                <number>0</number>
-            </property>
-        </widget>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>radioButtonSmallestCoin</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>40</y>
-                    <width>170</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property name="text">
-                <string>Smallest coin method</string>
-            </property>
-            <property name="buttonGroupId">
-                <number>1</number>
-            </property>
-        </widget>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>radioButtonNoRounding</cstring>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>60</y>
-                    <width>170</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property name="text">
-                <string>No rounding at all</string>
-            </property>
-            <property name="buttonGroupId">
-                <number>2</number>
-            </property>
-        </widget>
-    </widget>
     <widget class="QListBox">
         <property name="name">
             <cstring>defaultCurrencyList</cstring>
@@ -206,44 +206,9 @@
             <rect>
                 <x>10</x>
                 <y>130</y>
-                <width>280</width>
+                <width>260</width>
                 <height>80</height>
             </rect>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>CancelButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>270</x>
-                <y>240</y>
-                <width>70</width>
-                <height>25</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>Cancel</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>OKButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>160</x>
-                <y>240</y>
-                <width>54</width>
-                <height>25</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string>OK</string>
-        </property>
-        <property name="default">
-            <bool>true</bool>
         </property>
     </widget>
     <widget class="QButtonGroup">
@@ -252,9 +217,9 @@
         </property>
         <property name="geometry">
             <rect>
-                <x>300</x>
+                <x>280</x>
                 <y>120</y>
-                <width>190</width>
+                <width>250</width>
                 <height>90</height>
             </rect>
         </property>
@@ -269,14 +234,49 @@
                 <rect>
                     <x>10</x>
                     <y>20</y>
-                    <width>170</width>
-                    <height>50</height>
+                    <width>230</width>
+                    <height>60</height>
                 </rect>
             </property>
             <property name="text">
                 <string>&lt;i&gt;This setting is not available yet&lt;/i&gt;</string>
             </property>
         </widget>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>OKButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>170</x>
+                <y>240</y>
+                <width>80</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+        <property name="default">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>CancelButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>280</x>
+                <y>240</y>
+                <width>80</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Cancel</string>
+        </property>
     </widget>
 </widget>
 <connections>
