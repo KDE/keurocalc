@@ -46,10 +46,10 @@ Let keurocalc offer a desktop panel applet.
 COSMETICAL
 ==========
 
+Non-blocking wait during the splash screen.
+
 Display the currencies sorted by their code in the drop-down lists.
 
 Better geometry management.
 
 Add country flags.
-
-Replace Europe flag with money picture.
