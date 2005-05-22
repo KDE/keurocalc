@@ -16,7 +16,7 @@
 <firstname>Éric</firstname>
 <surname>Bischoff</surname>
 <affiliation>
-<address><email>e.bischoff@_NOSPAM_noos.fr</email></address>
+<address><email>ebischoff@_NOSPAM_nerim.net</email></address>
 </affiliation>
 </author>
 </authorgroup>
@@ -28,17 +28,18 @@
 <year>2002</year>
 <year>2003</year>
 <year>2004</year>
+<year>2005</year>
 <holder>Éric Bischoff</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2004-04-29</date>
-<releaseinfo>0.09.00</releaseinfo>
+<date>2005-05-20</date>
+<releaseinfo>0.09.02</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 0.9.0.
+This documentation describes &keurocalc; version 0.9.2.
 </para>
 </abstract>
 
@@ -150,8 +151,10 @@ or use that memory as a running total.</para></listitem>
 <listitem><para>No parenthesized or complex expressions.</para></listitem>
 <listitem><para>Some roundings go wrong due to the limitations
 of the mathematical library.</para></listitem>
-<listitem><para>Inflationist currencies like Turkish Lira cannot
-be handled due to limited display size.</para></listitem>
+<listitem><para>Inflationist currencies cannot be handled due to limited
+display size. However, with the change to the new Turkish Lira
+and the removal of six zeroes in that currency, it is not a practical
+problem anymore.</para></listitem>
 <listitem><para>New York Federal Reserve Bank rates are not available
 during the non-working days (Christmas, Easter, etc.).</para></listitem>
 </itemizedlist>
@@ -235,7 +238,7 @@ to see the same amount of 61.36 € converted into pesetas in the
 </sect1>
 
 <sect1 id="usage-additions">
-<title>Adding and Subtracting</title>
+<title>Adding and Substracting</title>
 
 <procedure>
 <title>How much is 3 + 5?</title>
