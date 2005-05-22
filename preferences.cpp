@@ -2,8 +2,8 @@
                       preferences.cpp  -  preferences widget
                              -------------------
     begin                : lun avr 12 18:25:02 CET 2004
-    copyright            : (C) 2001-2004 by Éric Bischoff
-    email                : e.bischoff@noos.fr
+    copyright            : (C) 2001-2005 by Ã‰ric Bischoff
+    email                : ebischoff@nerim.net
  ***************************************************************************/
 
 /***************************************************************************

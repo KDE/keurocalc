@@ -46,6 +46,11 @@
                         <height>20</height>
                     </rect>
                 </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
+                </property>
                 <property name="text">
                     <string>Official rounding rules</string>
                 </property>
@@ -64,6 +69,11 @@
                         <width>180</width>
                         <height>20</height>
                     </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
                 </property>
                 <property name="text">
                     <string>Smallest coin method</string>
@@ -91,6 +101,11 @@
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                     </sizepolicy>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
                 </property>
                 <property name="text">
                     <string>No rounding at all</string>
@@ -127,6 +142,11 @@
                         <verstretch>0</verstretch>
                     </sizepolicy>
                 </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
+                </property>
                 <property name="text">
                     <string>&lt;i&gt;This setting is not available yet&lt;/i&gt;</string>
                 </property>
@@ -154,6 +174,11 @@
                 <widget class="QListBox">
                     <property name="name">
                         <cstring>defaultCurrencyList</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                           <pointsize>9</pointsize>
+                        </font>
                     </property>
                 </widget>
             </vbox>
@@ -231,6 +256,11 @@
                         <height>20</height>
                     </rect>
                 </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
+                </property>
                 <property name="text">
                     <string>Euro, no network access (fixed rates only)</string>
                 </property>
@@ -252,9 +282,14 @@
                     <rect>
                         <x>10</x>
                         <y>40</y>
-                        <width>190</width>
+                        <width>266</width>
                         <height>20</height>
                     </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
                 </property>
                 <property name="text">
                     <string>Euro, European Central Bank</string>
@@ -277,9 +312,14 @@
                     <rect>
                         <x>10</x>
                         <y>60</y>
-                        <width>249</width>
+                        <width>266</width>
                         <height>20</height>
                     </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>9</pointsize>
+                    </font>
                 </property>
                 <property name="text">
                     <string>Dollar, New York Federal Reserve Bank</string>

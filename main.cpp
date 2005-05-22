@@ -1,9 +1,9 @@
 /***************************************************************************
                           main.cpp  -  main program
                              -------------------
-    begin                : sam d�c  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2004 by �ric Bischoff
-    email                : e.bischoff@noos.fr
+    begin                : sam déc  1 23:40:19 CET 2001
+    copyright            : (C) 2001-2005 by Éric Bischoff
+    email                : ebischoff@nerim.net
  ***************************************************************************/
 
 /***************************************************************************
@@ -31,7 +31,7 @@ static const char
 	*name =	I18N_NOOP("KEuroCalc"),
 	*description = I18N_NOOP("Cash converter and calculator"),
 	*copyright = I18N_NOOP("(c) 2001-2004, the KEuroCalc developers"),
-	*text = I18N_NOOP("A program by Éric Bischoff <e.bischoff@noos.fr>\n\nThis program is dedicated to humorist Michael Moore, for he\nknows that money does not justify anything...\n");
+	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to humorist Michael Moore, for he\nknows that money does not justify anything...\n");
 
 // Command line arguments
 static KCmdLineOptions options[] =
@@ -41,9 +41,9 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData( "keurocalc", name, "0.9.1", description,
+	KAboutData aboutData( "keurocalc", name, "0.9.2", description,
 	 	              KAboutData::License_GPL, copyright, text);
-	aboutData.addAuthor("Éric Bischoff", I18N_NOOP("Design and implementation"), "e.bischoff@noos.fr");
+	aboutData.addAuthor("Éric Bischoff", I18N_NOOP("Design and implementation"), "ebischoff@nerim.net");
 	aboutData.addCredit("Melchior Franz", I18N_NOOP("Design and testing"), "a8603365@unet.univie.ac.at");
 	aboutData.addCredit("Bas Willems", I18N_NOOP("Graphical artwork"), "cybersurfer@euronet.nl");
 	KCmdLineArgs::init( argc, argv, &aboutData );

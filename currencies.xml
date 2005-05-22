@@ -71,7 +71,7 @@
 		name = "Cyprus pound"
 		/>
 	<currency
-		symbol = "Kč"
+		symbol = "K"
 		code = "CZK"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
@@ -292,7 +292,7 @@
 		code = "PLN"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Polish sloty"
+		name = "Polish zloty"
 		/>
 	<currency
 		symbol = "Esc"
@@ -346,6 +346,13 @@
 		smallest-coin-precision = "1.0"
 		name = "Thailandese baht"
 		new-york-name = "Baht/Thailand"
+		/>
+	<currency
+		symbol = "YTL"
+		code = "TRY"
+		official-rules-precision = "1.0"
+		smallest-coin-precision = "1.0"
+		name = "New Turkish lira"
 		/>
 	<currency
 		symbol = "Bt"

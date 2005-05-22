@@ -1,8 +1,6 @@
 BUGS
 ====
 
-Find a solution for the Turkish Lira (doesn't fit in display).
-
 Problem with non-working days at New York Federal Reserve Bank.
 
 Fonts too large at some places.
@@ -24,6 +22,8 @@ Allow querying the exchange rates of some date in the past.
 Add buttons to selectively clear input, display or memory.
 
 Add setting for display color.
+
+Add setting to skip splash screen.
 
 Do not show all currencies in the default currency setting,
 only the ones that the selected data source offers.
