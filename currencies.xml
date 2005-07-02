@@ -304,10 +304,10 @@
 		/>
 	<currency
 		symbol = "L"
-		code = "ROL"
-		official-rules-precision = "100.0"
-		smallest-coin-precision = "10000.0"
-		name = "Romanian leu"
+		code = "RON"
+		official-rules-precision = "1.0"
+		smallest-coin-precision = "1.0"
+		name = "New Romanian leu"
 		/>
 	<currency
 		symbol = "SKr"

@@ -30,7 +30,7 @@
 static const char
 	*name =	I18N_NOOP("KEuroCalc"),
 	*description = I18N_NOOP("Cash converter and calculator"),
-	*copyright = I18N_NOOP("(c) 2001-2004, the KEuroCalc developers"),
+	*copyright = I18N_NOOP("(c) 2001-2005, the KEuroCalc developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to humorist Michael Moore, for he\nknows that money does not justify anything...\n");
 
 // Command line arguments
@@ -41,7 +41,7 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData( "keurocalc", name, "0.9.2", description,
+	KAboutData aboutData( "keurocalc", name, "0.9.3", description,
 	 	              KAboutData::License_GPL, copyright, text);
 	aboutData.addAuthor("Éric Bischoff", I18N_NOOP("Design and implementation"), "ebischoff@nerim.net");
 	aboutData.addCredit("Melchior Franz", I18N_NOOP("Design and testing"), "a8603365@unet.univie.ac.at");
