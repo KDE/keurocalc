@@ -419,7 +419,7 @@ void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 
 	document.setContent( variableRates, true );
 
-	QDomNodeList ratesList = document.elementsByTagName( "Rate" );
+	QDomNodeList ratesList = document.elementsByTagName( "Series" );
 	bool date = false;
 	int num, position;
 	double currencyPrecision;
@@ -429,17 +429,21 @@ void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 	for (uint i = 0; i < ratesList.count(); i++)
 	{
 		QDomElement elt = ratesList.item(i).toElement();
-		QDomNodeList dateElements = elt.elementsByTagName( "Date" ),
-			     countryElements = elt.elementsByTagName( "Country" ),
-			     valueElements = elt.elementsByTagName( "Value" );
-		if (dateElements.count() == 1 && countryElements.count() == 1 && valueElements.count() == 1)
+		QDomNodeList dateElements = elt.elementsByTagName( "TIME_PERIOD" ),
+			     currencyElements = elt.elementsByTagName( "CURR" ),
+			     valueElements = elt.elementsByTagName( "OBS_VALUE" );
+		if (dateElements.count() == 1 && currencyElements.count() == 1 && valueElements.count() == 1)
 		{
 			QDomElement dateElement = dateElements.item(0).toElement(),
-				    countryElement = countryElements.item(0).toElement(),
+				    currencyElement = currencyElements.item(0).toElement(),
 				    valueElement = valueElements.item(0).toElement();
-			QString newYorkName( countryElement.attribute( "UnitName" ) + "/" + countryElement.text() );
+			QString code(
+				elt.attribute( "UNIT" ) == "USD" ?
+				currencyElement.text():
+				elt.attribute( "UNIT" )
+			            );
 			for (num = 0; num < numCurrencies; num++)
-				if ( newYorkName == currency[num].newYorkName )
+				if ( code == currency[num].code )
 					break;
 			if ( num < numCurrencies )
 			{
@@ -454,7 +458,7 @@ void KEuroCalc::httpResultNY_FRB(KIO::Job *job)
 					default:
 						currencyPrecision = 1.0;
 				}
-				if ( valueElement.attribute( "InUsd" ) == "false" )
+				if ( elt.attribute( "UNIT" ) != "USD" )
 					currency[num].rate =
 						valueElement.text().toDouble() / currencyPrecision;
 				else currency[num].rate =
