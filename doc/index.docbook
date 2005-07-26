@@ -34,12 +34,12 @@
 <legalnotice>&FDLNotice;</legalnotice>
 
 <date>2005-07-26</date>
-<releaseinfo>0.09.04</releaseinfo>
+<releaseinfo>0.09.05</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 0.9.4.
+This documentation describes &keurocalc; version 0.9.5.
 </para>
 </abstract>
 
@@ -621,8 +621,8 @@ would be rounded to 12.54 euro.</para>
 circulates in the country that uses that currency. For disappeared currencies
 like the Italian lira, it uses the smallest coin that used to circulate before
 the currency has been withdrawn: in the case of the Italian lira, it was the
-10 liras coin.</para>
-<para>For example, 1235.9 Italian liras would be rounded to 1240 liras. 39.45 Norwegian
+50 liras coin.</para>
+<para>For example, 1235.9 Italian liras would be rounded to 1250 liras. 39.45 Norwegian
 krownes would be rounded to 39.50 krownes.</para>
 <para>We lack information about the smallest coins that exist in every country.
 Please send a bug report if &keurocalc; uses an incorrect value for the smallest
