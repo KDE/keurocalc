@@ -33,13 +33,13 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-05-20</date>
-<releaseinfo>0.09.02</releaseinfo>
+<date>2005-07-26</date>
+<releaseinfo>0.09.04</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 0.9.2.
+This documentation describes &keurocalc; version 0.9.4.
 </para>
 </abstract>
 
@@ -123,7 +123,7 @@ aloud what you're doing.</para></listitem>
 <listitem><para>If you make mistakes, a special correction button enables you
 to correct your last input data, as long as you didn't validate.</para></listitem>
 <listitem><para>The numbers are displayed according to your locale settings:
-with either a comma or a dot as a dedcimal point, according to your &kcontrol;
+with either a comma or a dot as a decimal point, according to your &kcontrol;
 settings.</para></listitem>
 <listitem><para>You can decide which reference currency you want to use (euro
 or dollar), which other currency to start with when you launch &keurocalc;, and
@@ -137,9 +137,9 @@ which rounding method to use.</para></listitem>
 <listitem><para>Conversions from and to the reference currency (euro or dollar).</para></listitem>
 <listitem><para>Systematic rounding of the displayed result, but
 computations done internally with the precision of the mathematical libraries.</para></listitem>
-<listitem><para>Usual additions, substractions, multiplications and divisions.</para></listitem>
+<listitem><para>Usual additions, subtractions, multiplications and divisions.</para></listitem>
 <listitem><para>Apply a percentage, add a percentage,
-or substract a percentage.</para></listitem>
+or subtract a percentage.</para></listitem>
 <listitem><para>Possibility to store values in an intermediate memory,
 or use that memory as a running total.</para></listitem>
 </itemizedlist>
@@ -152,7 +152,7 @@ or use that memory as a running total.</para></listitem>
 <listitem><para>Some roundings go wrong due to the limitations
 of the mathematical library.</para></listitem>
 <listitem><para>Inflationist currencies cannot be handled due to limited
-display size. However, with the change to the new Turkish Lira
+display size. However, with the change to the new Turkish lira
 and the removal of six zeroes in that currency, it is not a practical
 problem anymore.</para></listitem>
 <listitem><para>New York Federal Reserve Bank rates are not available
@@ -165,7 +165,7 @@ nor the accuracy of the result. You are always invited to verify your
 computations by some other means. As the <link linkend="credits">license</link>
 agreement states, there's no liability of the authors if the results are not
 correct or as expected. Also, please notice that the variable exchange rates
-are downloaded in an unencrypted and therefore unsecure manner from the data
+are downloaded in an unencrypted and therefore insecure manner from the data
 sources (European Central Bank and New York Federal Reserve Bank).
 Some <quote>man-in-the-middle</quote> attacker may confuse &keurocalc; by forging
 exchange rates. More simply, a transmission error is always possible.</para></warning>
@@ -188,15 +188,17 @@ exchange rates. More simply, a transmission error is always possible.</para></wa
 <step><para>Select the <guilabel>BEF - Belgian franc</guilabel> (<foreignphrase>francs
 belges</foreignphrase>) item in the currencies
 drop down list on the bottom. If that choice is not available, press the
-<guibutton>Settings..</guibutton> button and select 
+<guibutton>Settings...</guibutton> button and select 
 <guilabel>Euro, no network access (fixed rates only)</guilabel> to make the
 correct rates list appear.</para></step>
 <step><para>Type <userinput>1000</userinput> on the keyboard or use the
 corresponding numerical buttons. The digits appear while you are typing them in
 the <guilabel>Input</guilabel> display. If you make a mistake while typing the digits
 use the &Backspace; key or the <guibutton>&lt;-</guibutton> button.</para></step>
-<step><para>Press the <guibutton>€</guibutton> button or the <keycap>E</keycap>
-key.</para></step>
+<step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
+key. In fact, any key that is not already reserved for some other usage
+will validate the input as a number expressed in the currency, so <keycap>B</keycap>
+or <keycap>X</keycap> would have worked as well.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
 24.79 € or 24,79 € according to our locale settings.</para></step> 
 </procedure>
@@ -206,18 +208,15 @@ key.</para></step>
 <step><para>If the fixed rates currencies are available, select the
 <guilabel>BEF - Belgian franc</guilabel> item in the
 currencies drop down list on the bottom.
-You can skip this step if it's already the selected currency</para></step>
+You can skip this step if it's already the selected currency.</para></step>
 <step><para>Type <userinput>25</userinput>.</para></step>
-<step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
-key. In fact, any key that is not already reserved for some other
-usage will validate
-the input as a number expressed in the currency, so <keycap>B</keycap>
-or <keycap>X</keycap> would have worked as well.</para></step>
+<step><para>Press the <guibutton>€</guibutton> button or the <keycap>E</keycap>
+key.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
 1008.50 FB or 1008,50 FB. The exact value is 1008.4975, but it's rounded
-to the closest hundredth of a Belgian Franc. The rounding unit depends on
+to the closest hundredth of a Belgian franc. The rounding unit depends on
 the currency and on the rounding method: with the official rounding rules,
-for Belgian Francs it's 0.01 FB, for Italian Liras it's 1 L for example.</para></step>
+for Belgian francs it's 0.01 FB, for Italian liras it's 1 L for example.</para></step>
 </procedure>
 
 <para>You could also have typed: <userinput>25 Enter E</userinput>.</para>
@@ -238,7 +237,7 @@ to see the same amount of 61.36 € converted into pesetas in the
 </sect1>
 
 <sect1 id="usage-additions">
-<title>Adding and Substracting</title>
+<title>Adding and Subtracting</title>
 
 <procedure>
 <title>How much is 3 + 5?</title>
@@ -316,7 +315,7 @@ or the <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
 <para>You could also have used the following order:
 <userinput>3.2 = * 2 €</userinput> or even <userinput>3.2 * 2 €</userinput>.</para>
 
-<note><para>Of course it's not possible to multiply X euros by Y dollars,
+<note><para>It's not possible to multiply X euros by Y dollars,
 just as you don't multiply 10 fingers by 2 ears.
 </para></note>
 
@@ -397,24 +396,24 @@ the memory.</para></step>
 <title>How do I compute 3.1 * 5.2 € + 2.7 * 8.9 €?</title>
 <step><para>First compute the first half: <userinput>3.1 * 5.2 €</userinput>.</para></step>
 <step><para>Store the result in memory with <guibutton>Min</guibutton> button.</para></step>
-<step><para>Now compute the other half: <userinput>2.7 * 8.9 €?</userinput>.</para></step>
+<step><para>Now compute the other half: <userinput>2.7 * 8.9 €</userinput>.</para></step>
 <step><para>Add the result to the memory with <guibutton>M+</guibutton> button.</para></step>
 <step><para>Recall the sum with <guibutton>MR</guibutton> button.</para></step>
 </procedure>
 
 <para>There are other solutions like <userinput>3.1 * 5.2 € Min
-2.7 * 8.9 €? + MR</userinput>.</para>
+2.7 * 8.9 € + MR</userinput>.</para>
 
 <procedure>
 <title>How do I compute 3.1 * 5.2 € - 2.7 * 8.9 €?</title>
 <step><para>First compute the first half: <userinput>3.1 * 5.2 €</userinput>.</para></step>
 <step><para>Store the result in memory with <guibutton>Min</guibutton> button.</para></step>
-<step><para>Now compute the other half: <userinput>2.7 * 8.9 €?</userinput>.</para></step>
-<step><para>Substract the result from the memory with <guibutton>M-</guibutton> button.</para></step>
+<step><para>Now compute the other half: <userinput>2.7 * 8.9 €</userinput>.</para></step>
+<step><para>Subtract the result from the memory with <guibutton>M-</guibutton> button.</para></step>
 <step><para>Recall the sum with <guibutton>MR</guibutton> button.</para></step>
 </procedure>
 
-<para>The sequence <userinput>3.1 * 5.2 € Min 2.7 * 8.9 €? - MR</userinput>
+<para>The sequence <userinput>3.1 * 5.2 € Min 2.7 * 8.9 € - MR</userinput>
 computes the difference in the reverse order.</para>
 
 </sect1>
@@ -446,7 +445,7 @@ computes the difference in the reverse order.</para>
 <member>Decimal separator</member>
 
 <member><keycap>+</keycap>, <keycap>-</keycap>, <keycap>*</keycap> and <keycap>/</keycap></member>
-<member>Operators: addition, substraction, multiplication and division</member>
+<member>Operators: addition, subtraction, multiplication and division</member>
 
 <member><keycap>Enter</keycap> and <keycap>Return</keycap></member>
 <member>Validation of input number considered as a simple, unitless, value</member>
@@ -510,10 +509,10 @@ computes the difference in the reverse order.</para>
 <member>Change sign of the result</member>
 
 <member><guibutton>Min</guibutton>, <guibutton>MR</guibutton>, <guibutton>M+</guibutton> and <guibutton>-</guibutton></member>
-<member>Store result in memory, recall memory into result, add result to memory and substract result from memory</member>
+<member>Store result in memory, recall memory into result, add result to memory and subtract result from memory</member>
 
 <member><guibutton>/</guibutton>, <guibutton>X</guibutton>, <guibutton>-</guibutton> and <guibutton>+</guibutton></member>
-<member>Operators: addition, substraction, multiplication and division</member>
+<member>Operators: addition, subtraction, multiplication and division</member>
 
 <member><guibutton>Reset</guibutton></member>
 <member>Reset both input, result and memory</member>
@@ -559,7 +558,7 @@ rate with the euro.</para>
 <varlistentry>
 <term><guilabel>Euro, European Central Bank</guilabel></term>
 <listitem>
-<para>Euro is the reference currency. The fixed exchage rates are available.
+<para>Euro is the reference currency. The fixed exchange rates are available.
 &keurocalc; attempts to download the variable rates from the
 <ulink url="http://www.ecb.int/stats/eurofxref/">European Central Bank (ECB)</ulink>.</para>
 </listitem>
@@ -622,9 +621,9 @@ would be rounded to 12.54 euro.</para>
 circulates in the country that uses that currency. For disappeared currencies
 like the Italian lira, it uses the smallest coin that used to circulate before
 the currency has been withdrawn: in the case of the Italian lira, it was the
-10 lira coin.</para>
-<para>For example, 1235.9 Italian lira would be rounded to 1240 lira. 55 462.2
-Romanian lev would be rounded to 55 500 lev.</para>
+10 liras coin.</para>
+<para>For example, 1235.9 Italian liras would be rounded to 1240 liras. 39.45 Norwegian
+krownes would be rounded to 39.50 krownes.</para>
 <para>We lack information about the smallest coins that exist in every country.
 Please send a bug report if &keurocalc; uses an incorrect value for the smallest
 available coin in your country, and we will enter that information.</para>
@@ -676,7 +675,7 @@ available coin in your country, and we will enter that information.</para>
 <title>How to obtain &keurocalc;</title>
 
 <para>
-&keurocalc; is part of the <ulink url="http://extragear.kde.org/">KDE extragear 3</ulink>
+&keurocalc; is part of the <ulink url="http://extragear.kde.org/">KDE extragear-utils</ulink>
 package. The latest version of &keurocalc; can be downloaded from its
 <ulink url="http://opensource.bureau-cornavin.com/keurocalc/">home page</ulink>.
 </para>
@@ -686,7 +685,7 @@ package. The latest version of &keurocalc; can be downloaded from its
 <sect1 id="requirements">
 <title>Requirements</title>
 
-<para>In order to successfully use &keurocalc;, you need KDE 3.4.</para>
+<para>In order to successfully use &keurocalc;, you need &kde; 3.4.</para>
 
 <para>All required libraries can be found
 on <ulink url="ftp://ftp.kde.org">ftp.kde.org</ulink>, the &FTP; site
@@ -708,7 +707,8 @@ following in the base directory of the &keurocalc; distribution:
 </screen>
 </para>
 
-<para>Since &keurocalc; uses autoconf and automake you should have not trouble compiling it.
+<para>Since &keurocalc; uses <application>autoconf</application> and
+<application>automake</application> you should have not trouble compiling it.
 Should you run into problems please report them to &keurocalc;'s author.</para>
 
 </sect1>
