@@ -180,7 +180,7 @@
 		symbol = "L"
 		code = "ITL"
 		official-rules-precision = "100.0"
-		smallest-coin-precision = "1000.0"
+		smallest-coin-precision = "5000.0"
 		name = "Italian lira"
 		fixed-rate = "1936.27"
 		/>
@@ -192,12 +192,12 @@
 		name = "Japanese yen"
 		/>
 	<currency
-		symbol = "W"
+		symbol = "₩"
 		code = "KRW"
 		official-rules-precision = "100.0"
 		smallest-coin-precision = "1000.0"
 		name = "South Korean won"
-		/> <!-- symbol should be "₩" -->
+		/>
 	<currency
 		symbol = "SLRs"
 		code = "LKR"
