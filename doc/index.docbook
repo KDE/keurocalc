@@ -623,7 +623,7 @@ like the Italian lira, it uses the smallest coin that used to circulate before
 the currency has been withdrawn: in the case of the Italian lira, it was the
 50 liras coin.</para>
 <para>For example, 1235.9 Italian liras would be rounded to 1250 liras. 39.45 Norwegian
-krownes would be rounded to 39.50 krownes.</para>
+crowns would be rounded to 39.50 crowns.</para>
 <para>We lack information about the smallest coins that exist in every country.
 Please send a bug report if &keurocalc; uses an incorrect value for the smallest
 available coin in your country, and we will enter that information.</para>
