@@ -69,7 +69,7 @@ KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 		KMessageBox::error( 0, i18n( "Cannot load currencies.xml" ) );
 		exit(1);
 	}
-	readOptions( reference, currencyNum, rounding );
+	readOptions( reference, currencyNum, rounding, displayColor );
 
 	displayNewCurrency();
 	displayNewResult();
@@ -81,6 +81,10 @@ KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 	if (position < 0) position = 0;
 	CurrencyList->setCurrentItem( position );
 
+	ResultDisplay->setPaletteBackgroundColor(displayColor);
+	InputDisplay->setPaletteBackgroundColor(displayColor);
+	OperatorDisplay->setPaletteBackgroundColor(displayColor);
+
 	setFixedSize(size());
 	setFocusPolicy( StrongFocus );
 }
@@ -91,7 +95,7 @@ KEuroCalc::~KEuroCalc()
 }
 
 // Read options from preferences file
-void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRounding )
+void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor )
 {
 	KConfig *config;
 	QString option;
@@ -122,10 +126,14 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 	else if (option == "NO_ROUNDING")
 		oldRounding = NO_ROUNDING;
 	else oldRounding = OFFICIAL_RULES;
+
+	option = config->readEntry("DiplayColor", "#C0FFFF");
+	oldDisplayColor.setNamedColor(option);
+
 }
 
 // Write options to preferences file
-void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding)
+void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor)
 {
 	KConfig *config;
 
@@ -156,15 +164,18 @@ void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding)
 			config->writeEntry("Rounding", "NO_ROUNDING");
 	}
 
+	config->writeEntry("DiplayColor", newDisplayColor.name());
+
 	config->sync();
 }
 
 // Set new preferences dialog
-void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding)
+void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor)
 {
 	reference = newReference;
 	currencyNum = newCurrency;
 	rounding = newRounding;
+	displayColor = newDisplayColor;
 
 	CurrencyList->clear();
 	initButtons();

@@ -18,6 +18,10 @@
 #include <qbuttongroup.h>
 #include <qlistbox.h>
 
+#include <kcolorbutton.h>
+#include <kcolordialog.h>
+#include <qlabel.h>
+
 #include <klocale.h>
 
 #include "preferences.h"
@@ -33,8 +37,9 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 	: SettingsDialog( parent, name )
 {
 	int oldReference, oldCurrency, oldRounding;
+	QColor oldDisplayColor;
 
-	parent->readOptions( oldReference, oldCurrency,  oldRounding );
+	parent->readOptions( oldReference, oldCurrency,  oldRounding, oldDisplayColor );
 
 	referenceGroup->setButton( oldReference );
 
@@ -44,6 +49,8 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 	defaultCurrencyList->setCurrentItem( oldCurrency );
 
 	roundingGroup->setButton( oldRounding );
+
+	displayColorResult->setPaletteBackgroundColor( oldDisplayColor );
 }
 
 // Destructor
@@ -59,8 +66,15 @@ void Preferences::ok()
 	    newCurrency = defaultCurrencyList->currentItem(),
 	    newRounding = roundingGroup->selectedId();
 
-	calc->writeOptions( newReference, newCurrency, newRounding );
-	calc->setPreferences( newReference, newCurrency, newRounding );
+	QColor newDisplayColor;
+	newDisplayColor = displayColorResult->paletteBackgroundColor();
+
+	calc->writeOptions( newReference, newCurrency, newRounding, newDisplayColor );
+	calc->setPreferences( newReference, newCurrency, newRounding, newDisplayColor );
+
+	calc->ResultDisplay->setPaletteBackgroundColor(newDisplayColor);
+	calc->InputDisplay->setPaletteBackgroundColor(newDisplayColor);
+	calc->OperatorDisplay->setPaletteBackgroundColor(newDisplayColor);
 
 	close();
 }
@@ -69,4 +83,16 @@ void Preferences::ok()
 void Preferences::cancel()
 {
 	close();
+}
+
+// Change display color button pressed
+void Preferences::changeDisplayColor()
+{
+	QColor myColor;
+	int result;
+
+	result = KColorDialog::getColor
+		( myColor, displayColorResult->paletteBackgroundColor() );
+	if ( result == KColorDialog::Accepted )
+		displayColorResult->setPaletteBackgroundColor( myColor );
 }

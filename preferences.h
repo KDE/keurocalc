@@ -33,6 +33,8 @@ public:
 public slots:
     virtual void ok();
     virtual void cancel();
+    virtual void changeDisplayColor();
+
 };
 
 #endif

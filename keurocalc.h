@@ -35,9 +35,11 @@ public:
     KEuroCalc(QWidget* parent=0, const char *name=0);
     ~KEuroCalc();
     virtual void keyPressEvent( QKeyEvent *e );    
-    void readOptions(int &oldReference, int &oldCurrency, int &oldRounding);
-    void writeOptions(int newReference, int newCurrency, int newRounding);
-    void setPreferences(int newReference, int newCurrency, int newRounding);
+    void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor );
+    void writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor);
+
+    void setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor);
+
 
 public slots:
     virtual void httpData(KIO::Job *, const QByteArray &); 
@@ -95,6 +97,7 @@ private:
     int reference;
     int currencyNum;
     int rounding;
+    QColor displayColor;
 
     bool readCurrencies();
     void addFixedRates();
