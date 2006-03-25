@@ -29,11 +29,12 @@
 <year>2003</year>
 <year>2004</year>
 <year>2005</year>
+<year>2006</year>
 <holder>Éric Bischoff</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-07-26</date>
+<date>2006-03-25</date>
 <releaseinfo>0.09.05</releaseinfo>
 
 <abstract>
@@ -640,6 +641,16 @@ available coin in your country, and we will enter that information.</para>
 </variablelist>
 
 </sect2>
+
+<sect2 id="settings-display-color">
+<title>Display Color</title>
+
+<para>This setting allows to change the background color of the display area. To
+change the background color, click on <guibutton>Change...</guibutton>,
+then choose a new color. Once done, press <guibutton>OK</guibutton>
+to validate the new choice.</para>
+
+</sect2>
 </sect1>
 </chapter>
 
@@ -649,16 +660,17 @@ available coin in your country, and we will enter that information.</para>
 
 <para>&keurocalc;</para>
 
-<para>Program copyright 2001-2004 the &keurocalc; developers:
+<para>Program copyright 2001-2006 the &keurocalc; developers:
 
 <itemizedlist>
-<listitem><para>Éric Bischoff <email>e.bischoff@_NOSPAM_noos.fr</email> - design and implementation</para></listitem>
+<listitem><para>Éric Bischoff <email>ebischoff@_NOSPAM_nerim.net</email> - design and implementation</para></listitem>
+<listitem><para>Gil Gross <email>ptit.ours@_NOSPAM_gmail.com</email> - additional functionnality</para></listitem>
 <listitem><para>Melchior Franz <email>a8603365@_NOSPAM_unet.univie.ac.at</email> - design and testing</para></listitem>
 <listitem><para>Bas Willems <email>cybersurfer@_NOSPAM_euronet.nl</email> - graphical artwork</para></listitem>
 </itemizedlist></para>
 
-<para>Documentation copyright 2001-2004 Éric Bischoff
-<email>e.bischoff@_NOSPAM_noos.fr</email>.</para>
+<para>Documentation copyright 2001-2006 Éric Bischoff
+<email>ebischoff@_NOSPAM_nerim.net</email>.</para>
 
 <para>Documentation reviewed by &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
