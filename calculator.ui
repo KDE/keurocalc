@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>Calculator</class>
 <widget class="QDialog">
     <property name="name">
@@ -8,1776 +8,1674 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>372</width>
-            <height>321</height>
+            <width>511</width>
+            <height>368</height>
         </rect>
     </property>
     <property name="caption">
         <string>Currency Calculator</string>
     </property>
-    <widget class="QPushButton">
+    <vbox>
         <property name="name">
-            <cstring>TwoButton</cstring>
+            <cstring>unnamed</cstring>
         </property>
-        <property name="geometry">
-            <rect>
-                <x>40</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
+        <property name="resizeMode">
+            <enum>Fixed</enum>
         </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>EightButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>40</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>FiveButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>40</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>FourButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SixButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>70</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>BackspaceButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>100</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Correct last input digit</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>NineButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>70</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>OneButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SevenButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ThreeButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>70</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>DotButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>70</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QGroupBox">
-        <property name="name">
-            <cstring>GroupBox4</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>10</y>
-                <width>140</width>
-                <height>60</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="title">
-            <string>Input</string>
-        </property>
-        <widget class="QLabel">
+        <widget class="QLayoutWidget">
             <property name="name">
-                <cstring>OperatorDisplay</cstring>
+                <cstring>layout15</cstring>
             </property>
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>20</y>
-                    <width>20</width>
-                    <height>30</height>
-                </rect>
-            </property>
-            <property name="sizePolicy">
-                <sizepolicy>
-                    <hsizetype>5</hsizetype>
-                    <vsizetype>1</vsizetype>
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
-            <property name="paletteBackgroundColor">
-                <color>
-                    <red>170</red>
-                    <green>255</green>
-                    <blue>255</blue>
-                </color>
-            </property>
-            <property name="palette">
-                <palette>
-                    <active>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>237</red>
-                            <green>237</green>
-                            <blue>237</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </active>
-                    <disabled>
-                        <color>
-                            <red>128</red>
-                            <green>128</green>
-                            <blue>128</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>253</red>
-                            <green>253</green>
-                            <blue>253</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>128</red>
-                            <green>128</green>
-                            <blue>128</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </disabled>
-                    <inactive>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>253</red>
-                            <green>253</green>
-                            <blue>253</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </inactive>
-                </palette>
-            </property>
-            <property name="font">
-                <font>
-                    <pointsize>13</pointsize>
-                </font>
-            </property>
-            <property name="frameShape">
-                <enum>WinPanel</enum>
-            </property>
-            <property name="frameShadow">
-                <enum>Sunken</enum>
-            </property>
-            <property name="text">
-                <string></string>
-            </property>
-            <property name="alignment">
-                <set>AlignVCenter|AlignRight</set>
-            </property>
-            <property name="hAlign" stdset="0">
-            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout13</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer15_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Vertical</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QGroupBox">
+                            <property name="name">
+                                <cstring>GroupBox4</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                </font>
+                            </property>
+                            <property name="title">
+                                <string>Input</string>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>OperatorDisplay</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>20</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="paletteBackgroundColor">
+                                        <color>
+                                            <red>170</red>
+                                            <green>255</green>
+                                            <blue>255</blue>
+                                        </color>
+                                    </property>
+                                    <property name="palette">
+                                        <palette>
+                                            <active>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>237</red>
+                                                    <green>237</green>
+                                                    <blue>237</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </active>
+                                            <disabled>
+                                                <color>
+                                                    <red>128</red>
+                                                    <green>128</green>
+                                                    <blue>128</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>253</red>
+                                                    <green>253</green>
+                                                    <blue>253</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>128</red>
+                                                    <green>128</green>
+                                                    <blue>128</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </disabled>
+                                            <inactive>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>253</red>
+                                                    <green>253</green>
+                                                    <blue>253</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </inactive>
+                                        </palette>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>13</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>WinPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>InputDisplay</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>150</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="paletteBackgroundColor">
+                                        <color>
+                                            <red>170</red>
+                                            <green>255</green>
+                                            <blue>255</blue>
+                                        </color>
+                                    </property>
+                                    <property name="palette">
+                                        <palette>
+                                            <active>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>237</red>
+                                                    <green>237</green>
+                                                    <blue>237</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </active>
+                                            <disabled>
+                                                <color>
+                                                    <red>128</red>
+                                                    <green>128</green>
+                                                    <blue>128</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>253</red>
+                                                    <green>253</green>
+                                                    <blue>253</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>128</red>
+                                                    <green>128</green>
+                                                    <blue>128</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </disabled>
+                                            <inactive>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>253</red>
+                                                    <green>253</green>
+                                                    <blue>253</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </inactive>
+                                        </palette>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>13</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>WinPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer15</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Vertical</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </vbox>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer49</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>0</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout14</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer16_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Vertical</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QGroupBox">
+                            <property name="name">
+                                <cstring>GroupBox5</cstring>
+                            </property>
+                            <property name="title">
+                                <string>Result</string>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>ResultDisplay</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>250</width>
+                                            <height>50</height>
+                                        </size>
+                                    </property>
+                                    <property name="palette">
+                                        <palette>
+                                            <active>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>237</red>
+                                                    <green>237</green>
+                                                    <blue>237</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </active>
+                                            <disabled>
+                                                <color>
+                                                    <red>128</red>
+                                                    <green>128</green>
+                                                    <blue>128</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>253</red>
+                                                    <green>253</green>
+                                                    <blue>253</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>128</red>
+                                                    <green>128</green>
+                                                    <blue>128</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </disabled>
+                                            <inactive>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>220</red>
+                                                    <green>220</green>
+                                                    <blue>220</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>253</red>
+                                                    <green>253</green>
+                                                    <blue>253</blue>
+                                                </color>
+                                                <color>
+                                                    <red>110</red>
+                                                    <green>110</green>
+                                                    <blue>110</blue>
+                                                </color>
+                                                <color>
+                                                    <red>146</red>
+                                                    <green>146</green>
+                                                    <blue>146</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>170</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>84</red>
+                                                    <green>112</green>
+                                                    <blue>152</blue>
+                                                </color>
+                                                <color>
+                                                    <red>255</red>
+                                                    <green>255</green>
+                                                    <blue>255</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                                <color>
+                                                    <red>0</red>
+                                                    <green>0</green>
+                                                    <blue>0</blue>
+                                                </color>
+                                            </inactive>
+                                        </palette>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>13</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>WinPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>AutoText</enum>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                    <property name="vAlign" stdset="0">
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer16</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Vertical</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </vbox>
+                </widget>
+            </hbox>
         </widget>
-        <widget class="QLabel">
+        <widget class="QLayoutWidget">
             <property name="name">
-                <cstring>InputDisplay</cstring>
+                <cstring>layout29</cstring>
             </property>
-            <property name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>20</y>
-                    <width>100</width>
-                    <height>30</height>
-                </rect>
-            </property>
-            <property name="sizePolicy">
-                <sizepolicy>
-                    <hsizetype>5</hsizetype>
-                    <vsizetype>1</vsizetype>
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
-            <property name="paletteBackgroundColor">
-                <color>
-                    <red>170</red>
-                    <green>255</green>
-                    <blue>255</blue>
-                </color>
-            </property>
-            <property name="palette">
-                <palette>
-                    <active>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>237</red>
-                            <green>237</green>
-                            <blue>237</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </active>
-                    <disabled>
-                        <color>
-                            <red>128</red>
-                            <green>128</green>
-                            <blue>128</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>253</red>
-                            <green>253</green>
-                            <blue>253</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>128</red>
-                            <green>128</green>
-                            <blue>128</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </disabled>
-                    <inactive>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>253</red>
-                            <green>253</green>
-                            <blue>253</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </inactive>
-                </palette>
-            </property>
-            <property name="font">
-                <font>
-                    <pointsize>13</pointsize>
-                </font>
-            </property>
-            <property name="frameShape">
-                <enum>WinPanel</enum>
-            </property>
-            <property name="frameShadow">
-                <enum>Sunken</enum>
-            </property>
-            <property name="text">
-                <string></string>
-            </property>
-            <property name="alignment">
-                <set>AlignVCenter|AlignRight</set>
-            </property>
-            <property name="hAlign" stdset="0">
-            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer row="0" column="4">
+                    <property name="name">
+                        <cstring>spacer19</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>0</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton" row="4" column="2" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>DotButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="0" rowspan="2" colspan="2">
+                    <property name="name">
+                        <cstring>ZeroButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="2" column="8" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>MMinusButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Substract from memory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="7">
+                    <property name="name">
+                        <cstring>AsteriskButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Multiply</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="10">
+                    <property name="name">
+                        <cstring>ResetButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Reset</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Reset both input, result and memory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="2" column="0" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>OneButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="2" column="5" rowspan="2" colspan="2">
+                    <property name="name">
+                        <cstring>SimpleValueButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Enter</string>
+                        <comment>Enter button</comment>
+                    </property>
+                    <property name="default">
+                        <bool>false</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Enter simple value</string>
+                    </property>
+                </widget>
+                <spacer row="0" column="9">
+                    <property name="name">
+                        <cstring>spacer21</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>0</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton" row="5" column="10">
+                    <property name="name">
+                        <cstring>SettingsButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Settings...</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+S</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Configure KEuroCalc</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="2">
+                    <property name="name">
+                        <cstring>NineButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="2" column="2" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>ThreeButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="7" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>PlusButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Add</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="5" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>PercentButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Apply percentage value</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="0">
+                    <property name="name">
+                        <cstring>FourButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="8">
+                    <property name="name">
+                        <cstring>MInputButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Store in memory</string>
+                    </property>
+                </widget>
+                <spacer row="7" column="9">
+                    <property name="name">
+                        <cstring>spacer18</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>0</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton" row="0" column="1">
+                    <property name="name">
+                        <cstring>EightButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="8">
+                    <property name="name">
+                        <cstring>MRecallButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Recall from memory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>FiveButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="5" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>ReferenceButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Enter value expressed in reference currency</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="2">
+                    <property name="name">
+                        <cstring>SixButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="8" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>MPlusButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Add to memory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="3" column="10" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>HelpButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Help...</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+H</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Display help pages</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="5" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>CurrencyButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="default">
+                        <bool>false</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Enter value expressed in currency</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="2" column="1" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>TwoButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="7">
+                    <property name="name">
+                        <cstring>SlashButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Divide</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox" row="7" column="0" rowspan="1" colspan="9">
+                    <property name="name">
+                        <cstring>CurrencyList</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Currencies</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="7" column="10">
+                    <property name="name">
+                        <cstring>FlagPixmap</cstring>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>image0</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="3">
+                    <property name="name">
+                        <cstring>BackspaceButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Correct last input digit</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="2" column="7" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>MinusButton</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Subtract</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="4" column="6" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>PlusMinusButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Change sign</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="10" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>AboutButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>&amp;About...</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+A</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Display about box</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="0" column="0">
+                    <property name="name">
+                        <cstring>SevenButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+            </grid>
         </widget>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ZeroButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>170</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>PlusMinusButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>170</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Change sign</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>PercentButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>140</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Apply percentage value</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>AsteriskButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>200</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Multiply</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MinusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>true</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>200</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Subtract</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ReferenceButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>140</x>
-                <y>80</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Enter value expressed in reference currency</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SlashButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>200</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Divide</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MPlusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>false</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>230</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Add to memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>PlusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>true</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>200</x>
-                <y>170</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Add</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SimpleValueButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>true</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>140</x>
-                <y>140</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string>Enter</string>
-            <comment>Enter button</comment>
-        </property>
-        <property name="default">
-            <bool>false</bool>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Enter simple value</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MRecallButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>false</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>230</x>
-                <y>110</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Recall from memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MMinusButton</cstring>
-        </property>
-        <property name="enabled">
-            <bool>false</bool>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>230</x>
-                <y>140</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Substract from memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>CurrencyButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>140</x>
-                <y>110</y>
-                <width>60</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="default">
-            <bool>false</bool>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Enter value expressed in currency</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>MInputButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>230</x>
-                <y>80</y>
-                <width>30</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Store in memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>ResetButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>270</x>
-                <y>80</y>
-                <width>90</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string>Reset</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Reset both input, result and memory</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>AboutButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>270</x>
-                <y>110</y>
-                <width>90</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string>&amp;About...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+A</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Display about box</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>HelpButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>270</x>
-                <y>140</y>
-                <width>90</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string>&amp;Help...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+H</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Display help pages</string>
-        </property>
-    </widget>
-    <widget class="QPushButton">
-        <property name="name">
-            <cstring>SettingsButton</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>270</x>
-                <y>170</y>
-                <width>90</width>
-                <height>30</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="text">
-            <string>&amp;Settings...</string>
-        </property>
-        <property name="accel">
-            <string>Alt+S</string>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Configure KEuroCalc</string>
-        </property>
-    </widget>
-    <widget class="QGroupBox">
-        <property name="name">
-            <cstring>GroupBox5</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>170</x>
-                <y>0</y>
-                <width>180</width>
-                <height>80</height>
-            </rect>
-        </property>
-        <property name="title">
-            <string>Result</string>
-        </property>
-        <widget class="QLabel">
+        <widget class="QLayoutWidget">
             <property name="name">
-                <cstring>ResultDisplay</cstring>
+                <cstring>layout16</cstring>
             </property>
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>20</y>
-                    <width>160</width>
-                    <height>50</height>
-                </rect>
-            </property>
-            <property name="sizePolicy">
-                <sizepolicy>
-                    <hsizetype>5</hsizetype>
-                    <vsizetype>1</vsizetype>
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
-            <property name="palette">
-                <palette>
-                    <active>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>237</red>
-                            <green>237</green>
-                            <blue>237</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </active>
-                    <disabled>
-                        <color>
-                            <red>128</red>
-                            <green>128</green>
-                            <blue>128</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>253</red>
-                            <green>253</green>
-                            <blue>253</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>128</red>
-                            <green>128</green>
-                            <blue>128</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </disabled>
-                    <inactive>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>220</red>
-                            <green>220</green>
-                            <blue>220</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>253</red>
-                            <green>253</green>
-                            <blue>253</blue>
-                        </color>
-                        <color>
-                            <red>110</red>
-                            <green>110</green>
-                            <blue>110</blue>
-                        </color>
-                        <color>
-                            <red>146</red>
-                            <green>146</green>
-                            <blue>146</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>170</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>84</red>
-                            <green>112</green>
-                            <blue>152</blue>
-                        </color>
-                        <color>
-                            <red>255</red>
-                            <green>255</green>
-                            <blue>255</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                        <color>
-                            <red>0</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
-                    </inactive>
-                </palette>
-            </property>
-            <property name="font">
-                <font>
-                    <pointsize>13</pointsize>
-                </font>
-            </property>
-            <property name="frameShape">
-                <enum>WinPanel</enum>
-            </property>
-            <property name="frameShadow">
-                <enum>Sunken</enum>
-            </property>
-            <property name="text">
-                <string></string>
-            </property>
-            <property name="textFormat">
-                <enum>AutoText</enum>
-            </property>
-            <property name="alignment">
-                <set>AlignVCenter|AlignRight</set>
-            </property>
-            <property name="hAlign" stdset="0">
-            </property>
-            <property name="vAlign" stdset="0">
-            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer22</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout15</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>RateLabel</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>LineEditPanel</enum>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="alignment">
+                                <set>AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>RoundingLabel</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>LineEditPanel</enum>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="alignment">
+                                <set>AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>SourceLabel</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>LineEditPanel</enum>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="alignment">
+                                <set>AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>DateLabel</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>LineEditPanel</enum>
+                            </property>
+                            <property name="alignment">
+                                <set>AlignCenter</set>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </vbox>
         </widget>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>FlagPixmap</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>270</x>
-                <y>210</y>
-                <width>90</width>
-                <height>72</height>
-            </rect>
-        </property>
-        <property name="pixmap">
-            <pixmap>image0</pixmap>
-        </property>
-        <property name="scaledContents">
-            <bool>true</bool>
-        </property>
-    </widget>
-    <widget class="QComboBox">
-        <property name="name">
-            <cstring>CurrencyList</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>210</y>
-                <width>250</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="toolTip" stdset="0">
-            <string>Currencies</string>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>RateLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>10</x>
-                <y>290</y>
-                <width>110</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="frameShape">
-            <enum>LineEditPanel</enum>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="alignment">
-            <set>AlignCenter</set>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>RoundingLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>130</x>
-                <y>290</y>
-                <width>80</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="frameShape">
-            <enum>LineEditPanel</enum>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="alignment">
-            <set>AlignCenter</set>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>SourceLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>220</x>
-                <y>290</y>
-                <width>50</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="frameShape">
-            <enum>LineEditPanel</enum>
-        </property>
-        <property name="text">
-            <string></string>
-        </property>
-        <property name="alignment">
-            <set>AlignCenter</set>
-        </property>
-    </widget>
-    <widget class="QLabel">
-        <property name="name">
-            <cstring>DateLabel</cstring>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>280</x>
-                <y>290</y>
-                <width>80</width>
-                <height>20</height>
-            </rect>
-        </property>
-        <property name="font">
-            <font>
-                <pointsize>9</pointsize>
-            </font>
-        </property>
-        <property name="frameShape">
-            <enum>LineEditPanel</enum>
-        </property>
-        <property name="alignment">
-            <set>AlignCenter</set>
-        </property>
-    </widget>
+    </vbox>
 </widget>
 <images>
     <image name="image0">

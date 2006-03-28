@@ -34,11 +34,12 @@ class KEuroCalc : public Calculator
 public:
     KEuroCalc(QWidget* parent=0, const char *name=0);
     ~KEuroCalc();
-    virtual void keyPressEvent( QKeyEvent *e );    
-    void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor );
-    void writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor);
+    virtual void keyPressEvent( QKeyEvent *e );
+    bool readSplashScreenState();
+    void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreenState);
+    void writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreenState);
 
-    void setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor);
+    void setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreenState);
 
 
 public slots:
@@ -98,6 +99,7 @@ private:
     int currencyNum;
     int rounding;
     QColor displayColor;
+    bool splashScreenState;
 
     bool readCurrencies();
     void addFixedRates();

@@ -41,7 +41,7 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData( "keurocalc", name, "0.9.5", description,
+	KAboutData aboutData( "keurocalc", name, "0.9.6", description,
 	 	              KAboutData::License_GPL, copyright, text);
 	aboutData.addAuthor("Éric Bischoff", I18N_NOOP("Design and implementation"), "ebischoff@nerim.net");
 	aboutData.addAuthor("Gil Gross", I18N_NOOP("Additional functionnality"), "ptit.ours@gmail.com");
@@ -55,18 +55,26 @@ int main(int argc, char *argv[])
 	KApplication a;
 	KSplashScreen *splash;
 	KEuroCalc *keurocalc;
+	bool splashScreenState;
 
 	splash = new KSplashScreen( QPixmap( locate( "data", "keurocalc/splash.png" ) ) );
-
 	splash->message(i18n(description) + "\n" + i18n(copyright), Qt::AlignBottom);
-	splash->show();
 
 	keurocalc = new KEuroCalc();
+	splashScreenState = keurocalc->readSplashScreenState();
+	if ( splashScreenState )
+	{
+		splash->show();
+	}
+
 	a.setMainWidget(keurocalc);
 	keurocalc->show();
 
-	usleep(600000); // Something less idiotic to propose ?
-	splash->finish(keurocalc);
+	if ( splashScreenState )
+	{
+		usleep(600000); // Something less idiotic to propose ?
+		splash->finish(keurocalc);
+	}
 	delete splash;
 
 	keurocalc->repaint();

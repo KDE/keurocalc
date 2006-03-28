@@ -3,8 +3,6 @@ BUGS
 
 Problem with non-working days at New York Federal Reserve Bank.
 
-Fonts too large at some places.
-
 
 FUNCTIONALITY
 =============
@@ -20,8 +18,6 @@ Allow more data sources:
 Allow querying the exchange rates of some date in the past.
 
 Add buttons to selectively clear input, display or memory.
-
-Add setting to skip splash screen.
 
 Do not show all currencies in the default currency setting,
 only the ones that the selected data source offers.

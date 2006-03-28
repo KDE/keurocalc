@@ -21,6 +21,8 @@
 #include <kcolorbutton.h>
 #include <kcolordialog.h>
 #include <qlabel.h>
+#include <qcheckbox.h>
+
 
 #include <klocale.h>
 
@@ -38,8 +40,9 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 {
 	int oldReference, oldCurrency, oldRounding;
 	QColor oldDisplayColor;
+	bool oldSplashScreenState;
 
-	parent->readOptions( oldReference, oldCurrency,  oldRounding, oldDisplayColor );
+	parent->readOptions( oldReference, oldCurrency,  oldRounding, oldDisplayColor, oldSplashScreenState );
 
 	referenceGroup->setButton( oldReference );
 
@@ -51,6 +54,8 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 	roundingGroup->setButton( oldRounding );
 
 	displayColorResult->setPaletteBackgroundColor( oldDisplayColor );
+
+	checkBoxSplashScreen->setChecked( oldSplashScreenState );
 }
 
 // Destructor
@@ -65,12 +70,13 @@ void Preferences::ok()
 	int newReference = referenceGroup->selectedId(),
 	    newCurrency = defaultCurrencyList->currentItem(),
 	    newRounding = roundingGroup->selectedId();
+	
+	QColor newDisplayColor = displayColorResult->paletteBackgroundColor();
 
-	QColor newDisplayColor;
-	newDisplayColor = displayColorResult->paletteBackgroundColor();
+	bool newSplashScreenState = checkBoxSplashScreen->isChecked();
 
-	calc->writeOptions( newReference, newCurrency, newRounding, newDisplayColor );
-	calc->setPreferences( newReference, newCurrency, newRounding, newDisplayColor );
+	calc->writeOptions( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreenState );
+	calc->setPreferences( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreenState );
 
 	calc->ResultDisplay->setPaletteBackgroundColor(newDisplayColor);
 	calc->InputDisplay->setPaletteBackgroundColor(newDisplayColor);
