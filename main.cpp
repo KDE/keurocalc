@@ -55,14 +55,14 @@ int main(int argc, char *argv[])
 	KApplication a;
 	KSplashScreen *splash;
 	KEuroCalc *keurocalc;
-	bool splashScreenState;
+	bool splashScreen;
 
 	splash = new KSplashScreen( QPixmap( locate( "data", "keurocalc/splash.png" ) ) );
 	splash->message(i18n(description) + "\n" + i18n(copyright), Qt::AlignBottom);
 
 	keurocalc = new KEuroCalc();
-	splashScreenState = keurocalc->readSplashScreenState();
-	if ( splashScreenState )
+	splashScreen = keurocalc->readSplashScreen();
+	if ( splashScreen )
 	{
 		splash->show();
 	}
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 	a.setMainWidget(keurocalc);
 	keurocalc->show();
 
-	if ( splashScreenState )
+	if ( splashScreen )
 	{
 		usleep(600000); // Something less idiotic to propose ?
 		splash->finish(keurocalc);

@@ -69,7 +69,7 @@ KEuroCalc::KEuroCalc(QWidget *parent, const char *name)
 		KMessageBox::error( 0, i18n( "Cannot load currencies.xml" ) );
 		exit(1);
 	}
-	readOptions( reference, currencyNum, rounding, displayColor, splashScreenState );
+	readOptions( reference, currencyNum, rounding, displayColor, splashScreen );
 
 	displayNewCurrency();
 	displayNewResult();
@@ -93,8 +93,8 @@ KEuroCalc::~KEuroCalc()
 {
 }
 
-// Read splash screen state from preferences file
-bool KEuroCalc::readSplashScreenState()
+// Is splash screen to be displayed ?
+bool KEuroCalc::readSplashScreen() const
 {
 	KConfig *config;
 	QString option;
@@ -103,15 +103,12 @@ bool KEuroCalc::readSplashScreenState()
 	config->setGroup("General");
 
 	option = config->readEntry("SplashScreen", "yes");
-	if (option == "no")
-		this->splashScreenState = false;
-	else this->splashScreenState = true;
 
-	return this->splashScreenState;
+	return option == "yes";
 }
 
 // Read options from preferences file
-void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreenState)
+void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreen) const
 {
 	KConfig *config;
 	QString option;
@@ -146,11 +143,12 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 	option = config->readEntry("DiplayColor", "#C0FFFF");
 	oldDisplayColor.setNamedColor(option);
 
-	oldSplashScreenState = this->splashScreenState;
+	option = config->readEntry("SplashScreen", "yes");
+	oldSplashScreen = option == "yes";
 }
 
 // Write options to preferences file
-void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreenState)
+void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen)
 {
 	KConfig *config;
 
@@ -183,22 +181,19 @@ void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding,
 
 	config->writeEntry("DiplayColor", newDisplayColor.name());
 
-	if (newSplashScreenState)
-		config->writeEntry("SplashScreen", "yes");
-	else
-		config->writeEntry("SplashScreen", "no");
+	config->writeEntry("SplashScreen", newSplashScreen? "yes": "no");
 
 	config->sync();
 }
 
 // Set new preferences dialog
-void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreenState)
+void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen)
 {
 	reference = newReference;
 	currencyNum = newCurrency;
 	rounding = newRounding;
 	displayColor = newDisplayColor;
-	splashScreenState = newSplashScreenState;
+	splashScreen = newSplashScreen;
 
 	CurrencyList->clear();
 	initButtons();

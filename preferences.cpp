@@ -40,9 +40,9 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 {
 	int oldReference, oldCurrency, oldRounding;
 	QColor oldDisplayColor;
-	bool oldSplashScreenState;
+	bool oldSplashScreen;
 
-	parent->readOptions( oldReference, oldCurrency,  oldRounding, oldDisplayColor, oldSplashScreenState );
+	parent->readOptions( oldReference, oldCurrency,  oldRounding, oldDisplayColor, oldSplashScreen );
 
 	referenceGroup->setButton( oldReference );
 
@@ -55,7 +55,7 @@ Preferences::Preferences(KEuroCalc *parent, const char *name)
 
 	displayColorResult->setPaletteBackgroundColor( oldDisplayColor );
 
-	checkBoxSplashScreen->setChecked( oldSplashScreenState );
+	checkBoxSplashScreen->setChecked( oldSplashScreen );
 }
 
 // Destructor
@@ -73,10 +73,10 @@ void Preferences::ok()
 	
 	QColor newDisplayColor = displayColorResult->paletteBackgroundColor();
 
-	bool newSplashScreenState = checkBoxSplashScreen->isChecked();
+	bool newSplashScreen = checkBoxSplashScreen->isChecked();
 
-	calc->writeOptions( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreenState );
-	calc->setPreferences( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreenState );
+	calc->writeOptions( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreen );
+	calc->setPreferences( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreen );
 
 	calc->ResultDisplay->setPaletteBackgroundColor(newDisplayColor);
 	calc->InputDisplay->setPaletteBackgroundColor(newDisplayColor);
