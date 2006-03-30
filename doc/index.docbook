@@ -34,13 +34,13 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2006-03-25</date>
-<releaseinfo>0.09.05</releaseinfo>
+<date>2006-03-30</date>
+<releaseinfo>0.09.06</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 0.9.5.
+This documentation describes &keurocalc; version 0.9.6.
 </para>
 </abstract>
 
@@ -642,13 +642,31 @@ available coin in your country, and we will enter that information.</para>
 
 </sect2>
 
-<sect2 id="settings-display-color">
-<title>Display Color</title>
+<sect2 id="settings-look-and-feel">
+<title>Look an feel</title>
 
-<para>This setting allows to change the background color of the display area. To
-change the background color, click on <guibutton>Change...</guibutton>,
-then choose a new color. Once done, press <guibutton>OK</guibutton>
-to validate the new choice.</para>
+<para>This setting defines the appearance and behavior of &keurocalc;.
+The following options are available:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Display color</guilabel></term>
+<listitem>
+<para>The background color of the display areas (both input and result).
+To change the background color, click on <guibutton>Change...</guibutton>.
+This opens the standard &kde; color selection dialog. Choose a new color,
+then press <guibutton>OK</guibutton> to validate the new choice.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Enable splash screen</guilabel></term>
+<listitem>
+<para>Uncheck this box if you do not want to initial picture to appear
+when &keurocalc; starts.</para>
+</listitem>
+</varlistentry>
+</variablelist>
 
 </sect2>
 </sect1>
