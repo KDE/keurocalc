@@ -148,11 +148,25 @@
 		name = "Hong kong dollar"
 		/>
 	<currency
+		symbol = "Kuna"
+		code = "HRK"
+		official-rules-precision = "1.0"
+		smallest-coin-precision = "1.0"
+		name = "Croatian kuna"
+		/>
+	<currency
 		symbol = "Ht"
 		code = "HUF"
 		official-rules-precision = "100.0"
 		smallest-coin-precision = "100.0"
 		name = "Hungarian forint"
+		/>
+	<currency
+		symbol = "Rp"
+		code = "IDR"
+		official-rules-precision = "1.0"
+		smallest-coin-precision = "1.0"
+		name = "Indonesian rupiah"
 		/>
 	<currency
 		symbol = "£IR"
@@ -271,6 +285,13 @@
 		name = "New Zealand dollar"
 		/>
 	<currency
+		symbol = "₱"
+		code = "PHP"
+		official-rules-precision = "1.0"
+		smallest-coin-precision = "1.0"
+		name = "Philippine peso"
+		/>
+	<currency
 		symbol = "zł"
 		code = "PLN"
 		official-rules-precision = "1.0"
@@ -293,6 +314,13 @@
 		name = "New Romanian leu"
 		/>
 	<currency
+		symbol = "руб"
+		code = "RUB"
+		official-rules-precision = "1.0"
+		smallest-coin-precision = "1.0"
+		name = "Russian rouble"
+		/>
+	<currency
 		symbol = "SKr"
 		code = "SEK"
 		official-rules-precision = "1.0"
@@ -301,9 +329,9 @@
 		/>
 	<currency
 		symbol = "S$"
-		code = "SGB"
+		code = "SGD"
 		official-rules-precision = "1.0"
-		smallest-coin-precision = "1.0"
+		smallest-coin-precision = "5.0"
 		name = "Singapore dollar"
 		/>
 	<currency
