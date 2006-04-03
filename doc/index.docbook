@@ -34,7 +34,7 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2006-03-30</date>
+<date>2006-04-03</date>
 <releaseinfo>0.09.06</releaseinfo>
 
 <abstract>
@@ -715,7 +715,7 @@ package. The latest version of &keurocalc; can be downloaded from its
 <sect1 id="requirements">
 <title>Requirements</title>
 
-<para>In order to successfully use &keurocalc;, you need &kde; 3.4.</para>
+<para>In order to successfully use &keurocalc;, you need &kde; 3.5.</para>
 
 <para>All required libraries can be found
 on <ulink url="ftp://ftp.kde.org">ftp.kde.org</ulink>, the &FTP; site
@@ -739,7 +739,7 @@ following in the base directory of the &keurocalc; distribution:
 
 <para>Since &keurocalc; uses <application>autoconf</application> and
 <application>automake</application> you should have not trouble compiling it.
-Should you run into problems please report them to &keurocalc;'s author.</para>
+Should you run into problems please report them to &keurocalc;'s authors.</para>
 
 </sect1>
 
