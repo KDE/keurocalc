@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>SettingsDialog</class>
 <widget class="QDialog">
     <property name="name">
@@ -76,6 +76,9 @@
                     <property name="text">
                         <string>Euro, no ne&amp;twork access (fixed rates only)</string>
                     </property>
+                    <property name="accel">
+                        <string>Alt+T</string>
+                    </property>
                     <property name="buttonGroupId">
                         <number>0</number>
                     </property>
@@ -94,6 +97,9 @@
                     <property name="text">
                         <string>Euro, European Central &amp;Bank</string>
                     </property>
+                    <property name="accel">
+                        <string>Alt+B</string>
+                    </property>
                     <property name="checked">
                         <bool>false</bool>
                     </property>
@@ -111,6 +117,9 @@
                     </property>
                     <property name="text">
                         <string>&amp;Dollar, New York Federal Reserve Bank</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+D</string>
                     </property>
                     <property name="buttonGroupId">
                         <number>2</number>
@@ -163,6 +172,9 @@
                     <property name="text">
                         <string>&amp;Smallest coin method</string>
                     </property>
+                    <property name="accel">
+                        <string>Alt+S</string>
+                    </property>
                     <property name="buttonGroupId">
                         <number>1</number>
                     </property>
@@ -185,6 +197,9 @@
                     </property>
                     <property name="text">
                         <string>&amp;No rounding at all</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+N</string>
                     </property>
                     <property name="buttonGroupId">
                         <number>2</number>
@@ -530,6 +545,9 @@
                             <property name="text">
                                 <string>C&amp;hange...</string>
                             </property>
+                            <property name="accel">
+                                <string>Alt+H</string>
+                            </property>
                         </widget>
                         <spacer>
                             <property name="name">
@@ -653,6 +671,9 @@
                     <property name="text">
                         <string>O&amp;K</string>
                     </property>
+                    <property name="accel">
+                        <string>Alt+K</string>
+                    </property>
                     <property name="default">
                         <bool>true</bool>
                     </property>
@@ -663,6 +684,9 @@
                     </property>
                     <property name="text">
                         <string>Cance&amp;l</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+L</string>
                     </property>
                 </widget>
             </hbox>
