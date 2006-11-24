@@ -5,6 +5,7 @@ Exec=keurocalc -caption "%c" %i %m
 Icon=keurocalc.png
 DocPath=keurocalc/index.html
 Terminal=false
+Category=Application;Office;
 Name=KEuroCalc
 Name[sv]=Keurocalc
 Name[ta]=Kயுரோ கேல்க்
