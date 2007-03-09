@@ -8,5 +8,7 @@ Terminal=false
 Category=Application;Office;
 Name=KEuroCalc
 Comment=A currency converter and calculator
+Comment[el]=Ένας μετατροπέας και υπολογιστής νομισμάτων
 Keywords=converter,euro,money,cash,calculator
+Keywords[el]=μετατροπέας,euro,χρήματα,λεφτά,υπολογιστής
 Encoding=UTF-8
