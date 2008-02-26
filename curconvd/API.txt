@@ -1,0 +1,143 @@
+                                  D-Bus API
+
+
+-------------------------------------------------------------------------------
+
+                         Object "/CurrencyConverter"
+
+
+DataSources(out ARRAY of STRING sources)
+
+  Returns the available data sources.
+
+  In the case of curconvd, this method returns:
+     (fixed)
+     http://www.ecb.int
+     http://www.ny.frb.org
+  which stands for:
+     Fixed rates
+     European Central Bank
+     New York Federal Reserve Bank
+
+
+RoundingMethods(out ARRAY of STRING sources)
+
+  Lists the available rounding methods.
+
+  In the case of curconvd, this method returns:
+     none
+     official rules
+     smallest coin
+  which stands for:
+     No rounding at all
+     Use the official rules
+     Round to the nearest smallest coin
+
+
+ReferenceCurrency(in STRING dataSource, out STRING code)
+
+  Gives the reference currency for a given data source.
+
+  In the case of curconvd, this method returns:
+    EUR
+  or
+    USD
+  which stands for
+    euro
+  or
+    US dollar
+
+
+LoadSource(in STRING source, in STRING method, out STRING tablePath)
+
+  Loads the exchange rates provided by a given data source, planning
+  to use the given rounding method. This method returns the d-bus object
+  path of the conversion table. This path can be used in subsequent calls,
+  to get exchange rates for example.
+
+  The reference data source must be specified using the same names as the ones
+  returned by the "DataSources()" method. The rounding methods must be
+  specified using the same names as the ones returned by the "RoundingMethod"
+  method.
+
+  The table path is guaranteed to be valid at least during one hour after
+  last access to the table. After that, the table can be removed from memory
+  at any time without warning. It is better to kindly call "UnloadTable"
+  when finished, rather than to let tables get unloaded automatically.
+
+  Please notice that the data source might change its rates at any time without
+  the exchange rates table to be updated. This is intentional, because one might
+  be able to finish computations with the same old exchange rates.
+
+TODO : this will be an asynchronous method, explain how to be informed when completed
+
+
+UnloadTable(in UINT32 tableNumber)
+
+  Unloads the data source from memory when it is not needed any more.
+
+
+-------------------------------------------------------------------------------
+
+                                Table object
+
+
+AvailableCurrencies(out ARRAY of STRING codes)
+
+  Returns the list of currencies provided by the data source that has been
+  loaded.
+
+  The supported currencies are shown using their three-letter international
+  code, like:
+     AUD
+     BGN
+     BRL
+     CAD
+  which would stand for:
+     Australian dollar
+     Bulgarian Lev
+     Brazilian real
+     Canadian dollar
+
+  The list for a given data source may vary over time, as this data source may
+  add or remove currencies.
+
+
+Symbol(in STRING code, out STRING symbol)
+
+  Gives the ordinary symbol for a given currency. For example,
+  converts "GBP" into "£".
+
+  The "code" is one of the three-letter codes that is available for
+  that table (see "AvailableCurrencies()" method).
+
+
+Name(in STRING code, out STRING name)
+
+  Gives the long name for a given currency. For example,
+  converts "GBP" into "Brtisih pound".
+
+  The "code" is one of the three-letter codes that is available for
+  that table (see "AvailableCurrencies()" method).
+
+
+ConvertFromReference(in STRING code, in DOUBLE amount, out DOUBLE result)
+
+  Converts an amount expressed in the reference currency into
+  the required currency, and rounds the result according to the
+  rounding method.
+
+  The "code" is one of the three-letter codes that is available for
+  that table (see "AvailableCurrencies()" method). The "amount" is
+  a number with two decimal digits.
+
+
+ConvertToReference(in STRING code, in DOUBLE amount, out DOUBLE result)
+
+  Converts an amount expressed in the required currency into
+  the reference currency, and rounds the result according to the
+  rounding method.
+
+  The "code" is one of the three-letter codes that is available for
+  that table (see "AvailableCurrencies()" method). The "amount" is
+  a number with two decimal digits.
