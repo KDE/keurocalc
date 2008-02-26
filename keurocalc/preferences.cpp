@@ -2,7 +2,7 @@
                       preferences.cpp  -  preferences widget
                              -------------------
     begin                : lun avr 12 18:25:02 CET 2004
-    copyright            : (C) 2001-2005 by Éric Bischoff
+    copyright            : (C) 2001-2008 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -15,45 +15,51 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <qbuttongroup.h>
-#include <qlistbox.h>
+#include <QButtonGroup>
+#include <QLabel>
+#include <QCheckBox>
 
 #include <kcolorbutton.h>
 #include <kcolordialog.h>
-#include <qlabel.h>
-#include <qcheckbox.h>
-
-
 #include <klocale.h>
 
 #include "preferences.h"
 #include "preferences.moc"
 #include "keurocalc.h"
-#include "currencies.h"
-
-extern int numCurrencies;
-extern currencyStruc *currency;
 
 // Constructor
-Preferences::Preferences(KEuroCalc *parent, const char *name)
-	: SettingsDialog( parent, name )
+Preferences::Preferences(KEuroCalc *parent, const Currencies *currencies)
+	: QDialog(parent), Ui::SettingsDialog()
 {
 	int oldReference, oldCurrency, oldRounding;
 	QColor oldDisplayColor;
+	QPalette palette;
 	bool oldSplashScreen;
 
-	parent->readOptions( oldReference, oldCurrency,  oldRounding, oldDisplayColor, oldSplashScreen );
+	setupUi(this);
+// TODO: The following should move to the ui file!
+	referenceGroup = new QButtonGroup();
+	referenceGroup->addButton( radioButtonEuroFixed, EURO_FIXED );
+	referenceGroup->addButton( radioButtonEuroECB, EURO_ECB );
+	referenceGroup->addButton( radioButtonDollarNYFRB, DOLLAR_NY_FRB );
+	roundingGroup = new QButtonGroup();
+	roundingGroup->addButton( radioButtonOfficialRules, OFFICIAL_RULES );
+	roundingGroup->addButton( radioButtonSmallestCoin, SMALLEST_COIN );
+	roundingGroup->addButton( radioButtonNoRounding, NO_ROUNDING );
 
-	referenceGroup->setButton( oldReference );
+	parent->readOptions( oldReference, oldCurrency, oldRounding, oldDisplayColor, oldSplashScreen );
 
-	for (int num = 0; num < numCurrencies; num++)
-		defaultCurrencyList->insertItem
-			( currency[num].code + " - " + currency[num].name );
-	defaultCurrencyList->setCurrentItem( oldCurrency );
+	referenceGroup->button( oldReference )->setChecked( true );
 
-	roundingGroup->setButton( oldRounding );
+	for (int num = 0; num < currencies->number(); num++)
+		defaultCurrencyList->addItem
+			( currencies->code(num) + " - " + currencies->name(num) );
+	defaultCurrencyList->setCurrentRow( oldCurrency );
 
-	displayColorResult->setPaletteBackgroundColor( oldDisplayColor );
+	roundingGroup->button( oldRounding )->setChecked( true );
+
+	palette.setColor( backgroundRole(), oldDisplayColor );
+	displayColorResult->setPalette( palette );
 
 	checkBoxSplashScreen->setChecked( oldSplashScreen );
 }
@@ -67,20 +73,21 @@ Preferences::~Preferences()
 void Preferences::ok()
 {
 	KEuroCalc *calc = (KEuroCalc *) parentWidget();
-	int newReference = referenceGroup->selectedId(),
-	    newCurrency = defaultCurrencyList->currentItem(),
-	    newRounding = roundingGroup->selectedId();
+	int newReference = referenceGroup->checkedId(),
+	    newCurrency = defaultCurrencyList->currentRow(),
+	    newRounding = roundingGroup->checkedId();
 	
-	QColor newDisplayColor = displayColorResult->paletteBackgroundColor();
+	QPalette palette = displayColorResult->palette();
+	QColor newDisplayColor = palette.color( backgroundRole() );
 
 	bool newSplashScreen = checkBoxSplashScreen->isChecked();
 
 	calc->writeOptions( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreen );
 	calc->setPreferences( newReference, newCurrency, newRounding, newDisplayColor, newSplashScreen );
 
-	calc->ResultDisplay->setPaletteBackgroundColor(newDisplayColor);
-	calc->InputDisplay->setPaletteBackgroundColor(newDisplayColor);
-	calc->OperatorDisplay->setPaletteBackgroundColor(newDisplayColor);
+	calc->ResultDisplay->setPalette( palette );
+	calc->InputDisplay->setPalette( palette );
+	calc->OperatorDisplay->setPalette( palette );
 
 	close();
 }
@@ -94,11 +101,17 @@ void Preferences::cancel()
 // Change display color button pressed
 void Preferences::changeDisplayColor()
 {
+	QPalette palette = displayColorResult->palette();
 	QColor myColor;
 	int result;
 
 	result = KColorDialog::getColor
-		( myColor, displayColorResult->paletteBackgroundColor() );
+		( myColor, palette.color( backgroundRole() ) );
 	if ( result == KColorDialog::Accepted )
-		displayColorResult->setPaletteBackgroundColor( myColor );
+	{
+		QPalette palette;
+
+		palette.setColor( backgroundRole(), myColor );
+		displayColorResult->setPalette( palette );
+	}
 }

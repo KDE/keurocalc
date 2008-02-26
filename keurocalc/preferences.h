@@ -2,7 +2,7 @@
                       preferences.h  -  preferences widget
                              -------------------
     begin                : lun avr 12 18:25:02 CET 2004
-    copyright            : (C) 2001-2005 by Éric Bischoff
+    copyright            : (C) 2001-2008 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -18,23 +18,30 @@
 #ifndef KPREF_H
 #define KPREF_H
 
-#include "settingsdialog.h"
+#include <QDialog>
+
+#include "ui_settingsdialog.h"
 
 class KEuroCalc;
+class Currencies;
 
-class Preferences : public SettingsDialog
+class Preferences : public QDialog, public Ui::SettingsDialog
 {
   Q_OBJECT 
 
 public:
-    Preferences(KEuroCalc *parent, const char *name=0);
-    ~Preferences();
+    Preferences(KEuroCalc *parent, const Currencies *currencies);
+    virtual ~Preferences();
 
 public slots:
     virtual void ok();
     virtual void cancel();
     virtual void changeDisplayColor();
 
+// TODO: The following should move to the ui file!
+private:
+	class QButtonGroup *referenceGroup;
+	class QButtonGroup *roundingGroup;
 };
 
 #endif

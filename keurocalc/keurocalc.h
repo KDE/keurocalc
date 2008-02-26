@@ -2,7 +2,7 @@
                           keurocalc.h  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2005 by Éric Bischoff
+    copyright            : (C) 2001-2008 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -15,25 +15,25 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef KEURO_H
-#define KEURO_H
+#ifndef KEUROCALC_H
+#define KEUROCALC_H
 
 class KLocale;
 
 #include <kapplication.h>
-#include <kio/job.h>
 
-#include <qwidget.h>
+#include <QDialog>
 
-#include "calculator.h"
+#include "ui_calculator.h"
+#include "../currencies/currencies.h"
 
-class KEuroCalc : public Calculator
+class KEuroCalc : public QDialog, public Ui::Calculator
 {
-  Q_OBJECT 
+    Q_OBJECT 
 
 public:
-    KEuroCalc(QWidget* parent=0, const char *name=0);
-    ~KEuroCalc();
+    KEuroCalc(QWidget* parent=0);
+    virtual ~KEuroCalc();
     virtual void keyPressEvent( QKeyEvent *e );
     bool readSplashScreen() const;
     void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreen) const;
@@ -41,44 +41,41 @@ public:
 
     void setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen);
 
-
 public slots:
-    virtual void httpData(KIO::Job *, const QByteArray &); 
-    virtual void httpResultECB(KIO::Job *); 
-    virtual void httpResultNY_FRB(KIO::Job *); 
-    virtual void inputDot();
-    virtual void inputZero();
-    virtual void inputOne();
-    virtual void inputTwo();
-    virtual void inputThree();
-    virtual void inputFour();
-    virtual void inputFive();
-    virtual void inputSix();
-    virtual void inputSeven();
-    virtual void inputEight();
-    virtual void inputNine();
-    virtual void inputPlus();
-    virtual void inputMinus();
-    virtual void inputAsterisk();
-    virtual void inputSlash();
-    virtual void inputBackspace();
-    virtual void validateReference();
-    virtual void validateCurrency();
-    virtual void validatePercent();
-    virtual void validateSimpleValue();
-    virtual void changeSign();
-    virtual void memoryInput();
-    virtual void memoryRecall();
-    virtual void memoryPlus();
-    virtual void memoryMinus();
-    virtual void reset();
-    virtual void displayAbout();
-    virtual void displayHelp();
-    virtual void displaySettings();
-    virtual void selectCurrency(int position);
+    Q_SCRIPTABLE void InputDot();
+    Q_SCRIPTABLE void InputZero();
+    Q_SCRIPTABLE void InputOne();
+    Q_SCRIPTABLE void InputTwo();
+    Q_SCRIPTABLE void InputThree();
+    Q_SCRIPTABLE void InputFour();
+    Q_SCRIPTABLE void InputFive();
+    Q_SCRIPTABLE void InputSix();
+    Q_SCRIPTABLE void InputSeven();
+    Q_SCRIPTABLE void InputEight();
+    Q_SCRIPTABLE void InputNine();
+    Q_SCRIPTABLE void InputPlus();
+    Q_SCRIPTABLE void InputMinus();
+    Q_SCRIPTABLE void InputAsterisk();
+    Q_SCRIPTABLE void InputSlash();
+    Q_SCRIPTABLE void InputBackspace();
+    Q_SCRIPTABLE void ValidateReference();
+    Q_SCRIPTABLE void ValidateCurrency();
+    Q_SCRIPTABLE void ValidatePercent();
+    Q_SCRIPTABLE void ValidateSimpleValue();
+    Q_SCRIPTABLE void ChangeSign();
+    Q_SCRIPTABLE void MemoryInput();
+    Q_SCRIPTABLE void MemoryRecall();
+    Q_SCRIPTABLE void MemoryPlus();
+    Q_SCRIPTABLE void MemoryMinus();
+    Q_SCRIPTABLE void Reset();
+    Q_SCRIPTABLE void DisplayAbout();
+    Q_SCRIPTABLE void DisplayHelp();
+    Q_SCRIPTABLE void DisplaySettings();
+    Q_SCRIPTABLE void SelectCurrency(int position);
+
+    void endDownload(int defaultCurrency, const QString &date);
 
 private:  
-    QString variableRates;
     char operatorDisplay[2],
          inputDisplay[12];
     enum { beforeUnits,
@@ -101,11 +98,12 @@ private:
     QColor displayColor;
     bool splashScreen;
 
-    bool readCurrencies();
-    void addFixedRates();
+    Currencies currencies;
+
     void initButtons();
     void startDownload();
     void newRatesList(int defaultCurrency); 
+
     void inputDigit( char c );
     void inputCorrect();
     void inputOperator( char c );

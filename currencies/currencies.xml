@@ -64,6 +64,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Cyprus pound"
+		fixed-rate = "0.585274"
 		/>
 	<currency
 		symbol = "K"
@@ -247,6 +248,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Maltese lira"
+		fixed-rate = "0.4293"
 		/>
 	<currency
 		symbol = "Mex$"
@@ -340,6 +342,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Slovenian tolar"
+		fixed-rate = "239.64"
 		/>
 	<currency
 		symbol = "Sk"
