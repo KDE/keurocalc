@@ -30,17 +30,19 @@
 <year>2004</year>
 <year>2005</year>
 <year>2006</year>
+<year>2007</year>
+<year>2008</year>
 <holder>Éric Bischoff</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2006-04-03</date>
-<releaseinfo>0.09.06</releaseinfo>
+<date>2008-02-24</date>
+<releaseinfo>1.0.0</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 0.9.6.
+This documentation describes &keurocalc; version 1.0.0.
 </para>
 </abstract>
 
@@ -64,8 +66,8 @@ This documentation describes &keurocalc; version 0.9.6.
 
 <para>
 On the 1st of January, 2002, 12 European countries united their national
-currencies into a single one, the euro (€). The same will probably happen
-in 2007 in some Eastern European countries. &keurocalc; helps:
+currencies into a single one, the euro (€). The same happens from time to
+time on a smaller scale with new European countries. &keurocalc; helps:
 
 <variablelist>
 <varlistentry>
@@ -687,7 +689,7 @@ when &keurocalc; starts.</para>
 <listitem><para>Bas Willems <email>cybersurfer@_NOSPAM_euronet.nl</email> - graphical artwork</para></listitem>
 </itemizedlist></para>
 
-<para>Documentation copyright 2001-2006 Éric Bischoff
+<para>Documentation copyright 2001-2007 Éric Bischoff
 <email>ebischoff@_NOSPAM_nerim.net</email>.</para>
 
 <para>Documentation reviewed by &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
@@ -715,7 +717,7 @@ package. The latest version of &keurocalc; can be downloaded from its
 <sect1 id="requirements">
 <title>Requirements</title>
 
-<para>In order to successfully use &keurocalc;, you need &kde; 3.5.</para>
+<para>In order to successfully use &keurocalc;, you need &kde; 4.0.</para>
 
 <para>All required libraries can be found
 on <ulink url="ftp://ftp.kde.org">ftp.kde.org</ulink>, the &FTP; site
@@ -731,15 +733,17 @@ In order to compile and install &keurocalc; on your system, type the
 following in the base directory of the &keurocalc; distribution:
 
 <screen width="40">
-<prompt>%</prompt> <userinput>./configure</userinput>
+<prompt>%</prompt> <userinput>mkdir build</userinput>
+<prompt>%</prompt> <userinput>cd build</userinput>
+<prompt>%</prompt> <userinput>cmake ..</userinput>
 <prompt>%</prompt> <userinput>make</userinput>
 <prompt>%</prompt> <userinput>make install</userinput>
 </screen>
 </para>
 
-<para>Since &keurocalc; uses <application>autoconf</application> and
-<application>automake</application> you should have not trouble compiling it.
-Should you run into problems please report them to &keurocalc;'s authors.</para>
+<para>Since cmake autodetects your system settings, you should have no
+trouble compiling &keurocalc;. Should you run into problems please report
+them to &keurocalc;'s authors.</para>
 
 </sect1>
 
