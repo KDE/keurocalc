@@ -2169,9 +2169,6 @@
       <property name="text" >
        <string>&amp;About...</string>
       </property>
-      <property name="shortcut" >
-       <string>Alt+A</string>
-      </property>
      </widget>
     </item>
     <item row="2" column="0" >
@@ -2343,9 +2340,6 @@
       <property name="text" >
        <string>&amp;Help...</string>
       </property>
-      <property name="shortcut" >
-       <string>Alt+H</string>
-      </property>
      </widget>
     </item>
     <item row="3" column="0" colspan="2" >
@@ -2513,9 +2507,6 @@
       </property>
       <property name="text" >
        <string>&amp;Settings...</string>
-      </property>
-      <property name="shortcut" >
-       <string>Alt+S</string>
       </property>
      </widget>
     </item>

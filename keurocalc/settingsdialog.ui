@@ -74,9 +74,6 @@
         <property name="text" >
          <string>Euro, no ne&amp;twork access (fixed rates only)</string>
         </property>
-        <property name="shortcut" >
-         <string>Alt+T</string>
-        </property>
        </widget>
       </item>
       <item>
@@ -90,9 +87,6 @@
         <property name="text" >
          <string>Euro, European Central &amp;Bank</string>
         </property>
-        <property name="shortcut" >
-         <string>Alt+B</string>
-        </property>
         <property name="checked" >
          <bool>false</bool>
         </property>
@@ -105,9 +99,6 @@
         </property>
         <property name="text" >
          <string>&amp;Dollar, New York Federal Reserve Bank</string>
-        </property>
-        <property name="shortcut" >
-         <string>Alt+D</string>
         </property>
        </widget>
       </item>
@@ -152,9 +143,6 @@
         <property name="text" >
          <string>&amp;Smallest coin method</string>
         </property>
-        <property name="shortcut" >
-         <string>Alt+S</string>
-        </property>
        </widget>
       </item>
       <item>
@@ -164,9 +152,6 @@
         </property>
         <property name="text" >
          <string>&amp;No rounding at all</string>
-        </property>
-        <property name="shortcut" >
-         <string>Alt+N</string>
         </property>
        </widget>
       </item>
@@ -704,9 +689,6 @@
            <property name="text">
              <string>C&amp;hange...</string>
            </property>
-           <property name="shortcut">
-             <string>Alt+H</string>
-           </property>
          </widget>
         </item>
         <item>
@@ -824,9 +806,6 @@
        <property name="text" >
         <string>O&amp;K</string>
        </property>
-       <property name="shortcut" >
-        <string>Alt+K</string>
-       </property>
        <property name="default" >
         <bool>true</bool>
        </property>
@@ -836,9 +815,6 @@
       <widget class="QPushButton" name="CancelButton" >
        <property name="text" >
         <string>Cance&amp;l</string>
-       </property>
-       <property name="shortcut" >
-        <string>Alt+L</string>
        </property>
       </widget>
      </item>
