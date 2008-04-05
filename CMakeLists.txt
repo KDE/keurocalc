@@ -13,5 +13,3 @@ include_directories ( ${QDBUS_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_D
 
 add_subdirectory( keurocalc )
 add_subdirectory( curconvd )
-add_subdirectory( doc )
-add_subdirectory( po )
