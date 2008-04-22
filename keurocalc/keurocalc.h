@@ -18,7 +18,6 @@
 #ifndef KEUROCALC_H
 #define KEUROCALC_H
 
-class KLocale;
 
 #include <kapplication.h>
 
