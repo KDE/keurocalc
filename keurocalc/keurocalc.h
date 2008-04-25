@@ -36,9 +36,9 @@ public:
     virtual void keyPressEvent( QKeyEvent *e );
     bool readSplashScreen() const;
     void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreen) const;
-    void writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen);
+    void writeOptions(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen);
 
-    void setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen);
+    void setPreferences(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen);
 
 public slots:
     Q_SCRIPTABLE void InputDot();

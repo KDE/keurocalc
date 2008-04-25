@@ -146,7 +146,7 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 }
 
 // Write options to preferences file
-void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen)
+void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen)
 {
 	KConfigGroup config(KGlobal::config(), "General");
 
@@ -182,7 +182,7 @@ void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding,
 }
 
 // Set new preferences dialog
-void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, QColor newDisplayColor, bool newSplashScreen)
+void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen)
 {
 	reference = newReference;
 	currencyNum = newCurrency;
