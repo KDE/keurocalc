@@ -12,7 +12,7 @@ kde4_add_executable(curconvd ${curconvd_SRCS} )
 
 target_link_libraries(curconvd ${KDE4_KIO_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KDEPRINT_LIBS} )
 
-install(TARGETS curconvd DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS curconvd ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
