@@ -58,7 +58,7 @@ bool Currencies::readCurrencies( const char *filename )
 	QString name;
 
 	numCurrencies = currenciesList.count();
-	if (currency) delete currency;
+	if (currency) delete [] currency;
 	currency = new currencyStruc[numCurrencies];
 	for (num = 0; num < numCurrencies; num++)
 	{
