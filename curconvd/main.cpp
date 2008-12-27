@@ -29,7 +29,7 @@
 static const char
 	*name =	I18N_NOOP("CurConvD"),
 	*description = I18N_NOOP("A currency converter daemon"),
-	*copyright = I18N_NOOP("(c) 2006-2008, the curconvd developpers"),
+	*copyright = I18N_NOOP("(c) 2006-2008, the curconvd developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n");
 
 int main(int argc, char *argv[])
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	KApplication a(false);
 	CurrencyConverter *currency;
 
-	printf( "Currency conversion daemon (c) 2006-2008, the curconvd developpers\n" );
+	printf( "Currency conversion daemon (c) 2006-2008, the curconvd developers\n" );
 	currency = new CurrencyConverter();
 
 	return a.exec();
