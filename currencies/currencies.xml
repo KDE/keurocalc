@@ -225,7 +225,7 @@
 		code = "LTL"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Latvian lats"
+		name = "Lituanian litas"
 		/>
 	<currency
 		symbol = "FLux"
@@ -240,7 +240,7 @@
 		code = "LVL"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Lithuanian litas"
+		name = "Latvian latas"
 		/>
 	<currency
 		symbol = "Lm"
@@ -350,6 +350,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Slovakian koruna"
+		fixed-rate = "30.1260"
 		/>
 	<currency
 		symbol = "Bt"

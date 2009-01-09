@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : lun nov 13 11:22:05 CET 2006
-    copyright            : (C) 2006-2008 by Éric Bischoff
+    copyright            : (C) 2006-2009 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -29,12 +29,12 @@
 static const char
 	*name =	I18N_NOOP("CurConvD"),
 	*description = I18N_NOOP("A currency converter daemon"),
-	*copyright = I18N_NOOP("(c) 2006-2008, the curconvd developers"),
+	*copyright = I18N_NOOP("(c) 2006-2009, the curconvd developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n");
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData("curconvd", "curconvd", ki18n(name), "1.0.0", ki18n(description),
+	KAboutData aboutData("curconvd", "curconvd", ki18n(name), "1.0.2", ki18n(description),
 			     KAboutData::License_GPL, ki18n(copyright), ki18n(text));
 	KCmdLineOptions options;
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	KApplication a(false);
 	CurrencyConverter *currency;
 
-	printf( "Currency conversion daemon (c) 2006-2008, the curconvd developers\n" );
+	printf( "Currency conversion daemon (c) 2006-2009, the curconvd developers\n" );
 	currency = new CurrencyConverter();
 
 	return a.exec();

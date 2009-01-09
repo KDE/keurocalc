@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2008 by Éric Bischoff
+    copyright            : (C) 2001-2009 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -30,12 +30,12 @@
 static const char
 	*name = I18N_NOOP("KEuroCalc"),
 	*description = I18N_NOOP("Cash converter and calculator"),
-	*copyright = I18N_NOOP("(c) 2001-2008, the KEuroCalc developers"),
+	*copyright = I18N_NOOP("(c) 2001-2009, the KEuroCalc developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to humorist Michael Moore, for he\nknows that money does not justify anything...\n");
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData("keurocalc", "keurocalc", ki18n(name), "1.0.0", ki18n(description),
+	KAboutData aboutData("keurocalc", "keurocalc", ki18n(name), "1.0.2", ki18n(description),
 			     KAboutData::License_GPL, ki18n(copyright), ki18n(text));
 	KCmdLineOptions options;
 

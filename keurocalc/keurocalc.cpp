@@ -2,7 +2,7 @@
                           keurocalc.cpp  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2008 by Éric Bischoff
+    copyright            : (C) 2001-2009 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -146,7 +146,7 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 }
 
 // Write options to preferences file
-void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen)
+void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, const QColor &newDisplayColor, bool newSplashScreen)
 {
 	KConfigGroup config(KGlobal::config(), "General");
 
@@ -182,7 +182,7 @@ void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding,
 }
 
 // Set new preferences dialog
-void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen)
+void KEuroCalc::setPreferences(int newReference, int newCurrency, int newRounding, const QColor &newDisplayColor, bool newSplashScreen)
 {
 	reference = newReference;
 	currencyNum = newCurrency;
