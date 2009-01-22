@@ -520,10 +520,10 @@ computes the difference in the reverse order.</para>
 <member><guibutton>Reset</guibutton></member>
 <member>Reset both input, result and memory</member>
 
-<member><guibutton><accel>A</accel>bout</guibutton></member>
+<member><guibutton>About</guibutton></member>
 <member>Displays the <guilabel>About</guilabel> box</member>
 
-<member><guibutton><accel>H</accel>elp</guibutton></member>
+<member><guibutton>Help</guibutton></member>
 <member>Displays these help pages</member>
 
 <member>The drop down list with currency codes and names</member>
