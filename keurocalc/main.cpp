@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	KCmdLineOptions options;
 
 	aboutData.addAuthor(ki18n("Éric Bischoff"), ki18n("Design and implementation"), "ebischoff@nerim.net");
-	aboutData.addAuthor(ki18n("Gil Gross"), ki18n("Additional functionnality"), "ptit.ours@gmail.com");
+	aboutData.addAuthor(ki18n("Gil Gross"), ki18n("Additional functionality"), "ptit.ours@gmail.com");
 	aboutData.addCredit(ki18n("Melchior Franz"), ki18n("Design and testing"), "a8603365@unet.univie.ac.at");
 	aboutData.addCredit(ki18n("Bas Willems"), ki18n("Graphical artwork"), "cybersurfer@euronet.nl");
 	aboutData.setOrganizationDomain("kde.org");
