@@ -234,7 +234,7 @@ the currencies drop down list.</para></step>
 or <keycap>M</keycap> keys.</para></step>
 <step><para>Just select the <guilabel>ESP - Spanish peseta</guilabel> item
 to see the same amount of 61.36 € converted into pesetas in the
-<guilabel>Results</guilabel> area.</para></step>
+<guilabel>Result</guilabel> area.</para></step>
 </procedure>
 
 </sect1>
@@ -645,7 +645,7 @@ available coin in your country, and we will enter that information.</para>
 </sect2>
 
 <sect2 id="settings-look-and-feel">
-<title>Look an feel</title>
+<title>Look and feel</title>
 
 <para>This setting defines the appearance and behavior of &keurocalc;.
 The following options are available:</para>
