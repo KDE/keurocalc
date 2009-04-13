@@ -1,11 +1,10 @@
-# KDE Config File
 [Desktop Entry]
 Type=Application
-Exec=keurocalc -caption "%c" %i %m
-Icon=keurocalc.png
-DocPath=keurocalc/index.html
+Exec=keurocalc -caption "%c" %i
+Icon=keurocalc
+X-DocPath=keurocalc/index.html
 Terminal=false
-Categories=Application;Office;
+Categories=Qt;KDE;Office;
 Name=KEuroCalc
 Name[hi]=केयूरोकेल्क
 Name[hne]=केयूरोकेल्क
@@ -73,4 +72,3 @@ Keywords[tr]=dönüştürücü,avro,para,nakit,hesaplayıcı
 Keywords[uk]=перетворювач,євро,гроші,готівка,калькулятор
 Keywords[x-test]=xxconverter,euro,money,cash,calculatorxx
 Keywords[zh_CN]=converter,euro,money,cash,calculator,转换器,欧元,钱,现金,计算器
-Encoding=UTF-8
