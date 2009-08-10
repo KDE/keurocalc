@@ -19,9 +19,6 @@
 #include <math.h>
 
 #include <QDBusConnection>
-#include <QLabel>
-#include <QButtonGroup>
-#include <QComboBox>
 #include <QPushButton>
 #include <QKeyEvent>
 

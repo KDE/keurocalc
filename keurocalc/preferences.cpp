@@ -16,7 +16,6 @@
  ***************************************************************************/
 
 #include <QButtonGroup>
-#include <QLabel>
 #include <QCheckBox>
 
 #include <kcolorbutton.h>
