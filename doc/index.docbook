@@ -248,7 +248,7 @@ to see the same amount of 61.36 € converted into pesetas in the
 Notice that in the result field, <computeroutput>3</computeroutput>
 is a simple value displayed on just one line, with no monetary unit.</para></step>
 <step><para>Type <userinput>5</userinput> and then press the
-<guibutton>Enter</guibutton> button or the <keycap>Enter</keycap> key. The
+<guibutton>Enter</guibutton> button or the &Enter; key. The
 result <computeroutput>8</computeroutput> appears on the right.</para></step>
 </procedure>
 
@@ -310,7 +310,7 @@ available and if not already selected.</para></step>
 key. Notice the <computeroutput>X</computeroutput> sign at the left of
 the <guilabel>Input</guilabel> display.</para></step>
 <step><para>Now type <userinput>3.2</userinput> followed by the <guibutton>Enter</guibutton> button
-or the <keycap>Enter</keycap> key: this means <quote>3.2 units</quote> at
+or the &Enter; key: this means <quote>3.2 units</quote> at
 2 € each.</para></step>
 <step><para>The result in Australian dollars matches <computeroutput>6.4 €</computeroutput>.</para></step>
 </procedure>
@@ -450,7 +450,7 @@ computes the difference in the reverse order.</para>
 <member><keycap>+</keycap>, <keycap>-</keycap>, <keycap>*</keycap> and <keycap>/</keycap></member>
 <member>Operators: addition, subtraction, multiplication and division</member>
 
-<member><keycap>Enter</keycap> and <keycap>Return</keycap></member>
+<member>&Enter; and <keycap>Return</keycap></member>
 <member>Validation of input number considered as a simple, unitless, value</member>
 
 <member><keycap>%</keycap></member>
@@ -459,7 +459,7 @@ computes the difference in the reverse order.</para>
 <member>&Backspace;</member>
 <member>Removal of last input: digits, decimal separator or operator</member>
 
-<member><keycap>Tab</keycap> and <keycombo action="simul">&Shift; <keycap>Tab</keycap></keycombo> keys</member>
+<member>&Tab; and <keycombo action="simul">&Shift; &Tab;</keycombo> keys</member>
 <member>Moves from one button to the next or previous one</member>
 
 <member>Arrow keys</member>
