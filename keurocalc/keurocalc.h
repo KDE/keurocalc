@@ -2,7 +2,7 @@
                           keurocalc.h  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2009 by Éric Bischoff
+    copyright            : (C) 2001-2010 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -35,9 +35,9 @@ public:
     virtual void keyPressEvent( QKeyEvent *e );
     bool readSplashScreen() const;
     void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreen) const;
-    void writeOptions(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen);
+    void writeOptions(int newReference, int newCurrency, int newRounding, const QColor &newDisplayColor, bool newSplashScreen);
 
-    void setPreferences(int newReference, int newCurrency, int newRounding, const QColor& newDisplayColor, bool newSplashScreen);
+    void setPreferences(int newReference, int newCurrency, int newRounding, const QColor &newDisplayColor, bool newSplashScreen);
 
 public slots:
     Q_SCRIPTABLE void InputDot();
@@ -81,6 +81,7 @@ private:
 	   afterUnits
     } inputPos;
 
+    locale_t c_locale;
     bool isSimpleValue;
     double simpleValue,
            referenceValue,

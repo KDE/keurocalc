@@ -2,7 +2,7 @@
                           keurocalc.cpp  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2009 by Éric Bischoff
+    copyright            : (C) 2001-2010 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -17,6 +17,7 @@
 
 #include <stdlib.h>
 #include <math.h>
+#include <locale.h>
 
 #include <QDBusConnection>
 #include <QPushButton>
@@ -53,6 +54,7 @@ KEuroCalc::KEuroCalc(QWidget *parent)
 	         this, SLOT(endDownload(int, const QString &))
 	       );
 
+	c_locale = newlocale(LC_NUMERIC_MASK, "C", NULL);
 	isSimpleValue = false;
 	simpleValue = 0.0;
 	referenceValue = 0.0;
@@ -91,6 +93,7 @@ KEuroCalc::KEuroCalc(QWidget *parent)
 // Destructor
 KEuroCalc::~KEuroCalc()
 {
+	freelocale(c_locale);
 }
 
 // Is splash screen to be displayed ?
@@ -376,7 +379,7 @@ void KEuroCalc::ValidateReference()
 {
 	double inputValue, currencyRate, currencyPrecision;
 
-	inputValue = atof( inputDisplay );
+	inputValue = strtod_l( inputDisplay, NULL, c_locale );
 	currencyRate = currencies.rate(currencyNum);
 	switch (rounding)
 	{
@@ -462,7 +465,7 @@ void KEuroCalc::ValidateCurrency()
 {
 	double inputValue, currencyRate, currencyPrecision;
 
-	inputValue = atof( inputDisplay );
+	inputValue = strtod_l( inputDisplay, NULL, c_locale );
 	currencyRate = currencies.rate(currencyNum);
 	switch (rounding)
 	{
@@ -549,7 +552,7 @@ void KEuroCalc::ValidatePercent()
 {
 	double inputValue, currencyRate, currencyPrecision;
 
-	inputValue = atof( inputDisplay );
+	inputValue = strtod_l( inputDisplay, NULL, c_locale );
 	currencyRate = currencies.rate(currencyNum);
 	switch (rounding)
 	{
@@ -612,7 +615,7 @@ void KEuroCalc::ValidateSimpleValue()
 {
 	double inputValue, currencyRate, currencyPrecision;
 
-	inputValue = atof( inputDisplay );
+	inputValue = strtod_l( inputDisplay, NULL, c_locale );
 	currencyRate = currencies.rate(currencyNum);
 	switch (rounding)
 	{
@@ -1295,7 +1298,7 @@ void KEuroCalc::normalize( QString &numberDisplay )
 
 	if ( dotPos != -1 )
 		numberDisplay.replace(	dotPos,
-			 		KGlobal::locale()->decimalSymbol().length(),
+					KGlobal::locale()->decimalSymbol().length(),
 					KGlobal::locale()->decimalSymbol() );
 
 	while (unitPos > 0)
