@@ -2,7 +2,7 @@
                            currencies.h  -  list of currencies
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2009 by Éric Bischoff
+    copyright            : (C) 2001-2010 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
