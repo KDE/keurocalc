@@ -23,7 +23,7 @@ install(TARGETS keurocalc ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( FILES keurocalc.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS keurocalc.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
 
 install( FILES splash.png ../currencies/currencies.xml DESTINATION ${DATA_INSTALL_DIR}/keurocalc )
 
