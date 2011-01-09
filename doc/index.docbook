@@ -24,13 +24,13 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 
 <copyright>
-<year>2001-2010</year>
+<year>2001-2011</year>
 <holder>Éric Bischoff</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2010-05-16</date>
-<releaseinfo>1.0.3</releaseinfo>
+<date>2011-01-08</date>
+<releaseinfo>1.1.0</releaseinfo>
 
 <abstract>
 <para>
@@ -86,16 +86,22 @@ currency at any stage of calculations.</para></listitem>
 <listitem>
 <para><itemizedlist>
 <listitem><para>To do conversions between the euro and other currencies,
-like the British Pound, according to the daily exchange rate defined by the
+like the British Pound, according to the daily exchange rate published by the
 <ulink url="http://www.ecb.int/stats/eurofxref/">European Central Bank (ECB)</ulink>.</para></listitem>
 <listitem><para>To do conversions between any two currencies that are part of the list
-published the ECB.</para></listitem>
-<listitem><para>To do conversions between the US dollar and other currencies
-according to the daily exchange rate defined by the
+published by the ECB.</para></listitem>
+<!--listitem><para>To do conversions between the US dollar and other currencies
+according to the daily exchange rate published by the
 <ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
 Federal Reserve Bank (NY FRB)</ulink>.</para></listitem>
 <listitem><para>To do conversions between any two currencies that are part of the list
-published the NY FRB.</para></listitem>
+published by the NY FRB.</para></listitem-->
+<listitem><para>To do conversions between the euro and other currencies,
+like the British Pound, according to the daily exchange rate published by the
+<ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex">Time Genie</ulink>
+foreign exchange (TG).</para></listitem>
+<listitem><para>To do conversions between any two currencies that are part of the list
+published by the TG.</para></listitem>
 </itemizedlist></para>
 </listitem>
 </varlistentry>
@@ -108,12 +114,14 @@ usability:
 
 <itemizedlist>
 <listitem><para>You see every intermediate value and the result
-in both the reference currency (euro or dollar) and in the other currency.</para></listitem>
+in both the reference currency (euro<!-- or dollar -->)
+and in the other currency.</para></listitem>
 <listitem><para>There is a separate input area where you can
 type a new value while still having the previous result visible.</para></listitem>
 <listitem><para>The ergonomy is very close to usual pocket calculators,
-despite the fact that any value you type can be a value in the reference currency (euro
-or dollar), a value in the other currency, a percentage or an unit-less quantity.</para></listitem>
+despite the fact that any value you type can be a value in the reference currency
+(euro<!-- or dollar -->), a value in the other currency,
+a percentage or an unit-less quantity.</para></listitem>
 <listitem><para>You press the keys in the order you would speak
 aloud what you're doing.</para></listitem>
 <listitem><para>If you make mistakes, a special correction button enables you
@@ -121,8 +129,8 @@ to correct your last input data, as long as you didn't validate.</para></listite
 <listitem><para>The numbers are displayed according to your locale settings:
 with either a comma or a dot as a decimal point, according to your &kcontrol;
 settings.</para></listitem>
-<listitem><para>You can decide which reference currency you want to use (euro
-or dollar), which other currency to start with when you launch &keurocalc;, and
+<listitem><para>You can decide which reference currency you want to use
+(euro<!-- or dollar -->), which other currency to start with when you launch &keurocalc;, and
 which rounding method to use.</para></listitem>
 </itemizedlist>
 </para>
@@ -130,7 +138,8 @@ which rounding method to use.</para></listitem>
 <para>&keurocalc; allows the following operations:
 
 <itemizedlist>
-<listitem><para>Conversions from and to the reference currency (euro or dollar).</para></listitem>
+<listitem><para>Conversions from and to the reference currency
+(euro<!-- or dollar -->).</para></listitem>
 <listitem><para>Systematic rounding of the displayed result, but
 computations done internally with the precision of the mathematical libraries.</para></listitem>
 <listitem><para>Usual additions, subtractions, multiplications and divisions.</para></listitem>
@@ -151,8 +160,8 @@ of the mathematical library.</para></listitem>
 display size. However, with the change to the new Turkish lira
 and the removal of six zeroes in that currency, it is not a practical
 problem anymore.</para></listitem>
-<listitem><para>New York Federal Reserve Bank rates are not available
-during the non-working days (Christmas, Easter, etc.).</para></listitem>
+<!-- listitem><para>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para></listitem-->
 </itemizedlist>
 </para>
 
@@ -162,7 +171,7 @@ computations by some other means. As the <link linkend="credits">license</link>
 agreement states, there's no liability of the authors if the results are not
 correct or as expected. Also, please notice that the variable exchange rates
 are downloaded in an unencrypted and therefore insecure manner from the data
-sources (European Central Bank and New York Federal Reserve Bank).
+sources (European Central Bank and <!-- New York Federal Reserve Bank --> Time Genie).
 Some <quote>man-in-the-middle</quote> attacker may confuse &keurocalc; by forging
 exchange rates. More simply, a transmission error is always possible.</para></warning>
 
@@ -251,8 +260,9 @@ how much do you have left in your bank account?</title>
 <step><para>Make sure that the variable exchange rates are available. If not, press
 the <guibutton>Settings...</guibutton> to select either 
 <guilabel>Euro, European Central Bank</guilabel> or
-<guilabel>Dollar, New York Federal Reserve Bank</guilabel>.
-Now select the <guilabel>USD - US dollar</guilabel> or the <guilabel>EUR - EU euro</guilabel>
+<guilabel><!-- Dollar, New York Federal Reserve Bank -->Euro, Time Genie</guilabel>.
+Now select the <guilabel>USD - US dollar</guilabel>
+<!-- or the <guilabel>EUR - EU euro</guilabel> -->
 item in the scroll down list on the bottom.
 If you have no Internet access, that item won't be available as the latest variable
 rates between the euro and the dollar cannot be determined.</para></step>
@@ -265,8 +275,8 @@ and then press <guibutton>€</guibutton>.</para></step>
 <step><para>Read the result in the <guilabel>Result</guilabel> display on the right.
 The exact value might depend on latest exchange rates. Notice that during the whole computation
 you've been able to read the values both in euro and in US dollars. Pay attention to the fact
-that different data sources (ECB or NY FRB) might not provide the same conversion rate between
-the euro and the dollar.</para></step>
+that different data sources (ECB or <!-- NY FRB --> TG) might not provide
+the same conversion rate between the euro and the dollar.</para></step>
 </procedure>
 
 <procedure>
@@ -376,7 +386,8 @@ other memory keys now become available.</para></step>
 (Memory Recall) button.</para></step>
 </procedure>
 
-<para>Internally, the values are recalled with no unit or in the reference currency (euro or dollar) with
+<para>Internally, the values are recalled with no unit or in the reference currency
+(euro<!-- or dollar -->) with
 the maximum precision allowed by the mathematical library. In some rare cases,
 this might lead to rounding problems if the stored value is a rounded value in a
 non-reference currency.</para>
@@ -462,7 +473,8 @@ computes the difference in the reverse order.</para>
 <member>When focus is on a push button, presses this button</member>
 
 <member><keycap>E</keycap> or <keycap>$</keycap></member>
-<member>Validation of input number considered as a value expressed in the reference currency (euro or dollar)</member>
+<member>Validation of input number considered as a value expressed in the reference currency
+(euro<!-- or dollar -->)</member>
 
 <member><keycap>S</keycap></member>
 <member>Change sign of the result</member>
@@ -490,7 +502,8 @@ computes the difference in the reverse order.</para>
 <member>Clear all: both input and result area</member>
 
 <member><guibutton>€</guibutton> or <guibutton>$</guibutton></member>
-<member>Validation of input number considered as a value expressed in the reference currency (euro or dollar)</member>
+<member>Validation of input number considered as a value expressed in the reference currency
+(euro<!-- or dollar -->)</member>
 
 <member>The button labeled with the name of an other currency</member>
 <member>Validation of input number considered as a number in the other currency</member>
@@ -535,8 +548,8 @@ computes the difference in the reverse order.</para>
 <sect2 id="settings-reference">
 <title>Reference currency, rates origin</title>
 
-<para>This setting defines the reference currency (euro or dollar),
-and from where 
+<para>This setting defines <!-- the reference currency (euro or dollar),
+and --> from where 
 &keurocalc; should download the exchange rates between the reference currency and
 other currencies. The following choices are available:</para>
 
@@ -560,7 +573,7 @@ rate with the euro.</para>
 </listitem>
 </varlistentry>
 
-<varlistentry>
+<!--varlistentry>
 <term><guilabel>Dollar, New York Federal Reserve Bank</guilabel></term>
 <listitem>
 <para>Dollar is the reference currency. There are no fixed exchange rates.
@@ -571,6 +584,15 @@ Federal Reserve Bank (NY FRB)</ulink>.</para>
 exchange rates published by that bank, because of time zone offsets and non-working
 days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
 not optimal.</para>
+</listitem>
+</varlistentry-->
+
+<varlistentry>
+<term><guilabel>Euro, Time Genie</guilabel></term>
+<listitem>
+<para>Euro is the reference currency. The fixed exchange rates are available.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex">Time Genie (TG)</ulink>.</para>
 </listitem>
 </varlistentry>
 
