@@ -2,7 +2,7 @@
                            currencies.h  -  list of currencies
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2010 by Éric Bischoff
+    copyright            : (C) 2001-2011 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -25,7 +25,8 @@
 
 #define EURO_FIXED 0
 #define EURO_ECB 1
-#define DOLLAR_NY_FRB 2
+//#define DOLLAR_NY_FRB 2
+#define EURO_TG 3
 
 #define OFFICIAL_RULES 0
 #define SMALLEST_COIN 1
@@ -78,12 +79,14 @@ public:
     void clearRates();
     void addFixedRates( int rounding, bool someMoreToCome = false );
     void addECBRates( int rounding );
-    void addNY_FRBRates( int rounding );
+//  void addNY_FRBRates( int rounding );
+    void addTGRates( int rounding );
 
 
 private slots:
     virtual void httpDataECB(KIO::Job *, const QByteArray &); 
-    virtual void httpDataNY_FRB(KIO::Job *, const QByteArray &); 
+//  virtual void httpDataNY_FRB(KIO::Job *, const QByteArray &); 
+    virtual void httpDataTG(KIO::Job *, const QByteArray &); 
 
 signals:
     void endDownload(int defaultCurrency, const QString &date);

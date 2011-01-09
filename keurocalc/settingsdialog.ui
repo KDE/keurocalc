@@ -92,12 +92,12 @@
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="radioButtonDollarNYFRB">
+       <widget class="QRadioButton" name="radioButtonEuroTG">
         <property name="font">
          <font/>
         </property>
         <property name="text">
-         <string>&amp;Dollar, New York Federal Reserve Bank</string>
+         <string>Euro, Time &amp;Genie</string>
         </property>
        </widget>
       </item>
@@ -832,7 +832,7 @@
  <tabstops>
   <tabstop>radioButtonEuroFixed</tabstop>
   <tabstop>radioButtonEuroECB</tabstop>
-  <tabstop>radioButtonDollarNYFRB</tabstop>
+  <tabstop>radioButtonEuroTG</tabstop>
   <tabstop>defaultCurrencyList</tabstop>
   <tabstop>radioButtonOfficialRules</tabstop>
   <tabstop>radioButtonSmallestCoin</tabstop>

@@ -2,7 +2,7 @@
                           keurocalc.cpp  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2010 by Éric Bischoff
+    copyright            : (C) 2001-2011 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -36,8 +36,8 @@
 #include "preferences.h"
 
 static const char
-	*euroSymbol = " €",
-	*dollarSymbol = " $";
+	*euroSymbol = " €";
+//	*dollarSymbol = " $";
 
 // Constructor
 KEuroCalc::KEuroCalc(QWidget *parent)
@@ -118,8 +118,10 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 		oldReference = EURO_FIXED;
 	else if (option == "EURO_ECB")
 		oldReference = EURO_ECB;
-	else if (option == "DOLLAR_NY_FRB")
-		oldReference = DOLLAR_NY_FRB;
+//	else if (option == "DOLLAR_NY_FRB")
+//		oldReference = DOLLAR_NY_FRB;
+	else if (option == "EURO_TG")
+		oldReference = EURO_TG;
 	else oldReference = EURO_ECB;
 
 	option = config.readEntry("Currency", "USD");
@@ -157,8 +159,11 @@ void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding,
 		case EURO_ECB:
 			config.writeEntry("Reference", "EURO_ECB");
 			break;
-		case DOLLAR_NY_FRB:
-			config.writeEntry("Reference", "DOLLAR_NY_FRB");
+//		case DOLLAR_NY_FRB:
+//			config.writeEntry("Reference", "DOLLAR_NY_FRB");
+//			break;
+		case EURO_TG:
+			config.writeEntry("Reference", "EURO_TG");
 	}
 
 	config.writeEntry("Currency", currencies.code(newCurrency) );
@@ -972,8 +977,12 @@ void KEuroCalc::initButtons()
 			SourceLabel->setText( i18n( "ECB" ) );
 			DateLabel->setText( i18n( "Loading..." ) );
 			break;
-		case DOLLAR_NY_FRB:
-			SourceLabel->setText( i18n( "NY FRB" ) );
+//		case DOLLAR_NY_FRB:
+//			SourceLabel->setText( i18n( "NY FRB" ) );
+//			DateLabel->setText( i18n( "Loading..." ) );
+//			break;
+		case EURO_TG:
+			SourceLabel->setText( i18n( "TG" ) );
 			DateLabel->setText( i18n( "Loading..." ) );
 	}
 	switch ( rounding )
@@ -1008,7 +1017,8 @@ void KEuroCalc::initButtons()
 	AsteriskButton->setText( QString::fromUtf8( "X" ) );
 	MinusButton->setText( QString::fromUtf8( "-" ) );
 	PlusButton->setText( QString::fromUtf8( "+" ) );
-	ReferenceButton->setText( QString::fromUtf8( reference == DOLLAR_NY_FRB? dollarSymbol: euroSymbol ) );
+//	ReferenceButton->setText( QString::fromUtf8( reference == DOLLAR_NY_FRB? dollarSymbol: euroSymbol ) );
+	ReferenceButton->setText( QString::fromUtf8( euroSymbol ) );
 	PercentButton->setText( QString::fromUtf8( "%" ) );
 	PlusMinusButton->setText( QString::fromUtf8( "+/-" ) );
 }
@@ -1030,9 +1040,17 @@ void KEuroCalc::startDownload()
 			currencies.addECBRates( rounding );
 			// endDowload is called again when completed
 			break;
-		case DOLLAR_NY_FRB:
-			currencies.addNY_FRBRates( rounding );
-			// endDowload is called when completed
+//		case DOLLAR_NY_FRB:
+//			currencies.addNY_FRBRates( rounding );
+//			// endDowload is called when completed
+//			break;
+		case EURO_TG:
+			currencies.addFixedRates( rounding, true );
+			// endDownload is called here for the first time
+			CurrencyList->addItem( "--------------------------------------------" );
+			currencies.addTGRates( rounding );
+			// endDowload is called again when completed
+			break;
 	}
 }
 
@@ -1220,7 +1238,8 @@ void KEuroCalc::displayNewResult()
 		}
 		else referenceDisplay.setNum( referenceValue );
 		normalize( referenceDisplay );
-		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
+//		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
+		referenceSymbol = QString::fromUtf8( euroSymbol );
 
 		switch (rounding)
 		{
@@ -1272,7 +1291,8 @@ void KEuroCalc::displayNewCurrency()
 				currencyPrecision = 1.0;
 		}
 		rate.setNum( currencyRate * currencyPrecision ); 
-		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
+//		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
+		referenceSymbol = QString::fromUtf8( euroSymbol );
 		RateLabel->setText
 			( "1" + referenceSymbol + " = " + rate + " " + currencySymbol ); 
 	}

@@ -2,7 +2,7 @@
                           table.cpp  -  conversion table
                              -------------------
     begin                : jeu nov 23 21:03:30 CET 2006
-    copyright            : (C) 2006-2010 by Éric Bischoff
+    copyright            : (C) 2006-2011 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -75,10 +75,17 @@ void CurrencyTable::loadSource(const QString &dataSource, const QString &roundin
 		addECBRates( rounding );
 		// endDowload is called again when completed
 	}
-	else if (dataSource == "http://www.ny.frb.org")
+//	else if (dataSource == "http://www.newyorkfed.org")
+//	{
+//		addNY_FRBRates( rounding );
+//		// endDowload is called when completed
+//	}
+	else if (dataSource == "http://rss.timegenie.com")
 	{
-		addNY_FRBRates( rounding );
-		// endDowload is called when completed
+		addFixedRates( rounding, true );
+		// endDownload is called here for the first time
+		addECBRates( rounding );
+		// endDowload is called again when completed
 	}
 }
 

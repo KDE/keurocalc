@@ -2,7 +2,7 @@
                       preferences.cpp  -  preferences widget
                              -------------------
     begin                : lun avr 12 18:25:02 CET 2004
-    copyright            : (C) 2001-2010 by Éric Bischoff
+    copyright            : (C) 2001-2011 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -40,7 +40,8 @@ Preferences::Preferences(KEuroCalc *parent, const Currencies *currencies)
 	referenceGroup = new QButtonGroup();
 	referenceGroup->addButton( radioButtonEuroFixed, EURO_FIXED );
 	referenceGroup->addButton( radioButtonEuroECB, EURO_ECB );
-	referenceGroup->addButton( radioButtonDollarNYFRB, DOLLAR_NY_FRB );
+//	referenceGroup->addButton( radioButtonDollarNYFRB, DOLLAR_NY_FRB );
+	referenceGroup->addButton( radioButtonEuroTG, EURO_TG );
 	roundingGroup = new QButtonGroup();
 	roundingGroup->addButton( radioButtonOfficialRules, OFFICIAL_RULES );
 	roundingGroup->addButton( radioButtonSmallestCoin, SMALLEST_COIN );
