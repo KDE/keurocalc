@@ -63,18 +63,18 @@ int main(int argc, char *argv[])
 	if ( splashScreen )
 	{
 		splash->show();
-	}
-
-	a.setTopWidget(keurocalc);
-	keurocalc->show();
-
-	if ( splashScreen )
-	{
-		usleep(600000); // Something less idiotic to propose ?
+		splash->repaint();
+		for (int i = 0; i < 8; i++)
+		{	// Something less idiotic to propose?
+			a.processEvents();
+			usleep(100000);
+		}
 		splash->finish(keurocalc);
 	}
 	delete splash;
 
+	a.setTopWidget(keurocalc);
+	keurocalc->show();
 	keurocalc->repaint();
 	return a.exec();
 }
