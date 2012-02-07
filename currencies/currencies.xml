@@ -5,28 +5,28 @@
 		code = "AED"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "United Arab Emirates Dirham"
+		name = "United Arab Emirates dirham"
 		/>
 	<currency
 		symbol = "NAƒ"
 		code = "ANG"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Netherlands Antilles Guilder"
+		name = "Netherlands Antilles guilder"
 		/>
 	<currency
 		symbol = "Kz"
 		code = "AOA"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Angola Kwanza"
+		name = "Angola kwanza"
 		/>
 	<currency
 		symbol = "$a"
 		code = "ARS"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Argentina Peso"
+		name = "Argentina peso"
 		/>
 	<currency
 		symbol = "öS"
@@ -48,7 +48,7 @@
 		code = "BBD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Barbados Dollar"
+		name = "Barbados dollar"
 		/>
 	<currency
 		symbol = "FB"
@@ -70,21 +70,21 @@
 		code = "BHD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Bahrain Dinar"
+		name = "Bahrain dinar"
 		/>
 	<currency
 		symbol = "BD$"
 		code = "BMD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Bermuda Dollar"
+		name = "Bermuda dollar"
 		/>
 	<currency
 		symbol = "B$"
 		code = "BND"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Brunei Dollar"
+		name = "Brunei dollar"
 		/>
 	<currency
 		symbol = "R$"
@@ -98,7 +98,7 @@
 		code = "BSD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Bahamas Dollar"
+		name = "Bahamas dollar"
 		/>
 	<currency
 		symbol = "Can$"
@@ -119,7 +119,7 @@
 		code = "CLP"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Chile Peso"
+		name = "Chile peso"
 		/>
 	<currency
 		symbol = "Y"
@@ -133,7 +133,7 @@
 		code = "CVE"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Cape Verde Escudo"
+		name = "Cape Verde escudo"
 		/>
 	<currency
 		symbol = "£C"
@@ -170,7 +170,7 @@
 		code = "DOP"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Dominican Republic Peso"
+		name = "Dominican Republic peso"
 		/>
 	<currency
 		symbol = "EKr"
@@ -185,7 +185,7 @@
 		code = "EGP"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Egypt Pound"
+		name = "Egypt pound"
 		/>
 	<currency
 		symbol = "Pts"
@@ -215,7 +215,7 @@
 		code = "FJD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Fiji Dollar"
+		name = "Fiji dollar"
 		/>
 	<currency
 		symbol = "FF"
@@ -245,7 +245,7 @@
 		code = "GYD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Guyana Dollar"
+		name = "Guyana dollar"
 		/>
 	<currency
 		symbol = "HK$"
@@ -288,7 +288,7 @@
 		code = "ILS"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Israel New Shekel"
+		name = "Israel new shekel"
 		/>
 	<currency
 		symbol = "₹"
@@ -302,7 +302,7 @@
 		code = "IRR"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Iran Rial"
+		name = "Iran rial"
 		/>
 	<currency
 		symbol = "Ikr"
@@ -324,7 +324,7 @@
 		code = "JMD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Jamaica Dollar"
+		name = "Jamaica dollar"
 		/>
 	<currency
 		symbol = "¥"
@@ -338,14 +338,14 @@
 		code = "KES"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Kenya Schilling"
+		name = "Kenya schilling"
 		/>
 	<currency
 		symbol = "៛"
 		code = "KHR"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Cambodia Riel"
+		name = "Cambodia riel"
 		/>
 	<currency
 		symbol = "₩"
@@ -359,21 +359,21 @@
 		code = "KWD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Kuwait Dinar"
+		name = "Kuwait dinar"
 		/>
 	<currency
 		symbol = "KY$"
 		code = "KYD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Cayman Islands Dollar"
+		name = "Cayman Islands dollar"
 		/>
 	<currency
 		symbol = "T"
 		code = "KZT"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Kazakhstan Tenge"
+		name = "Kazakhstan tenge"
 		/>
 	<currency
 		symbol = "SLRs"
@@ -409,14 +409,14 @@
 		code = "MAD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Morocco Dirham"
+		name = "Morocco dirham"
 		/>
 	<currency
 		symbol = "P"
 		code = "MOP"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Macau Pataca"
+		name = "Macau pataca"
 		/>
 	<currency
 		symbol = "Lm"
@@ -445,7 +445,7 @@
 		code = "MZM"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Mozambican Metical"
+		name = "Mozambican metical"
 		/>
 	<currency
 		symbol = "Fl"
@@ -474,21 +474,21 @@
 		code = "OMR"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Oman Rial"
+		name = "Oman rial"
 		/>
 	<currency
 		symbol = "B./"
 		code = "PAB"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Panama Balboa"
+		name = "Panama balboa"
 		/>
 	<currency
 		symbol = "S/."
 		code = "PEN"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Peru Neuevo Sol"
+		name = "Peru nuevo sol"
 		/>
 	<currency
 		symbol = "₱"
@@ -502,7 +502,7 @@
 		code = "PKR"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Pakistan Rupee"
+		name = "Pakistan rupee"
 		/>
 	<currency
 		symbol = "zł"
@@ -524,21 +524,21 @@
 		code = "QAR"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Qatar Rial"
+		name = "Qatar rial"
 		/>
 	<currency
 		symbol = "L"
 		code = "RON"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "New Romanian leu"
+		name = "Romanian new leu"
 		/>
 	<currency
 		symbol = "din."
 		code = "RSD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Serbian Dinar"
+		name = "Serbian dinar"
 		/>
 	<currency
 		symbol = "руб"
@@ -552,7 +552,7 @@
 		code = "SAR"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Saudi Arabia Riyal"
+		name = "Saudi Arabia riyal"
 		/>
 	<currency
 		symbol = "Kr"
@@ -589,49 +589,49 @@
 		code = "STD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Sao Tome and Principe Dobra"
+		name = "Sao Tome and Principe dobra"
 		/>
 	<currency
 		symbol = "ق"
 		code = "SYP"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Syrian Pound"
+		name = "Syrian pound"
 		/>
 	<currency
 		symbol = "฿"
 		code = "THB"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Thailandese baht"
+		name = "Thai baht"
 		/>
 	<currency
 		symbol = "YTL"
 		code = "TRY"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "New Turkish lira"
+		name = "Turkish new lira"
 		/>
 	<currency
 		symbol = "TT$"
 		code = "TTD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Trinidad and Tobago Dollar"
+		name = "Trinidad and Tobago dollar"
 		/>
 	<currency
 		symbol = "Bt"
 		code = "TWD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "New Taiwanese dollar"
+		name = "Taiwanese new dollar"
 		/>
 	<currency
 		symbol = "₴"
 		code = "UAH"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Ukraine Hryvnia"
+		name = "Ukraine hryvnia"
 		/>
 	<currency
 		symbol = "$"
@@ -645,42 +645,42 @@
 		code = "VEF"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Venezuelan Bolivar Fuerte"
+		name = "Venezuelan bolivar fuerte"
 		/>
 	<currency
 		symbol = "₫"
 		code = "VND"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Vietnam Dong"
+		name = "Vietnam dong"
 		/>
 	<currency
 		symbol = "CFA"
 		code = "XAF"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Central African CFA Franc"
+		name = "Central African CFA franc"
 		/>
 	<currency
 		symbol = "EC$"
 		code = "XCD"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "East Caribbean Dollar"
+		name = "East Caribbean dollar"
 		/>
 	<currency
 		symbol = "CFA"
 		code = "XOF"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "West African CFA Franc"
+		name = "West African CFA franc"
 		/>
 	<currency
 		symbol = "﷼"
 		code = "YER"
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
-		name = "Yemen Rial"
+		name = "Yemen rial"
 		/>
 	<currency
 		symbol = "R"
