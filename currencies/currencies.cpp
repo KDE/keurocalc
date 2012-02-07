@@ -121,11 +121,10 @@ void Currencies::clearRates()
 // Add fixed rates
 void Currencies::addFixedRates( int rounding, bool someMoreToCome )
 {
-	int num, position;
+	int num;
 	double currencyPrecision;
 	QString blank("");
 
-	position = 0;
 	for (num = 0; num < numCurrencies; num++)
 		if ( currency[num].fixedRate )
 	{
