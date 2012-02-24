@@ -17,6 +17,8 @@
 
 #include <stdio.h>
 
+#include <klocale.h>
+
 #include <QDBusConnection>
 #include <QStringList>
 
@@ -31,7 +33,7 @@ CurrencyConverter::CurrencyConverter()
 {
 	QDBusConnection::sessionBus().registerObject("/CurrencyConverter", this, QDBusConnection::ExportScriptableSlots);
 
-	printf( "curconvd: waiting for D-Bus requests\n" );
+	printf( "%s\n", (const char *) i18n("curconvd: waiting for D-Bus requests").toUtf8() );
 }
 
 // Destructor
@@ -39,7 +41,7 @@ CurrencyConverter::~CurrencyConverter()
 {
 	QDBusConnection::sessionBus().unregisterObject("/CurrencyConverter");
 
-	printf( "curconvd: stopped waiting for D-Bus requests\n" );
+	printf( "%s\n", (const char *) i18n("curconvd: stopped waiting for D-Bus requests").toUtf8() );
 }
 
 // List available data sources
