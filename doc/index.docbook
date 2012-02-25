@@ -24,18 +24,18 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 
 <copyright>
-<year>2001-2011</year>
+<year>2001-2012</year>
 <holder>Éric Bischoff</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2011-01-08</date>
-<releaseinfo>1.1.0</releaseinfo>
+<date>2012-02-07</date>
+<releaseinfo>1.2.0</releaseinfo>
 
 <abstract>
 <para>
 &keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 1.1.0.
+This documentation describes &keurocalc; version 1.2.0.
 </para>
 </abstract>
 
@@ -129,8 +129,8 @@ to correct your last input data, as long as you didn't validate.</para></listite
 <listitem><para>The numbers are displayed according to your locale settings:
 with either a comma or a dot as a decimal point, according to your &systemsettings;
 settings.</para></listitem>
-<listitem><para>You can decide which reference currency you want to use
-(euro<!-- or dollar -->), which other currency to start with when you launch &keurocalc;, and
+<listitem><para>You can decide where &keurocalc; should download the conversion
+rates from, which currency to start with when you launch &keurocalc;, and
 which rounding method to use.</para></listitem>
 </itemizedlist>
 </para>
@@ -290,7 +290,7 @@ without the trailing <userinput>0</userinput>.</para></step>
 <step><para>Press the <guibutton>-</guibutton> button or the <keycap>-</keycap> key.</para></step>
 <step><para>Type <userinput>500</userinput> and press the <guibutton>FF</guibutton>
 button or the <keycap>F</keycap> key.</para></step>
-<step><para>The result <computeroutput>-43.72</computeroutput> € is negative, indicating that
+<step><para>The result <computeroutput>-43.72 €</computeroutput> is negative, indicating that
 change money has to be given back to the customer. The <guibutton>+/-</guibutton>
 button or the <keycap>S</keycap> key permit you to change the sign of the result.</para></step>
 </procedure>
@@ -315,7 +315,7 @@ the <guilabel>Input</guilabel> display.</para></step>
 <step><para>Now type <userinput>3.2</userinput> followed by the <guibutton>Enter</guibutton> button
 or the &Enter; key: this means <quote>3.2 units</quote> at
 2 € each.</para></step>
-<step><para>The result in Australian dollars matches <computeroutput>6.4</computeroutput> €.</para></step>
+<step><para>The result in Australian dollars matches <computeroutput>6.4 €</computeroutput>.</para></step>
 </procedure>
 
 <para>You could also have used the following order:
@@ -695,7 +695,7 @@ when &keurocalc; starts.</para>
 
 <para>&keurocalc;</para>
 
-<para>Program copyright 2001-2011 the &keurocalc; developers:
+<para>Program copyright 2001-2012 the &keurocalc; developers:
 
 <itemizedlist>
 <listitem><para>Éric Bischoff <email>ebischoff@_NOSPAM_nerim.net</email> - design and implementation</para></listitem>
@@ -704,7 +704,7 @@ when &keurocalc; starts.</para>
 <listitem><para>Bas Willems <email>cybersurfer@_NOSPAM_euronet.nl</email> - graphical artwork</para></listitem>
 </itemizedlist></para>
 
-<para>Documentation copyright 2001-2011 Éric Bischoff
+<para>Documentation copyright 2001-2012 Éric Bischoff
 <email>ebischoff@_NOSPAM_nerim.net</email>.</para>
 
 <para>Documentation reviewed by &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
