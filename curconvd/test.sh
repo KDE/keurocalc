@@ -39,8 +39,8 @@ echo "10 Russian rouble in euro"
 qdbus $SERVICE $TABLE             ConvertToReference   RUB 10.0
 qdbus $SERVICE $TABLE             Unload
 
-qdbus $SERVICE /CurrencyConverter ReferenceCurrency    "http://www.ny.frb.org"
-TABLE=$(qdbus $SERVICE /CurrencyConverter LoadSource           "http://www.ny.frb.org" "smallest coin")
+qdbus $SERVICE /CurrencyConverter ReferenceCurrency    "http://rss.timegenie.com"
+TABLE=$(qdbus $SERVICE /CurrencyConverter LoadSource           "http://rss.timegenie.com" "smallest coin")
 echo $TABLE
 sleep 2
 qdbus $SERVICE $TABLE             AvailableCurrencies

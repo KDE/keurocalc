@@ -13,11 +13,11 @@ DataSources(out ARRAY of STRING sources)
   In the case of curconvd, this method returns:
      (fixed)
      http://www.ecb.int
-     http://www.ny.frb.org
+     http://rss.timegenie.com
   which stands for:
      Fixed rates
      European Central Bank
-     New York Federal Reserve Bank
+     Time Genie
 
 
 RoundingMethods(out ARRAY of STRING sources)

@@ -53,7 +53,8 @@ QStringList CurrencyConverter::DataSources()
 
 	dataSources << QString("(fixed)");
         dataSources << QString("http://www.ecb.int");
-	dataSources << QString("http://www.ny.frb.org");
+//	dataSources << QString("http://www.newyorkfed.org");
+	dataSources << QString("http://rss.timegenie.com");
 
 	return dataSources;
 }
@@ -84,7 +85,9 @@ QString CurrencyConverter::ReferenceCurrency(const QString &dataSource)
 		reference = "EUR";
 	else if (dataSource == "http://www.ecb.int")
 		reference = "EUR";
-	else if (dataSource == "http://www.ny.frb.org")
+//	else if (dataSource == "http://www.newyorkfed.org")
+//		reference = "USD";
+	else if (dataSource == "http://rss.timegenie.com")
 		reference = "USD";
 	else reference = "";
 
