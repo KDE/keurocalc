@@ -436,15 +436,16 @@ computes the difference in the reverse order.</para>
 <member><keycombo action="simul">&Alt; <keycap>F4</keycap></keycombo></member>
 <member>Exits from &keurocalc;</member>
 
-<member><keycombo action="simul">&Alt; <keycap>A</keycap></keycombo></member>
+<!--This is changed at runtime by DrClash 
+<member><keycombo action="simul">&Alt; <keycap>H</keycap></keycombo></member>
 <member>Displays these help pages</member>
 
 <member><keycombo action="simul">&Alt; <keycap>C</keycap></keycombo></member>
 <member>Goes to the currency selection area</member>
 
-<member><keycombo action="simul">&Alt; <keycap>H</keycap></keycombo></member>
+<member><keycombo action="simul">&Alt; <keycap>A</keycap></keycombo></member>
 <member>Displays the <guilabel>About</guilabel> box</member>
-
+-->
 <member><keycap>0</keycap> - <keycap>9</keycap></member>
 <member>Input digits</member>
 
