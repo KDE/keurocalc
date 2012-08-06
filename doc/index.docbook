@@ -733,7 +733,7 @@ package. The latest version of &keurocalc; can be downloaded from its
 <sect1 id="requirements">
 <title>Requirements</title>
 
-<para>In order to successfully use &keurocalc;, you need &kde; 4.0.</para>
+<para>In order to successfully use &keurocalc;, you need &kde; 4.</para>
 
 <para>All required libraries can be found
 on <ulink url="ftp://ftp.kde.org">ftp.kde.org</ulink>, the &FTP; site
