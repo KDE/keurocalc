@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=keurocalc -caption "%c" %i
+Exec=keurocalc -caption %c %i
 Icon=keurocalc
 X-DocPath=keurocalc/index.html
 Terminal=false
