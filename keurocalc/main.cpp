@@ -30,7 +30,7 @@
 static const char
 	*name = I18N_NOOP("KEuroCalc"),
 	*description = I18N_NOOP("Cash converter and calculator"),
-	*copyright = I18N_NOOP("(c) 2001-2012, the KEuroCalc developers"),
+	*copyright = I18N_NOOP("(c) 2001-2014, the KEuroCalc developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to humorist Michael Moore, for he\nknows that money does not justify anything...\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n");
 
 int main(int argc, char *argv[])
