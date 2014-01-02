@@ -403,6 +403,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Latvian latas"
+		fixed-rate = "0.702804"
 		/>
 	<currency
 		symbol = "م.د."

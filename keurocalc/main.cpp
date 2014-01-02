@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2012 by Éric Bischoff
+    copyright            : (C) 2001-2014 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -35,7 +35,7 @@ static const char
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData("keurocalc", "keurocalc", ki18n(name), "1.2.0", ki18n(description),
+	KAboutData aboutData("keurocalc", "keurocalc", ki18n(name), "1.2.1", ki18n(description),
 			     KAboutData::License_GPL, ki18n(copyright), ki18n(text));
 	KCmdLineOptions options;
 

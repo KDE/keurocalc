@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : lun nov 13 11:22:05 CET 2006
-    copyright            : (C) 2006-2012 by Éric Bischoff
+    copyright            : (C) 2006-2014 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -29,12 +29,12 @@
 static const char
 	*name =	I18N_NOOP("CurConvD"),
 	*description = I18N_NOOP("A currency converter daemon"),
-	*copyright = I18N_NOOP("(c) 2006-2012, the curconvd developers"),
+	*copyright = I18N_NOOP("(c) 2006-2014, the curconvd developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n");
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData("curconvd", "curconvd", ki18n(name), "1.2.0", ki18n(description),
+	KAboutData aboutData("curconvd", "curconvd", ki18n(name), "1.2.1", ki18n(description),
 			     KAboutData::License_GPL, ki18n(copyright), ki18n(text));
 	KCmdLineOptions options;
 
