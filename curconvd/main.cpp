@@ -34,7 +34,7 @@ static const char
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData("curconvd", "curconvd", ki18n(name), "1.2.1", ki18n(description),
+	KAboutData aboutData("curconvd", "curconvd", ki18n(name), "1.2.2", ki18n(description),
 			     KAboutData::License_GPL, ki18n(copyright), ki18n(text));
 	KCmdLineOptions options;
 
