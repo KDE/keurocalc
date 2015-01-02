@@ -2,7 +2,7 @@
                           converter.h  -  d-bus service
                              -------------------
     begin                : lun nov 13 11:28:34 CET 2006
-    copyright            : (C) 2006-2014 by Éric Bischoff
+    copyright            : (C) 2006-2015 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 

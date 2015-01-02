@@ -388,6 +388,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Lituanian litas"
+		fixed-rate = "3.45280"
 		/>
 	<currency
 		symbol = "FLux"
