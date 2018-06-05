@@ -683,7 +683,7 @@
          </widget>
         </item>
         <item>
-         <widget class="KPushButton" name="kPushButtonDisplayColor">
+         <widget class="QPushButton" name="qPushButtonDisplayColor">
           <property name="text">
            <string>C&amp;hange...</string>
           </property>
@@ -821,14 +821,6 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <tabstops>
   <tabstop>radioButtonEuroFixed</tabstop>
   <tabstop>radioButtonEuroECB</tabstop>
@@ -841,7 +833,6 @@
   <tabstop>CancelButton</tabstop>
  </tabstops>
  <includes>
-  <include location="local">kpushbutton.h</include>
  </includes>
  <resources/>
  <connections>
@@ -878,7 +869,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>kPushButtonDisplayColor</sender>
+   <sender>qPushButtonDisplayColor</sender>
    <signal>clicked()</signal>
    <receiver>SettingsDialog</receiver>
    <slot>changeDisplayColor()</slot>

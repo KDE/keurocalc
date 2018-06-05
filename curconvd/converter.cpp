@@ -2,7 +2,7 @@
                           converter.cpp  -  d-bus service
                              -------------------
     begin                : lun nov 13 11:22:05 CET 2006
-    copyright            : (C) 2006-2015 by Éric Bischoff
+    copyright            : (C) 2006-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -17,10 +17,10 @@
 
 #include <stdio.h>
 
-#include <klocale.h>
+#include <QtDBus/QDBusConnection>
+#include <QtCore/QStringList>
 
-#include <QDBusConnection>
-#include <QStringList>
+#include <KI18n/KLocalizedString>
 
 #include "converter.h"
 #include "converter.moc"
@@ -31,6 +31,7 @@ CurrencyConverter::CurrencyConverter()
 	: QObject(),
 	  serialNumber(0)
 {
+	QDBusConnection::sessionBus().registerService("org.kde.curconvd");
 	QDBusConnection::sessionBus().registerObject("/CurrencyConverter", this, QDBusConnection::ExportScriptableSlots);
 
 	printf( "%s\n", (const char *) i18n("curconvd: waiting for D-Bus requests").toUtf8() );
@@ -40,6 +41,7 @@ CurrencyConverter::CurrencyConverter()
 CurrencyConverter::~CurrencyConverter()
 {
 	QDBusConnection::sessionBus().unregisterObject("/CurrencyConverter");
+	QDBusConnection::sessionBus().unregisterService("org.kde.curconvd");
 
 	printf( "%s\n", (const char *) i18n("curconvd: stopped waiting for D-Bus requests").toUtf8() );
 }

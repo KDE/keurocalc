@@ -2,7 +2,7 @@
                           keurocalc.cpp  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -19,16 +19,17 @@
 #include <math.h>
 #include <locale.h>
 
-#include <QDBusConnection>
-#include <QPushButton>
-#include <QKeyEvent>
+#include <QtDBus/QDBusConnection>
+#include <QtWidgets/QPushButton>
+#include <QtGui/QKeyEvent>
 
-#include <kapplication.h>
-#include <kaboutapplicationdialog.h>
-#include <kglobal.h>
-#include <kconfig.h>
-#include <kmessagebox.h>
-#include <ktoolinvocation.h>
+#include <KI18n/KLocalizedString>
+#include <KConfigCore/KConfigGroup>
+#include <KConfigCore/KSharedConfig>
+#include <KCoreAddons/KAboutData>
+#include <KXmlGui/KAboutApplicationDialog>
+#include <KWidgetsAddons/KMessageBox>
+#include <KConfigWidgets/KHelpClient>
 
 #include "keurocalc.h"
 #include "ui_calculator.h"
@@ -65,7 +66,7 @@ KEuroCalc::KEuroCalc(QWidget *parent)
 	simpleMemory = 0.0;
 	referenceMemory = 0.0;
 
-	if ( !currencies.readCurrencies( "keurocalc/currencies.xml" ) )
+	if ( !currencies.readCurrencies( "currencies.xml" ) )
 	{
 		KMessageBox::error( 0, i18n( "Cannot load currencies.xml" ) );
 		exit(1);
@@ -99,7 +100,7 @@ KEuroCalc::~KEuroCalc()
 // Is splash screen to be displayed ?
 bool KEuroCalc::readSplashScreen() const
 {
-	KConfigGroup config(KGlobal::config(), "General");
+	KConfigGroup config(KSharedConfig::openConfig(), "General");
 	QString option;
 
 	option = config.readEntry("SplashScreen", "yes");
@@ -110,7 +111,7 @@ bool KEuroCalc::readSplashScreen() const
 // Read options from preferences file
 void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreen) const
 {
-	KConfigGroup config(KGlobal::config(), "General");
+	KConfigGroup config(KSharedConfig::openConfig(), "General");
 	QString option;
 
 	option = config.readEntry("Reference", "EURO_ECB");
@@ -150,7 +151,7 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 // Write options to preferences file
 void KEuroCalc::writeOptions(int newReference, int newCurrency, int newRounding, const QColor &newDisplayColor, bool newSplashScreen)
 {
-	KConfigGroup config(KGlobal::config(), "General");
+	KConfigGroup config(KSharedConfig::openConfig(), "General");
 
 	switch (newReference)
 	{	case EURO_FIXED:
@@ -406,7 +407,7 @@ void KEuroCalc::ValidateReference()
 			currencyValue = referenceValue * currencyRate * currencyPrecision;
 			displayNewResult();
 		}
-		else KApplication::beep();
+		else QApplication::beep();
 		return;
 	}
 
@@ -420,7 +421,7 @@ void KEuroCalc::ValidateReference()
 		case '+':
 			if ( isSimpleValue )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			referenceValue += inputValue;
@@ -429,7 +430,7 @@ void KEuroCalc::ValidateReference()
 		case '-':
 			if ( isSimpleValue )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			referenceValue -= inputValue;
@@ -444,7 +445,7 @@ void KEuroCalc::ValidateReference()
 			}
 			else
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			break;
@@ -456,7 +457,7 @@ void KEuroCalc::ValidateReference()
 			}
 			else
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 	}
@@ -493,7 +494,7 @@ void KEuroCalc::ValidateCurrency()
 			referenceValue = currencyValue / currencyRate / currencyPrecision;
 			displayNewResult();
 		}
-		else KApplication::beep();
+		else QApplication::beep();
 		return;
 	}
 
@@ -507,7 +508,7 @@ void KEuroCalc::ValidateCurrency()
 		case '+':
 			if ( isSimpleValue )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			currencyValue += inputValue;
@@ -516,7 +517,7 @@ void KEuroCalc::ValidateCurrency()
 		case '-':
 			if ( isSimpleValue )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			currencyValue -= inputValue;
@@ -531,7 +532,7 @@ void KEuroCalc::ValidateCurrency()
 			}
 			else
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			break;
@@ -543,7 +544,7 @@ void KEuroCalc::ValidateCurrency()
 			}
 			else
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 	}
@@ -573,7 +574,7 @@ void KEuroCalc::ValidatePercent()
 
 	if ( inputDisplay[10] == ' ' )
 	{
-		KApplication::beep();
+		QApplication::beep();
 		return;
 	}
 
@@ -608,7 +609,7 @@ void KEuroCalc::ValidatePercent()
 			break;
 		case 'x':
 		case '/':
-			KApplication::beep();
+			QApplication::beep();
 			return;
 	}
 	resetInput();
@@ -636,7 +637,7 @@ void KEuroCalc::ValidateSimpleValue()
 
 	if ( inputDisplay[10] == ' ' )
 	{
-		KApplication::beep();
+		QApplication::beep();
 		return;
 	}
 
@@ -651,7 +652,7 @@ void KEuroCalc::ValidateSimpleValue()
 				simpleValue += inputValue;
 			else
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			break;
@@ -660,7 +661,7 @@ void KEuroCalc::ValidateSimpleValue()
 				simpleValue -= inputValue;
 			else
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			break;
@@ -676,7 +677,7 @@ void KEuroCalc::ValidateSimpleValue()
 		case '/':
 			if ( inputValue == 0.0 )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			if ( isSimpleValue )
@@ -688,7 +689,7 @@ void KEuroCalc::ValidateSimpleValue()
 			}
 			break;
 		default:
-			KApplication::beep();
+			QApplication::beep();
 			return;
 	}
 	resetInput();
@@ -755,7 +756,7 @@ void KEuroCalc::MemoryRecall()
 
 	if ( !memorySet )
 	{
-		KApplication::beep();
+		QApplication::beep();
 		return;
 	}
 
@@ -774,7 +775,7 @@ void KEuroCalc::MemoryRecall()
 		case '+':
 			if ( isSimpleValue != isSimpleMemory )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			if ( isSimpleMemory )
@@ -788,7 +789,7 @@ void KEuroCalc::MemoryRecall()
 		case '-':
 			if ( isSimpleValue != isSimpleMemory )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			if ( isSimpleMemory )
@@ -820,7 +821,7 @@ void KEuroCalc::MemoryRecall()
 				}
 				else
 				{
-					KApplication::beep();
+					QApplication::beep();
 					return;
 				}
 			}
@@ -830,7 +831,7 @@ void KEuroCalc::MemoryRecall()
 			{
 				if ( simpleMemory == 0.0 )
 				{
-					KApplication::beep();
+					QApplication::beep();
 					return;
 				}
 				if ( isSimpleValue )
@@ -850,7 +851,7 @@ void KEuroCalc::MemoryRecall()
 				}
 				else
 				{
-					KApplication::beep();
+					QApplication::beep();
 					return;
 				}
 			}
@@ -865,7 +866,7 @@ void KEuroCalc::MemoryPlus()
 {
 	if ( !memorySet || (isSimpleValue != isSimpleMemory) )
 	{
-		KApplication::beep();
+		QApplication::beep();
 		return;
 	}
 	if ( isSimpleMemory )
@@ -879,7 +880,7 @@ void KEuroCalc::MemoryMinus()
 {
 	if ( !memorySet || (isSimpleValue != isSimpleMemory) )
 	{
-		KApplication::beep();
+		QApplication::beep();
 		return;
 	}
 	if ( isSimpleMemory )
@@ -911,7 +912,7 @@ void KEuroCalc::Reset()
 // Display "about" page
 void KEuroCalc::DisplayAbout()
 {
-	KAboutApplicationDialog *d = new KAboutApplicationDialog( KGlobal::mainComponent().aboutData(), this);
+	KAboutApplicationDialog *d = new KAboutApplicationDialog(KAboutData::applicationData(), this);
 	d->exec();
 	delete d;
 	AboutButton->setDown( false );
@@ -920,7 +921,7 @@ void KEuroCalc::DisplayAbout()
 // Display help pages
 void KEuroCalc::DisplayHelp()
 {
-	KToolInvocation::invokeHelp();
+	KHelpClient::invokeHelp();
 }
 
 // Display settings pages
@@ -996,7 +997,7 @@ void KEuroCalc::initButtons()
 		case NO_ROUNDING:
 			RoundingLabel->setText( i18n( "No rounding" ) );
 	}
-	DotButton->setText( KGlobal::locale()->decimalSymbol() );
+	DotButton->setText( QLocale().decimalPoint() );
 	ZeroButton->setText( QString::fromUtf8( "0" ) );
 	OneButton->setText( QString::fromUtf8( "1" ) );
 	TwoButton->setText( QString::fromUtf8( "2" ) );
@@ -1125,7 +1126,7 @@ void KEuroCalc::inputDigit(char c)
 		case beforeUnits:
 			if ( inputDisplay[0] != ' ' )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			s = inputDisplay + 1;
@@ -1137,12 +1138,12 @@ void KEuroCalc::inputDigit(char c)
 		case afterUnits:
 			if ( inputDisplay[0] != ' ' )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			if ( c == '.' )
 			{
-				KApplication::beep();
+				QApplication::beep();
 				return;
 			}
 			s = inputDisplay + 1;
@@ -1318,8 +1319,8 @@ void KEuroCalc::normalize( QString &numberDisplay )
 
 	if ( dotPos != -1 )
 		numberDisplay.replace(	dotPos,
-					KGlobal::locale()->decimalSymbol().length(),
-					KGlobal::locale()->decimalSymbol() );
+					1,
+					QLocale().decimalPoint() );
 
 	while (unitPos > 0)
 	{

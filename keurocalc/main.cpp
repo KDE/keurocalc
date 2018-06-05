@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -17,44 +17,42 @@
 
 #include <unistd.h>
 
-#include <kcmdlineargs.h>
-#include <kaboutdata.h>
-#include <klocale.h>
-#include <ksplashscreen.h>
-#include <kstandarddirs.h>
+#include <QtCore/QTextCodec>
+#include <QtCore/QStandardPaths>
+#include <QtWidgets/QSplashScreen>
 
-#include <QTextCodec>
+#include <KCoreAddons/KAboutData>
+#include <KI18n/KLocalizedString>
 
 #include "keurocalc.h"
 
 static const char
 	*name = I18N_NOOP("KEuroCalc"),
 	*description = I18N_NOOP("Cash converter and calculator"),
-	*copyright = I18N_NOOP("(c) 2001-2015, the KEuroCalc developers"),
+	*copyright = I18N_NOOP("(c) 2001-2018, the KEuroCalc developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to all who know that money does not justify anything.\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n");
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData("keurocalc", "keurocalc", ki18n(name), "1.2.3", ki18n(description),
-			     KAboutData::License_GPL, ki18n(copyright), ki18n(text));
-	KCmdLineOptions options;
+	KAboutData aboutData("keurocalc", i18n(name), "1.3.0", i18n(description),
+			     KAboutLicense::GPL, i18n(copyright), i18n(text));
 
-	aboutData.addAuthor(ki18n("Éric Bischoff"), ki18n("Design and implementation"), "ebischoff@nerim.net");
-	aboutData.addAuthor(ki18n("Gil Gross"), ki18n("Additional functionality"), "ptit.ours@gmail.com");
-	aboutData.addCredit(ki18n("Melchior Franz"), ki18n("Design and testing"), "a8603365@unet.univie.ac.at");
-	aboutData.addCredit(ki18n("Bas Willems"), ki18n("Graphical artwork"), "cybersurfer@euronet.nl");
+	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "ebischoff@nerim.net");
+	aboutData.addAuthor(i18n("Gil Gross"), i18n("Additional functionality"), "ptit.ours@gmail.com");
+	aboutData.addCredit(i18n("Melchior Franz"), i18n("Design and testing"), "a8603365@unet.univie.ac.at");
+	aboutData.addCredit(i18n("Bas Willems"), i18n("Graphical artwork"), "cybersurfer@euronet.nl");
 	aboutData.setOrganizationDomain("kde.org");
-	KCmdLineArgs::init(argc, argv, &aboutData);
-	KCmdLineArgs::addCmdLineOptions(options);
+
+	KAboutData::setApplicationData(aboutData);
 
 	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
 
-	KApplication a;
-	KSplashScreen *splash;
+	QApplication a(argc, argv);
+	QSplashScreen *splash;
 	KEuroCalc *keurocalc;
 	bool splashScreen;
 
-	splash = new KSplashScreen( QPixmap( KStandardDirs::locate( "data", "keurocalc/splash.png" ) ) );
+	splash = new QSplashScreen( QPixmap( QStandardPaths::locate(QStandardPaths::AppDataLocation, "splash.png" ) ) );
 	splash->showMessage(i18n(description) + "\n" + i18n(copyright), Qt::AlignBottom);
 
 	keurocalc = new KEuroCalc();
@@ -73,7 +71,6 @@ int main(int argc, char *argv[])
 	}
 	delete splash;
 
-	a.setTopWidget(keurocalc);
 	keurocalc->show();
 	keurocalc->repaint();
 	return a.exec();

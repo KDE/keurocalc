@@ -2,7 +2,7 @@
                           keurocalc.h  -  main widget
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -18,9 +18,7 @@
 #ifndef KEUROCALC_H
 #define KEUROCALC_H
 
-#include <kapplication.h>
-
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 #include "ui_calculator.h"
 #include "../currencies/currencies.h"

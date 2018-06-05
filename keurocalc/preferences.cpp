@@ -2,7 +2,7 @@
                       preferences.cpp  -  preferences widget
                              -------------------
     begin                : lun avr 12 18:25:02 CET 2004
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -15,12 +15,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <QButtonGroup>
-#include <QCheckBox>
-
-#include <kcolorbutton.h>
-#include <kcolordialog.h>
-#include <klocale.h>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QColorDialog>
 
 #include "preferences.h"
 #include "preferences.moc"
@@ -103,11 +100,10 @@ void Preferences::changeDisplayColor()
 {
 	QPalette palette = displayColorResult->palette();
 	QColor myColor;
-	int result;
 
-	result = KColorDialog::getColor
-		( myColor, palette.color( backgroundRole() ) );
-	if ( result == KColorDialog::Accepted )
+	myColor = QColorDialog::getColor
+		( palette.color( backgroundRole() ) );
+	if ( myColor.isValid() )
 	{
 		QPalette palette;
 

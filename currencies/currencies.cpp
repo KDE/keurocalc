@@ -2,7 +2,7 @@
                          currencies.cpp  -  list of currencies
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -15,12 +15,12 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <QFile>
-#include <QDomDocument>
-#include <QDate>
+#include <QtCore/QFile>
+#include <QtCore/QDate>
+#include <QtCore/QStandardPaths>
+#include <QtXml/QDomDocument>
 
-#include <kstandarddirs.h>
-#include <klocale.h>
+#include <KI18n/KLocalizedString>
 
 #include "currencies.h"
 #include "currencies.moc"
@@ -48,7 +48,7 @@ Currencies::~Currencies()
 bool Currencies::readCurrencies( const char *filename )
 {
 	QDomDocument document( "currencies" );
-	QFile file( KStandardDirs::locate("data", filename) );
+	QFile file( QStandardPaths::locate(QStandardPaths::AppDataLocation, filename) );
 
 	if ( !file.open( QIODevice::ReadOnly ) ) return false;
 	if ( !document.setContent( &file ) ) { file.close(); return false; }
@@ -153,7 +153,7 @@ void Currencies::addECBRates( int rounding )
 
 	roundingMethod = rounding;
 
-	job = KIO::get( KUrl( urlECB ), KIO::Reload, KIO::HideProgressInfo );
+	job = KIO::get( QUrl( urlECB ), KIO::Reload, KIO::HideProgressInfo );
 	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
 		 this, SLOT(httpDataECB(KIO::Job *, const QByteArray &))
 		);
@@ -172,7 +172,7 @@ void Currencies::addECBRates( int rounding )
 //	// This is suboptimal: we should guess the date of latest working day at 12:00 in New York local time
 //	// Or much better: use a URL that does not depend on that date...
 //	sprintf(url, urlNY_FRB, yesterday.year(), yesterday.month(), yesterday.day());
-//	job = KIO::get( KUrl( url ), KIO::Reload, KIO::HideProgressInfo );
+//	job = KIO::get( QUrl( url ), KIO::Reload, KIO::HideProgressInfo );
 //	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
 //		 this, SLOT(httpDataNY_FRB(KIO::Job *, const QByteArray &))
 //		);
@@ -185,7 +185,7 @@ void Currencies::addTGRates( int rounding )
 
 	roundingMethod = rounding;
 
-	job = KIO::get( KUrl( urlTG ), KIO::Reload, KIO::HideProgressInfo );
+	job = KIO::get( QUrl( urlTG ), KIO::Reload, KIO::HideProgressInfo );
 	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
 		 this, SLOT(httpDataTG(KIO::Job *, const QByteArray &))
 		);

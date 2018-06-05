@@ -2,7 +2,7 @@
                            currencies.h  -  list of currencies
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -18,10 +18,10 @@
 #ifndef CURRENCY_H
 #define CURRENCY_H
 
-#include <QString>
-#include <QObject>
+#include <QtCore/QString>
+#include <QtCore/QObject>
 
-#include <kio/job.h>
+#include <KIO/Job>
 
 #define EURO_FIXED 0
 #define EURO_ECB 1

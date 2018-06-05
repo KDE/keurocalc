@@ -2,7 +2,7 @@
                       preferences.h  -  preferences widget
                              -------------------
     begin                : lun avr 12 18:25:02 CET 2004
-    copyright            : (C) 2001-2015 by Éric Bischoff
+    copyright            : (C) 2001-2018 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -18,7 +18,7 @@
 #ifndef KPREF_H
 #define KPREF_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 #include "ui_settingsdialog.h"
 
