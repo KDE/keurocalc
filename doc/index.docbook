@@ -753,7 +753,7 @@ following in the base directory of the &keurocalc; distribution:
 </screen>
 </para>
 
-<para>It might be needed to pass a number of variables to <command>cmake</cmake>
+<para>It might be needed to pass a number of variables to <command>cmake</command>
 to inform it about the location of the developer libraries on your system.
 Should you run into problems please report them to &keurocalc;'s authors.</para>
 
