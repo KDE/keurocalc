@@ -13,9 +13,6 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 include(ECMInstallIcons)
 
-include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${QT_INCLUDES} ${KF5_INCLUDES} ${QDBUS_INCLUDE_DIRS})
-add_definitions(${KF5_DEFINITIONS} ${QT_DEFINITIONS})
-
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
     Widgets
