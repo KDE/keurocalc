@@ -34,6 +34,9 @@ static const char
 
 int main(int argc, char *argv[])
 {
+	QApplication a(argc, argv);
+	KLocalizedString::setApplicationDomain("keurocalc");
+
 	KAboutData aboutData("keurocalc", i18n(name), "1.3.0", i18n(description),
 			     KAboutLicense::GPL, i18n(copyright), i18n(text));
 
@@ -47,7 +50,6 @@ int main(int argc, char *argv[])
 
 	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
 
-	QApplication a(argc, argv);
 	QSplashScreen *splash;
 	KEuroCalc *keurocalc;
 	bool splashScreen;
