@@ -18,8 +18,13 @@ add_executable(keurocalc ${keurocalc_SRCS})
 
 target_link_libraries(keurocalc
     Qt5::Widgets
+    KF5::ConfigCore
+    KF5::ConfigWidgets
+    KF5::CoreAddons
     KF5::I18n
-    KF5::KIOFileWidgets
+    KF5::KIOCore
+    KF5::XmlGui
+    KF5::WidgetsAddons
 )
 
 install(TARGETS keurocalc ${INSTALL_TARGETS_DEFAULT_ARGS})
