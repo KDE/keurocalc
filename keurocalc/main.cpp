@@ -45,6 +45,8 @@ int main(int argc, char *argv[])
 	aboutData.addCredit(i18n("Melchior Franz"), i18n("Design and testing"), "a8603365@unet.univie.ac.at");
 	aboutData.addCredit(i18n("Bas Willems"), i18n("Graphical artwork"), "cybersurfer@euronet.nl");
 	aboutData.setOrganizationDomain("kde.org");
+	aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"),
+                                i18nc("EMAIL OF TRANSLATORS", "Your emails"));
 
 	KAboutData::setApplicationData(aboutData);
 
