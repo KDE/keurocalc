@@ -17,12 +17,12 @@
 
 #include <unistd.h>
 
-#include <QtCore/QTextCodec>
-#include <QtCore/QStandardPaths>
-#include <QtWidgets/QSplashScreen>
+#include <QTextCodec>
+#include <QStandardPaths>
+#include <QSplashScreen>
 
-#include <KCoreAddons/KAboutData>
-#include <KI18n/KLocalizedString>
+#include <KAboutData>
+#include <KLocalizedString>
 
 #include "keurocalc.h"
 

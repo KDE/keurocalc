@@ -17,11 +17,11 @@
 
 #include <stdio.h>
 
-#include <QtCore/QTextCodec>
+#include <QTextCodec>
 #include <QCoreApplication>
 
-#include <KCoreAddons/KAboutData>
-#include <KI18n/KLocalizedString>
+#include <KAboutData>
+#include <KLocalizedString>
 
 #include "converter.h"
 

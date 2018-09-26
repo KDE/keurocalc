@@ -18,7 +18,7 @@
 #ifndef KEUROCALC_H
 #define KEUROCALC_H
 
-#include <QtWidgets/QDialog>
+#include <QDialog>
 
 #include "ui_calculator.h"
 #include "../currencies/currencies.h"

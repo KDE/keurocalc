@@ -15,7 +15,7 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <QtDBus/QDBusConnection>
+#include <QDBusConnection>
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -17,10 +17,10 @@
 
 #include <stdio.h>
 
-#include <QtDBus/QDBusConnection>
-#include <QtCore/QStringList>
+#include <QDBusConnection>
+#include <QStringList>
 
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 #include "converter.h"
 #include "converter.moc"

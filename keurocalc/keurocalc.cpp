@@ -19,17 +19,17 @@
 #include <math.h>
 #include <locale.h>
 
-#include <QtDBus/QDBusConnection>
-#include <QtWidgets/QPushButton>
-#include <QtGui/QKeyEvent>
+#include <QDBusConnection>
+#include <QPushButton>
+#include <QKeyEvent>
 
-#include <KI18n/KLocalizedString>
-#include <KConfigCore/KConfigGroup>
-#include <KConfigCore/KSharedConfig>
-#include <KCoreAddons/KAboutData>
-#include <KXmlGui/KAboutApplicationDialog>
-#include <KWidgetsAddons/KMessageBox>
-#include <KConfigWidgets/KHelpClient>
+#include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KAboutData>
+#include <KAboutApplicationDialog>
+#include <KMessageBox>
+#include <KHelpClient>
 
 #include "keurocalc.h"
 #include "ui_calculator.h"

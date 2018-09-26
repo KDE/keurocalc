@@ -15,9 +15,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
-#include <QtWidgets/QColorDialog>
+#include <QButtonGroup>
+#include <QCheckBox>
+#include <QColorDialog>
 
 #include "preferences.h"
 #include "preferences.moc"

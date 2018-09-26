@@ -18,7 +18,7 @@
 #ifndef CURRENCYCONVERTER_H
 #define CURRENCYCONVERTER_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class CurrencyConverter : public QObject
 {

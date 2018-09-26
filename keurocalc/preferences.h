@@ -18,7 +18,7 @@
 #ifndef KPREF_H
 #define KPREF_H
 
-#include <QtWidgets/QDialog>
+#include <QDialog>
 
 #include "ui_settingsdialog.h"
 

@@ -15,12 +15,12 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <QtCore/QFile>
-#include <QtCore/QDate>
-#include <QtCore/QStandardPaths>
-#include <QtXml/QDomDocument>
+#include <QFile>
+#include <QDate>
+#include <QStandardPaths>
+#include <QDomDocument>
 
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 #include "currencies.h"
 #include "currencies.moc"
