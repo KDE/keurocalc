@@ -22,7 +22,6 @@
 #include <math.h>
 
 #include "table.h"
-#include "table.moc"
 
 // Constructor
 CurrencyTable::CurrencyTable(const QString &tablePath)

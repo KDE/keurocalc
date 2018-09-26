@@ -33,7 +33,6 @@
 
 #include "keurocalc.h"
 #include "ui_calculator.h"
-#include "keurocalc.moc"
 #include "preferences.h"
 
 static const char

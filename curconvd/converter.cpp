@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 
 #include "converter.h"
-#include "converter.moc"
 #include "table.h"
 
 // Constructor

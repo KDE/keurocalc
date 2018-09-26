@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 
 #include "currencies.h"
-#include "currencies.moc"
 
 static const char
 	*urlECB = "http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml",

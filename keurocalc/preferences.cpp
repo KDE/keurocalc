@@ -20,7 +20,6 @@
 #include <QColorDialog>
 
 #include "preferences.h"
-#include "preferences.moc"
 #include "keurocalc.h"
 
 // Constructor
