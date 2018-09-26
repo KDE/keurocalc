@@ -23,9 +23,11 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
+    DocTools
     I18n
     KIO
 )
 
 add_subdirectory( keurocalc )
+add_subdirectory( doc )
 add_subdirectory( curconvd )

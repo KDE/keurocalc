@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY keurocalc '<application>KEuroCalc</application>'>
-  <!ENTITY kappname "&keurocalc;">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -715,51 +714,6 @@ when &keurocalc; starts.</para>
 &underGPL;
 
 </chapter>
-
-<appendix id="installation">
-<title>Installation</title>
-
-<sect1 id="getting-keurocalc">
-<title>How to obtain &keurocalc;</title>
-
-<para>
-&keurocalc; is part of the <ulink url="http://extragear.kde.org/">KDE extragear-utils</ulink>
-package. The latest version of &keurocalc; can be downloaded from the
-<ulink url="https://websvn.kde.org/trunk/extragear/utils/">KDE extragear-utils source repository</ulink>.
-</para>
-
-</sect1>
-
-<sect1 id="requirements">
-<title>Requirements</title>
-
-<para>In order to successfully use &keurocalc;, you need &kde; Frameworks 5.</para>
-
-</sect1>
-
-<sect1 id="compilation">
-<title>Compilation and Installation</title>
-
-<para>
-In order to compile and install &keurocalc; on your system, type the
-following in the base directory of the &keurocalc; distribution:
-
-<screen width="40">
-<prompt>%</prompt> <userinput>mkdir build</userinput>
-<prompt>%</prompt> <userinput>cd build</userinput>
-<prompt>%</prompt> <userinput>cmake ..</userinput>
-<prompt>%</prompt> <userinput>make</userinput>
-<prompt>%</prompt> <userinput>make install</userinput>
-</screen>
-</para>
-
-<para>It might be needed to pass a number of variables to <command>cmake</command>
-to inform it about the location of the developer libraries on your system.
-Should you run into problems please report them to &keurocalc;'s authors.</para>
-
-</sect1>
-
-</appendix>
 
 &documentation.index;
 </book>
