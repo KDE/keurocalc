@@ -18,7 +18,7 @@
 #include <stdio.h>
 
 #include <QtCore/QTextCodec>
-#include <QtWidgets/QApplication>
+#include <QCoreApplication>
 
 #include <KCoreAddons/KAboutData>
 #include <KI18n/KLocalizedString>
@@ -33,6 +33,7 @@ static const char
 
 int main(int argc, char *argv[])
 {
+	QCoreApplication a(argc, argv);
 	KAboutData aboutData("curconvd", i18n(name), "1.3.0", i18n(description),
 			     KAboutLicense::GPL, i18n(copyright), i18n(text));
 
@@ -42,7 +43,6 @@ int main(int argc, char *argv[])
 
 	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
 
-	QApplication a(argc, argv, false);
 	CurrencyConverter *currency;
 
 	printf( "%s - %s\n%s\n\n", (const char *) i18n(name).toUtf8(),

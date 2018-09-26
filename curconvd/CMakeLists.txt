@@ -11,9 +11,10 @@ set(curconvd_SRCS
 add_executable(curconvd ${curconvd_SRCS})
 
 target_link_libraries(curconvd
-    Qt5::Widgets
+    Qt5::Core
+    Qt5::Xml
     KF5::I18n
-    KF5::KIOFileWidgets
+    KF5::KIOCore
 )
 
 install(TARGETS curconvd ${INSTALL_TARGETS_DEFAULT_ARGS})
