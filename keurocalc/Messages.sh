@@ -1,8 +1,6 @@
 #! /bin/bash
 
-grep '[^-]name =' ../currencies/currencies.xml | sed 's/name = */I18N_NOOP(/; s/ *$$/);/' > names.cpp
+xsltproc --stringparam filename ../currencies/currencies.xml currencies2rc.xslt ../currencies/currencies.xml >> rc.cpp
 
 $EXTRACTRC *.ui >> rc.cpp
 $XGETTEXT *.cpp -o $podir/keurocalc.pot
-
-rm names.cpp
