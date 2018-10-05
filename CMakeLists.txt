@@ -29,6 +29,14 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     XmlGui
 )
 
+include(CheckIncludeFile)
+
+check_include_file(xlocale.h HAVE_XLOCALE_H)
+
+configure_file(config-keurocalc.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keurocalc.h)
+
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 add_subdirectory( keurocalc )
 add_subdirectory( doc )
 add_subdirectory( curconvd )

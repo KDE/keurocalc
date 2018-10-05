@@ -35,6 +35,12 @@
 #include "ui_calculator.h"
 #include "preferences.h"
 
+#include <config-keurocalc.h>
+
+#if HAVE_XLOCALE_H
+#include <xlocale.h>
+#endif
+
 static const char
 	*euroSymbol = " €";
 //	*dollarSymbol = " $";
