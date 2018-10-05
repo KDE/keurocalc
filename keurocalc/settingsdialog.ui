@@ -28,22 +28,6 @@
      </property>
      <layout class="QVBoxLayout">
       <item>
-       <spacer>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>16</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
        <layout class="QHBoxLayout">
         <item>
          <widget class="QLabel" name="textLabel1">
@@ -553,29 +537,13 @@
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>135</width>
+            <width>5</width>
             <height>20</height>
            </size>
           </property>
          </spacer>
         </item>
        </layout>
-      </item>
-      <item>
-       <spacer>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>16</height>
-         </size>
-        </property>
-       </spacer>
       </item>
       <item>
        <layout class="QHBoxLayout">
@@ -586,22 +554,6 @@
           </property>
          </widget>
         </item>
-        <item>
-         <spacer>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Expanding</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>156</width>
-            <height>21</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
       </item>
       <item>
@@ -615,7 +567,7 @@
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>16</height>
+          <height>5</height>
          </size>
         </property>
        </spacer>
@@ -625,31 +577,19 @@
    </item>
    <item row="0" column="1">
     <widget class="QGroupBox" name="groupBox2">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
      <property name="title">
       <string>Rounding</string>
      </property>
      <layout class="QVBoxLayout">
       <item>
        <widget class="QRadioButton" name="radioButtonOfficialRules">
-        <property name="font">
-         <font/>
-        </property>
         <property name="text">
-         <string>Off&amp;icial rounding rules</string>
+         <string>Offic&amp;ial rounding rules</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QRadioButton" name="radioButtonSmallestCoin">
-        <property name="font">
-         <font/>
-        </property>
         <property name="text">
          <string>Smallest coin &amp;method</string>
         </property>
@@ -657,9 +597,6 @@
       </item>
       <item>
        <widget class="QRadioButton" name="radioButtonNoRounding">
-        <property name="font">
-         <font/>
-        </property>
         <property name="text">
          <string>&amp;No rounding at all</string>
         </property>
@@ -670,21 +607,12 @@
    </item>
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox1">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
      <property name="title">
       <string>Reference currency, rates origin</string>
      </property>
      <layout class="QVBoxLayout">
       <item>
        <widget class="QRadioButton" name="radioButtonEuroFixed">
-        <property name="font">
-         <font/>
-        </property>
         <property name="text">
          <string>Euro, no ne&amp;twork access (fixed rates only)</string>
         </property>
@@ -694,9 +622,6 @@
        <widget class="QRadioButton" name="radioButtonEuroECB">
         <property name="enabled">
          <bool>true</bool>
-        </property>
-        <property name="font">
-         <font/>
         </property>
         <property name="text">
          <string>E&amp;uro, European Central Bank</string>
@@ -708,9 +633,6 @@
       </item>
       <item>
        <widget class="QRadioButton" name="radioButtonEuroTG">
-        <property name="font">
-         <font/>
-        </property>
         <property name="text">
          <string>Euro, Time &amp;Genie</string>
         </property>
@@ -732,11 +654,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListWidget" name="defaultCurrencyList">
-       <property name="font">
-        <font/>
-       </property>
-      </widget>
+      <widget class="QListWidget" name="defaultCurrencyList"/>
      </item>
     </layout>
    </item>
