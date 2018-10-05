@@ -7,128 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>653</width>
-    <height>297</height>
+    <height>295</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Settings</string>
   </property>
   <layout class="QGridLayout">
-   <item row="1" column="0">
-    <layout class="QVBoxLayout">
-     <item>
-      <widget class="QLabel" name="defaultCurrencyText">
-       <property name="text">
-        <string>Default currency</string>
-       </property>
-       <property name="wordWrap">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QListWidget" name="defaultCurrencyList">
-       <property name="font">
-        <font/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox1">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+   <item row="2" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
-     <property name="title">
-      <string>Reference currency, rates origin</string>
-     </property>
-     <layout class="QVBoxLayout">
-      <item>
-       <widget class="QRadioButton" name="radioButtonEuroFixed">
-        <property name="font">
-         <font/>
-        </property>
-        <property name="text">
-         <string>Euro, no ne&amp;twork access (fixed rates only)</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButtonEuroECB">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="font">
-         <font/>
-        </property>
-        <property name="text">
-         <string>E&amp;uro, European Central Bank</string>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButtonEuroTG">
-        <property name="font">
-         <font/>
-        </property>
-        <property name="text">
-         <string>Euro, Time &amp;Genie</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QGroupBox" name="groupBox2">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="title">
-      <string>Rounding</string>
-     </property>
-     <layout class="QVBoxLayout">
-      <item>
-       <widget class="QRadioButton" name="radioButtonOfficialRules">
-        <property name="font">
-         <font/>
-        </property>
-        <property name="text">
-         <string>Off&amp;icial rounding rules</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButtonSmallestCoin">
-        <property name="font">
-         <font/>
-        </property>
-        <property name="text">
-         <string>Smallest coin &amp;method</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButtonNoRounding">
-        <property name="font">
-         <font/>
-        </property>
-        <property name="text">
-         <string>&amp;No rounding at all</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </item>
    <item row="1" column="1">
@@ -733,38 +623,118 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" colspan="2">
-    <layout class="QHBoxLayout">
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="groupBox2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Rounding</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QRadioButton" name="radioButtonOfficialRules">
+        <property name="font">
+         <font/>
+        </property>
+        <property name="text">
+         <string>Off&amp;icial rounding rules</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButtonSmallestCoin">
+        <property name="font">
+         <font/>
+        </property>
+        <property name="text">
+         <string>Smallest coin &amp;method</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButtonNoRounding">
+        <property name="font">
+         <font/>
+        </property>
+        <property name="text">
+         <string>&amp;No rounding at all</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox1">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Reference currency, rates origin</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QRadioButton" name="radioButtonEuroFixed">
+        <property name="font">
+         <font/>
+        </property>
+        <property name="text">
+         <string>Euro, no ne&amp;twork access (fixed rates only)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButtonEuroECB">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font/>
+        </property>
+        <property name="text">
+         <string>E&amp;uro, European Central Bank</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButtonEuroTG">
+        <property name="font">
+         <font/>
+        </property>
+        <property name="text">
+         <string>Euro, Time &amp;Genie</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QVBoxLayout">
      <item>
-      <spacer>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>151</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="OKButton">
+      <widget class="QLabel" name="defaultCurrencyText">
        <property name="text">
-        <string>O&amp;K</string>
+        <string>Default currency</string>
        </property>
-       <property name="default">
-        <bool>true</bool>
+       <property name="wordWrap">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="CancelButton">
-       <property name="text">
-        <string>Cance&amp;l</string>
+      <widget class="QListWidget" name="defaultCurrencyList">
+       <property name="font">
+        <font/>
        </property>
       </widget>
      </item>
@@ -780,43 +750,10 @@
   <tabstop>radioButtonOfficialRules</tabstop>
   <tabstop>radioButtonSmallestCoin</tabstop>
   <tabstop>radioButtonNoRounding</tabstop>
-  <tabstop>OKButton</tabstop>
-  <tabstop>CancelButton</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>OKButton</sender>
-   <signal>pressed()</signal>
-   <receiver>SettingsDialog</receiver>
-   <slot>ok()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>CancelButton</sender>
-   <signal>pressed()</signal>
-   <receiver>SettingsDialog</receiver>
-   <slot>cancel()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>qPushButtonDisplayColor</sender>
    <signal>clicked()</signal>
@@ -824,8 +761,8 @@
    <slot>changeDisplayColor()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>567</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -833,5 +770,41 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>cancel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>11</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>ok()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>cancel()</slot>
+  <slot>ok()</slot>
+ </slots>
 </ui>
