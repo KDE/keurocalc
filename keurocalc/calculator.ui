@@ -2336,7 +2336,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>Substract from memory</string>
+       <string>Subtract from memory</string>
       </property>
       <property name="text">
        <string/>

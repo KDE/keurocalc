@@ -385,7 +385,7 @@ void KEuroCalc::InputBackspace()
 	inputCorrect();
 }
 
-// Convert to currency, and add or substract too if needed
+// Convert to currency, and add or subtract too if needed
 void KEuroCalc::ValidateReference()
 {
 	double inputValue, currencyRate, currencyPrecision;
@@ -471,7 +471,7 @@ void KEuroCalc::ValidateReference()
 	displayMemoryButtons();
 }
 
-// Convert to reference, and add or substract too if needed
+// Convert to reference, and add or subtract too if needed
 void KEuroCalc::ValidateCurrency()
 {
 	double inputValue, currencyRate, currencyPrecision;
@@ -558,7 +558,7 @@ void KEuroCalc::ValidateCurrency()
 	displayMemoryButtons();
 }
 
-// Apply percentage, and add or substract too if needed
+// Apply percentage, and add or subtract too if needed
 void KEuroCalc::ValidatePercent()
 {
 	double inputValue, currencyRate, currencyPrecision;
@@ -880,7 +880,7 @@ void KEuroCalc::MemoryPlus()
 		referenceMemory += referenceValue;
 }
 
-// Substract memory from display
+// Subtract memory from display
 void KEuroCalc::MemoryMinus()
 {
 	if ( !memorySet || (isSimpleValue != isSimpleMemory) )
