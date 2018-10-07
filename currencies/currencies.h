@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef CURRENCY_H
-#define CURRENCY_H
+#ifndef CURRENCIES_H
+#define CURRENCIES_H
 
 #include <QString>
 #include <QObject>

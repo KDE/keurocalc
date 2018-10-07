@@ -56,8 +56,8 @@ KEuroCalc::KEuroCalc(QWidget *parent)
 	setupUi(this);
 	QDBusConnection::sessionBus().registerObject
 		("/KEuroCalc", this, QDBusConnection::ExportScriptableSlots);
-	connect( &currencies, SIGNAL(endDownload(int, const QString &)),
-	         this, SLOT(endDownload(int, const QString &))
+	connect( &currencies, SIGNAL(endDownload(int,QString)),
+	         this, SLOT(endDownload(int,QString))
 	       );
 
 	c_locale = newlocale(LC_NUMERIC_MASK, "C", NULL);
@@ -131,7 +131,7 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 	else oldReference = EURO_ECB;
 
 	option = config.readEntry("Currency", "USD");
-	for (oldCurrency = 0; oldCurrency < currencies.number(); oldCurrency++)
+	for (oldCurrency = 0; oldCurrency < currencies.number(); ++oldCurrency)
 		if ( option == currencies.code(oldCurrency) )
 			break;
 	if ( oldCurrency == currencies.number() )
@@ -730,7 +730,7 @@ void KEuroCalc::ChangeSign()
 	displayNewResult();
 }
 
-// Tranfer from display to memory
+// Transfer from display to memory
 void KEuroCalc::MemoryInput()
 {
 	memorySet = true;
@@ -1029,7 +1029,7 @@ void KEuroCalc::initButtons()
 	PlusMinusButton->setText( QString::fromUtf8( "+/-" ) );
 }
 
-// Start dowloading rates
+// Start downloading rates
 void KEuroCalc::startDownload()
 {
 	currencies.clearRates();
@@ -1066,7 +1066,7 @@ void KEuroCalc::endDownload(int defaultCurrency, const QString &date)
 	int position, num;
 
 	position = CurrencyList->count();
-	for (num = 0; num < currencies.number(); num++)
+	for (num = 0; num < currencies.number(); ++num)
 		if (currencies.position(num) == -2)
 	{
 		currencies.setPosition(num, position);
@@ -1087,7 +1087,7 @@ void KEuroCalc::newRatesList(int defaultCurrency)
 	position = currencies.position(currencyNum);
 	if (position < 0)					// If current currency does not exist in new rates list, change current currency
 	{
-		for (currencyNum = 0; currencyNum < currencies.number(); currencyNum++)
+		for (currencyNum = 0; currencyNum < currencies.number(); ++currencyNum)
 		{
 			position = currencies.position(currencyNum);
 			if (position == 0) break;
@@ -1267,8 +1267,8 @@ void KEuroCalc::displayNewResult()
 		normalize( currencyDisplay );
 		currencySymbol = currencies.symbol(currencyNum);
 
-		ResultDisplay->setText( referenceDisplay + referenceSymbol + "\n" +
-					currencyDisplay + " " + currencySymbol );
+		ResultDisplay->setText( referenceDisplay + referenceSymbol + '\n' +
+					currencyDisplay + ' ' + currencySymbol );
 	}
 }
 
@@ -1300,7 +1300,7 @@ void KEuroCalc::displayNewCurrency()
 //		referenceSymbol = QString::fromUtf8( reference == DOLLAR_NY_FRB ? dollarSymbol: euroSymbol );
 		referenceSymbol = QString::fromUtf8( euroSymbol );
 		RateLabel->setText
-			( "1" + referenceSymbol + " = " + rate + " " + currencySymbol ); 
+			( '1' + referenceSymbol + " = " + rate + ' ' + currencySymbol ); 
 	}
 	else RateLabel->setText( "" );
 }

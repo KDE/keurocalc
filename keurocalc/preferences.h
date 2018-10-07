@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef KPREF_H
-#define KPREF_H
+#ifndef PREFERENCES_H
+#define PREFERENCES_H
 
 #include <QDialog>
 

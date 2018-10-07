@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 	bool splashScreen;
 
 	splash = new QSplashScreen( QPixmap( QStandardPaths::locate(QStandardPaths::AppDataLocation, "splash.png" ) ) );
-	splash->showMessage(i18n(description) + "\n" + i18n(copyright), Qt::AlignBottom);
+	splash->showMessage(i18n(description) + '\n' + i18n(copyright), Qt::AlignBottom);
 
 	keurocalc = new KEuroCalc();
 

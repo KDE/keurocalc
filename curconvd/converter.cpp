@@ -15,6 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "converter.h"
+
 #include <stdio.h>
 
 #include <QDBusConnection>
@@ -22,7 +24,6 @@
 
 #include <KLocalizedString>
 
-#include "converter.h"
 #include "table.h"
 
 // Constructor

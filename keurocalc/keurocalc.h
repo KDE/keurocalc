@@ -28,7 +28,7 @@ class KEuroCalc : public QDialog, public Ui::Calculator
     Q_OBJECT 
 
 public:
-    KEuroCalc(QWidget* parent=0);
+    explicit KEuroCalc(QWidget* parent=0);
     virtual ~KEuroCalc();
     virtual void keyPressEvent( QKeyEvent *e );
     bool readSplashScreen() const;

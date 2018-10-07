@@ -13,6 +13,7 @@ add_executable(curconvd ${curconvd_SRCS})
 target_link_libraries(curconvd
     Qt5::Core
     Qt5::Xml
+    Qt5::DBus
     KF5::I18n
     KF5::KIOCore
 )

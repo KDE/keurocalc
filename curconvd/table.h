@@ -25,7 +25,7 @@ class CurrencyTable : public Currencies
     Q_OBJECT 
 
 public:
-    CurrencyTable(const QString &tablePath);
+    explicit CurrencyTable(const QString &tablePath);
     virtual ~CurrencyTable();
     void loadSource(const QString &dataSource, const QString &roundingMethod);
 

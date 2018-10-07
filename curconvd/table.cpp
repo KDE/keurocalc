@@ -15,13 +15,13 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "table.h"
+
 #include <QDBusConnection>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-#include "table.h"
 
 // Constructor
 CurrencyTable::CurrencyTable(const QString &tablePath)
@@ -120,7 +120,7 @@ QString CurrencyTable::Symbol(const QString &currencyCode)
 		path.toUtf8().data(),
 		currencyCode.toUtf8().data());
 
-	for (num = 0; num < number(); num++)
+	for (num = 0; num < number(); ++num)
 		if ( code(num) == currencyCode )
 			break;
 	if (num == number())
@@ -141,7 +141,7 @@ QString CurrencyTable::Name(const QString &currencyCode)
 		path.toUtf8().data(),
 		currencyCode.toUtf8().data());
 
-	for (num = 0; num < number(); num++)
+	for (num = 0; num < number(); ++num)
 		if ( code(num) == currencyCode )
 			break;
 	if (num == number())
@@ -163,7 +163,7 @@ double CurrencyTable::ConvertFromReference(const QString &currencyCode, double r
 		currencyCode.toUtf8().data(),
 		referenceValue);
 
-	for (num = 0; num < number(); num++)
+	for (num = 0; num < number(); ++num)
 		if ( code(num) == currencyCode )
 			break;
 	if (num == number())
@@ -204,7 +204,7 @@ double CurrencyTable::ConvertToReference(const QString &currencyCode, double cur
 		currencyCode.toUtf8().data(),
 		currencyValue);
 
-	for (num = 0; num < number(); num++)
+	for (num = 0; num < number(); ++num)
 		if ( code(num) == currencyCode )
 			break;
 	if (num == number())

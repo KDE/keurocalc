@@ -15,11 +15,12 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "preferences.h"
+
 #include <QButtonGroup>
 #include <QCheckBox>
 #include <QColorDialog>
 
-#include "preferences.h"
 #include "keurocalc.h"
 
 // Constructor

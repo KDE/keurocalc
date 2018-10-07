@@ -15,14 +15,14 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "currencies.h"
+
 #include <QFile>
 #include <QDate>
 #include <QStandardPaths>
 #include <QDomDocument>
 
 #include <KLocalizedString>
-
-#include "currencies.h"
 
 static const char
 	*urlECB = "http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml",
@@ -37,7 +37,7 @@ Currencies::Currencies()
 	currency = 0;
 }
 
-// Denstructor
+// Destructor
 Currencies::~Currencies()
 {
 	if (currency) delete [] currency;
@@ -60,7 +60,7 @@ bool Currencies::readCurrencies( const char *filename )
 	numCurrencies = currenciesList.count();
 	if (currency) delete [] currency;
 	currency = new currencyStruc[numCurrencies];
-	for (num = 0; num < numCurrencies; num++)
+	for (num = 0; num < numCurrencies; ++num)
 	{
 		QDomElement elt = currenciesList.item(num).toElement();
 
@@ -153,8 +153,8 @@ void Currencies::addECBRates( int rounding )
 	roundingMethod = rounding;
 
 	job = KIO::get( QUrl( urlECB ), KIO::Reload, KIO::HideProgressInfo );
-	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
-		 this, SLOT(httpDataECB(KIO::Job *, const QByteArray &))
+	connect( job, SIGNAL(data(KIO::Job*,QByteArray)),
+		 this, SLOT(httpDataECB(KIO::Job*,QByteArray))
 		);
 }
 
@@ -172,8 +172,8 @@ void Currencies::addECBRates( int rounding )
 //	// Or much better: use a URL that does not depend on that date...
 //	sprintf(url, urlNY_FRB, yesterday.year(), yesterday.month(), yesterday.day());
 //	job = KIO::get( QUrl( url ), KIO::Reload, KIO::HideProgressInfo );
-//	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
-//		 this, SLOT(httpDataNY_FRB(KIO::Job *, const QByteArray &))
+//	connect( job, SIGNAL(data(KIO::Job*,QByteArray)),
+//		 this, SLOT(httpDataNY_FRB(KIO::Job*,QByteArray))
 //		);
 //}
 
@@ -185,8 +185,8 @@ void Currencies::addTGRates( int rounding )
 	roundingMethod = rounding;
 
 	job = KIO::get( QUrl( urlTG ), KIO::Reload, KIO::HideProgressInfo );
-	connect( job, SIGNAL(data(KIO::Job *, const QByteArray &)),
-		 this, SLOT(httpDataTG(KIO::Job *, const QByteArray &))
+	connect( job, SIGNAL(data(KIO::Job*,QByteArray)),
+		 this, SLOT(httpDataTG(KIO::Job*,QByteArray))
 		);
 }
 
@@ -218,7 +218,7 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 			else if ( elt.hasAttribute( "currency" ) && elt.hasAttribute( "rate" ) )
 			{
 				QString code(elt.attribute( "currency" ));
-				for (num = 0; num < numCurrencies; num++)
+				for (num = 0; num < numCurrencies; ++num)
 					if ( code == currency[num].code )
 						break;
 				if ( num < numCurrencies )
@@ -341,7 +341,7 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 			if ( elt.hasAttribute( "code" ) && elt.hasAttribute( "rate" ) )
 			{
 				QString code(elt.attribute( "code" ));
-				for (num = 0; num < numCurrencies; num++)
+				for (num = 0; num < numCurrencies; ++num)
 					if ( code == currency[num].code )
 						break;
 				if ( num < numCurrencies )
