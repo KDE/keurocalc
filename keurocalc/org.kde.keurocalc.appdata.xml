@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.keurocalc</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KEuroCalc</name>
+  <summary>Currency converter and calculator</summary>
+  <description>
+    <p>
+     KEuroCalc is a universal currency converter and calculator.
+    </p>
+  </description>
+  <categories>
+    <category>Qt</category>
+    <category>KDE</category>
+    <category>Office</category>
+    <category>Finance</category>
+  </categories>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-info">mild</content_attribute>
+  </content_rating>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=keurocalc</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=keurocalc&amp;source=appdata</url>
+  <url type="help">https://docs.kde.org/?application=keurocalc</url>
+  <url type="homepage">https://www.kde.org/applications/office/keurocalc/</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.kde.org/images/screenshots/keurocalc.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <developer_name>The KDE Community</developer_name>
+  <provides>
+    <binary>keurocalc</binary>
+  </provides>
+  <launchable type="desktop-id">org.kde.keurocalc.desktop</launchable>
+</component>

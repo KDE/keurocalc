@@ -33,6 +33,7 @@ install(TARGETS keurocalc ${INSTALL_TARGETS_DEFAULT_ARGS})
 ########### install files ###############
 
 install(PROGRAMS org.kde.keurocalc.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES org.kde.keurocalc.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 install(FILES splash.png ../currencies/currencies.xml DESTINATION ${DATA_INSTALL_DIR}/keurocalc)
 
