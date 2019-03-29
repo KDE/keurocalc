@@ -32,6 +32,7 @@
   <summary xml:lang="en-GB">Currency converter and calculator</summary>
   <summary xml:lang="es">Calculadora y conversor de divisas</summary>
   <summary xml:lang="fi">Valuuttamuunnin ja -laskin</summary>
+  <summary xml:lang="fr">Un convertisseur de devises et une calculatrice</summary>
   <summary xml:lang="gl">Unha calculadora e convertedor de divisas</summary>
   <summary xml:lang="it">Convertitore di valuta e calcolatrice</summary>
   <summary xml:lang="nl">Conversie van valuta en rekenmachine</summary>
@@ -53,6 +54,7 @@
     <p xml:lang="en-GB">KEuroCalc is a universal currency converter and calculator.</p>
     <p xml:lang="es">KEuroCalc es una calculadora y conversor universal de divisas</p>
     <p xml:lang="fi">KEuroCalc on yleinen valuuttamuunnin ja -laskin.</p>
+    <p xml:lang="fr">KEuroCalc est un convertisseur de devises universel et une calculatrice</p>
     <p xml:lang="gl">KEuroCalc é unha calculadora e un convertedor de divisas universal.</p>
     <p xml:lang="it">KEuroCalc è un convertitore di valuta e calcolatore tascabile universale.</p>
     <p xml:lang="nl">KEuroCalc is een universele rekenmachine voor het omrekenen van munteenheden.</p>
