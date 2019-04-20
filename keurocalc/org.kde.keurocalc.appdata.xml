@@ -14,6 +14,7 @@
   <name xml:lang="fr">KEuroCalc</name>
   <name xml:lang="gl">KEuroCalc</name>
   <name xml:lang="it">KEuroCalc</name>
+  <name xml:lang="ko">KEuroCalc</name>
   <name xml:lang="nl">KEuroCalc</name>
   <name xml:lang="pl">KEuroCalc</name>
   <name xml:lang="pt">KEuroCalc</name>
@@ -35,6 +36,7 @@
   <summary xml:lang="fr">Un convertisseur de devises et une calculatrice</summary>
   <summary xml:lang="gl">Unha calculadora e convertedor de divisas</summary>
   <summary xml:lang="it">Convertitore di valuta e calcolatrice</summary>
+  <summary xml:lang="ko">통화 변환기 및 계산기</summary>
   <summary xml:lang="nl">Conversie van valuta en rekenmachine</summary>
   <summary xml:lang="pl">Kalkulator i przekształcanie waluty</summary>
   <summary xml:lang="pt">Conversor e calculadora de moedas</summary>
@@ -57,6 +59,7 @@
     <p xml:lang="fr">KEuroCalc est un convertisseur de devises universel et une calculatrice</p>
     <p xml:lang="gl">KEuroCalc é unha calculadora e un convertedor de divisas universal.</p>
     <p xml:lang="it">KEuroCalc è un convertitore di valuta e calcolatore tascabile universale.</p>
+    <p xml:lang="ko">KEuroCalc는 보편적인 통화 변환기 및 계산기입니다.</p>
     <p xml:lang="nl">KEuroCalc is een universele rekenmachine voor het omrekenen van munteenheden.</p>
     <p xml:lang="pl">KEuroCalc jest wszechstronnym przelicznikiem walut i kalkulatorem.</p>
     <p xml:lang="pt">O KEuroCalc é um conversor e calculadora de moedas universal.</p>
@@ -97,6 +100,7 @@
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
   <developer_name xml:lang="gl">Comunidade KDE</developer_name>
   <developer_name xml:lang="it">La comunità KDE</developer_name>
+  <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nl">De KDE gemeenschap</developer_name>
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
