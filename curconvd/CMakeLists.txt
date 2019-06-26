@@ -1,4 +1,4 @@
-project(curconvd)
+project(curconvd VERSION "1.3.0")
 
 ########### next target ###############
 
@@ -24,3 +24,6 @@ install(TARGETS curconvd ${INSTALL_TARGETS_DEFAULT_ARGS})
 ########### install files ###############
 
 install(FILES ../currencies/currencies.xml DESTINATION ${DATA_INSTALL_DIR}/curconvd)
+
+configure_file(org.kde.curconvd.service.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.curconvd.service)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.curconvd.service DESTINATION ${DATA_INSTALL_DIR}/curconvd)

@@ -2,7 +2,7 @@
                           table.cpp  -  conversion table
                              -------------------
     begin                : jeu nov 23 21:03:30 CET 2006
-    copyright            : (C) 2006-2018 by Éric Bischoff
+    copyright            : (C) 2006-2019 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 

@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2018 by Éric Bischoff
+    copyright            : (C) 2001-2019 by Éric Bischoff
     email                : ebischoff@nerim.net
  ***************************************************************************/
 
@@ -29,7 +29,7 @@
 static const char
 	*name = I18N_NOOP("KEuroCalc"),
 	*description = I18N_NOOP("Cash converter and calculator"),
-	*copyright = I18N_NOOP("(c) 2001-2018, the KEuroCalc developers"),
+	*copyright = I18N_NOOP("(c) 2001-2019, the KEuroCalc developers"),
 	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to all who know that money does not justify anything.\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n");
 
 int main(int argc, char *argv[])
