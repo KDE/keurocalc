@@ -364,6 +364,7 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 			}
 		}
 		variableRates = "";
+		date = QDate::currentDate().toString("yyyy-MM-dd");   // TG does not provide time information, use current date
 		endDownload( euroCurrency, date );
 	}
 }
