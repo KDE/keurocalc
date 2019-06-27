@@ -4,6 +4,8 @@ BUGS
 Closing bug on Enlightment
 (http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=355386)
 
+curconvd quits unexpectedly after processing LoadSources for online sources
+
 
 FUNCTIONALITY
 =============
