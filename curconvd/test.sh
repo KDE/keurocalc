@@ -1,16 +1,21 @@
 # !/bin/bash
-# This program shows how curconvd answers to d-bus requests
+# This program shows how curconvd answers to D-Bus requests
 
-SERVICE=$(qdbus | grep curconvd)
+SERVICE="org.kde.curconvd"
 
+echo "------- Methods --------------------------------"
 qdbus $SERVICE /CurrencyConverter
 echo
 
+echo "------- Data sources ---------------------------"
 qdbus $SERVICE /CurrencyConverter DataSources
 echo
+
+echo "------- Rounding methods -----------------------"
 qdbus $SERVICE /CurrencyConverter RoundingMethods
 echo
 
+echo "------- Fixed rates ----------------------------"
 qdbus $SERVICE /CurrencyConverter ReferenceCurrency    "(fixed)"
 TABLE=$(qdbus $SERVICE /CurrencyConverter LoadSource           "(fixed)" "none")
 echo $TABLE
@@ -24,7 +29,9 @@ qdbus $SERVICE $TABLE             ConvertFromReference FRF 10.0
 echo "10 French franc in euro"
 qdbus $SERVICE $TABLE             ConvertToReference   FRF 10.0
 qdbus $SERVICE $TABLE             Unload
+echo
 
+echo "------- European Commerce Bank -----------------"
 qdbus $SERVICE /CurrencyConverter ReferenceCurrency    "http://www.ecb.int"
 TABLE=$(qdbus $SERVICE /CurrencyConverter LoadSource           "http://www.ecb.int" "official rules")
 echo $TABLE
@@ -38,7 +45,9 @@ qdbus $SERVICE $TABLE             ConvertFromReference RUB 10.0
 echo "10 Russian rouble in euro"
 qdbus $SERVICE $TABLE             ConvertToReference   RUB 10.0
 qdbus $SERVICE $TABLE             Unload
+echo
 
+echo "------- Time Genie -----------------------------"
 qdbus $SERVICE /CurrencyConverter ReferenceCurrency    "http://rss.timegenie.com"
 TABLE=$(qdbus $SERVICE /CurrencyConverter LoadSource           "http://rss.timegenie.com" "smallest coin")
 echo $TABLE
@@ -52,3 +61,4 @@ qdbus $SERVICE $TABLE             ConvertFromReference CAD 10.0
 echo "10 Canadian dollars in US dollars"
 qdbus $SERVICE $TABLE             ConvertToReference   CAD 10.0
 qdbus $SERVICE $TABLE             Unload
+echo
