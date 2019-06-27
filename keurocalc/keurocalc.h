@@ -30,7 +30,7 @@ class KEuroCalc : public QDialog, public Ui::Calculator
 public:
     explicit KEuroCalc(QWidget* parent=0);
     virtual ~KEuroCalc();
-    virtual void keyPressEvent( QKeyEvent *e );
+    virtual void keyPressEvent( QKeyEvent *e ) override;
     bool readSplashScreen() const;
     void readOptions(int &oldReference, int &oldCurrency, int &oldRounding, QColor &oldDisplayColor, bool &oldSplashScreen) const;
     void writeOptions(int newReference, int newCurrency, int newRounding, const QColor &newDisplayColor, bool newSplashScreen);

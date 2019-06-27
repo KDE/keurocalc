@@ -91,6 +91,8 @@ void CurrencyTable::loadSource(const QString &dataSource, const QString &roundin
 // Download has ended
 void CurrencyTable::endDownload(int defaultCurrency, const QString &date)
 {
+(void) defaultCurrency;
+(void) date;
 printf("Here\n");
 // TODO: if defaultCurrency is not null, inform that a result is available
 }

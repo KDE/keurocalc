@@ -193,7 +193,7 @@ void Currencies::addTGRates( int rounding )
 // Exchange rates received from European Central Bank
 void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 {
-	job = 0; // Unused parameter
+	(void) job; // Unused parameter
 
 	if ( array.size() )
 	{
@@ -250,7 +250,7 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 //{
 //	static const char *frbny = "http://www.newyorkfed.org/xml/schemas/FX/utility";
 //
-//	job = 0; // Unused parameter
+//	(void) job; // Unused parameter
 //
 //	if ( array.size() )
 //	{
@@ -318,7 +318,7 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 // Exchange rates received from Time Genie foreign exchange
 void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 {
-	job = 0; // Unused parameter
+	(void) job; // Unused parameter
 
 	if ( array.size() )
 	{

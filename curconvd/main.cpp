@@ -43,13 +43,12 @@ int main(int argc, char *argv[])
 
 	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
 
-	CurrencyConverter *currency;
-
 	printf( "%s - %s\n%s\n\n", (const char *) i18n(name).toUtf8(),
 	                           (const char *) i18n(description).toUtf8(),
 	                           (const char *) i18n(copyright).toUtf8() );
 	printf( "%s\n", (const char *) i18n("Time Genie exchange rates courtesy of Time Genie").toUtf8() );
-	currency = new CurrencyConverter();
+
+	new CurrencyConverter();
 
 	return a.exec();
 }
