@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 	KLocalizedString::setApplicationDomain("keurocalc");
 
-	KAboutData aboutData("keurocalc", i18n(name), "1.3.0", i18n(description),
+	KAboutData aboutData("keurocalc", i18n(name), "1.3.1", i18n(description),
 			     KAboutLicense::GPL, i18n(copyright), i18n(text));
 
 	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "ebischoff@nerim.net");

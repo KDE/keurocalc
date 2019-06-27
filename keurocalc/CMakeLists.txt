@@ -1,4 +1,4 @@
-project(keurocalc VERSION "1.3.0")
+project(keurocalc VERSION "1.3.1")
 
 ########### next target ###############
 

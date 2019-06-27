@@ -34,7 +34,7 @@ static const char
 int main(int argc, char *argv[])
 {
 	QCoreApplication a(argc, argv);
-	KAboutData aboutData("curconvd", i18n(name), "1.3.0", i18n(description),
+	KAboutData aboutData("curconvd", i18n(name), "1.3.1", i18n(description),
 			     KAboutLicense::GPL, i18n(copyright), i18n(text));
 
 	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "ebischoff@nerim.net");
