@@ -90,7 +90,7 @@ QString CurrencyConverter::ReferenceCurrency(const QString &dataSource)
 //	else if (dataSource == "http://www.newyorkfed.org")
 //		reference = "USD";
 	else if (dataSource == "http://rss.timegenie.com")
-		reference = "USD";
+		reference = "EUR";
 	else reference = "";
 
 	return reference;
