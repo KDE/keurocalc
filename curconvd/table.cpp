@@ -83,7 +83,7 @@ void CurrencyTable::loadSource(const QString &dataSource, const QString &roundin
 	{
 		addFixedRates( rounding, true );
 		// endDownload is called here for the first time
-		addECBRates( rounding );
+		addTGRates( rounding );
 		// endDowload is called again when completed
 	}
 }
