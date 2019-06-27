@@ -25,8 +25,9 @@
 
 // Constructor
 CurrencyTable::CurrencyTable(const QString &tablePath)
-	: Currencies(),
+	: QObject(),
 	  path( tablePath ),
+	  currencies(),
 	  rounding( NO_ROUNDING )
 {
 	QDBusConnection::sessionBus().registerObject(path, this, QDBusConnection::ExportScriptableSlots);
@@ -47,13 +48,13 @@ CurrencyTable::~CurrencyTable()
 // Load currencies from data source
 void CurrencyTable::loadSource(const QString &dataSource, const QString &roundingMethod)
 {
-	if ( !readCurrencies( "currencies.xml" ) )
+	if ( !currencies.readCurrencies( "currencies.xml" ) )
 	{
 		fprintf(stderr, "Cannot load currencies.xml" );
 		exit(1);
 // TODO: Less violent exit
 	}
-	clearRates();
+	currencies.clearRates();
 
 	if (roundingMethod == "official rules")
 		rounding = OFFICIAL_RULES;
@@ -62,28 +63,32 @@ void CurrencyTable::loadSource(const QString &dataSource, const QString &roundin
 	else
 		rounding = NO_ROUNDING;
 
+        connect( &currencies, SIGNAL(endDownload(int,QString)),
+                 this, SLOT(endDownload(int,QString))
+               );
+
 	if (dataSource == "(fixed)")
 	{
-		addFixedRates( rounding );
+		currencies.addFixedRates( rounding );
 		// endDownload is called here
 	}
 	else if (dataSource == "http://www.ecb.int")
 	{
-		addFixedRates( rounding, true );
+		currencies.addFixedRates( rounding, true );
 		// endDownload is called here for the first time
-		addECBRates( rounding );
+		currencies.addECBRates( rounding );
 		// endDowload is called again when completed
 	}
 //	else if (dataSource == "http://www.newyorkfed.org")
 //	{
-//		addNY_FRBRates( rounding );
+//		currencies.addNY_FRBRates( rounding );
 //		// endDowload is called when completed
 //	}
 	else if (dataSource == "http://rss.timegenie.com")
 	{
-		addFixedRates( rounding, true );
+		currencies.addFixedRates( rounding, true );
 		// endDownload is called here for the first time
-		addTGRates( rounding );
+		currencies.addTGRates( rounding );
 		// endDowload is called again when completed
 	}
 }
@@ -93,7 +98,7 @@ void CurrencyTable::endDownload(int defaultCurrency, const QString &date)
 {
 (void) defaultCurrency;
 (void) date;
-printf("Here\n");
+printf("End of download not implemented yet!\n");
 // TODO: if defaultCurrency is not null, inform that a result is available
 }
 
@@ -105,9 +110,9 @@ QStringList CurrencyTable::AvailableCurrencies()
 	printf( "curconvd: %s/AvailableCurrencies()\n",
 		path.toUtf8().data());
 
-	for (int num = 0; num < number(); num++)
-		if ( position(num) == -2 )
-			codes << QString(code(num));
+	for (int num = 0; num < currencies.number(); num++)
+		if ( currencies.position(num) == -2 )
+			codes << QString(currencies.code(num));
 
 	return codes;
 }
@@ -122,13 +127,13 @@ QString CurrencyTable::Symbol(const QString &currencyCode)
 		path.toUtf8().data(),
 		currencyCode.toUtf8().data());
 
-	for (num = 0; num < number(); ++num)
-		if ( code(num) == currencyCode )
+	for (num = 0; num < currencies.number(); ++num)
+		if ( currencies.code(num) == currencyCode )
 			break;
-	if (num == number())
+	if (num == currencies.number())
 		currencySymbol = ""; // TODO: return an error code here
 	else
-		currencySymbol = symbol(num);
+		currencySymbol = currencies.symbol(num);
 
 	return currencySymbol;
 }
@@ -143,13 +148,13 @@ QString CurrencyTable::Name(const QString &currencyCode)
 		path.toUtf8().data(),
 		currencyCode.toUtf8().data());
 
-	for (num = 0; num < number(); ++num)
-		if ( code(num) == currencyCode )
+	for (num = 0; num < currencies.number(); ++num)
+		if ( currencies.code(num) == currencyCode )
 			break;
-	if (num == number())
+	if (num == currencies.number())
 		currencyName = ""; // TODO: return an error code here
 	else
-		currencyName = name(num);
+		currencyName = currencies.name(num);
 
 	return currencyName;
 }
@@ -165,25 +170,25 @@ double CurrencyTable::ConvertFromReference(const QString &currencyCode, double r
 		currencyCode.toUtf8().data(),
 		referenceValue);
 
-	for (num = 0; num < number(); ++num)
-		if ( code(num) == currencyCode )
+	for (num = 0; num < currencies.number(); ++num)
+		if ( currencies.code(num) == currencyCode )
 			break;
-	if (num == number())
+	if (num == currencies.number())
 		currencyValue = 0.0; // TODO: return an error code here
 	else
 	{
 		double currencyRate, currencyPrecision;
 
-		currencyRate = rate(num);
+		currencyRate = currencies.rate(num);
 		switch (rounding)
 		{
 			case OFFICIAL_RULES:
-				currencyPrecision = officialRulesPrecision(num);
+				currencyPrecision = currencies.officialRulesPrecision(num);
 				currencyValue = floor(referenceValue * currencyRate * 100.0 + 0.5)
 						     / 100.0 * currencyPrecision;
 				break;
 			case SMALLEST_COIN:
-				currencyPrecision = smallestCoinPrecision(num);
+				currencyPrecision = currencies.smallestCoinPrecision(num);
 				currencyValue = floor(referenceValue * currencyRate * 100.0 + 0.5)
 						     / 100.0 * currencyPrecision;
 				break;
@@ -206,25 +211,25 @@ double CurrencyTable::ConvertToReference(const QString &currencyCode, double cur
 		currencyCode.toUtf8().data(),
 		currencyValue);
 
-	for (num = 0; num < number(); ++num)
-		if ( code(num) == currencyCode )
+	for (num = 0; num < currencies.number(); ++num)
+		if ( currencies.code(num) == currencyCode )
 			break;
-	if (num == number())
+	if (num == currencies.number())
 		referenceValue = 0.0; // TODO: return an error code here
 	else
 	{
 		double currencyRate, currencyPrecision;
 
-		currencyRate = rate(num);
+		currencyRate = currencies.rate(num);
 		switch (rounding)
 		{
 			case OFFICIAL_RULES:
-				currencyPrecision = officialRulesPrecision(num);
+				currencyPrecision = currencies.officialRulesPrecision(num);
 				referenceValue = floor( currencyValue / currencyRate / currencyPrecision
 							 * 100.0 + 0.5) / 100.0;
 				break;
 			case SMALLEST_COIN:
-				currencyPrecision = smallestCoinPrecision(num);
+				currencyPrecision = currencies.smallestCoinPrecision(num);
 				referenceValue = floor( currencyValue / currencyRate / currencyPrecision
 							 * 100.0 + 0.5) / 100.0;
 				break;

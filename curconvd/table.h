@@ -20,7 +20,7 @@
 
 #include "../currencies/currencies.h"
 
-class CurrencyTable : public Currencies
+class CurrencyTable : public QObject
 {
     Q_OBJECT 
 
@@ -41,6 +41,7 @@ public slots:
 
 private:
     QString path;			// Object path
+    Currencies currencies;              // Currencies list
     int rounding;			// Rounding method
 };
 
