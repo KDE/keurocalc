@@ -49,4 +49,7 @@
     <dbus type="user">org.kde.curconvd</dbus>
   </provides>
   <launchable type="desktop-id">org.kde.curconvd.service</launchable>
+  <releases>
+    <release version="1.3.0" date="2019-06-27"/>
+  </releases>
 </component>
