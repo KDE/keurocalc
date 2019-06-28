@@ -112,8 +112,11 @@ void Currencies::clearRates()
 
 	for (num = 0; num < numCurrencies; num++)
 	{
-		currency[num].rate = 1.0;
-		currency[num].position = -1;
+		if ( !currency[num].fixedRate )
+		{
+			currency[num].rate = 1.0;
+			currency[num].position = -1;
+		}
 	}
 }
 
@@ -231,20 +234,23 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 						break;
 				if ( num < numCurrencies )
 				{
-					switch (roundingMethod)
+					if ( !currency[num].fixedRate )
 					{
-						case OFFICIAL_RULES:
-							currencyPrecision = currency[num].officialRulesPrecision;
-							break;
-						case SMALLEST_COIN:
-							currencyPrecision = currency[num].smallestCoinPrecision;
-							break;
-						default:
-							currencyPrecision = 1.0;
+						switch (roundingMethod)
+						{
+							case OFFICIAL_RULES:
+								currencyPrecision = currency[num].officialRulesPrecision;
+								break;
+							case SMALLEST_COIN:
+								currencyPrecision = currency[num].smallestCoinPrecision;
+								break;
+							default:
+								currencyPrecision = 1.0;
+						}
+						currency[num].rate =
+							elt.attribute( "rate" ).toDouble() / currencyPrecision;
+						currency[num].position = -2;
 					}
-					currency[num].rate =
-						elt.attribute( "rate" ).toDouble() / currencyPrecision;
-					currency[num].position = -2;
 				}
 			}
 		}
@@ -255,9 +261,13 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 // End of exchange rates from European Central Bank
 void Currencies::httpResultECB(KJob *job)
 {
-	(void) job; // Unused parameter
-
-	endDownload( euroCurrency, date );
+	if ( job->error() )
+	{
+		clearRates();
+		endDownload( euroCurrency, "ERROR" );
+	}
+	else
+		endDownload( euroCurrency, date );
 }
 
 // Exchange rates received from New York Federal Reserve Bank
@@ -302,23 +312,26 @@ void Currencies::httpResultECB(KJob *job)
 //						break;
 //				if ( num < numCurrencies )
 //				{
-//					switch (roundingMethod)
+//					if ( !currency[num].fixedRate )
 //					{
-//						case OFFICIAL_RULES:
-//							currencyPrecision = currency[num].officialRulesPrecision;
-//							break;
-//						case SMALLEST_COIN:
-//							currencyPrecision = currency[num].smallestCoinPrecision;
-//							break;
-//						default:
-//							currencyPrecision = 1.0;
+//						switch (roundingMethod)
+//						{
+//							case OFFICIAL_RULES:
+//								currencyPrecision = currency[num].officialRulesPrecision;
+//								break;
+//							case SMALLEST_COIN:
+//								currencyPrecision = currency[num].smallestCoinPrecision;
+//								break;
+//							default:
+//								currencyPrecision = 1.0;
+//						}
+//						if ( elt.attribute( "UNIT" ) != "USD" )
+//							currency[num].rate =
+//								valueElement.text().toDouble() / currencyPrecision;
+//						else currency[num].rate =
+//							( 1.0 / valueElement.text().toDouble() ) / currencyPrecision;
+//						currency[num].position = -2;
 //					}
-//					if ( elt.attribute( "UNIT" ) != "USD" )
-//						currency[num].rate =
-//							valueElement.text().toDouble() / currencyPrecision;
-//					else currency[num].rate =
-//						( 1.0 / valueElement.text().toDouble() ) / currencyPrecision;
-//					currency[num].position = -2;
 //					if ( date.isNull() )
 //						date = dateElement.text();
 //				}
@@ -331,9 +344,13 @@ void Currencies::httpResultECB(KJob *job)
 // End of exchange rates from New York Federal Reserve Bank
 //void Currencies::httpResultNY_FRB(KJob *job)
 //{
-//	(void) job; // Unused parameter
-//
-//	endDownload( dollarCurrency, date );
+//	if ( job->error() )
+//	{
+//		clearRates();
+//		endDownload( dollarCurrency, "ERROR" );
+//	}
+//	else
+//		endDownload( dollarCurrency, date );
 //}
 
 // Exchange rates received from Time Genie foreign exchange
@@ -366,20 +383,23 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 						break;
 				if ( num < numCurrencies )
 				{
-					switch (roundingMethod)
+					if ( !currency[num].fixedRate )
 					{
-						case OFFICIAL_RULES:
-							currencyPrecision = currency[num].officialRulesPrecision;
-							break;
-						case SMALLEST_COIN:
-							currencyPrecision = currency[num].smallestCoinPrecision;
-							break;
-						default:
-							currencyPrecision = 1.0;
+						switch (roundingMethod)
+						{
+							case OFFICIAL_RULES:
+								currencyPrecision = currency[num].officialRulesPrecision;
+								break;
+							case SMALLEST_COIN:
+								currencyPrecision = currency[num].smallestCoinPrecision;
+								break;
+							default:
+								currencyPrecision = 1.0;
+						}
+						currency[num].rate =
+							elt.attribute( "rate" ).toDouble() / currencyPrecision;
+						currency[num].position = -2;
 					}
-					currency[num].rate =
-						elt.attribute( "rate" ).toDouble() / currencyPrecision;
-					currency[num].position = -2;
 				}
 			}
 		}
@@ -391,7 +411,12 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 // End of exchange rates from Time Genie foreign exchange
 void Currencies::httpResultTG(KJob *job)
 {
-	(void) job; // Unused parameter
+	if ( job->error() )
+	{
+		clearRates();
+		endDownload( euroCurrency, "ERROR" );
+	}
+	else
+		endDownload( euroCurrency, date );
 
-	endDownload( euroCurrency, date );
 }
