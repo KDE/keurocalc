@@ -98,7 +98,7 @@ void CurrencyTable::endDownload(int defaultCurrency, const QString &date)
 {
 (void) defaultCurrency;
 (void) date;
-printf("End of download not implemented yet!\n");
+printf("curconvd: end of download not implemented yet!\n");
 // TODO: if defaultCurrency is not null, inform that a result is available
 }
 

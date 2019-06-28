@@ -156,6 +156,9 @@ void Currencies::addECBRates( int rounding )
 	connect( job, SIGNAL(data(KIO::Job*,QByteArray)),
 		 this, SLOT(httpDataECB(KIO::Job*,QByteArray))
 		);
+	connect( job, SIGNAL(result(KJob*)),
+	         this, SLOT(httpResultECB(KJob*))
+	       );
 }
 
 // Add variable rates from New York Federal Reserve Bank
@@ -175,6 +178,9 @@ void Currencies::addECBRates( int rounding )
 //	connect( job, SIGNAL(data(KIO::Job*,QByteArray)),
 //		 this, SLOT(httpDataNY_FRB(KIO::Job*,QByteArray))
 //		);
+//	connect( job, SIGNAL(result(KJob*)),
+//	         this, SLOT(httpResultNY_FRB(KJob*))
+//	       );
 //}
 
 // Add variable rates from Time Genie foreign exchange
@@ -188,6 +194,9 @@ void Currencies::addTGRates( int rounding )
 	connect( job, SIGNAL(data(KIO::Job*,QByteArray)),
 		 this, SLOT(httpDataTG(KIO::Job*,QByteArray))
 		);
+	connect( job, SIGNAL(result(KJob*)),
+	         this, SLOT(httpResultTG(KJob*))
+	       );
 }
 
 // Exchange rates received from European Central Bank
@@ -206,7 +215,6 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 		document.setContent( variableRates, true );
 
 		QDomNodeList ratesList = document.elementsByTagName( "Cube" );
-		QString date;
 		int num;
 		double currencyPrecision;
 
@@ -241,8 +249,15 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 			}
 		}
 		variableRates = "";
-		endDownload( euroCurrency, date );
 	}
+}
+
+// End of exchange rates from European Central Bank
+void Currencies::httpResultECB(KJob *job)
+{
+	(void) job; // Unused parameter
+
+	endDownload( euroCurrency, date );
 }
 
 // Exchange rates received from New York Federal Reserve Bank
@@ -263,7 +278,6 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 //		document.setContent( variableRates, true );
 //
 //		QDomNodeList ratesList = document.elementsByTagNameNS( frbny, "Series" );
-//		QString date;
 //		int num;
 //		double currencyPrecision;
 //
@@ -311,8 +325,15 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 //			}
 //		}
 //		variableRates = "";
-//		endDownload( dollarCurrency, date );
 //	}
+//}
+
+// End of exchange rates from New York Federal Reserve Bank
+//void Currencies::httpResultNY_FRB(KJob *job)
+//{
+//	(void) job; // Unused parameter
+//
+//	endDownload( dollarCurrency, date );
 //}
 
 // Exchange rates received from Time Genie foreign exchange
@@ -331,7 +352,6 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 		document.setContent( variableRates, true );
 
 		QDomNodeList ratesList = document.elementsByTagName( "currency" );
-		QString date;
 		int num;
 		double currencyPrecision;
 
@@ -365,6 +385,13 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 		}
 		variableRates = "";
 		date = QDate::currentDate().toString("yyyy-MM-dd");   // TG does not provide time information, use current date
-		endDownload( euroCurrency, date );
 	}
+}
+
+// End of exchange rates from Time Genie foreign exchange
+void Currencies::httpResultTG(KJob *job)
+{
+	(void) job; // Unused parameter
+
+	endDownload( euroCurrency, date );
 }

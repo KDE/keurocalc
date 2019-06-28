@@ -54,6 +54,7 @@ private:
     int roundingMethod;
     int numCurrencies;
     int dollarCurrency, euroCurrency;
+    QString date;
     currencyStruc *currency;
 
 public:
@@ -87,6 +88,9 @@ private slots:
     virtual void httpDataECB(KIO::Job *, const QByteArray &); 
 //  virtual void httpDataNY_FRB(KIO::Job *, const QByteArray &); 
     virtual void httpDataTG(KIO::Job *, const QByteArray &); 
+    virtual void httpResultECB(KJob *);
+//  virtual void httpResultNY_FRB(KJob *);
+    virtual void httpResultTG(KJob *);
 
 signals:
     void endDownload(int defaultCurrency, const QString &date);
