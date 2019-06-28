@@ -4,11 +4,26 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>curconvd</name>
+  <name xml:lang="es">curconvd</name>
+  <name xml:lang="nl">curconvd</name>
+  <name xml:lang="pt">curconvd</name>
+  <name xml:lang="uk">curconvd</name>
+  <name xml:lang="x-test">xxcurconvdxx</name>
   <summary>Currency conversion service</summary>
+  <summary xml:lang="es">Servicio de conversión monetaria</summary>
+  <summary xml:lang="nl">Service valutaconversie</summary>
+  <summary xml:lang="pt">Serviço de conversão de moedas</summary>
+  <summary xml:lang="uk">Служба перетворення валют</summary>
+  <summary xml:lang="x-test">xxCurrency conversion servicexx</summary>
   <description>
     <p>
      curconvd is a D-Bus service for converting between currencies.
     </p>
+    <p xml:lang="es">curconvd es un servicio D-Bus para realizar conversiones de divisas.</p>
+    <p xml:lang="nl">curconvd is een D-Bus service voor converteren tussen valuta.</p>
+    <p xml:lang="pt">O 'curconvd' é um serviço de D-Bus para converter entre várias moedas.</p>
+    <p xml:lang="uk">curconvd — служба D-Bus для перетворення між валютами.</p>
+    <p xml:lang="x-test">xxcurconvd is a D-Bus service for converting between currencies.xx</p>
   </description>
   <categories>
     <category>Qt</category>
@@ -25,27 +40,11 @@
   <url type="homepage">https://www.kde.org/applications/office/keurocalc/</url>
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
-  <developer_name xml:lang="ca">La comunitat KDE</developer_name>
-  <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
-  <developer_name xml:lang="cs">Komunita KDE</developer_name>
-  <developer_name xml:lang="de">Die KDE-Gemeinschaft</developer_name>
-  <developer_name xml:lang="en-GB">The KDE Community</developer_name>
   <developer_name xml:lang="es">La Comunidad KDE</developer_name>
-  <developer_name xml:lang="fi">KDE-yhteisö</developer_name>
-  <developer_name xml:lang="fr">La communauté KDE</developer_name>
-  <developer_name xml:lang="gl">Comunidade KDE</developer_name>
-  <developer_name xml:lang="id">Komunitas KDE</developer_name>
-  <developer_name xml:lang="it">La comunità KDE</developer_name>
-  <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nl">De KDE gemeenschap</developer_name>
-  <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
-  <developer_name xml:lang="pt-BR">A comunidade KDE</developer_name>
-  <developer_name xml:lang="sk">KDE komunita</developer_name>
-  <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
-  <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
   <provides>
     <dbus type="user">org.kde.curconvd</dbus>
   </provides>
