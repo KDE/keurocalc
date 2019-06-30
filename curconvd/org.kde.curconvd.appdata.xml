@@ -4,6 +4,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>curconvd</name>
+  <name xml:lang="ca">CurConvD</name>
   <name xml:lang="es">curconvd</name>
   <name xml:lang="nl">curconvd</name>
   <name xml:lang="pt">curconvd</name>
@@ -11,6 +12,7 @@
   <name xml:lang="uk">curconvd</name>
   <name xml:lang="x-test">xxcurconvdxx</name>
   <summary>Currency conversion service</summary>
+  <summary xml:lang="ca">Servei de conversió de divises</summary>
   <summary xml:lang="es">Servicio de conversión monetaria</summary>
   <summary xml:lang="nl">Service valutaconversie</summary>
   <summary xml:lang="pt">Serviço de conversão de moedas</summary>
@@ -21,6 +23,7 @@
     <p>
      curconvd is a D-Bus service for converting between currencies.
     </p>
+    <p xml:lang="ca">El «curconvd» és un servei D-Bus per convertir entre monedes diferents.</p>
     <p xml:lang="es">curconvd es un servicio D-Bus para realizar conversiones de divisas.</p>
     <p xml:lang="nl">curconvd is een D-Bus service voor converteren tussen valuta.</p>
     <p xml:lang="pt">O 'curconvd' é um serviço de D-Bus para converter entre várias moedas.</p>
@@ -43,6 +46,7 @@
   <url type="homepage">https://www.kde.org/applications/office/keurocalc/</url>
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
+  <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="es">La Comunidad KDE</developer_name>
   <developer_name xml:lang="nl">De KDE gemeenschap</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
