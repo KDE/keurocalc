@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=curconvd
+Icon=keurocalc
+Terminal=true
+Categories=Qt;KDE;Office;Finance;
+Name=CurConvD
+GenericName=Currency conversion service
