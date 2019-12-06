@@ -10,6 +10,7 @@
   <name xml:lang="el">curconvd</name>
   <name xml:lang="en-GB">curconvd</name>
   <name xml:lang="es">curconvd</name>
+  <name xml:lang="et">curconvd</name>
   <name xml:lang="fi">curconvd</name>
   <name xml:lang="fr">curconvd</name>
   <name xml:lang="gl">curconvd</name>
@@ -30,6 +31,7 @@
   <summary xml:lang="el">Υπηρεσία μετατροπής νομισμάτων</summary>
   <summary xml:lang="en-GB">Currency conversion service</summary>
   <summary xml:lang="es">Servicio de conversión monetaria</summary>
+  <summary xml:lang="et">Valuuta teisendamise teenus</summary>
   <summary xml:lang="fi">Valuuttamuunnospalvelu</summary>
   <summary xml:lang="fr">Service de conversion de devises</summary>
   <summary xml:lang="gl">Servizo de conversión de divisas</summary>
@@ -53,6 +55,7 @@
     <p xml:lang="el">Το curconvd είναι μια υπηρεσία D-Bus για μετατροπή ανάμεσα στα νομίσματα.</p>
     <p xml:lang="en-GB">curconvd is a D-Bus service for converting between currencies.</p>
     <p xml:lang="es">curconvd es un servicio D-Bus para realizar conversiones de divisas.</p>
+    <p xml:lang="et">curconvd on D-Busi teenus erinevate vääringute teisendamiseks.</p>
     <p xml:lang="fi">curconvd on D-Bus-palvelu valuuttamuunnoksiin.</p>
     <p xml:lang="fr">curconvd est un service D-Bus de conversion entre devises.</p>
     <p xml:lang="gl">curconvd é un servizo de D-Bus para converter entre divisas.</p>
@@ -89,6 +92,7 @@
   <developer_name xml:lang="el">Η Κοινότητα του KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
   <developer_name xml:lang="es">La Comunidad KDE</developer_name>
+  <developer_name xml:lang="et">KDE kogukond</developer_name>
   <developer_name xml:lang="fi">KDE-yhteisö</developer_name>
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
   <developer_name xml:lang="gl">Comunidade KDE</developer_name>
