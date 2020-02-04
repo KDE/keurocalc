@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>curconvd</name>
   <name xml:lang="ca">CurConvD</name>
+  <name xml:lang="ca-valencia">CurConvD</name>
   <name xml:lang="cs">CurConvD</name>
   <name xml:lang="de">CurConvD</name>
   <name xml:lang="el">curconvd</name>
@@ -27,6 +28,7 @@
   <name xml:lang="x-test">xxcurconvdxx</name>
   <summary>Currency conversion service</summary>
   <summary xml:lang="ca">Servei de conversió de divises</summary>
+  <summary xml:lang="ca-valencia">Servei de conversió de divises</summary>
   <summary xml:lang="de">Dienst zur Währungsumwandlung</summary>
   <summary xml:lang="el">Υπηρεσία μετατροπής νομισμάτων</summary>
   <summary xml:lang="en-GB">Currency conversion service</summary>
@@ -51,6 +53,7 @@
      curconvd is a D-Bus service for converting between currencies.
     </p>
     <p xml:lang="ca">El «curconvd» és un servei D-Bus per convertir entre monedes diferents.</p>
+    <p xml:lang="ca-valencia">El «curconvd» és un servei D-Bus per convertir entre monedes diferents.</p>
     <p xml:lang="de">CurConvD ist ein D-Bus-Dienst für die Umrechnung von Währungen</p>
     <p xml:lang="el">Το curconvd είναι μια υπηρεσία D-Bus για μετατροπή ανάμεσα στα νομίσματα.</p>
     <p xml:lang="en-GB">curconvd is a D-Bus service for converting between currencies.</p>
@@ -87,6 +90,7 @@
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
+  <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
   <developer_name xml:lang="de">Die KDE-Gemeinschaft</developer_name>
   <developer_name xml:lang="el">Η Κοινότητα του KDE</developer_name>
