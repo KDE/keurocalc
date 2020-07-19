@@ -60,7 +60,7 @@
      curconvd is a D-Bus service for converting between currencies.
     </p>
     <p xml:lang="ca">El «curconvd» és un servei del D-Bus per a convertir entre monedes diferents.</p>
-    <p xml:lang="ca-valencia">El «curconvd» és un servei D-Bus per convertir entre monedes diferents.</p>
+    <p xml:lang="ca-valencia">El «curconvd» és un servei del D-Bus per a convertir entre monedes diferents.</p>
     <p xml:lang="de">CurConvD ist ein D-Bus-Dienst für die Umrechnung von Währungen</p>
     <p xml:lang="el">Το curconvd είναι μια υπηρεσία D-Bus για μετατροπή ανάμεσα στα νομίσματα.</p>
     <p xml:lang="en-GB">curconvd is a D-Bus service for converting between currencies.</p>
