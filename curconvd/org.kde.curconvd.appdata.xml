@@ -24,6 +24,7 @@
   <name xml:lang="pl">curconvd</name>
   <name xml:lang="pt">curconvd</name>
   <name xml:lang="pt-BR">curconvd</name>
+  <name xml:lang="ro">curconvd</name>
   <name xml:lang="sk">curconvd</name>
   <name xml:lang="sl">curconvd</name>
   <name xml:lang="sv">curconvd</name>
@@ -51,6 +52,7 @@
   <summary xml:lang="pl">Usługa przeliczania waluty</summary>
   <summary xml:lang="pt">Serviço de conversão de moedas</summary>
   <summary xml:lang="pt-BR">Serviço de conversão de moedas</summary>
+  <summary xml:lang="ro">Serviciu de conversie monetară</summary>
   <summary xml:lang="sk">Služba konverzie mien</summary>
   <summary xml:lang="sl">Storitev pretvorbe valut</summary>
   <summary xml:lang="sv">Valutakonverteringstjänst</summary>
@@ -80,6 +82,7 @@
     <p xml:lang="pl">curconvd jest usługą D-Bus do przeliczania pomiędzy walutami.</p>
     <p xml:lang="pt">O 'curconvd' é um serviço de D-Bus para converter entre várias moedas.</p>
     <p xml:lang="pt-BR">O curconvd é um serviço D-Bus para conversão entre moedas.</p>
+    <p xml:lang="ro">curconvd este un serviciu D-Bus pentru conversia între monede.</p>
     <p xml:lang="sk">curconvd je služba založená na D-Bus na konverziu mien.</p>
     <p xml:lang="sl">curconvd je storitev D-Bus za pretvorbo med valutami.</p>
     <p xml:lang="sv">curconvd är en D-Bus tjänst för att konvertera mellan valutor.</p>
@@ -122,6 +125,7 @@
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">A comunidade KDE</developer_name>
+  <developer_name xml:lang="ro">Comunitatea KDE</developer_name>
   <developer_name xml:lang="ru">Сообщество KDE</developer_name>
   <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sl">Skupnost KDE</developer_name>
