@@ -29,6 +29,7 @@
   <name xml:lang="sk">KEuroCalc</name>
   <name xml:lang="sl">KEuroCalc</name>
   <name xml:lang="sv">Keurocalc</name>
+  <name xml:lang="tr">KEuroCalc</name>
   <name xml:lang="uk">KEuroCalc</name>
   <name xml:lang="x-test">xxKEuroCalcxx</name>
   <name xml:lang="zh-CN">KEuroCalc</name>
@@ -59,6 +60,7 @@
   <summary xml:lang="sk">Cenový prevodník a kalkulačka</summary>
   <summary xml:lang="sl">Pretvornik valut in kalkulator</summary>
   <summary xml:lang="sv">Valutakonverterare och räknare</summary>
+  <summary xml:lang="tr">Para birimi dönüştürücü ve hesaplayıcı</summary>
   <summary xml:lang="uk">Інструмент для обчислення вартості грошових сум у різних валютах і калькулятор</summary>
   <summary xml:lang="x-test">xxCurrency converter and calculatorxx</summary>
   <summary xml:lang="zh-CN">汇率转换器和计算器</summary>
@@ -91,6 +93,7 @@
     <p xml:lang="sk">KEuroCalc je univerzálny konvertor mien a kalkulačka.</p>
     <p xml:lang="sl">KEuroCalc je univerzalni pretvornik valut in kalkulator.</p>
     <p xml:lang="sv">Keurocalc är en universell valutakonverterare och räknare.</p>
+    <p xml:lang="tr">KEuroCalc, genel bir para birimi dönüştürücü ve hesaplayıcıdır.</p>
     <p xml:lang="uk">KEuroCalc — це універсальний інструмент для обчислення вартості грошових сум у різних валютах і калькулятор.</p>
     <p xml:lang="x-test">xxKEuroCalc is a universal currency converter and calculator.xx</p>
     <p xml:lang="zh-CN">KEuroCalc 是一款通用汇率转换器和计算器。</p>
@@ -141,6 +144,7 @@
   <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
+  <developer_name xml:lang="tr">KDE Topluluğu</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <developer_name xml:lang="zh-CN">KDE 社区</developer_name>

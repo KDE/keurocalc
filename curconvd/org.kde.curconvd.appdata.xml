@@ -28,6 +28,7 @@
   <name xml:lang="sk">curconvd</name>
   <name xml:lang="sl">curconvd</name>
   <name xml:lang="sv">curconvd</name>
+  <name xml:lang="tr">curconvd</name>
   <name xml:lang="uk">curconvd</name>
   <name xml:lang="x-test">xxcurconvdxx</name>
   <name xml:lang="zh-CN">curconvd</name>
@@ -56,6 +57,7 @@
   <summary xml:lang="sk">Služba konverzie mien</summary>
   <summary xml:lang="sl">Storitev pretvorbe valut</summary>
   <summary xml:lang="sv">Valutakonverteringstjänst</summary>
+  <summary xml:lang="tr">Para birimi dönüştürme hizmeti</summary>
   <summary xml:lang="uk">Служба перетворення валют</summary>
   <summary xml:lang="x-test">xxCurrency conversion servicexx</summary>
   <summary xml:lang="zh-CN">汇率转换服务</summary>
@@ -86,6 +88,7 @@
     <p xml:lang="sk">curconvd je služba založená na D-Bus na konverziu mien.</p>
     <p xml:lang="sl">curconvd je storitev D-Bus za pretvorbo med valutami.</p>
     <p xml:lang="sv">curconvd är en D-Bus tjänst för att konvertera mellan valutor.</p>
+    <p xml:lang="tr">curconvd, para birimleri arasında dönüştürme yapmak için bir D-Bus hizmetidir.</p>
     <p xml:lang="uk">curconvd — служба D-Bus для перетворення між валютами.</p>
     <p xml:lang="x-test">xxcurconvd is a D-Bus service for converting between currencies.xx</p>
     <p xml:lang="zh-CN">curconvd 是用于汇率转换的 D-Bus 服务。</p>
@@ -130,6 +133,7 @@
   <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
+  <developer_name xml:lang="tr">KDE Topluluğu</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <developer_name xml:lang="zh-CN">KDE 社区</developer_name>
