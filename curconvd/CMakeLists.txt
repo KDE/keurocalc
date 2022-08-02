@@ -11,9 +11,9 @@ set(curconvd_SRCS
 add_executable(curconvd ${curconvd_SRCS})
 
 target_link_libraries(curconvd
-    Qt5::Core
-    Qt5::Xml
-    Qt5::DBus
+    Qt::Core
+    Qt::Xml
+    Qt::DBus
     KF5::I18n
     KF5::KIOCore
 )
@@ -23,7 +23,7 @@ install(TARGETS curconvd ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install(FILES ../currencies/currencies.xml DESTINATION ${DATA_INSTALL_DIR}/curconvd)
+install(FILES ../currencies/currencies.xml DESTINATION ${KDE_INSTALL_DATADIR}/curconvd)
 
 configure_file(org.kde.curconvd.service.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.curconvd.service)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.curconvd.service DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.curconvd.service DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
