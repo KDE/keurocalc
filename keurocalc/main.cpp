@@ -26,19 +26,15 @@
 
 #include "keurocalc.h"
 
-static const char
-	*name = I18N_NOOP("KEuroCalc"),
-	*description = I18N_NOOP("Cash converter and calculator"),
-	*copyright = I18N_NOOP("(c) 2001-2019, the KEuroCalc developers"),
-	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to all who know that money does not justify anything.\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n");
-
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	KLocalizedString::setApplicationDomain("keurocalc");
 
-	KAboutData aboutData("keurocalc", i18n(name), "1.3.1", i18n(description),
-			     KAboutLicense::GPL, i18n(copyright), i18n(text));
+    const QString copyright = i18n("(c) 2001-2019, the KEuroCalc developers");
+    const QString description = i18n("Cash converter and calculator");
+    KAboutData aboutData("keurocalc", i18n("KEuroCalc"), "1.3.1", description,
+                 KAboutLicense::GPL, copyright, i18n("A program by Éric Bischoff <ebischoff@nerim.net>\n\nThis program is dedicated to all who know that money does not justify anything.\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"));
 
 	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "ebischoff@nerim.net");
 	aboutData.addAuthor(i18n("Gil Gross"), i18n("Additional functionality"), "ptit.ours@gmail.com");
@@ -59,7 +55,7 @@ int main(int argc, char *argv[])
 	bool splashScreen;
 
 	splash = new QSplashScreen( QPixmap( QStandardPaths::locate(QStandardPaths::AppDataLocation, "splash.png" ) ) );
-	splash->showMessage(i18n(description) + '\n' + i18n(copyright), Qt::AlignBottom);
+    splash->showMessage(description + '\n' + copyright, Qt::AlignBottom);
 
 	keurocalc = new KEuroCalc();
 
