@@ -21,7 +21,7 @@
 
 #include <QDBusConnection>
 #include <QStringList>
-
+#include <QDebug>
 #include <KLocalizedString>
 
 #include "table.h"
@@ -34,7 +34,7 @@ CurrencyConverter::CurrencyConverter()
 	QDBusConnection::sessionBus().registerService("org.kde.curconvd");
 	QDBusConnection::sessionBus().registerObject("/CurrencyConverter", this, QDBusConnection::ExportScriptableSlots);
 
-	printf( "%s\n", (const char *) i18n("curconvd: waiting for D-Bus requests").toUtf8() );
+    qDebug() << i18n("curconvd: waiting for D-Bus requests");
 }
 
 // Destructor
@@ -43,7 +43,7 @@ CurrencyConverter::~CurrencyConverter()
 	QDBusConnection::sessionBus().unregisterObject("/CurrencyConverter");
 	QDBusConnection::sessionBus().unregisterService("org.kde.curconvd");
 
-	printf( "%s\n", (const char *) i18n("curconvd: stopped waiting for D-Bus requests").toUtf8() );
+    qDebug() << i18n("curconvd: stopped waiting for D-Bus requests");
 }
 
 // List available data sources
@@ -51,7 +51,7 @@ QStringList CurrencyConverter::DataSources()
 {
 	QStringList dataSources;
 
-	printf( "curconvd: /CurrencyConverter/DataSources()\n" );
+    qDebug() << "curconvd: /CurrencyConverter/DataSources()";
 
 	dataSources << QString("(fixed)");
         dataSources << QString("http://www.ecb.int");
@@ -66,7 +66,7 @@ QStringList CurrencyConverter::RoundingMethods()
 {
 	QStringList roundingMethods;
 
-	printf( "curconvd: /CurrencyConverter/RoundingMethods()\n" );
+    qDebug() << "curconvd: /CurrencyConverter/RoundingMethods()";
 
 	roundingMethods << QString("none");
         roundingMethods << QString("official rules");
@@ -80,8 +80,7 @@ QString CurrencyConverter::ReferenceCurrency(const QString &dataSource)
 {
 	QString reference;
 
-	printf( "curconvd: /CurrencyConverter/ReferenceCurrency(\"%s\")\n",
-		dataSource.toUtf8().data() );
+    qDebug() << QStringLiteral("curconvd: /CurrencyConverter/ReferenceCurrency(\"%1\")").arg(dataSource);
 
 	if (dataSource == "(fixed)")
 		reference = "EUR";
@@ -102,9 +101,7 @@ QString CurrencyConverter::LoadSource(const QString &dataSource, const QString &
 	QString tablePath;
 	CurrencyTable *table;
 
-	printf( "curconvd: /CurrencyConverter/LoadSource(\"%s\", \"%s\")\n",
-		dataSource.toUtf8().data(),
-		roundingMethod.toUtf8().data() );
+    qDebug() << QStringLiteral("curconvd: /CurrencyConverter/LoadSource(\"%1\", \"%2\")").arg(dataSource).arg(roundingMethod);
 
 	tablePath = QString( "/CurrencyConverter/tables/%1" ).arg( ++serialNumber );
 

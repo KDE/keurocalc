@@ -18,6 +18,7 @@
 #include "table.h"
 
 #include <QDBusConnection>
+#include <QDebug>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,8 +33,7 @@ CurrencyTable::CurrencyTable(const QString &tablePath)
 {
 	QDBusConnection::sessionBus().registerObject(path, this, QDBusConnection::ExportScriptableSlots);
 
-	printf( "curconvd: table \"%s\" created\n",
-		path.toUtf8().data());
+    qDebug() << QStringLiteral("curconvd: table \"%1\" created\n").arg(path);
 }
 
 // Destructor
@@ -41,8 +41,7 @@ CurrencyTable::~CurrencyTable()
 {
 	QDBusConnection::sessionBus().unregisterObject(path);
 
-	printf( "curconvd: table \"%s\" destroyed\n",
-		path.toUtf8().data());
+    qDebug() << QStringLiteral("curconvd: table \"%1\" destroyed\n").arg(path);
 }
 
 // Load currencies from data source
@@ -98,7 +97,7 @@ void CurrencyTable::endDownload(int defaultCurrency, const QString &date)
 {
 (void) defaultCurrency;
 (void) date;
-printf("curconvd: end of download not implemented yet!\n");
+qDebug() << "curconvd: end of download not implemented yet!";
 // TODO: if defaultCurrency is not null, inform that a result is available
 }
 
@@ -244,8 +243,7 @@ double CurrencyTable::ConvertToReference(const QString &currencyCode, double cur
 // Unload this currencies table
 void CurrencyTable::Unload()
 {
-	printf( "curconvd: %s/Unload()\n",
-		path.toUtf8().data());
+    qDebug() << QStringLiteral("curconvd: %1/Unload()").arg(path);
 
 	delete this;
 }

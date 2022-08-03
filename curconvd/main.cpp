@@ -25,28 +25,17 @@
 
 #include "converter.h"
 
-static const char
-	*name =	I18N_NOOP("CurConvD"),
-	*description = I18N_NOOP("A currency converter daemon"),
-	*copyright = I18N_NOOP("(c) 2006-2019, the curconvd developers"),
-	*text = I18N_NOOP("A program by Éric Bischoff <ebischoff@nerim.net>\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n");
-
 int main(int argc, char *argv[])
 {
 	QCoreApplication a(argc, argv);
-	KAboutData aboutData("curconvd", i18n(name), "1.3.1", i18n(description),
-			     KAboutLicense::GPL, i18n(copyright), i18n(text));
+    KAboutData aboutData("curconvd", i18n("CurConvD"), "1.3.1", i18n("A currency converter daemon"),
+                 KAboutLicense::GPL, i18n("(c) 2006-2019, the curconvd developers"), i18n("A program by Éric Bischoff <ebischoff@nerim.net>\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"));
 
 	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "ebischoff@nerim.net");
 
 	KAboutData::setApplicationData(aboutData);
 
 	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
-
-	printf( "%s - %s\n%s\n\n", (const char *) i18n(name).toUtf8(),
-	                           (const char *) i18n(description).toUtf8(),
-	                           (const char *) i18n(copyright).toUtf8() );
-	printf( "%s\n", (const char *) i18n("Time Genie exchange rates courtesy of Time Genie").toUtf8() );
 
 	new CurrencyConverter();
 
