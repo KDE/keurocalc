@@ -6,6 +6,9 @@ set(curconvd_SRCS
    ../currencies/currencies.cpp
    converter.cpp
    table.cpp
+   ../currencies/currencies.h
+   converter.h
+   table.h
    main.cpp )
 
 add_executable(curconvd ${curconvd_SRCS})

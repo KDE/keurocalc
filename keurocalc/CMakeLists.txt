@@ -6,7 +6,10 @@ set(keurocalc_SRCS
    ../currencies/currencies.cpp
    keurocalc.cpp
    main.cpp
-   preferences.cpp )
+   preferences.cpp
+   ../currencies/currencies.h
+   keurocalc.h
+   preferences.h)
 
 qt_add_resources(keurocalc_SRCS keurocalc.qrc)
 
