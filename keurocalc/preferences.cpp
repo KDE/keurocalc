@@ -59,6 +59,10 @@ Preferences::Preferences(KEuroCalc *parent, const Currencies *currencies)
 	displayColorResult->setPalette( palette );
 
 	checkBoxSplashScreen->setChecked( oldSplashScreen );
+
+    connect(qPushButtonDisplayColor, &QAbstractButton::clicked, this, &Preferences::changeDisplayColor);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &Preferences::cancel);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &Preferences::ok);
 }
 
 // Destructor

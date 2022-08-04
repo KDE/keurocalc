@@ -94,6 +94,36 @@ KEuroCalc::KEuroCalc(QWidget *parent)
 	OperatorDisplay->setPalette( palette );
 
 	setFocusPolicy( Qt::StrongFocus );
+    connect(ZeroButton, &QAbstractButton::pressed, this, &KEuroCalc::InputZero);
+    connect(FiveButton, &QAbstractButton::pressed, this, &KEuroCalc::InputFive);
+    connect(FourButton, &QAbstractButton::pressed, this, &KEuroCalc::InputFour);
+    connect(SevenButton, &QAbstractButton::pressed, this, &KEuroCalc::InputSeven);
+    connect(SixButton, &QAbstractButton::pressed, this, &KEuroCalc::InputSix);
+    connect(ThreeButton, &QAbstractButton::pressed, this, &KEuroCalc::InputThree);
+    connect(TwoButton, &QAbstractButton::pressed, this, &KEuroCalc::InputTwo);
+    connect(EightButton, &QAbstractButton::pressed, this, &KEuroCalc::InputEight);
+    connect(NineButton, &QAbstractButton::pressed, this, &KEuroCalc::InputNine);
+    connect(HelpButton, &QAbstractButton::pressed, this, &KEuroCalc::DisplayHelp);
+    connect(DotButton, &QAbstractButton::pressed, this, &KEuroCalc::InputDot);
+    connect(OneButton, &QAbstractButton::pressed, this, &KEuroCalc::InputOne);
+    connect(BackspaceButton, &QAbstractButton::pressed, this, &KEuroCalc::InputBackspace);
+    connect(ResetButton, &QAbstractButton::pressed, this, &KEuroCalc::Reset);
+    connect(ReferenceButton, &QAbstractButton::pressed, this, &KEuroCalc::ValidateReference);
+    connect(SlashButton, &QAbstractButton::pressed, this, &KEuroCalc::InputSlash);
+    connect(AsteriskButton, &QAbstractButton::pressed, this, &KEuroCalc::InputAsterisk);
+    connect(MinusButton, &QAbstractButton::pressed, this, &KEuroCalc::InputMinus);
+    connect(PlusButton, &QAbstractButton::pressed, this, &KEuroCalc::InputPlus);
+    connect(CurrencyButton, &QAbstractButton::pressed, this, &KEuroCalc::ValidateCurrency);
+    connect(PercentButton, &QAbstractButton::pressed, this, &KEuroCalc::ValidatePercent);
+    connect(PlusMinusButton, &QAbstractButton::pressed, this, &KEuroCalc::ChangeSign);
+    connect(SimpleValueButton, &QAbstractButton::pressed, this, &KEuroCalc::ValidateSimpleValue);
+    connect(AboutButton, &QAbstractButton::pressed, this, &KEuroCalc::DisplayAbout);
+    connect(MInputButton, &QAbstractButton::pressed, this, &KEuroCalc::MemoryInput);
+    connect(MRecallButton, &QAbstractButton::pressed, this, &KEuroCalc::MemoryRecall);
+    connect(MMinusButton, &QAbstractButton::pressed, this, &KEuroCalc::MemoryMinus);
+    connect(MPlusButton, &QAbstractButton::pressed, this, &KEuroCalc::MemoryPlus);
+    connect(CurrencyList, &QComboBox::activated, this, &KEuroCalc::SelectCurrency);
+    connect(SettingsButton, &QAbstractButton::pressed, this, &KEuroCalc::DisplaySettings);
 }
 
 // Destructor
