@@ -32,7 +32,6 @@
 #include <KHelpClient>
 
 #include "keurocalc.h"
-#include "ui_calculator.h"
 #include "preferences.h"
 
 #include <config-keurocalc.h>
