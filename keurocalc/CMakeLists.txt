@@ -30,7 +30,7 @@ target_link_libraries(keurocalc
     KF5::WidgetsAddons
 )
 
-install(TARGETS keurocalc ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS keurocalc ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 ########### install files ###############

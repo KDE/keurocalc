@@ -21,7 +21,7 @@ target_link_libraries(curconvd
     KF5::KIOCore
 )
 
-install(TARGETS curconvd ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS curconvd ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 ########### install files ###############
