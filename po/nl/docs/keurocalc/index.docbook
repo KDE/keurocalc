@@ -1,0 +1,1372 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="keurocalc" lang="&language;">
+
+<bookinfo>
+<title
+>Het handboek van &keurocalc;</title>
+
+<authorgroup>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>ebischoff@_NOSPAM_nerim.net</email
+></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<othercredit role="translator"
+><firstname
+>Jaap</firstname
+><surname
+>Woldringh</surname
+><affiliation
+><address
+><email
+>jjh.woldringh@_NOSPAM_planet.nl</email
+></address
+></affiliation
+><contrib
+></contrib
+></othercredit
+> 
+
+<copyright>
+<year
+>2001-2019</year>
+<holder
+>Éric Bischoff</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2019-06-24</date>
+<releaseinfo
+>1.3.1</releaseinfo>
+
+<abstract>
+<para
+>&keurocalc; is een universele rekenmachine die geschikt is voor het omrekenen van munteenheden. In deze documentatie wordt &keurocalc; versie 1.3.1 beschreven. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>extragear</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>munteenheid</keyword>
+<keyword
+>omrekenmachine</keyword>
+<keyword
+>rekenmachine</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&keurocalc; is een universele rekenmachine die geschikt is voor het omrekenen van munteenheden. </para>
+
+<para
+>Op 1 Januari 2002 voegden 12 Europese landen hun nationale valuta samen in een enkele, de euro (€). Hetzelfde zal zo af en toe op kleinere schaal gebeuren met nieuwe Oost-Europese landen. &keurocalc; helpt: <variablelist>
+<varlistentry>
+<term
+>Gedurende de overgangsperioden</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Om iemands bankrekening te controleren, bij het betalen in zowel euro's als in de oude munteenheden (Italiaanse lires bijvoorbeeld).</para
+></listitem>
+<listitem
+><para
+>Om uw uitgaven te controleren en het wisselgeld te kunnen berekenen indien er wordt betaald met een bankbiljet in de oude munteenheid.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Vele jaren na de overgangsperioden</term>
+<listitem
+><para
+>Om op elk moment van de berekeningen een idee te hebben van de bedragen uitgedrukt in de oude munteenheid.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Op elk moment</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Om de euro en andere valuta zoals het Britse Pond naar elkaar te kunnen omrekenen, volgens de dagelijkse wisselkoersen gepubliceerd door de <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Europese Centrale Bank (ECB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Om elke twee valuta, die in de door door de ECB gepubliceerde (koersen)lijst voorkomen, naar elkaar te kunnen omrekenen.</para
+></listitem>
+<!--listitem
+><para
+>To do conversions between the US dollar and other currencies
+according to the daily exchange rate published by the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>To do conversions between any two currencies that are part of the list
+published by the NY FRB.</para
+></listitem-->
+<listitem
+><para
+>Om de euro en andere valuta zoals het Britse Pond naar elkaar te kunnen omrekenen, volgens de dagelijkse wisselkoersen gepubliceerd door de <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie</ulink
+> foreign exchange (TG)..</para
+></listitem>
+<listitem
+><para
+>Om elke twee valuta, die in de door door de TG gepubliceerde (koersen)lijst voorkomen, naar elkaar te kunnen omrekenen.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+
+<para
+>&keurocalc; heeft de volgende voordelen in termen van gemak en bruikbaarheid: <itemizedlist>
+<listitem
+><para
+>U ziet elk tussenresultaat en het antwoord in zowel de referentie-munteenheid (euro) als in de andere valuta.</para
+></listitem>
+<listitem
+><para
+>Er is een apart invoerscherm waarin u de nieuwe waarde kunt typen terwijl het vorige antwoord zichtbaar blijft.</para
+></listitem>
+<listitem
+><para
+>De ergonomie is bijna gelijk aan die van de gewone zakrekenmachines, ondanks het feit dat elke waarde die u intypt een waarde kan zijn in de referentie-munteenheid (euro), een waarde in de andere munteenheid, een percentage of een hoeveelheid zonder eenheid.</para
+></listitem>
+<listitem
+><para
+>U drukt in dezelfde volgorde op de toetsen, als die u hardop zou uitspreken terwijl u hiermee bezig bent.</para
+></listitem>
+<listitem
+><para
+>Gemaakte fouten, zolang die nog niet zijn bevestigd, kunnen worden hersteld met behulp van een speciale correctietoets.</para
+></listitem>
+<listitem
+><para
+>De getallen worden overeenkomstig de lokale instellingen weergegeven, met een komma of een punt als decimaal scheidingsteken. Dit wordt geregeld met uw instellingen in &systemsettings;.</para
+></listitem>
+<listitem
+><para
+>U kunt bepalen vanwaar &keurocalc; de wisselkoersen moet downloaden, met welke andere munteenheid u wilt beginnen bij het opstarten van &keurocalc;, en welke methode u wilt gebruiken voor het afronden.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Met &keurocalc; zijn de volgende bewerkingen mogelijk: <itemizedlist>
+<listitem
+><para
+>Conversies van en naar de referentie-munteenheid (euro).</para
+></listitem>
+<listitem
+><para
+>Het systematisch afronden van het getoonde antwoord, intern worden de berekeningen echter gedaan met de nauwkeurigheid van de wiskundige bibliotheken.</para
+></listitem>
+<listitem
+><para
+>Het gebruikelijke optellen, aftrekken, vermenigvuldigen en delen.</para
+></listitem>
+<listitem
+><para
+>Een percentage toepassen, een percentage optellen of aftrekken.</para
+></listitem>
+<listitem
+><para
+>De mogelijkheid waarden op te slaan in een tussengeheugen, of om dat geheugen te gebruiken om totaalbedragen bij te houden.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Dit zijn enkele beperkingen van &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Geen berekeningen met haakjes of ingewikkelde expressies.</para
+></listitem>
+<listitem
+><para
+>Sommige afrondingen pakken verkeerd uit als gevolg van de beperkingen van de wiskundige bibliotheek.</para
+></listitem>
+<listitem
+><para
+>Sterk aan inflatie onderhevige valuta kunnen niet worden behandeld als gevolg van de beperkte mogelijkheden de bedragen weer te geven. Maar met de overgang naar de nieuwe Turkse lire en het verwijderen van zes nullen bij deze munteenheid is dit geen praktisch probleem meer.</para
+></listitem>
+<!-- listitem
+><para
+>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para
+></listitem-->
+</itemizedlist>
+</para>
+
+<warning
+><para
+>Met &keurocalc; worden de juiste koerswaarden noch de nauwkeurigheid van de antwoorden gegarandeerd. U moet altijd uw berekeningen verifiëren met een andere methode. Zoals u in de <link linkend="credits"
+>licentie</link
+>-overeenkomst kunt lezen zijn de auteurs niet aansprakelijk indien de antwoorden niet juist of naar verwachting zijn. Let er alstublieft ook op dat de variabele wisselkoersen zonder versleuteling en dus op een onveilige manier worden opgehaald van de gegevensbronnen (Europese Centrale Bank en Time Genie). Een aanvaller die zich tussen deze bronnen en u bevindt (<quote
+>man-in-the-middle</quote
+> kan &keurocalc; om de tuin leiden door met deze wisselkoersen te knoeien. Of, eenvoudiger, er kan altijd een transmissiefout optreden.</para
+></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title
+>Het gebruik van &keurocalc;</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title
+>Conversies uitvoeren</title>
+
+
+<procedure>
+<title
+>Het omrekenen van 1000 Belgische francs naar euro's</title>
+<step
+><para
+>Selecteer <guilabel
+>BEF - Belgische franc</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>) in het contextmenu voor munteenheden.</para
+></step>
+<step
+><para
+>Typ <userinput
+>1000</userinput
+> op het toetsenbord of gebruik de overeenkomstige numerieke knoppen. In het <guilabel
+>Invoer</guilabel
+>scherm verschijnen de cijfers terwijl u typt. Als u een fout maakt kunt u dit corrigeren met de &Backspace;-toets of de  <guibutton
+>&lt;-</guibutton
+> knop.</para
+></step>
+<step
+><para
+>Druk op de <guibutton
+>FB</guibutton
+>-knop of de <keycap
+>F</keycap
+>-toets. In feite kunt u elke toets die niet voor iets anders is gereserveerd gebruiken om de invoer te bevestigen als een bedrag uitgedrukt in de munteenheid, zodat u even goed <keycap
+>B</keycap
+> of <keycap
+>X</keycap
+> hiervoor had kunnen gebruiken.</para
+></step>
+<step
+><para
+>Lees het antwoord in het  <guilabel
+>Antwoord</guilabel
+>-scherm rechts: 24.79 € of 24,79 €, afhankelijk van onze lokale instellingen.</para
+></step
+> 
+</procedure>
+
+<procedure>
+<title
+>25 euro's omrekenen naar Belgische francs</title>
+<step
+><para
+>Indien de valuta met vaste wisselkoersen beschikbaar zijn, selecteer <guilabel
+>BEF - Belgische franc</guilabel
+> in het contextmenu voor valuta. U kunt deze stap overslaan indien dit reeds de geselecteerde valuta is.</para
+></step>
+<step
+><para
+>Typ <userinput
+>25</userinput
+>.</para
+></step>
+<step
+><para
+>Druk op de <guibutton
+>€</guibutton
+>-knop of de <keycap
+>E</keycap
+>-toets.</para
+></step>
+<step
+><para
+>Lees het antwoord in het <guilabel
+>Antwoord</guilabel
+>-scherm rechts: 1008.50 FB of 1008,50 FB. De exacte waarde is 1008.4975, maar deze is afgerond naar het dichtstbijzijnde honderdste deel van een Belgische franc. De afrond-eenheid is afhankelijk van de munteenheid en de afrondmethode met de officiële afrondregels. Voor Belgische francs is dit 0,01 FB, voor Italiaanse lires is dit 1 L, bijvoorbeeld.</para
+></step>
+</procedure>
+
+<para
+>U had ook kunnen typen: <userinput
+>25 Enter E</userinput
+>.</para>
+
+<procedure>
+<title
+>Conversie van 120 Duitse marken naar Spaanse peseta's</title>
+<step
+><para
+>Indien de valuta met vaste wisselkoersen beschikbaar zijn, selecteer <guilabel
+>DEM - Duitse marken</guilabel
+> in het contextmenu voor valuta.</para
+></step>
+<step
+><para
+>Typ <userinput
+>120</userinput
+>.</para
+></step>
+<step
+><para
+>Druk op de <guibutton
+>DM</guibutton
+>-knop of de <keycap
+>D</keycap
+>- of <keycap
+>M</keycap
+>-toets.</para
+></step>
+<step
+><para
+>Selecteer nu <guilabel
+>ESP - Spaanse peseta</guilabel
+> waarna u ditzelfde bedrag van 61,36 € naar peseta's ziet omgerekend in het <guilabel
+>Antwoord</guilabel
+>-scherm.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title
+>Optellen en aftrekken</title>
+
+<procedure>
+<title
+>Hoeveel is 3 + 5?</title>
+<step
+><para
+>Typ <userinput
+>3</userinput
+> en druk daarna op <guibutton
+>+</guibutton
+>. Merk op dat in het antwoordscherm <computeroutput
+>3</computeroutput
+> gewoon een getal is op een regel, zonder valuta.</para
+></step>
+<step
+><para
+>Typ <userinput
+>5</userinput
+> en druk daarna op de <guibutton
+>Enter</guibutton
+>-knop of op de &Enter;-toets. Het antwoord <computeroutput
+>8</computeroutput
+> verschijnt rechts.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>U ontving 100 US-dollars en betaalde 32,50 euro's voor een boek, hoeveel staat er nu op uw bankrekening?</title>
+<step
+><para
+>Overtuig u ervan dat de variabele wisselkoersen beschikbaar zijn. Indien dit niet het geval is drukt u op <guibutton
+>Instellingen...</guibutton
+> en selecteert u óf <guilabel
+>Euro, Europese Centrale Bank</guilabel
+> óf <guilabel
+>Euro, Time Genie</guilabel
+>. Selecteer daarna <guilabel
+>USD - US-dollar</guilabel
+> in het afrolmenu onderaan. Zonder een internetverbinding kan dit niet omdat dan de laatste variabele wisselkoersen tussen de euro en de dollar niet kunnen worden bepaald.</para
+></step>
+<step
+><para
+>Typ <userinput
+>100</userinput
+> en druk dan op <guibutton
+>$</guibutton
+>.</para
+></step>
+<step
+><para
+>Druk op de <guibutton
+>-</guibutton
+> knop of de <keycap
+>-</keycap
+> toets. Let op het <computeroutput
+>-</computeroutput
+> teken in het meest linkse deel van het <guilabel
+>Invoer</guilabel
+>-scherm.</para
+></step>
+<step
+><para
+>Typ <userinput
+>32,50</userinput
+> of <userinput
+>32.50</userinput
+> en druk daarna op <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Lees het antwoord in het <guilabel
+>Antwoord</guilabel
+>-scherm rechts. De exacte waarde hangt af van de laatste wisselkoersen. Merk op dat gedurende de gehele bewerking u de waardes zowel in euro's als in US-dollars kunt zien. Merk ook op dat het verschil kan maken welke bron u gebruikt voor uw gegevens (ECB of TG). Beiden geven niet noodzakelijk dezelfde wisselkoers op tussen euro en dollar.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>U betaalt 32,50 € voor een boek met een bankbiljet van 500 FF. Hoeveel zou de winkelbediende u terug moeten geven, in euro-bankbiljetten en -munten?</title>
+<step
+><para
+>Selecteer <guilabel
+>FRF - Franse francs</guilabel
+> in het contextmenu voor valuta, indien dit niet reeds is geselecteerd.</para
+></step>
+<step
+><para
+>Typ <userinput
+>32.50</userinput
+> of <userinput
+>32,50</userinput
+> en druk dan op de <guibutton
+>€</guibutton
+>-knop. U kunt ook <userinput
+>32,5</userinput
+> typen zonder de laatste <userinput
+>0</userinput
+>.</para
+></step>
+<step
+><para
+>Druk op de <guibutton
+>-</guibutton
+> knop of de <keycap
+>-</keycap
+> toets.</para
+></step>
+<step
+><para
+>Typ <userinput
+>500</userinput
+> en druk op de <guibutton
+>FF</guibutton
+>-knop of de <keycap
+>F</keycap
+>-toets.</para
+></step>
+<step
+><para
+>Het antwoord <computeroutput
+>-43,72 €</computeroutput
+> is negatief, wat betekent dat de klant wisselgeld terug moet krijgen. Met de knop <guibutton
+>+/-</guibutton
+> of de toets <keycap
+>S</keycap
+> kan het teken van het antwoord worden gewijzigd.</para
+></step>
+</procedure>
+
+<note
+><para
+>Probeer geen euro's op te tellen bij eenvoudige getallen (zonder een munteenheid). Dit gaat natuurlijk niet, om dezelfde reden dat u niet 5 meters kunt optellen bij 3 kilogrammen.</para
+></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title
+>Vermenigvuldigen en delen</title>
+
+<procedure>
+<title
+>U koopt 3,2 kilogram appels à 2 € per kilogram. Hoeveel kost dit in Australische dollars?</title>
+<step
+><para
+>Selecteer <guilabel
+>AUD - Australische dollar</guilabel
+> indien beschikbaar en niet reeds geselecteerd.</para
+></step>
+<step
+><para
+>Typ <userinput
+>2</userinput
+> en druk op <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Druk op de knop <guibutton
+>X</guibutton
+> of de <keycap
+>*</keycap
+>-toets. Zie het <computeroutput
+>X</computeroutput
+>-teken links van het  <guilabel
+>Invoer</guilabel
+>-scherm.</para
+></step>
+<step
+><para
+>Typ nu <userinput
+>3,2</userinput
+> en daarna op de knop <guibutton
+>Enter</guibutton
+> of de toets &Enter;: dit betekent <quote
+>3,2 eenheden</quote
+> voor 2 € elk.</para
+></step>
+<step
+><para
+>Het antwoord in Australische dollars komt overeen met <computeroutput
+>6,4 €</computeroutput
+>.</para
+></step>
+</procedure>
+
+<para
+>U zou het ook op deze manier hebben kunnen doen: <userinput
+>3,2 = * 2 €</userinput
+> of zelfs <userinput
+>3,2 * 2 €</userinput
+>.</para>
+
+<note
+><para
+>Het is niet mogelijk om X euro's met Y dollars te vermenigvuldigen, net zoals u ook niet 10 vingers met 2 oren kunt vermenigvuldigen. </para
+></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title
+>Rekenen met percentages</title>
+
+<procedure>
+<title
+>Hoeveel is 20% van 3000 yen?</title>
+<step
+><para
+>Selecteer <guilabel
+>JPY - Japanse yen</guilabel
+> indien beschikbaar en nog niet geselecteerd.</para
+></step>
+<step
+><para
+>Typ <userinput
+>3000</userinput
+> en druk op de knop <guibutton
+>¥</guibutton
+> of de <keycap
+>Y</keycap
+>-toets.</para
+></step>
+<step
+><para
+>Voer <userinput
+>20</userinput
+> in en druk op de knop <guibutton
+>%</guibutton
+> of de <keycap
+>%</keycap
+>-toets. Net zoals bij vermenigvuldigen moet het getalworden ingetoetst <emphasis
+>voor</emphasis
+> het percentage.</para
+></step>
+<step
+><para
+>Kijk naar het antwoord: dit is 600 yen.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Hoeveel is 3000 yen plus 20%?</title>
+<step
+><para
+>Selecteer <guilabel
+>JPY - Japanse yen</guilabel
+> indien beschikbaar en nog niet geselecteerd.</para
+></step>
+<step
+><para
+>Typ <userinput
+>3000</userinput
+> en druk op de knop <guibutton
+>¥</guibutton
+> of de <keycap
+>Y</keycap
+>-toets.</para
+></step>
+<step
+><para
+>Herhaal de vorige stappen en druk op de knop <guibutton
+>+</guibutton
+> of de toets <keycap
+>+</keycap
+> tussen beide.</para
+></step>
+<step
+><para
+>Voer <userinput
+>20</userinput
+> in en druk op de knop <guibutton
+>%</guibutton
+> of de <keycap
+>%</keycap
+>-toets. Net zoals bij vermenigvuldigen moet het getalworden ingetoetst <emphasis
+>voor</emphasis
+> het percentage.</para
+></step>
+<step
+><para
+>Zie het antwoord: 24,94€ of 3600 ¥ op het tijdstip van vertalen.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Hoeveel is 3000 yen minus 20%?</title>
+<step
+><para
+>Selecteer <guilabel
+>JPY - Japanse yen</guilabel
+> indien beschikbaar en nog niet geselecteerd.</para
+></step>
+<step
+><para
+>Typ <userinput
+>3000</userinput
+> en druk op de knop <guibutton
+>¥</guibutton
+> of de <keycap
+>Y</keycap
+>-toets.</para
+></step>
+<step
+><para
+>Druk nu tussen beide stappen op de knop <guibutton
+>-</guibutton
+> of de toets <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Voer <userinput
+>20</userinput
+> in en druk op de knop <guibutton
+>%</guibutton
+> of de <keycap
+>%</keycap
+>-toets. Net zoals bij vermenigvuldigen moet het getalworden ingetoetst <emphasis
+>voor</emphasis
+> het percentage.</para
+></step>
+<step
+><para
+>Zie het antwoord: 16,63 € of 2400 ¥ op het moment dat deze regels werden vertaald.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title
+>Gebruik van het tussengeheugen</title>
+
+<procedure>
+<title
+>Hoe sla ik nu een waarde op en roep ik die later weer op?</title>
+<step
+><para
+>Maak uw berekeningen.</para
+></step>
+<step
+><para
+>Druk op de knop <guibutton
+>Min</guibutton
+> (Memory in (geheugen in)) waardoor de waarde in het <guilabel
+>Antwoord</guilabel
+>-scherm in het geheugen wordt opgeslagen. Merk op dat de andere geheugenknoppen nu beschikbaar zijn geworden.</para
+></step>
+<step
+><para
+>Doe wat andere berekeningen met de rekenmachine.</para
+></step>
+<step
+><para
+>Roep de waarde op uit het geheugen door op de knop <guibutton
+>MR</guibutton
+>  (Memory Recall (geheugen oproepen)) te drukken.</para
+></step>
+</procedure>
+
+<para
+>Intern worden de waarden zonder eenheid of referentie-munteenheid (euro) opgeslagen met de maximum nauwkeurigheid die de wiskundige bibliotheek toestaat. In sommige gevallen kan dit leiden tot afrondproblemen indien de opgeslagen waarde een afgeronde waarde is in een niet-referentievaluta.</para>
+
+<procedure>
+<title
+>Hoe kan ik de inhoud van het geheugen wissen?</title>
+<step
+><para
+>Druk op de knop <guibutton
+>Wissen</guibutton
+>. Let erop dat met de knop <guibutton
+>Wissen</guibutton
+> alles wordt gewist: de invoer, het antwoord en het geheugen.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Hoe bereken ik 3,1 * 5,2 € + 2,7 * 8,9 €?</title>
+<step
+><para
+>Bereken eerst de eerste helft: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Sla het antwoord op in het geheugen met de knop <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Bereken nu de andere helft: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Tel het antwoord op bij dat in het geheugen met de knop <guibutton
+>M+</guibutton
+>.</para
+></step>
+<step
+><para
+>Roep de som op uit het geheugen met de knop <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>Er zijn nog meer methoden zoals <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € + MR</userinput
+>.</para>
+
+<procedure>
+<title
+>Hoe bereken ik 3,1 * 5,2 € - 2,7 * 8,9 €?</title>
+<step
+><para
+>Bereken eerst de eerste helft: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Sla het antwoord op in het geheugen met de knop <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Bereken nu de andere helft: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Net als hierboven, maar trek nu het antwoord af van dat in het geheugen met de knop <guibutton
+>M-</guibutton
+>.</para
+></step>
+<step
+><para
+>Roep de som op uit het geheugen met de knop <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>Met de invoerrij <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € - MR</userinput
+> wordt het verschil in de omgekeerde richting berekend.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title
+>Opdrachtenoverzicht</title>
+
+<sect1 id="reference-keys">
+<title
+>Standaard sneltoetsen</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>&keurocalc; verlaten</member>
+
+<!--This is changed at runtime by DrClash 
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Displays these help pages</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Goes to the currency selection area</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Displays the <guilabel
+>About</guilabel
+> box</member>
+-->
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Cijfers invoeren</member>
+
+<member
+><keycap
+>.</keycap
+> of <keycap
+>,</keycap
+></member>
+<member
+>Decimaal scheidingsteken</member>
+
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> en <keycap
+>/</keycap
+></member>
+<member
+>Bewerkingen: optellen, aftrekken, vermenigvuldigen, delen</member>
+
+<member
+>&Enter; en <keycap
+>Return</keycap
+></member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een eenvoudige waarde zonder eenheid</member>
+
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een percentage</member>
+
+<member
+>&Backspace;</member>
+<member
+>Verwijderen van de laatste invoer: cijfers, decimaal scheidingsteken of bewerking</member>
+
+<member
+>&Tab; en <keycombo action="simul"
+>&Shift; &Tab;</keycombo
+> toetsen</member>
+<member
+>Met de knopselectie van de ene knop naar de andere gaan of terug</member>
+
+<member
+>Pijl-toetsen</member>
+<member
+>Bij het kiezen van een munteenheid, van de ene naar de andere munteenheid gaan</member>
+
+<member
+>Spatiebalk</member>
+<member
+>Indien de focus op een drukknop is: drukken op deze knop</member>
+
+<member
+><keycap
+>E</keycap
+> of <keycap
+>$</keycap
+></member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een waarde uitgedrukt in de referentie-munteenheid (euro)</member>
+
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Het teken veranderen van het antwoord</member>
+
+<member
+>Elke andere toets</member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een getal in de andere munteenheid</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title
+>De knoppen</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><guibutton
+>0</guibutton
+> tot <guibutton
+>9</guibutton
+></member>
+<member
+>Cijfers invoeren</member>
+
+<member
+><guibutton
+>.</guibutton
+> of <guibutton
+>,</guibutton
+></member>
+<member
+>Decimaal scheidingsteken</member>
+
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Verwijderen van de laatste invoer: cijfers, decimaal scheidingsteken of bewerking</member>
+
+<member
+><guibutton
+>Wissen</guibutton
+></member>
+<member
+>Alles wissen: zowel het invoer- als het antwoordscherm</member>
+
+<member
+><guibutton
+>€</guibutton
+> of <guibutton
+>$</guibutton
+></member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een waarde uitgedrukt in de referentie-munteenheid (euro)</member>
+
+<member
+>De knop met de naam van een andere munteenheid</member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een getal in de andere munteenheid</member>
+
+<member
+><guibutton
+>Enter</guibutton
+></member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een eenvoudige waarde zonder eenheid</member>
+
+<member
+><guibutton
+>%</guibutton
+></member>
+<member
+>Bevestigen van ingevoerd getal, beschouwd als een percentage</member>
+
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Het teken veranderen van het antwoord</member>
+
+<member
+><guibutton
+>Min</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> en <guibutton
+>M-</guibutton
+></member>
+<member
+>Antwoord opslaan in geheugen, ophalen inhoud geheugen naar antwoordscherm, antwoord optellen bij inhoud geheugen en aftrekken antwoord van geheugeninhoud</member>
+
+<member
+><guibutton
+>/</guibutton
+>, <guibutton
+>X</guibutton
+>, <guibutton
+>-</guibutton
+> en <guibutton
+>+</guibutton
+></member>
+<member
+>Bewerkingen: optellen, aftrekken, vermenigvuldigen, delen</member>
+
+<member
+><guibutton
+>Wissen</guibutton
+></member>
+<member
+>Wissen van invoer, antwoord en geheugen</member>
+
+<member
+><guibutton
+>Info over</guibutton
+></member>
+<member
+>Het vak <guilabel
+>Info over</guilabel
+> tonen</member>
+
+<member
+><guibutton
+>Help</guibutton
+></member>
+<member
+>Deze helppagina's tonen</member>
+
+<member
+>Het contextmenu met de codes en namen van de munteenheden</member>
+<member
+>Selecteren van een andere munteenheid om mee te werken</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="settings">
+<title
+>De instellingendialoog</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title
+>Referentie-munteenheid, bron koersen</title>
+
+<para
+>Deze instelling definieert uit welke bron &keurocalc; de wisselkoersen moet ophalen tussen de referentie-munteenheid en andere valuta. De volgende keuzes zijn beschikbaar:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Euro, geen toegang tot internet (alleen vaste koersen)</guilabel
+></term>
+<listitem>
+<para
+>De euro is de referentie-munteenheid. Er worden geen variabele wisselkoersen opgehaald of gebruikt. De enige beschikbare munteenheden zijn die met een vaste omrekeningskoers met de euro.</para>
+<para
+>Deze instelling wordt gebruikt op computers zonder toegang tot het internet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Europese Centrale Bank</guilabel
+></term>
+<listitem>
+<para
+>De euro is de referentie-munteenheid. De vaste wisselkoersen zijn beschikbaar. &keurocalc; probeert de variabele koersen op te halen van de <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Europese Centrale Bank (ECB)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+<!--varlistentry>
+<term
+><guilabel
+>Dollar, New York Federal Reserve Bank</guilabel
+></term>
+<listitem>
+<para
+>Dollar is the reference currency. There are no fixed exchange rates.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para>
+<para
+>Currently, &keurocalc; has a problem determining the date of the latest
+exchange rates published by that bank, because of time zone offsets and non-working
+days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
+not optimal.</para>
+</listitem>
+</varlistentry-->
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Time Genie</guilabel
+></term>
+<listitem>
+<para
+>De euro is de referentie-munteenheid. De vaste wisselkoersen zijn beschikbaar. &keurocalc; probeert de variabele koersen op te halen van de <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title
+>Standaard munteenheid</title>
+
+<para
+>Met deze instelling wordt de andere munteenheid gekozen die in &keurocalc; wordt gebruikt wanneer dit programma wordt gestart, of wanneer de gebruiker nieuwe instellingen kiest.</para>
+
+<para
+>Merk op dat de geselecteerde muntsoort misschien niet aanwezig is in de lijst van de wisselkoersen van de bron voor koersen. In dat geval wordt de eerste munteenheid in de lijst gebruikt.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title
+>Afronding</title>
+
+<para
+>Met deze instelling wordt gedefinieerd hoe de antwoorden worden weergegeven in het antwoordscherm. Intern worden alle berekeningen uitgevoerd met de nauwkeurigheid die mogelijk wordt gemaakt door de wiskundige bibliotheek, maar het is gewoonlijk zinloos om antwoorden in tienden van centen te geven. De volgende afrondmethodes staan ter beschikking:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Officiële afrondregels</guilabel
+></term>
+<listitem>
+<para
+>De regels van de EU of andere officiële regels worden gebruikt. Dit betekent dat het antwoord wordt afgerond tot de dichtstbijzijnde eenheid voor munteenheden als de Japanse yen of de Italiaanse lire, en tot het dichtstbijzijnde honderdste deel van de eenheid (<quote
+>centen</quote
+>) voor munteenheden als de euro en de dollar.</para>
+<para
+>Bijvoorbeeld, 158,323 yen wordt afgerond tot 158 yen. 12,537 euro wordt afgerond tot 12,54 euro.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Kleinste-munt methode</guilabel
+></term>
+<listitem>
+<para
+>Het antwoord wordt afgerond tot de dichtstbijzijnde kleinste munt die circuleert in het land waar die munteenheid wordt gebruikt. Voor muntsoorten die verdwenen zijn zoals de Italiaanse lire wordt de kleinste munt gebruikt die in circulatie was voordat de muntsoort werd ingetrokken: in het geval van de Italiaanse lire was dit de munt van 50 lire.</para>
+<para
+>Bijvoorbeeld, 1235,9 Italiaanse lires worden afgerond tot 1250 lires. 39,45 Noorse kronen worden afgerond tot 39,50 kronen.</para>
+<para
+>Wij hebben onvoldoende informatie over de kleinste munten die in omloop zijn in alle landen. Stuurt u ons een "bugreport" (een bericht over een programmafout) indien door &keurocalc; een onjuiste waarde wordt gebruikt voor de kleinste munt die in uw land in omloop is, waarna we die informatie kunnen gebruiken om het programma beter te maken.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Geen afronding</guilabel
+></term>
+<listitem>
+<para
+>De berekende waarde wordt ongewijzigd getoond, als een decimale breuk.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-look-and-feel">
+<title
+>Uiterlijk en gedrag</title>
+
+<para
+>Met deze instelling wijzigt u het uiterlijk en gedrag van &keurocalc;. De volgende opties zijn aanwezig:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Schermkleur</guilabel
+></term>
+<listitem>
+<para
+>De achtergrondkleur van de schermpjes voor zowel de invoer als het antwoord. Om de achtergrondkleur te wijzigen klikt u op <guibutton
+>Wijzigen...</guibutton
+>. Hiermee opent u de standaard dialoog van &kde; voor het selecteren van een kleur. Kies een nieuwe kleur. Daarna drukt u op <guibutton
+>OK</guibutton
+> waarmee de nieuwe keuze wordt bevestigd.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Opstartscherm aan</guilabel
+></term>
+<listitem>
+<para
+>Deselecteer dit keuzevakje als u niet wilt dat er even een afbeelding wordt getoond voor het werkelijke opstarten van &keurocalc;.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licenties</title>
+
+<para
+>&keurocalc;</para>
+
+<para
+>Programma copyright 2001-2019 de ontwikkelaars van &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+> - ontwerp en implementatie</para
+></listitem>
+<listitem
+><para
+>Gil Gross <email
+>ptit.ours@_NOSPAM_gmail.com</email
+> - toegevoegde functionaliteit</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_NOSPAM_unet.univie.ac.at</email
+> - ontwerp en testen</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_NOSPAM_euronet.nl</email
+> - grafische vormgeving</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>Documentatie copyright 2001-2019 Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+>.</para>
+
+<para
+>Documentatie nagekeken door &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+<para
+><email
+>jjh punt woldringh bij planet punt nl</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

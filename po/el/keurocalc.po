@@ -1,0 +1,899 @@
+# translation of keurocalc.po to Greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2009.
+# Petros <pvidalis@gmail.com>, 2009.
+# Stelios <sstavra@gmail.com>, 2011, 2014, 2015, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: keurocalc\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-06 00:48+0000\n"
+"PO-Revision-Date: 2021-09-09 16:51+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "United Arab Emirates dirham"
+msgstr "Ηνωμένα Αραβικά Εμιράτα ντιρχάμ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Netherlands Antilles guilder"
+msgstr "Ολλανδικές Αντίλλες φιορίνι"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Angola kwanza"
+msgstr "Ανγκόλα κουάνζα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Argentina peso"
+msgstr "Αργεντινή πέσο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Austrian schilling"
+msgstr "Αυστρία σκίλινγκ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Australian dollar"
+msgstr "Αυστραλία δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Barbados dollar"
+msgstr "Μπαμπάντος δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Belgian franc"
+msgstr "Βελγικό φράγκο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bulgarian lev"
+msgstr "Βουλγαρία λεβ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bahrain dinar"
+msgstr "Μπαχρέιν δηνάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bermuda dollar"
+msgstr "Βερμούδες δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Brunei dollar"
+msgstr "Μπρουνέι δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Brazilian real"
+msgstr "Βραζιλία ρεάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bahamas dollar"
+msgstr "Μπαχάμες δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Canadian dollar"
+msgstr "Καναδικό δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Swiss franc"
+msgstr "Ελβετικό φράγκο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Chile peso"
+msgstr "Χιλή πέσο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Chinese yuan"
+msgstr "Κινεζικό γιουάν"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cape Verde escudo"
+msgstr "Πράσινο Ακρωτήριο εσκούδο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cyprus pound"
+msgstr "Κυπριακή λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Czech koruna"
+msgstr "Τσέχικη κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "German deutschmark"
+msgstr "Γερμανικό μάρκο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Danish krone"
+msgstr "Δανική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Dominican Republic peso"
+msgstr "Δομινικανική Δημοκρατία πέσο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Estonian kroon"
+msgstr "Εσθονική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Egypt pound"
+msgstr "Αιγυπτιακή λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Spanish peseta"
+msgstr "Ισπανική πεσέτα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "EU euro"
+msgstr "ΕΕ ευρώ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Finnish markka"
+msgstr "Φινλανδική μάρκα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Fiji dollar"
+msgstr "Φίτζι δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "French franc"
+msgstr "Γαλλικό φράγκο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Great Britain pound"
+msgstr "Μεγάλη βρετανία λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Greek drachma"
+msgstr "Ελληνική δραχμή"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Guyana dollar"
+msgstr "Γουιάνα δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Hong kong dollar"
+msgstr "Χονγκ Κονγκ δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Croatian kuna"
+msgstr "Κροατική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Hungarian forint"
+msgstr "Ουγγαρία φιορίνι"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Indonesian rupiah"
+msgstr "Ινδονησία ρουπία"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Irish punt"
+msgstr "Ιρλανδικό πουντ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Israel new shekel"
+msgstr "Ισραήλ νέο σέκελ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Indian rupee"
+msgstr "Ινδική ρουπία"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Iran rial"
+msgstr "Ιράν ριάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Icelandic krona"
+msgstr "Ισλανδική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Italian lira"
+msgstr "Ιταλική λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Jamaica dollar"
+msgstr "Τζαμάικα δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Japanese yen"
+msgstr "Ιαπωνικό γιεν"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Kenya schilling"
+msgstr "Κένυα σελίνι"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cambodia riel"
+msgstr "Καμπότζη ριέλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "South Korean won"
+msgstr "Νότια Κορέα γουόν"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Kuwait dinar"
+msgstr "Κουβέιτ δηνάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cayman Islands dollar"
+msgstr "Νήσοι Καϋμάν δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Kazakhstan tenge"
+msgstr "Καζαχστάν τένγκε"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Sri Lankan rupee"
+msgstr "Σρι Λάνκα ρούπε"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Lituanian litas"
+msgstr "Λιθουανία λίτας"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Luxembourg franc"
+msgstr "Λουξεμβούργο φράγκο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Latvian latas"
+msgstr "Λετονικό λάτας"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Morocco dirham"
+msgstr "Μαρόκο ντιρχάμ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Macau pataca"
+msgstr "Μακάο πατάκα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Maltese lira"
+msgstr "Μαλτέζικη λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Mexican peso"
+msgstr "Μεξικάνικο πέσο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Malaysian ringgit"
+msgstr "Μαλαισιανό ρίνγκιτ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Mozambican metical"
+msgstr "Μοζαμβίκη μετικάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Dutch gulden"
+msgstr "Ολλανδικό γκούλντεν"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Norvegian krone"
+msgstr "Νορβηγική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "New Zealand dollar"
+msgstr "Νέα Ζηλανδία δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Oman rial"
+msgstr "Ομάν ριάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Panama balboa"
+msgstr "Παναμά Μπαλμπόα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Peru nuevo sol"
+msgstr "Περού νέο σολ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Philippine peso"
+msgstr "Φιλιππίνες πέσο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Pakistan rupee"
+msgstr "Πακιστανική ρουπία"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Polish zloty"
+msgstr "Πολωνικό ζλότι"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Portuguese escudo"
+msgstr "Πορτογαλέζικο εσκούδο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Qatar rial"
+msgstr "Κατάρ ριάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Romanian new leu"
+msgstr "Ρουμάνικο λεβ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Serbian dinar"
+msgstr "Σερβικό δηνάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Russian rouble"
+msgstr "Ρωσικό ρούβλι"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Saudi Arabia riyal"
+msgstr "Σαουδική Αραβία ριάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Swedish krona"
+msgstr "Σουηδική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Singapore dollar"
+msgstr "Σινγκαπούρη δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Slovenian tolar"
+msgstr "Σλοβένικο τόλαρ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Slovakian koruna"
+msgstr "Σλοβακική κορώνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Sao Tome and Principe dobra"
+msgstr "Σάο Τομέ και Πρίνσιπε ντόμπρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Syrian pound"
+msgstr "Συρία λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Thai baht"
+msgstr "Ταϊλανδέζικο μπαχτ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Turkish new lira"
+msgstr "Τουρκία νέα λίρα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Trinidad and Tobago dollar"
+msgstr "Τρινιντάντ και Τομπάγκο δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Taiwanese new dollar"
+msgstr "Ταϊβάν νέο δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Ukraine hryvnia"
+msgstr "Ουκρανία γρίβνα"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "US dollar"
+msgstr "ΗΠΑ δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Venezuelan bolivar fuerte"
+msgstr "Βενεζουέλα μπολιβάρ φουέρτε"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Vietnam dong"
+msgstr "Βιετνάμ ντογκ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Central African CFA franc"
+msgstr "Κεντρική Αφρική Φράγκο CFA"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "East Caribbean dollar"
+msgstr "Ανατολική Καραϊβική δολάριο"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "West African CFA franc"
+msgstr "Δυτική Αφρική Φράγκο CFA"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Yemen rial"
+msgstr "Υεμένη ριάλ"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "South African rand"
+msgstr "Νότια Αφρική ραντ"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, Calculator)
+#: calculator.ui:14
+#, kde-format
+msgid "Currency Calculator"
+msgstr "Υπολογιστής συναλλάγματος"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox4)
+#: calculator.ui:241
+#, kde-format
+msgid "Input"
+msgstr "Είσοδος"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox5)
+#: calculator.ui:1301
+#, kde-format
+msgid "Result"
+msgstr "Αποτέλεσμα"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, BackspaceButton)
+#: calculator.ui:1930
+#, kde-format
+msgid "Correct last input digit"
+msgstr "Διόρθωση τελευταίου ψηφίου εισόδου"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, ReferenceButton)
+#: calculator.ui:1968
+#, kde-format
+msgid "Enter value expressed in reference currency"
+msgstr "Εισαγωγή τιμής εκφραζόμενης στο νόμισμα αναφοράς"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, SlashButton)
+#: calculator.ui:1990
+#, kde-format
+msgid "Divide"
+msgstr "Διαίρεση"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MInputButton)
+#: calculator.ui:2012
+#, kde-format
+msgid "Store in memory"
+msgstr "Αποθήκευση στη μνήμη"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, ResetButton)
+#: calculator.ui:2050
+#, kde-format
+msgid "Reset both input, result and memory"
+msgstr "Επαναφορά της εισόδου, του αποτελέσματος και της μνήμης"
+
+#. i18n: ectx: property (text), widget (QPushButton, ResetButton)
+#: calculator.ui:2053
+#, kde-format
+msgid "Reset"
+msgstr "Επαναφορά"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, CurrencyButton)
+#: calculator.ui:2132
+#, kde-format
+msgid "Enter value expressed in currency"
+msgstr "Εισαγωγή τιμής εκφραζόμενης στο νόμισμα"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, AsteriskButton)
+#: calculator.ui:2157
+#, kde-format
+msgid "Multiply"
+msgstr "Πολλαπλασιασμός"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MRecallButton)
+#: calculator.ui:2182
+#, kde-format
+msgid "Recall from memory"
+msgstr "Επαναφορά από τη μνήμη"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, AboutButton)
+#: calculator.ui:2204
+#, kde-format
+msgid "Display about box"
+msgstr "Εμφάνιση πλαισίου σχετικά με το πρόγραμμα"
+
+#. i18n: ectx: property (text), widget (QPushButton, AboutButton)
+#: calculator.ui:2207
+#, kde-format
+msgid "&About..."
+msgstr "&Σχετικά..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, SimpleValueButton)
+#: calculator.ui:2286
+#, kde-format
+msgid "Enter simple value"
+msgstr "Εισαγωγή απλής τιμής"
+
+#. i18n: ectx: property (text), widget (QPushButton, SimpleValueButton)
+#: calculator.ui:2289
+#, kde-format
+msgctxt "Enter button"
+msgid "Enter"
+msgstr "Enter"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MinusButton)
+#: calculator.ui:2314
+#, kde-format
+msgid "Subtract"
+msgstr "Αφαίρεση"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MMinusButton)
+#: calculator.ui:2339
+#, kde-format
+msgid "Subtract from memory"
+msgstr "Αφαίρεση από τη μνήμη"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, HelpButton)
+#: calculator.ui:2361
+#, kde-format
+msgid "Display help pages"
+msgstr "Εμφάνιση σελίδων βοήθειας"
+
+#. i18n: ectx: property (text), widget (QPushButton, HelpButton)
+#: calculator.ui:2364
+#, kde-format
+msgid "&Help..."
+msgstr "&Βοήθεια..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, PercentButton)
+#: calculator.ui:2421
+#, kde-format
+msgid "Apply percentage value"
+msgstr "Εφαρμογή ποσοστιαίας τιμής"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, PlusMinusButton)
+#: calculator.ui:2443
+#, kde-format
+msgid "Change sign"
+msgstr "Αλλαγή προσήμου"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, PlusButton)
+#: calculator.ui:2468
+#, kde-format
+msgid "Add"
+msgstr "Προσθήκη"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MPlusButton)
+#: calculator.ui:2493
+#, kde-format
+msgid "Add to memory"
+msgstr "Πρόσθεση στη μνήμη"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, SettingsButton)
+#: calculator.ui:2515
+#, kde-format
+msgid "Configure KEuroCalc"
+msgstr "Διαμόρφωση του KEuroCalc"
+
+#. i18n: ectx: property (text), widget (QPushButton, SettingsButton)
+#: calculator.ui:2518
+#, kde-format
+msgid "&Settings..."
+msgstr "&Ρυθμίσεις..."
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, CurrencyList)
+#: calculator.ui:2531
+#, kde-format
+msgid "Currencies"
+msgstr "Νομίσματα"
+
+#: keurocalc.cpp:75
+#, kde-format
+msgid "Cannot load currencies.xml"
+msgstr "Αδυναμία φόρτωσης του currencies.xml"
+
+#: keurocalc.cpp:1008
+#, kde-format
+msgid "Fixed"
+msgstr "Σταθερό"
+
+#: keurocalc.cpp:1012
+#, kde-format
+msgid "ECB"
+msgstr "ECB"
+
+#: keurocalc.cpp:1013 keurocalc.cpp:1021
+#, kde-format
+msgid "Loading..."
+msgstr "Φόρτωση..."
+
+#: keurocalc.cpp:1020
+#, kde-format
+msgid "TG"
+msgstr "TG"
+
+#: keurocalc.cpp:1026
+#, kde-format
+msgid "Official rules"
+msgstr "Επίσημοι κανόνες"
+
+#: keurocalc.cpp:1029
+#, kde-format
+msgid "Smallest coin"
+msgstr "Μικρότερο νόμισμα"
+
+#: keurocalc.cpp:1032
+#, kde-format
+msgid "No rounding"
+msgstr "Δίχως στρογγυλοποίηση"
+
+#: keurocalc.cpp:1106
+#, kde-format
+msgid "Not loaded"
+msgstr "Μη φορτωμένο"
+
+#: main.cpp:34
+#, kde-format
+msgid "(c) 2001-2019, the KEuroCalc developers"
+msgstr "(c) 2001-2019, οι προγραμματιστές του KEuroCalc"
+
+#: main.cpp:35
+#, kde-format
+msgid "Cash converter and calculator"
+msgstr "Μετατροπέας συναλλάγματος και αριθμομηχανή"
+
+#: main.cpp:36
+#, kde-format
+msgid "KEuroCalc"
+msgstr "KEuroCalc"
+
+#: main.cpp:37
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"This program is dedicated to all who know that money does not justify "
+"anything.\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Ένα πρόγραμμα από τον Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Αυτό το πρόγραμμα είναι αφιερωμένο σέ όσους γνωρίζουν\n"
+"ότι το χρήμα δεν δικαιολογεί τίποτα.\n"
+"\n"
+"Οι συναλλαγματικές ισοτιμίες από το Time Genie είναι ευγενική χορηγία του <a "
+"href='http://www.timegenie.com/' title='foreign exchange rates courtesy of "
+"Time Genie'>Time Genie</a>\n"
+
+#: main.cpp:39
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:39
+#, kde-format
+msgid "Design and implementation"
+msgstr "Σχεδίαση και εφαρμογή"
+
+#: main.cpp:40
+#, kde-format
+msgid "Gil Gross"
+msgstr "Gil Gross"
+
+#: main.cpp:40
+#, kde-format
+msgid "Additional functionality"
+msgstr "Επιπλέον λειτουργικότητα"
+
+#: main.cpp:41
+#, kde-format
+msgid "Melchior Franz"
+msgstr "Melchior Franz"
+
+#: main.cpp:41
+#, kde-format
+msgid "Design and testing"
+msgstr "Σχεδίαση και δοκιμές"
+
+#: main.cpp:42
+#, kde-format
+msgid "Bas Willems"
+msgstr "Bas Willems"
+
+#: main.cpp:42
+#, kde-format
+msgid "Graphical artwork"
+msgstr "Γραφικό στόλισμα"
+
+#: main.cpp:44
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Stelios"
+
+#: main.cpp:45
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org, sstavra@gmail.com"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, SettingsDialog)
+#: settingsdialog.ui:14
+#, kde-format
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#. i18n: ectx: property (title), widget (QGroupBox, AppearanceGroup)
+#: settingsdialog.ui:27
+#, kde-format
+msgid "Look and feel"
+msgstr "Εμφάνιση και Αίσθηση"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: settingsdialog.ui:35
+#, kde-format
+msgid "Display color"
+msgstr "Εμφάνιση χρώματος"
+
+#. i18n: ectx: property (text), widget (QLabel, displayColorResult)
+#: settingsdialog.ui:510
+#, kde-format
+msgid "215.06 €"
+msgstr "215.06 €"
+
+#. i18n: ectx: property (text), widget (QPushButton, qPushButtonDisplayColor)
+#: settingsdialog.ui:526
+#, kde-format
+msgid "C&hange..."
+msgstr "Αλ&λαγή..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxSplashScreen)
+#: settingsdialog.ui:553
+#, kde-format
+msgid "Enable splash screen"
+msgstr "Ενεργοποίηση οθόνης εκκίνησης"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: settingsdialog.ui:581
+#, kde-format
+msgid "Rounding"
+msgstr "Στρογγυλοποίηση"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonOfficialRules)
+#: settingsdialog.ui:587
+#, kde-format
+msgid "Offic&ial rounding rules"
+msgstr "Επίσημο&ι κανόνες στρογγυλοποίησης"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonSmallestCoin)
+#: settingsdialog.ui:594
+#, kde-format
+msgid "Smallest coin &method"
+msgstr "Μέθοδος μικρότερου νομίσ&ματος"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonNoRounding)
+#: settingsdialog.ui:601
+#, kde-format
+msgid "&No rounding at all"
+msgstr "&Χωρίς στρογγυλοποίηση"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: settingsdialog.ui:611
+#, kde-format
+msgid "Reference currency, rates origin"
+msgstr "Νόμισμα αναφοράς, προέλευση ισοτιμιών"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroFixed)
+#: settingsdialog.ui:617
+#, kde-format
+msgid "Euro, no ne&twork access (fixed rates only)"
+msgstr "Ευρώ, χωρίς πρόσβαση δικ&τύου (σταθερές τιμές μόνο)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroECB)
+#: settingsdialog.ui:627
+#, kde-format
+msgid "E&uro, European Central Bank"
+msgstr "Ε&υρώ, Ευρωπαϊκή Κεντρική Τράπεζα"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroTG)
+#: settingsdialog.ui:637
+#, kde-format
+msgid "Euro, Time &Genie"
+msgstr "Euro, Time &Genie"
+
+#. i18n: ectx: property (text), widget (QLabel, defaultCurrencyText)
+#: settingsdialog.ui:649
+#, kde-format
+msgid "Default currency"
+msgstr "Προκαθορισμένο νόμισμα"
+
+#~ msgid "O&K"
+#~ msgstr "Ε&ντάξει"
+
+#~ msgid "Cance&l"
+#~ msgstr "Ακύρω&ση"
+
+#~ msgid "NY FRB"
+#~ msgstr "NY FRB"
+
+#~ msgid "&Dollar, New York Federal Reserve Bank"
+#~ msgstr "&Δολάριο, Ομοσπονδιακή τράπεζα αποθεματικού Νέας Υόρκης"

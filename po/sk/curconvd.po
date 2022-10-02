@@ -1,0 +1,79 @@
+# translation of curconvd.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2008, 2009.
+# Peter Mihálik <udavac@inmail.sk>, 2008.
+# Roman Paholík <wizzardsk@gmail.com>, 2014, 2015, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2022-04-09 19:32+0200\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Peter Mihálik"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "udavac@inmail.sk"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr "curconvd: čakám na požiadavky D-Bus"
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr "curconvd: koniec čakania na požiadavky D-Bus"
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "Démon konverzie meny"
+
+#: main.cpp:33
+#, kde-format
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2019, vývojári curconvd"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Program vytvoril Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Výmenné kurzy Time Genie od <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "Dizajn a implementácia"
+
+#~ msgid "Time Genie exchange rates courtesy of Time Genie"
+#~ msgstr "Time Genie výmenné kurzy s povolením Time Genie"

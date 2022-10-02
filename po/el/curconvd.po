@@ -1,0 +1,88 @@
+# translation of curconvd.po to greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2009.
+# Stelios <sstavra@gmail.com>, 2011, 2014, 2015, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2019-08-13 08:57+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 18.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Stelios"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org, sstavra@gmail.com"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr "curconvd: σε αναμονή για αιτήσεις D-Bus"
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr "curconvd: διακοπή αναμονής για αιτήσεις D-Bus"
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "Ένας δαίμονας μετατροπής νομισμάτων"
+
+#: main.cpp:33
+#, kde-format
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2019, οι προγραμματιστές του curconvd"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Ένα πρόγραμμα από τον Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Οι συναλλαγματικές ισοτιμίες Time Genie είναι ευγενική χορηγία του <a "
+"href='http://www.timegenie.com/' title='foreign exchange rates courtesy of "
+"Time Genie'>Time Genie</a>\n"
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "Σχεδίαση και δημιουργία"
+
+#~ msgid "Time Genie exchange rates courtesy of Time Genie"
+#~ msgstr ""
+#~ "Οι συναλλαγματικές ισοτιμίες Time Genie είναι ευγενική χορηγία του Time "
+#~ "Genie"
+
+#~ msgid "A program by Éric Bischoff <ebischoff@nerim.net>\n"
+#~ msgstr "Ένα πρόγραμμα από τον Éric Bischoff <ebischoff@nerim.net>\n"

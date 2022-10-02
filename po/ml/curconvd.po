@@ -1,0 +1,75 @@
+# Malayalam Translation of curconvd.pot
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the curconvd package.
+# SANKARANARAYANAN |ശങ്കരനാരായണന്‍<snaalledam@dataone.in>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd.pot \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2009-01-18 HO:MI+ZONE\n"
+"Last-Translator: SANKARANARAYANAN |ശങ്കരനാരായണന്‍<snalledam@dataone.in>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sankaranarayanan | ശങ്കരനാരായണന്‍ "
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "snalledam@dataone.in"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr ""
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr ""
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "കര്‍കോണ്‍വ്ഡി"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "നാണയമാറ്റത്തിനുള്ള മാന്ത്രികസഹായി"
+
+#: main.cpp:33
+#, fuzzy, kde-format
+#| msgid "(c) 2006-2009, the curconvd developers"
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2009, കര്‍കോണ്‍വ്‌ഡി വികസിപ്പിച്ചവര്‍"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "എറിക് ബിഷോഫ്"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "രൂപരേഖയും നിര്‍വ്വഹണവും"
+
+#~ msgid "A program by Éric Bischoff <ebischoff@nerim.net>\n"
+#~ msgstr "എറിക് ബിഷോഫിന്റെ <ebischoff@nerim.net> ഒരു പ്രോഗ്രാം\n"

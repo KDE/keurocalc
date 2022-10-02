@@ -1,0 +1,891 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: keurocalc\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-06 00:48+0000\n"
+"PO-Revision-Date: 2022-02-27 19:51+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "United Arab Emirates dirham"
+msgstr "Dirham Emiratele Arabe Unite"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Netherlands Antilles guilder"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Angola kwanza"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Argentina peso"
+msgstr "Peso argentinian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Austrian schilling"
+msgstr "Șiling austriac"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Australian dollar"
+msgstr "Dolar australian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Barbados dollar"
+msgstr "Dolar Barbados"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Belgian franc"
+msgstr "Franc belgian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bulgarian lev"
+msgstr "Levă bulgară"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bahrain dinar"
+msgstr "Dinar Bahrain"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bermuda dollar"
+msgstr "Dolar Bermude"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Brunei dollar"
+msgstr "Dolar Brunei"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Brazilian real"
+msgstr "Real brazilian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Bahamas dollar"
+msgstr "Dolar Bahamas"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Canadian dollar"
+msgstr "Dolar canadian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Swiss franc"
+msgstr "Franc elvețian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Chile peso"
+msgstr "Peso chilian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Chinese yuan"
+msgstr "Yuan chinez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cape Verde escudo"
+msgstr "Escudo Capul Verde"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cyprus pound"
+msgstr "Liră cipriotă"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Czech koruna"
+msgstr "Coroană cehă"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "German deutschmark"
+msgstr "Marcă germană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Danish krone"
+msgstr "Coroană daneză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Dominican Republic peso"
+msgstr "Peso Republica Dominicană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Estonian kroon"
+msgstr "Coroană estoniană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Egypt pound"
+msgstr "Liră egipteană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Spanish peseta"
+msgstr "Peseta spaniolă"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "EU euro"
+msgstr "Euro UE"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Finnish markka"
+msgstr "Marcă finlandeză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Fiji dollar"
+msgstr "Dolar Fiji"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "French franc"
+msgstr "Franc francez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Great Britain pound"
+msgstr "Liră sterlină"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Greek drachma"
+msgstr "Drahmă grecească"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Guyana dollar"
+msgstr "Dolar Guyana"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Hong kong dollar"
+msgstr "Dolar Hong Kong"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Croatian kuna"
+msgstr "Kună croată"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Hungarian forint"
+msgstr "Forint unguresc"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Indonesian rupiah"
+msgstr "Rupie indoneziană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Irish punt"
+msgstr "Liră irlandeză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Israel new shekel"
+msgstr "Șekel israelian nou"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Indian rupee"
+msgstr "Rupie indiană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Iran rial"
+msgstr "Rial iranian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Icelandic krona"
+msgstr "Coroană islandeză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Italian lira"
+msgstr "Liră italiană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Jamaica dollar"
+msgstr "Dolar jamaican"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Japanese yen"
+msgstr "Yen japonez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Kenya schilling"
+msgstr "Șiling kenyan"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cambodia riel"
+msgstr "Riel cambodgian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "South Korean won"
+msgstr "Won sud-coreean"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Kuwait dinar"
+msgstr "Dinar Kuweit"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Cayman Islands dollar"
+msgstr "Dolar Insulele Cayman"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Kazakhstan tenge"
+msgstr "Tenge kazah"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Sri Lankan rupee"
+msgstr "Rupie Sri Lanka"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Lituanian litas"
+msgstr "Litași lituanieni"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Luxembourg franc"
+msgstr "Franc luxemburghez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Latvian latas"
+msgstr "Lata letonă"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Morocco dirham"
+msgstr "Dirham marocan"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Macau pataca"
+msgstr "Pataca Macau"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Maltese lira"
+msgstr "Liră malteză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Mexican peso"
+msgstr "Peso mexican"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Malaysian ringgit"
+msgstr "Ringgit Malaysian"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Mozambican metical"
+msgstr "Metical mozambican"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Dutch gulden"
+msgstr "Gulden olandez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Norvegian krone"
+msgstr "Coroană norvegiană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "New Zealand dollar"
+msgstr "Dolar neozeelandez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Oman rial"
+msgstr "Rial Oman"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Panama balboa"
+msgstr "Balboa Panama"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Peru nuevo sol"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Philippine peso"
+msgstr "Peso filipinez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Pakistan rupee"
+msgstr "Rupie pakistaneză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Polish zloty"
+msgstr "Zlot polonez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Portuguese escudo"
+msgstr "Escudo portughez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Qatar rial"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Romanian new leu"
+msgstr "Leu românesc nou"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Serbian dinar"
+msgstr "Dinar sârbesc"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Russian rouble"
+msgstr "Rublă rusească"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Saudi Arabia riyal"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Swedish krona"
+msgstr "Coroană suedeză"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Singapore dollar"
+msgstr "Dolar singaporez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Slovenian tolar"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Slovakian koruna"
+msgstr "Coroană slovacă"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Sao Tome and Principe dobra"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Syrian pound"
+msgstr "Liră siriană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Thai baht"
+msgstr "Baht tailandez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Turkish new lira"
+msgstr "Liră turcească nouă"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Trinidad and Tobago dollar"
+msgstr "Dolar Trinidad și Tobago"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Taiwanese new dollar"
+msgstr "Dolar taiwanez nou"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Ukraine hryvnia"
+msgstr "Hrivnă ucraineană"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "US dollar"
+msgstr "Dolar american"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Venezuelan bolivar fuerte"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Vietnam dong"
+msgstr "Dong vietnamez"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Central African CFA franc"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "East Caribbean dollar"
+msgstr "Dolar Caraibele de est"
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "West African CFA franc"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "Yemen rial"
+msgstr ""
+
+#. i18n: file: ../currencies/currencies.xml
+#, kde-format
+msgid "South African rand"
+msgstr "Rand sud-african"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, Calculator)
+#: calculator.ui:14
+#, kde-format
+msgid "Currency Calculator"
+msgstr "Calculator valutar"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox4)
+#: calculator.ui:241
+#, kde-format
+msgid "Input"
+msgstr "Intrare"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox5)
+#: calculator.ui:1301
+#, kde-format
+msgid "Result"
+msgstr "Rezultat"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, BackspaceButton)
+#: calculator.ui:1930
+#, kde-format
+msgid "Correct last input digit"
+msgstr "Corectează ultima cifră de intrare"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, ReferenceButton)
+#: calculator.ui:1968
+#, kde-format
+msgid "Enter value expressed in reference currency"
+msgstr "Introduceți valoarea exprimată în moneda de referință"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, SlashButton)
+#: calculator.ui:1990
+#, kde-format
+msgid "Divide"
+msgstr "Împarte"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MInputButton)
+#: calculator.ui:2012
+#, kde-format
+msgid "Store in memory"
+msgstr "Stochează în memorie"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, ResetButton)
+#: calculator.ui:2050
+#, kde-format
+msgid "Reset both input, result and memory"
+msgstr "Reinițializează intrarea, rezultatul și memoria"
+
+#. i18n: ectx: property (text), widget (QPushButton, ResetButton)
+#: calculator.ui:2053
+#, kde-format
+msgid "Reset"
+msgstr "Reinițializează"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, CurrencyButton)
+#: calculator.ui:2132
+#, kde-format
+msgid "Enter value expressed in currency"
+msgstr "Introduceți valoarea exprimată în monedă"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, AsteriskButton)
+#: calculator.ui:2157
+#, kde-format
+msgid "Multiply"
+msgstr "Înmulţeşte"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MRecallButton)
+#: calculator.ui:2182
+#, kde-format
+msgid "Recall from memory"
+msgstr "Scoate din memorie"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, AboutButton)
+#: calculator.ui:2204
+#, kde-format
+msgid "Display about box"
+msgstr "Arată caseta Despre"
+
+#. i18n: ectx: property (text), widget (QPushButton, AboutButton)
+#: calculator.ui:2207
+#, kde-format
+msgid "&About..."
+msgstr "&Despre…"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, SimpleValueButton)
+#: calculator.ui:2286
+#, kde-format
+msgid "Enter simple value"
+msgstr "Introduceți valoare simplă"
+
+#. i18n: ectx: property (text), widget (QPushButton, SimpleValueButton)
+#: calculator.ui:2289
+#, kde-format
+msgctxt "Enter button"
+msgid "Enter"
+msgstr "Enter"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MinusButton)
+#: calculator.ui:2314
+#, kde-format
+msgid "Subtract"
+msgstr "Scade"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MMinusButton)
+#: calculator.ui:2339
+#, kde-format
+msgid "Subtract from memory"
+msgstr "Scade din memorie"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, HelpButton)
+#: calculator.ui:2361
+#, kde-format
+msgid "Display help pages"
+msgstr "Afișează pagini cu ajutor"
+
+#. i18n: ectx: property (text), widget (QPushButton, HelpButton)
+#: calculator.ui:2364
+#, kde-format
+msgid "&Help..."
+msgstr "&Ajutor…"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, PercentButton)
+#: calculator.ui:2421
+#, kde-format
+msgid "Apply percentage value"
+msgstr "Aplică valoare procentuală"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, PlusMinusButton)
+#: calculator.ui:2443
+#, kde-format
+msgid "Change sign"
+msgstr "Schimbă semnul"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, PlusButton)
+#: calculator.ui:2468
+#, kde-format
+msgid "Add"
+msgstr "Adaugă"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, MPlusButton)
+#: calculator.ui:2493
+#, kde-format
+msgid "Add to memory"
+msgstr "Adaugă în memorie"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, SettingsButton)
+#: calculator.ui:2515
+#, kde-format
+msgid "Configure KEuroCalc"
+msgstr "Configurează KEuroCalc"
+
+#. i18n: ectx: property (text), widget (QPushButton, SettingsButton)
+#: calculator.ui:2518
+#, kde-format
+msgid "&Settings..."
+msgstr "&Configurări…"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, CurrencyList)
+#: calculator.ui:2531
+#, kde-format
+msgid "Currencies"
+msgstr "Monede"
+
+#: keurocalc.cpp:75
+#, kde-format
+msgid "Cannot load currencies.xml"
+msgstr "currencies.xml nu poate fi încărcat"
+
+#: keurocalc.cpp:1008
+#, kde-format
+msgid "Fixed"
+msgstr "Fix"
+
+#: keurocalc.cpp:1012
+#, kde-format
+msgid "ECB"
+msgstr "ECB"
+
+#: keurocalc.cpp:1013 keurocalc.cpp:1021
+#, kde-format
+msgid "Loading..."
+msgstr "Se încarcă…"
+
+#: keurocalc.cpp:1020
+#, kde-format
+msgid "TG"
+msgstr "TG"
+
+#: keurocalc.cpp:1026
+#, kde-format
+msgid "Official rules"
+msgstr "Reguli oficiale"
+
+#: keurocalc.cpp:1029
+#, kde-format
+msgid "Smallest coin"
+msgstr "Cea mai mică monedă"
+
+#: keurocalc.cpp:1032
+#, kde-format
+msgid "No rounding"
+msgstr "Fără rotunjire"
+
+#: keurocalc.cpp:1106
+#, kde-format
+msgid "Not loaded"
+msgstr "Neîncărcat"
+
+#: main.cpp:34
+#, kde-format
+msgid "(c) 2001-2019, the KEuroCalc developers"
+msgstr "(c) 2001-2019, Dezvoltatorii KEuroCalc"
+
+#: main.cpp:35
+#, kde-format
+msgid "Cash converter and calculator"
+msgstr "Convertor și calculator de lichidități"
+
+#: main.cpp:36
+#, kde-format
+msgid "KEuroCalc"
+msgstr "KEuroCalc"
+
+#: main.cpp:37
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"This program is dedicated to all who know that money does not justify "
+"anything.\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Un program de Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Acest program e dedicat tuturor celor ce știu  că banii nu justifică orice.\n"
+"\n"
+"Rate de schimb Time Genie mulțumite <a href='http://www.timegenie.com/' "
+"title='rate de schimb valutar mulțumite Time Genie'>Time Genie</a>\n"
+
+#: main.cpp:39
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:39
+#, kde-format
+msgid "Design and implementation"
+msgstr "Proiectare și implementare"
+
+#: main.cpp:40
+#, kde-format
+msgid "Gil Gross"
+msgstr "Gil Gross"
+
+#: main.cpp:40
+#, kde-format
+msgid "Additional functionality"
+msgstr "Funcționalitate suplimentară"
+
+#: main.cpp:41
+#, kde-format
+msgid "Melchior Franz"
+msgstr "Melchior Franz"
+
+#: main.cpp:41
+#, kde-format
+msgid "Design and testing"
+msgstr "Proiectare și testare"
+
+#: main.cpp:42
+#, kde-format
+msgid "Bas Willems"
+msgstr "Bas Willems"
+
+#: main.cpp:42
+#, kde-format
+msgid "Graphical artwork"
+msgstr "Grafică"
+
+#: main.cpp:44
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#: main.cpp:45
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, SettingsDialog)
+#: settingsdialog.ui:14
+#, kde-format
+msgid "Settings"
+msgstr "Configurări"
+
+#. i18n: ectx: property (title), widget (QGroupBox, AppearanceGroup)
+#: settingsdialog.ui:27
+#, kde-format
+msgid "Look and feel"
+msgstr "Aspect și comportament"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: settingsdialog.ui:35
+#, kde-format
+msgid "Display color"
+msgstr "Culoare afișaj"
+
+#. i18n: ectx: property (text), widget (QLabel, displayColorResult)
+#: settingsdialog.ui:510
+#, kde-format
+msgid "215.06 €"
+msgstr "215.06 €"
+
+#. i18n: ectx: property (text), widget (QPushButton, qPushButtonDisplayColor)
+#: settingsdialog.ui:526
+#, kde-format
+msgid "C&hange..."
+msgstr "&Modificare..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxSplashScreen)
+#: settingsdialog.ui:553
+#, kde-format
+msgid "Enable splash screen"
+msgstr "Activează imaginea de întîmpinare"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: settingsdialog.ui:581
+#, kde-format
+msgid "Rounding"
+msgstr "Rotunjire"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonOfficialRules)
+#: settingsdialog.ui:587
+#, kde-format
+msgid "Offic&ial rounding rules"
+msgstr "Regul&i de rotunjire oficiale"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonSmallestCoin)
+#: settingsdialog.ui:594
+#, kde-format
+msgid "Smallest coin &method"
+msgstr "&Metoda celei mai mici monede"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonNoRounding)
+#: settingsdialog.ui:601
+#, kde-format
+msgid "&No rounding at all"
+msgstr "&Niciun fel de rotunjire"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
+#: settingsdialog.ui:611
+#, kde-format
+msgid "Reference currency, rates origin"
+msgstr "Monedă de referință, origine rate"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroFixed)
+#: settingsdialog.ui:617
+#, kde-format
+msgid "Euro, no ne&twork access (fixed rates only)"
+msgstr "Euro, fără acces la rețea (doar ra&te fixe)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroECB)
+#: settingsdialog.ui:627
+#, kde-format
+msgid "E&uro, European Central Bank"
+msgstr "E&uro, Banca Centrală Europeană"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroTG)
+#: settingsdialog.ui:637
+#, kde-format
+msgid "Euro, Time &Genie"
+msgstr "Euro, Time &Genie"
+
+#. i18n: ectx: property (text), widget (QLabel, defaultCurrencyText)
+#: settingsdialog.ui:649
+#, kde-format
+msgid "Default currency"
+msgstr "Moneda implicită"
+
+#~ msgid "O&K"
+#~ msgstr "O&K"
+
+#~ msgid "Cance&l"
+#~ msgstr "R&enunță"
+
+#~ msgid "NY FRB"
+#~ msgstr "NY FRB"

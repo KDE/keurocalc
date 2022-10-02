@@ -1,0 +1,78 @@
+# Translation of curconvd to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2020.
+# Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2020-06-14 13:59+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.07.70\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Karl Ove Hufthammer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karl@huftis.org"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr "curconvd: Ventar på D-Bus-førespurnadar"
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr "curconvd: stoppa å venta på D-Bus-førespurnadar"
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "Ei teneste for valutakonvertering"
+
+#: main.cpp:33
+#, kde-format
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "© 2006–2019 curconvd-utviklarane"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Eit program frå Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Valutakursane kjem frå <a href='http://www.timegenie.com/'>Time Genie</a>.\n"
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "Design og implementering"

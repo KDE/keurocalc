@@ -1,0 +1,77 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2014, 2015, 2018, 2019.
+# Vit Pelcak <vpelcak@suse.cz>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2021-08-20 12:32+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vít Pelčák"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "vit@pelcak.org"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr "curconvd: čekám na požadavky D-Bus"
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr "curconvd: zastaveno čekání na požadavky D-Bus"
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "Démon pro převod měň"
+
+#: main.cpp:33
+#, kde-format
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2019, vývojáři curconvd"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Program vytvořil Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Směnné kurzy Time Genie poskytl <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "Design a implementace"

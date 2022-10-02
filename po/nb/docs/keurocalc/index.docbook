@@ -1,0 +1,1369 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
+  <!ENTITY kappname "&keurocalc;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title
+>&keurocalc;-håndboken</title>
+
+<authorgroup>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>ebischoff@_NOSPAM_nerim.net</email
+></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<othercredit role="translator"
+><firstname
+>Alexander</firstname
+> <surname
+>Sørnes</surname
+> <affiliation
+><address
+><email
+>alex@thehandofagony.com</email
+></address
+></affiliation
+> <contrib
+>Oversetter</contrib
+></othercredit
+> 
+
+<copyright>
+<year
+>2001</year>
+<year
+>2002</year>
+<year
+>2003</year>
+<year
+>2004</year>
+<year
+>2005</year>
+<holder
+>Éric Bischoff</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2005-07-26</date>
+<releaseinfo
+>0.09.05</releaseinfo>
+
+<abstract>
+<para
+>&keurocalc; er en universell valutekonverterer og kalkulator. Denne dokumentasjonen beskriver versjon 0.9.5. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>ekstrautstyr</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>valuta</keyword>
+<keyword
+>konverterer</keyword>
+<keyword
+>kalkulator</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduksjon</title>
+
+<para
+>&keurocalc; er en universell valutakonverterer og -kalkulator. </para>
+
+<para
+>1. januar 2002 sluttet 12 europeiske land seg til en felles myntenhet, euro (€). Det samme vil antakelig skje med noen Øst-Europeiske land i 2007. &keurocalc; hjelper: <variablelist>
+<varlistentry>
+<term
+>Under overgangsperiodene</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>For å verifisere ens bankkonto, når det betales i både euro og den gamle myntenheten (italienske lire, for eksempel).</para
+></listitem>
+<listitem
+><para
+>For å kontrollere et varekjøp, og kalkulere vekslepengene hvis en betaler med en seddel fra den gamle myntenheten.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Flere år etter overgangsperiodene</term>
+<listitem
+><para
+>For å få en idé om verdien til ting i den gamle myntenheten i ethvert steg i kalkuleringene.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Til enhver tid</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>For å foreta konverteringer mellom euro og andre valutaer, for eksempel britiske pund, i henhold til de daglige kursene gitt av <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Den europeiske sentralbanken (ECB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>For å foreta en konvertering mellom to valutaer som er med på listen fra sentralbanken.</para
+></listitem>
+<listitem
+><para
+>For å foreta konverteringer mellom US dollar og andre valutaer ifølge de daglige kursene definert av <ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New Yorks føderale bank for reserver (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>For å foreta konverteringer mellom to valutaer som er med på listen utgitt av NY FRB.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+
+<para
+>&keurocalc; har følgende fordeler når det gjelder behagelighet og brukbarhet: <itemizedlist>
+<listitem
+><para
+>Mellomverdier og resultat vises i både referansevalutaen (euro eller US dollar) og den andre valutaen.</para
+></listitem>
+<listitem
+><para
+>Det er et seperat inndatafelt hvor en ny verdi kan skrives inn uten å fjerne den gamle.</para
+></listitem>
+<listitem
+><para
+>Utformingen er veldig lik en vanlig lommekalkulator, selv om en verdi som skrives inn kan være en verdi i referansevalutaen (euro eller US dollar), en verdi i en annen valuta, en prosentdel eller et enhetsløst tall.</para
+></listitem>
+<listitem
+><para
+>Tastene trykkes i den samme rekkefølgen som det er vanlig å si handlingene i.</para
+></listitem>
+<listitem
+><para
+>Feil kan enkelt rettes med den spesielle retteknappen som kan fjerne den siste inndataen, så lenge det 'Valider' ble trykket.</para
+></listitem>
+<listitem
+><para
+>Tall vises i henhold til de lokale innstillingene; med enten et punktum eller et komma som angitt i &kcontrol;-innstillingene.</para
+></listitem>
+<listitem
+><para
+>Det går an å velge ønsket referansevaluta (euro eller US dollar), hvilken annen valuta som skal brukes når &keurocalc; startes, og hvilken avrundingsmetode som skal brukes.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>&keurocalc; tillater følgende operasjoner: <itemizedlist>
+<listitem
+><para
+>Konvertering fra og til referansevalutaen (euro eller US dollar).</para
+></listitem>
+<listitem
+><para
+>Systematisk avrunding av det viste resultatet, mens det kalkuleres internt med presisjonen til de matematiske bibliotekene.</para
+></listitem>
+<listitem
+><para
+>Vanlig addering, substraksjon, multiplikasjon og divisjon.</para
+></listitem>
+<listitem
+><para
+>Finne en prosentdel, addedere en prosentdel eller substrahere en prosentdel.</para
+></listitem>
+<listitem
+><para
+>Muligens for å lagre verdier i et midlertidig minne, eller bruke minnet som en endrende totalverdi.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Her er noen av &keurocalc;s begrensninger: <itemizedlist>
+<listitem
+><para
+>Ingen parenteser eller innviklede uttrykk.</para
+></listitem>
+<listitem
+><para
+>Noen avrundinger er feile på grunn av begrensninger i det matematiske biblioteket.</para
+></listitem>
+<listitem
+><para
+>Inflasjonsvalutaer kan ikke håndteres på grunn av begrensinger i visningsstørrelsen; men med endringene i den nye tyrkiske lira med fjerning av seks nuller, er ikke dette et stort problem lenger.</para
+></listitem>
+<listitem
+><para
+>Kurser fra New Yorks føderale bank for reserver er ikke tilgjengelige under perioder som f.eks. jul og påske.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<warning
+><para
+>&keurocalc; garanterer ikike nøyaktigheten til valutakursene, og du kan gjerne kontrollere dem med andre verktøy. Forfatteren påtar seg intet ansvar hvis resultater er ukorrekte eller ikke som forventet, i henhold til <link linkend="credits"
+>lisensavtalen</link
+>. Vær også oppmerksom på at valutakursene lastes ned med en ukryptert og derfor usikret forbindelse til datakildene, Den europeiske sentralbanken eller New Yorks føderale bank for reserver. En angriper kan forvirre &keurocalc; ved å lage falske valutakurser, eller, konspirasjonsteorier til side, kan det simpelthen skje en feil under overføring av data.</para
+></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title
+>Bruke &keurocalc;</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title
+>Foreta konverteringer</title>
+
+
+<procedure>
+<title
+>For å konvertere 1000 belgiske franc til euro</title>
+<step
+><para
+>Velg <guilabel
+>BEF - belgiske franc</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>) fra listen over valutaer nederst i programmet. Hvis valutaen ikke er tilgjengelig, gå til <guibutton
+>Innstillinger</guibutton
+> og velg <guilabel
+>Euro, uten Internett-tilgang</guilabel
+>. Da skal valutaen være tilgjengelig.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>1000</userinput
+> ved hjelp av tastaturet eller knappene i programmet. Mens du skriver kommer sifrene fram i <guilabel
+>Inndata</guilabel
+>-feltet. Skrivefeil kan rettes med &Backspace;-tasten eller <guibutton
+>&lt;-</guibutton
+>-knappen.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>FB</guibutton
+>-knappen eller <keycap
+>F</keycap
+>-tasten for å skrive tallet inn som en verdi angitt i valutaen. Merk at alle taster som ikke har en spesiell funksjon kan brukes akkurat som <keycap
+>F</keycap
+>, så det går  an å bruke for eksempel <keycap
+>B</keycap
+> eller <keycap
+>X</keycap
+> i stedet.</para
+></step>
+<step
+><para
+>Nå vises resultatet i <guilabel
+>Resultat</guilabel
+>-vinduet til høyre i programmet. Svaret blir 24,79 €, hvis du brukte de innebygde valutakursene.</para
+></step
+> 
+</procedure>
+
+<procedure>
+<title
+>For å konvertere 25 euro til belgiske franc</title>
+<step
+><para
+>Velg <guilabel
+>BEF - belgiske franc</guilabel
+> fra listen over valutaer, i nede i programvinduet. Dette er ikke nødvendig hvis belgiske franc allerede er valgt.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>25</userinput
+>.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>€</guibutton
+>-knappen eller <keycap
+>E</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Resultatet vises nå i <guilabel
+>Resultat</guilabel
+>-feltet til høyre. Svaret er 1008,50 FB hvis du brukte de innebygde valutakursene. Det egentlige resultatet er 1008,4975, men dette avrundes til nærmeste hundredel av en belgisk franc. Avrundingen avhenger av hvilke avrundingsregler og hvilken valuta som er valgt. For eksempel er de offisielle reglene for belgiske franc å avrunde til nærmeste hundredel, mens for italienske lire er det nærmeste hele tall.</para
+></step>
+</procedure>
+
+<para
+>Dette kunne også vært gjort tastaturer slik: <userinput
+>25 Enter E</userinput
+>.</para>
+
+<procedure>
+<title
+>For å konvertere 120 tyske mark til spanske peseta</title>
+<step
+><para
+>Velg <guilabel
+>DEM - tyske mark</guilabel
+> fra listen over valutaer.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>120</userinput
+>.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>DM</guibutton
+>-knappen eller bruk tastene <keycap
+>D</keycap
+> eller <keycap
+>M</keycap
+>.</para
+></step>
+<step
+><para
+>Velg <guilabel
+>ESP - spanske peseta</guilabel
+> for å se beløpet (61,36 € hvis du brukte de innebygde valutakursene) uttrykt i spanske peseta i <guilabel
+>Resultat</guilabel
+>-feltet.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title
+>Addisjon og substraksjon</title>
+
+<procedure>
+<title
+>Hvor mye er 3 + 5?</title>
+<step
+><para
+>Skriv inn <userinput
+>3</userinput
+> og klikk på <guibutton
+>+</guibutton
+>. Merk at <computeroutput
+>3</computeroutput
+> vises som en enkel verdi på én linje, uten en valutaenhet.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>5</userinput
+> og klikk på <guibutton
+>Send</guibutton
+>-knappen eller bruk <keycap
+>Enter</keycap
+>-tasten. Resultatet, <computeroutput
+>8</computeroutput
+>, vises til høyre.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Du mottok 100 US dollar og betalte 32,50 euro for en bok. Hvor mye er igjen?</title>
+<step
+><para
+>Forsikre deg om at de variable valutakursene er tilgjengelige. Hvis ikke, klikk på <guibutton
+>Innstillinger</guibutton
+> og velg enten <guilabel
+>Euro, Den europeiske sentralbanken</guilabel
+> elle r<guilabel
+>Dollar, New Yorks føderale bank</guilabel
+>. Velg så <guilabel
+>USD - US dollar</guilabel
+> fra listen over valutaer. Dette elementet vil ikke være tilgjengelig hvis du ikke har Internett-tilgang, fordi de variable kursene mellom euro og US dollar ikke kan avgjøres.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>100</userinput
+> og klikk på <guilabel
+>$</guilabel
+>-knappen.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>-</guibutton
+>-knappen eller <keycap
+>-</keycap
+>-tasten. Merk <computeroutput
+>-</computeroutput
+>-tegnet til venstre i <guilabel
+>Inndata</guilabel
+>-feltet.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>32,50</userinput
+> og likk på <guibutton
+>€</guibutton
+>-knappen.</para
+></step>
+<step
+><para
+>Les resultatet i <guilabel
+>Resultat</guilabel
+>-feltet til høyre. Svaret avhenger av valutakursene. Merk at du under hele prosessen har kunnet lese verdiene i både US dollar og euro. Det viktig å ta hensyn til at dataklidene (Den europeiske sentralbanken eller New Yorks føderale bank for reserver) ikke nødvendigvis gir samme kurs mellom euro og US dollar.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Du betaler en bok på 32,50 € med en seddel pålydende 500 franske franc (FF). Hvor mye skal du få igjen, i eurosedler og -mynter?</title>
+<step
+><para
+>Velg <guilabel
+>FRF - franske franc</guilabel
+> i listen over valuter hvis den allerede ikke er valgt.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>32,5</userinput
+> og klikk på <guibutton
+>€</guibutton
+>. </para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>-</guibutton
+> eller bruk tastaturets <keycap
+>-</keycap
+>-tast.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>500</userinput
+> og klikk på <guibutton
+>FF</guibutton
+>-knappen eller <keycap
+>F</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Resultatet (<computeroutput
+>-43,72 €</computeroutput
+> hvis du bruker de innebyde kursene) er negativt, og indikerer at du skal få penger igjen. <guibutton
+>+/-</guibutton
+>-knappen eller <keycap
+>S</keycap
+>-tasten endrer fortegn.</para
+></step>
+</procedure>
+
+<note
+><para
+>Ikke prøv å addere euro med en simpel verdi (uten valutaenhet); det er like dumt som å addere 5 meter og 3 kilogram!</para
+></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title
+>Multiplikasjon og divisjon</title>
+
+<procedure>
+<title
+>Du kjøper 3,2 kilo epler til 2 € per kilo. Hvor mye blir dette i australske dollar?</title>
+<step
+><para
+>Velg <guilabel
+>AUD - australske dollar</guilabel
+> fra listen over valutaer.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>2</userinput
+> og klikk på <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>X</guibutton
+>-knappen eller <keycap
+>*</keycap
+>-tasten. Legg merke til <computeroutput
+>X</computeroutput
+>-tegnet til venstre i <guilabel
+>Inndata</guilabel
+>-feltet.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>3,2</userinput
+> etterfulgt av <guibutton
+>Send</guibutton
+>-knappen eller <keycap
+>Enter</keycap
+>-tasten. Dette betyr 3,2 enheter til 2 € per strykke.</para
+></step>
+<step
+><para
+>Resultatet i australske dollar er en konvertering av <computeroutput
+>6,4 €</computeroutput
+>.</para
+></step>
+</procedure>
+
+<para
+>Du kan òg bruke andre rekkefølger, som <userinput
+>3,2 = * 2 €</userinput
+> eller <userinput
+>3,2 * 2 €</userinput
+>.</para>
+
+<note
+><para
+>Det er ikke mulig å multiplisere X euro med Y dollar, akkurat som det ikker er mulig å multiplisere 10 fingre med 2 ører. </para
+></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title
+>Bruk av prosentverdier</title>
+
+<procedure>
+<title
+>Hovr mye er 20% av 3000 yen?</title>
+<step
+><para
+>Velg <guilabel
+>JPY - japanske yen</guilabel
+> fra listen over valutaer.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>3000</userinput
+> og klikk på <guibutton
+>¥</guibutton
+>-knappen eller <keycap
+>Y</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>20</userinput
+> og klikk på <guibutton
+>%</guibutton
+>-knappen eller <keycap
+>%</keycap
+>-tasten. Verdien må skrives inn <emphasis
+>før</emphasis
+> prosenttegnet, akkurat som med multiplikasjon.</para
+></step>
+<step
+><para
+>Se på resultatet; det tilsvarer 600 yen.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Hvor mye er 3000 yen pluss 20%?</title>
+<step
+><para
+>Velg <guilabel
+>JPY - japanske yen</guilabel
+> fra listen over valutaer.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>3000</userinput
+> og klikk på <guibutton
+>¥</guibutton
+>-knappen eller <keycap
+>Y</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>+</guibutton
+>-knappen eller <keycap
+>+</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>20</userinput
+> og klikk på <guibutton
+>%</guibutton
+>-knappen eller <keycap
+>%</keycap
+>-tasten. Verdien må skrives inn <emphasis
+>før</emphasis
+> prosenttegnet, akkurat som med multiplikasjon.</para
+></step>
+<step
+><para
+>Da denne manualen ble skrevet, var resultatet 26,96 € eller 3600 ¥.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Hvor mye er 3000 yen minus 20%?</title>
+<step
+><para
+>Velg <guilabel
+>JPY - japanske yen</guilabel
+> fra listen over valutaer.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>3000</userinput
+> og klikk på <guibutton
+>¥</guibutton
+>-knappen eller <keycap
+>Y</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>-</guibutton
+>-knappen eller <keycap
+>-</keycap
+>-tasten.</para
+></step>
+<step
+><para
+>Skriv inn <userinput
+>20</userinput
+> og klikk på <guibutton
+>%</guibutton
+>-knappen eller <keycap
+>%</keycap
+>-tasten. Verdien må skrives inn <emphasis
+>før</emphasis
+> prosenttegnet, akkurat som med multiplikasjon.</para
+></step>
+<step
+><para
+>Se på resultatet, som da dette ble skrevet var 17,97 € eller 2400 ¥.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title
+>Bruk av midlertidig minne</title>
+
+<procedure>
+<title
+>Hvordan lagre en verdi og hente den fram igjen seinere?</title>
+<step
+><para
+>Gjør kalkuleringene.</para
+></step>
+<step
+><para
+>Klikk på <guibutton
+>Min</guibutton
+> (Lagre i minne)-knappen for å lagre verdien i <guilabel
+>Resultat</guilabel
+>-feltet. Da blir også de andre minneknappene tilgjengelige.</para
+></step>
+<step
+><para
+>Gjør et annet arbeid med kalkulatoren.</para
+></step>
+<step
+><para
+>Hent verdien fra minnet ved å klikke på <guibutton
+>MR</guibutton
+> (Hent minne)-knappen.</para
+></step>
+</procedure>
+
+<para
+>Verdiene lagres internt uten valuta eller i referansevalutaen (euro eller US dollar) med den høyestre presisjonen som tillates av biblioteket for matematikk. I sjeldne tilfeller kan dette føre til problemer hvis den lagrede verdien er en avrundet verdi i en ikke-referanse valuta.</para>
+
+<procedure>
+<title
+>Hvordan slette minnet?</title>
+<step
+><para
+>Klikk på <guilabel
+>Tilbakestill</guilabel
+>-knappen. Merk at dette sletter alt: inndataen, resultatet og minnet.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Hvordan regne 3,1 * 5,2 € + 2,7 * 8,9 €?</title>
+<step
+><para
+>Regn den første halvdelen først: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Lagre resultatet i minnet med <guibutton
+>Min</guibutton
+>-knappen.</para
+></step>
+<step
+><para
+>Regn den andre halvdelen: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Legg resultatet til minnet med <guibutton
+>M+</guibutton
+>-knappen.</para
+></step>
+<step
+><para
+>Hent summen med <guibutton
+>MR</guibutton
+>-knappen.</para
+></step>
+</procedure>
+
+<para
+>Det finnes også andre metoder, som <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € + MR</userinput
+>.</para>
+
+<procedure>
+<title
+>Hvordan regne 3,1 * 5,2 € - 2,7 * 8,9 €?</title>
+<step
+><para
+>Regn den første halvdelen først: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Lagre resultatet i minnet med <guibutton
+>Min</guibutton
+>-knappen.</para
+></step>
+<step
+><para
+>Regn den andre halvdelen: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Substraher resultatet fra minnet med <guibutton
+>M-</guibutton
+>-knappen.</para
+></step>
+<step
+><para
+>Hent summen med <guibutton
+>MR</guibutton
+>-knappen.</para
+></step>
+</procedure>
+
+<para
+>Sekvensen <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € - MR</userinput
+> regner forskjellen i omvendt rekkefølge.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title
+>Kommandoreferanse</title>
+
+<sect1 id="reference-keys">
+<title
+>Standardsnarveier</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>Avslutter &keurocalc;</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Viser disse hjelpesidene</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Flytter fokus til valutalisten</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Viser <guilabel
+>Om</guilabel
+>-vinduet</member>
+
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Skriver inn siffre</member>
+
+<member
+><keycap
+>.</keycap
+> eller <keycap
+>,</keycap
+></member>
+<member
+>Desimaltegn</member>
+
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> og <keycap
+>/</keycap
+></member>
+<member
+>Addisjon, substraksjon, multiplikasjon og divisjon</member>
+
+<member
+><keycap
+>Enter</keycap
+></member>
+<member
+>Validerer inndataen osm en enkel, valutaløs verdi</member>
+
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Validerer inndataen som en prosentdel</member>
+
+<member
+>&Backspace;</member>
+<member
+>Fjerner siste siffer, desimaltegn eller operatør</member>
+
+<member
+><keycap
+>Tab</keycap
+> og <keycombo action="simul"
+>&Shift; <keycap
+>Tab</keycap
+></keycombo
+></member>
+<member
+>Flytter fokus fra en knapp til den neste eller forrige</member>
+
+<member
+>Piltastene</member>
+<member
+>Flytter fra en valuta til en annen når brukt i valutalisten</member>
+
+<member
+>Mellomrom</member>
+<member
+>Klikke på knappen som er i fokus</member>
+
+<member
+><keycap
+>E</keycap
+> eller <keycap
+>$</keycap
+></member>
+<member
+>Validerer inndataen som en verdi uttrykt i referansevalutaen (euro eller US-dollar)</member>
+
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Endre fortegn på resultatet</member>
+
+<member
+>Alle andre taster</member>
+<member
+>Validerer inndataen som et tall i den andre valutaen</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title
+>Knappene</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><guibutton
+>0</guibutton
+> til <guibutton
+>9</guibutton
+></member>
+<member
+>Skriver inn siffre</member>
+
+<member
+><guibutton
+>.</guibutton
+> eller <guibutton
+>,</guibutton
+></member>
+<member
+>Desimaltegn</member>
+
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Fjerner siste siffer, desimaltegn eller operatør</member>
+
+<member
+><guibutton
+>AC</guibutton
+></member>
+<member
+>Tøm både inndata- og resultat-feltet</member>
+
+<member
+><guibutton
+>€</guibutton
+> eller <guibutton
+>$</guibutton
+></member>
+<member
+>Validerer inndataen som en verdi uttrykt i referansevalutaen (euro eller US-dollar)</member>
+
+<member
+>Knappen merket med navnet til en annen valuta</member>
+<member
+>Validerer inndataen som et tall i den andre valutaen</member>
+
+<member
+><guibutton
+>Send</guibutton
+></member>
+<member
+>Validerer inndataen osm en enkel, valutaløs verdi</member>
+
+<member
+><guibutton
+>
+>%</guibutton
+></member>
+<member
+>Validerer inndataen som en prosentdel</member>
+
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Endre fortegn på resultatet</member>
+
+<member
+><guibutton
+>Min</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> og <guibutton
+>M-</guibutton
+></member>
+<member
+>Lagre resultatet i minnet, hente minnet inn i resultatet, legge resultatet til minnet og trekke resultatet fra minnet</member>
+
+<member
+><guibutton
+>/</guibutton
+>, <guibutton
+>X</guibutton
+>, <guibutton
+>-</guibutton
+> og <guibutton
+>+</guibutton
+></member>
+<member
+>Addisjon, substraksjon, multiplikasjon og divisjon</member>
+
+<member
+><guibutton
+>Tilbakestill</guibutton
+></member>
+<member
+>Tilbakestill både inndataen, resultatet og minnet</member>
+
+<member
+><guibutton
+>Om</guibutton
+></member>
+<member
+>Viser <guilabel
+>Om</guilabel
+>-vinduet</member>
+
+<member
+><guibutton
+><accel
+>H</accel
+>jelp</guibutton
+></member>
+<member
+>Viser disse hjelpesidene</member>
+
+<member
+>Listen med valutakoder og -navn</member>
+<member
+>Velger en annen valuta å arbeide med</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="settings">
+<title
+>Vinduet for innstillinger</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title
+>Referansevalutaen</title>
+
+<para
+>Denne innstillingen angir referansevalutaen (euro eller US dollar), og hvor &keurocalc; skal hente valutakursene mellom referansevalutaen og andre valutaer. Alternativene er som følger:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Euro, uten Internett-tilgang</guilabel
+></term>
+<listitem>
+<para
+>Euro er referansevalutaen. Ingen variabel kurs brukes eller lastes ned, og kun valutaene som har en fast kurs med euroen er tilgjengelige.</para>
+<para
+>Denne innstillingen er tilpasset maskiner uten Internett-tilgang.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Den europeiske sentralbanken</guilabel
+></term>
+<listitem>
+<para
+>Euro er referansevalutaen. &keurocalc; prøver å hente oppdaterte valutakurser fra <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Den europeiske sentralbanken (ECB)</ulink
+>, men kommer også med forhåndsdefinerte kurser.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>US dollar, New Yorks føderale bank</guilabel
+></term>
+<listitem>
+<para
+>US dollar er referansevalutaen. Det er ingen faste kurser, og &keurocalc; prøver å laste ned de variable kursene fra <ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New Yorks føderale bank for reserver</ulink
+>.</para>
+<para
+>&keurocalc; har for øyeblikket problemer med å avgjøre datoen til de siste kursene som banken gir ut, grunnet forskjell i tidssoner og helligdager. Derfor ber programmet for sikkerhets skyld om gårsdagens kurser, noe som selvfølgelig ikke er en optimal løsning.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title
+>Standardvaluta</title>
+
+<para
+>Denne innstillingen angir den andre valutaen som brukes når &keurocalc; startes eller når brukeren validerer de nye innstillingene.</para>
+
+<para
+>Vær oppmerksom på at den valgte valutaen kanskje ikke får kurser fra kurskilden. I sånne tilfeller brukes den første tilgjengelige valutaen.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title
+>Avrunding</title>
+
+<para
+>Denne innstillingen bestemmer hvordan resultatene vises i resultat-feltet. Interne kalkuleringer gjøres med den høyeste presisjonen som tilbys av det matematiske biblioteket, men det er sjelden nødvendig å vise noe mer nøyaktig enn hundredeler. Følgende avrundsmetoder er tilgjengelig:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Offisielle avrundingsregler</guilabel
+></term>
+<listitem>
+<para
+>EUs konverteringsregler eller andre offisielle konverteringsregler brukes. Dette betyr for eksempel at japanske yen og italienske lire avrundes til nærmeste heltall, mens euro og US dollar avrundes til nærmeste hundredel (<quote
+>cent</quote
+>).</para>
+<para
+>For eksmepel blir 158,323 yen avrundet til 158 yen, og 12,537 euro til 12,54 euro.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Minste mynt</guilabel
+></term>
+<listitem>
+<para
+>Resultatet avrundes til nærmeste verdi i den minste tilgjengelige mynten i valuaten. For myntenheter som ikke lenger er i bruk, som italienske lire, brukes den minste mynten som var i sirkulasjon, i dette tilfellet 50 lire.</para>
+<para
+>For example, 1235.9 Italian liras would be rounded to 1250 liras. 39.45 Norwegian crowns would be rounded to 39.50 crowns.</para>
+<para
+>&keurocalc; mangler informasjon om den minste mynten i mange land. Send gjerne en feilrapport hvis programmet bruker feil verdi for den minste mynten.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ingen avrunding</guilabel
+></term>
+<listitem>
+<para
+>Den kalkulerte verdien vises uforandret.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Forfattere og lisensbetingelser</title>
+
+<para
+>&keurocalc;</para>
+
+<para
+>Kopirett 2001-2004 tilhører &keurocalc;-utviklerne. <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>e.bischoff@_INGENREKLAME_noos.fr</email
+> - utforming og implementering</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_INGENREKLAME_unet.univie.ac.at</email
+> - utforming og testing</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_INGENREKLAME_euronet.nl</email
+> - grafikk</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>Kopirett 2001-2004 for dokumentasjonen tilhører Éric Bischoff <email
+>e.bischoff@_INGENREKLAME_noos.fr</email
+>.</para>
+
+<para
+>Dokumentasjonen ble gjennomgått av &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+<para>Oversatt til norsk (bokmål) av Alexander N. Sørnes <email
+>alex@thehandofagony.com</email
+> </para>
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Installasjon</title>
+
+<sect1 id="getting-keurocalc">
+<title
+>Hvordan få tak i &keurocalc;</title>
+
+<para
+>&keurocalc; er den del av <ulink url="http://extragear.kde.org/"
+>KDE extragear-utils</ulink
+>-pakken. Den nyeste versjonen av &keurocalc; kan lastes ned fra <ulink url="http://opensource.bureau-cornavin.com/keurocalc/"
+>programmets hjemmeside</ulink
+>. </para>
+
+</sect1>
+
+<sect1 id="requirements">
+<title
+>Systemkrav</title>
+
+<para
+>For å installere &keurocalc; må du ha &kde; 3.4.</para>
+
+<para
+>Alle nødvendige biblioteker finnes på <ulink url="ftp://ftp.kde.org"
+>ftp.kde.org</ulink
+>, &FTP;-tjeneren til &kde;-prosjektet.</para>
+
+</sect1>
+
+<sect1 id="compilation">
+<title
+>Kompilering og innstallasjon</title>
+
+<para
+>Skriv inn følgende i rotkatalogen til &keurocalc;-distribusjonen for å installere programmet: <screen width="40"
+><prompt
+>%</prompt
+> <userinput
+>./configure</userinput>
+<prompt
+>%</prompt
+> <userinput
+>make</userinput>
+<prompt
+>%</prompt
+> <userinput
+>make install</userinput
+>
+</screen>
+</para>
+
+<para
+>Siden &keurocalc; bruker <application
+>autoconf</application
+> og <application
+>automake</application
+>, bør det ikke være noe problem å installere det. Hvis det allikevel ikke virker, rapporter det til &keurocalc;s forfatter.</para>
+
+</sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

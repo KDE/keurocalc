@@ -1,0 +1,87 @@
+# translation of curconvd.po to french
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Bieuzent Cyrille <bieuzent@gmail.com>, 2008.
+# Cyrille Bieuzent <bieuzent@gmail.com>, 2009, 2010, 2012, 2013.
+# xavier <xavier.besnard@neuf.fr>, 2013.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2019-08-10 16:48+0800\n"
+"Last-Translator: Simon Depiets <sdepiets@gmail.com>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.07.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Cyrille Bieuzent, Simon Depiets"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bieuzent@gmail.com, sdepiets@gmail.com"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr "curconvd : en attente de requêtes D-Bus"
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr "curconvd : arrêté et en attente de requêtes D-Bus"
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "Un démon de conversion de devises"
+
+#: main.cpp:33
+#, kde-format
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2019, les développeurs de CurConvD"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Un programme d'Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Taux de change « Time Genie » mis gracieusement à disposition par <a "
+"href='http://www.timegenie.com/' title='Taux de change mis gracieusement à "
+"disposition par Time Genie'>Time Genie</a>\n"
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "Conception et implémentation"
+
+#~ msgid "Time Genie exchange rates courtesy of Time Genie"
+#~ msgstr "Taux de change « Time Genie » avec autorisation de « Time Genie »"

@@ -1,0 +1,87 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Laszlo Papp <djszapi@archlinux.us>, 2010.
+# Kiszel Kristóf <ulysses@kubuntu.org>, 2010.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2014-01-20 21:07+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr "curconvd: várakozás a D-Bus kérésekre"
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr "curconvd: várakozás leállítása a D-Bus kérésekre"
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "Egy valutaátváltó démon"
+
+#: main.cpp:33
+#, fuzzy, kde-format
+#| msgid "(c) 2006-2014, the curconvd developers"
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "© A curconvd fejlesztői, 2006-2014."
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+"Éric Bischoff <ebischoff@nerim.net> programja\n"
+"\n"
+"Idődzsinn devizaárfolyamok az <a href='http://www.timegenie.com/' "
+"title='idegen devizaárfolyamok az Idődzsinn szívessége folytán'>Idődzsinn</"
+"a> szívessége folytán\n"
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr "Éric Bischoff"
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "Tervezés és implementáció"
+
+#~ msgid "Time Genie exchange rates courtesy of Time Genie"
+#~ msgstr "Idődzsinn devizaárfolyamok az Idődzsinn szívessége folytán"
+
+#~ msgid "A program by Éric Bischoff <ebischoff@nerim.net>\n"
+#~ msgstr "Éric Bischoff (<ebischoff@nerim.net>) programja\n"

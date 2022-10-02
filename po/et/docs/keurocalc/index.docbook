@@ -1,0 +1,1444 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
+  <!ENTITY kappname "&keurocalc;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="keurocalc" lang="&language;">
+
+<bookinfo>
+<title
+>&keurocalc;i käsiraamat</title>
+
+<authorgroup>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>ebischoff@_NOSPAM_nerim.net</email
+></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<othercredit role="translator"
+> <firstname
+>Marek</firstname
+> <surname
+>Laane</surname
+> <affiliation
+><address
+><email
+>bald@starman.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+
+<copyright>
+<year
+>2001-2012</year>
+<holder
+>Éric Bischoff</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2012-02-07</date>
+<releaseinfo
+>1.2.0</releaseinfo>
+
+<abstract>
+<para
+>&keurocalc; on käepärane valuutateisendaja ja kalkulaator. Käesolev käsiraamat kirjeldab &keurocalc;i versiooni 1.2.0. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>extragear</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>valuuta</keyword>
+<keyword
+>teisendaja</keyword>
+<keyword
+>kalkulaator</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Sissejuhatus</title>
+
+<para
+>&keurocalc; on käepärane valuutateisendaja ja kalkulaator. </para>
+
+<para
+>Alates 1. jaanuarist 2002 on kaksteist Euroopa riiki loobunud oma rahvusvaluutast ühisraha euro (€) kasuks. Tasapisi lähevad sellele üle ka uued Euroopa Liidu riigid. &keurocalc; on abiks: <variablelist>
+<varlistentry>
+<term
+>Üleminekuperioodil</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Pangaarve kontrollimisel, kui makseid tehakse nii eurodes kui vanas valuutas (näiteks Itaalia liirides)</para
+></listitem>
+<listitem
+><para
+>Ostusummade ja tagasisaadud raha kontrollimisel, kui tasutakse vanade rahatähtedega</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Paljude aastate kestel pärast üleminekut</term>
+<listitem
+><para
+>Teadasaamisel, kui palju maksid asjad vanas vääringus.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Alati</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Teisendusteks eurode ja muude valuutade vahel (näiteks Briti nael) vastavalt <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Euroopa Keskpanga (EKP) igapäevasele vahetuskursile</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Kahe valuuta teisendamisel, mille kursse avaldab EKP.</para
+></listitem>
+<!--listitem
+><para
+>To do conversions between the US dollar and other currencies
+according to the daily exchange rate published by the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>To do conversions between any two currencies that are part of the list
+published by the NY FRB.</para
+></listitem-->
+<listitem
+><para
+>Teisendusteks eurode ja muude valuutade vahel (näiteks Briti nael) vastavalt <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG) igapäevasele vahetuskursile</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Kahe valuuta teisendamisel, mille kursse avaldab TG.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+
+<para
+>&keurocalc; pakub järgmisi mugavaid kasutusvõimalusi: <itemizedlist>
+<listitem
+><para
+>Nii kõiki vahesummasid kui tulemust saab näha nii muus vääringus kui eurodes.</para
+></listitem>
+<listitem
+><para
+>Eraldi sisendalale saab kirjutada uue väärtuse, samal ajal on näha ka viimane tulemus</para
+></listitem>
+<listitem
+><para
+>Kuigi väärtust võib sisestada nii eurodes kui muus valuutas, protsendi või hulgana, on arvutused kiired (võrreldavad tavaliste taskuarvutitega)</para
+></listitem>
+<listitem
+><para
+>Klahve saab vajutada just sellises järjekorras, nagu see käib peast arvutamisel</para
+></listitem>
+<listitem
+><para
+>Kui teed vea, saab erinupuga parandada viimast sisestatud väärtust, kui sa ei ole sellega juba mingit operatsiooni ette võtnud</para
+></listitem>
+<listitem
+><para
+>Arve näidatakse vastavalt sinu maa tavale, nii võib kümnendkoha eraldajaks olla koma või punkt (seda saab määrata Süsteemi seadistustes).</para
+></listitem>
+<listitem
+><para
+>Määrata saab koha, kust &keurocalc; vahetuskursse alla laadib, millise vääringuga alustada &keurocalc;i käivitamisel, kui ka kasutatava ümardamismeetodi.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>&keurocalc; võimaldab sooritada järgmisi tehteid: <itemizedlist>
+<listitem
+><para
+>Teisendused baasvaluutast ja baasvaluutasse (euro).</para
+></listitem>
+<listitem
+><para
+>Näidatava tulemuse süstemaatiline ümardamine, samas sooritatakse arvutused seesmiselt nii täpselt, kui seda võimaldavad matemaatikateegid</para
+></listitem>
+<listitem
+><para
+>Tavapärased liitmis-, lahutamis-, korrutamis- ja jagamistehted</para
+></listitem>
+<listitem
+><para
+>Võimalus võtta protsent, liita protsent või lahutada protsent</para
+></listitem>
+<listitem
+><para
+>Võimalus salvestada väärtused vahemällu või kasutada seda vahetehete lisamiseks</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>&keurocalc;il on siiski ka mõned piirangud: <itemizedlist>
+<listitem
+><para
+>Sulgudes või kompleksavaldisi ei saa kasutada</para
+></listitem>
+<listitem
+><para
+>Ümardamine võib vahel anda vale tulemuse matemaatikateegi piiratuse tõttu</para
+></listitem>
+<listitem
+><para
+>Piiratud esitusala tõttu ei saa korralikult käsitleda kõrge inflatsiooniga valuutasid. Kuid pärast Türgi uue liiri kasutuselevõttu, millega eemaldati rahaühikult kuus nulli, ei ole see enam märkimisväärne probleem.</para
+></listitem>
+<!-- listitem
+><para
+>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para
+></listitem-->
+</itemizedlist>
+</para>
+
+<warning
+><para
+>&keurocalc; ei garanteeri absoluutselt täpset tulemust. Kui see on vähegi oluline, tasub alati kontrollida arvutusi mingil muul moel. Nagu selgitab <link linkend="credits"
+>litsents</link
+>, ei võta autorid endale vastutust, kui tulemus ei ole täpne või oodatud. Samuti tasub tähele panna, et Euroopa Keskpanga ja Time Genie valuutakursid tõmmatakse krüptimata ja seepärast ebaturvaliselt - mõni ründaja võib &keurocalc;i segadusse ajada valesid kursse pakkudes või siis ei pruugi allatõmbamine alati edukalt minna.</para
+></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title
+>&keurocalc;i kasutamine</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title
+>Valuutateisendused</title>
+
+
+<procedure>
+<title
+>1000 Belgia frangi teisendamine eurodesse</title>
+<step
+><para
+>Vali <guilabel
+>BEF - Belgia frank</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>) kalkulaatori allosas rahaühiku nimekirjas. Kui see ei ole saadaval, klõpsa nuppu <guibutton
+>Seadistused...</guibutton
+> ja vali <guilabel
+>Euro, võrguühenduseta (ainult fikseeritud kurss)</guilabel
+>, mis toob nähtavale korrektse kursside nimekirja.</para
+></step>
+<step
+><para
+>Kirjuta klaviatuuril <userinput
+>1000</userinput
+> või kasuta selleks kalkulaatori numbrinuppe. Kirjutamisel ilmuvad numbrid väljale <guilabel
+>Sisend</guilabel
+>. Kui teed numbreid kirjutades vea, kasuta parandamiseks klahvi &Backspace; või nuppu <guibutton
+>&lt;-</guibutton
+>.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>FB</guibutton
+> või klahvi <keycap
+>F</keycap
+>. Õigupoolest võib mis tahes klahvi, mida ei ole mingile muule operatsioonile omistatud, kasutada sisendi määratlemiseks numbrilise valuutana, nii et sama hästi oleks võinud vajutada klahvi <keycap
+>B</keycap
+> või <keycap
+>X</keycap
+>.</para
+></step>
+<step
+><para
+>Vaata tulemust paremal asuval väljal <guilabel
+>Tulemus</guilabel
+>: vastavalt kohalikele rahaühiku seadistustele on see 24.79 € või 24,79 €.</para
+></step
+> 
+</procedure>
+
+<procedure>
+<title
+>25 euro teisendamine Belgia frankideks</title>
+<step
+><para
+>Kui saadaval on fikseeritud kurssidega valuutad, vali all hüpiknimekirjast <guilabel
+>BEF - Belgia frank</guilabel
+>. Seda ei ole vaja, kui kasutasid just äsja sama valuutat.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>25</userinput
+>.</para
+></step>
+<step
+><para
+>Klõpsa nuppu <guibutton
+>€</guibutton
+> või klahvi <keycap
+>E</keycap
+>.</para
+></step>
+<step
+><para
+>Vaata tulemust paremal asuval väljal <guilabel
+>Tulemus</guilabel
+>: see on 1008,50 FB või 1008,50 FB. Täpne väärtus oleks 1008,4975, kuid see ümardati Belgia frankide lähima sajandikuni. Ümardamise tase sõltub rahaühikust: Belgia frankidel on see 0,01 FB, Itaalia liiridel aga näiteks 1 L.</para
+></step>
+</procedure>
+
+<para
+>Sama hästi oleks võinud kirjutada <userinput
+>25 Enter E</userinput
+>.</para>
+
+<procedure>
+<title
+>120 Saksa marga teisendamine Hispaania peseetadeks</title>
+<step
+><para
+>Kui saadaval on fikseeritud kurssidega valuutad, vali all hüpikloendist <guilabel
+>DEM - Saksa mark</guilabel
+>.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>120</userinput
+>.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>DM</guibutton
+> või klahvi <keycap
+>D</keycap
+> või <keycap
+>M</keycap
+>.</para
+></step>
+<step
+><para
+>Nüüd vali raadionupp <guilabel
+>ESP - Hispaania peseeta</guilabel
+>, et näha tulemust 61,36 € teisendatuna peseetadesse väljal <guilabel
+>Tulemus</guilabel
+>.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title
+>Liitmine ja lahutamine</title>
+
+<procedure>
+<title
+>Kui palju on 3 + 5?</title>
+<step
+><para
+>Kirjuta <userinput
+>3</userinput
+> ja vajuta <guibutton
+>+</guibutton
+>. Pane tähele, et tulemusväljal on <computeroutput
+>3</computeroutput
+> lihtne väärtus, mis on esitatud ainult ühel real, ilma rahaühikuta.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>5</userinput
+> ja vajuta nuppu <guibutton
+>Enter</guibutton
+> või klahvi &Enter;. Paremale ilmub tulemus <computeroutput
+>8</computeroutput
+>.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Said 100 USA dollarit ja maksid 32,50 eurot raamatu eest. Kui palju jäi veel arvele?</title>
+<step
+><para
+>Kontrolli, et saadaval oleks muutuvad valuutakursid. Kui see nii ei ole, klõpsa nupule <guibutton
+>Seadistused...</guibutton
+> ja vali kas <guilabel
+>Euro, Euroopa Keskpank</guilabel
+> või <guilabel
+>Euro, Time Genie</guilabel
+>. Seejärel vali all <guilabel
+>USD - USA dollar</guilabel
+>. Kui sul ei ole internetiühendust, siis ei saa seda paraku kasutada, sest pole võimalik teada saada euro ja dollari uusimat vahetuskurssi.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>100</userinput
+> ja vajuta <guibutton
+>$</guibutton
+>.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>-</guibutton
+> või klahvi <keycap
+>-</keycap
+>. Pane tähele, et <computeroutput
+>-</computeroutput
+> ilmub välja <guilabel
+>Sisend</guilabel
+> vasakpoolsesse serva.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>32,50</userinput
+> (või <userinput
+>32.50</userinput
+>) ja vajuta <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Vaata tulemust paremal asuval väljal <guilabel
+>Tulemus</guilabel
+>. Tulemus sõltub parajasti kehtivast vahetuskursist. Pane tähele, et kogu tehte ajal oli võimalik näha väärtusi nii eurodes kui USA dollarites. Arvesta, et erinevad andmeallikad (EKP või TG) ei pruugi tingimata teatada ühesugust euro ja dollari vahetuskurssi.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Tasusid 32,50 € maksva raamatu eest 500 FF rahatähega. Kui palju peaks müüja sulle eurodes tagasi andma?</title>
+<step
+><para
+>Vali rahaühikute hüpikloendist <guilabel
+>FRF - Prantsuse frangid</guilabel
+> (kui see pole veel valitud).</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>32,50</userinput
+> (või <userinput
+>32.50</userinput
+>) ja  vajuta <guibutton
+>€</guibutton
+>. Võid ka kirjutada lihtsalt  <userinput
+>32,5</userinput
+> ilma lõpetava <userinput
+>0</userinput
+>-ta.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>-</guibutton
+> või klahvi <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>500</userinput
+> ja vajuta nuppu <guibutton
+>FF</guibutton
+> või klahvi <keycap
+>F</keycap
+>.</para
+></step>
+<step
+><para
+>Tulemus <computeroutput
+>-43.72 €</computeroutput
+> on negatiivne, mis tähendab, et ostjale tuleb raha tagasi anda. Tulemuse märki on võimalik muuta nupuga <guibutton
+>+/-</guibutton
+> või klahviga <keycap
+>S</keycap
+>.</para
+></step>
+</procedure>
+
+<note
+><para
+>Ära püüa liita eurosid tavalise arvuga - see annab sama hea tulemuse kui liita 5 meetrile 3 kilogrammi.</para
+></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title
+>Korrutamine ja jagamine</title>
+
+<procedure>
+<title
+>Ostsid 3,2 kilogrammi õunu hinnaga 2 € kilogramm. Kui palju maksaks see Austraalia dollarites?</title>
+<step
+><para
+>Vali <guilabel
+>AUD - Austraalia dollar</guilabel
+>, kui see ei ole juba valitud.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>2</userinput
+> ja vajuta <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>X</guibutton
+> või klahvi <keycap
+>*</keycap
+>. Pane tähele, et märk <computeroutput
+>X</computeroutput
+> ilmub välja <guilabel
+>Sisend</guilabel
+> vasakpoolsesse serva.</para
+></step>
+<step
+><para
+>Nüüd kirjuta <userinput
+>3,2</userinput
+> ja vajuta seejärel nuppu <guibutton
+>Enter</guibutton
+> või klahvi &Enter;. See tähendabki <quote
+>3,2 ühikut</quote
+>, iga ühik hinnaga 2 €.</para
+></step>
+<step
+><para
+>Tulemusele Austraalia dollarites vastab <computeroutput
+>6.4 €</computeroutput
+>.</para
+></step>
+</procedure>
+
+<para
+>Kirjutada võib ka <userinput
+>3,2 = * 2 €</userinput
+> või isegi <userinput
+>3,2 * 2 €</userinput
+>.</para>
+
+<note
+><para
+>Mõistagi ei ole võimalik korrutada X eurot Y dollariga, nagu ei saa ka korrutada 10 sõrme 2 kõrvaga. </para
+></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title
+>Protsentarvutus</title>
+
+<procedure>
+<title
+>Kui palju on 20% 3000 jeenist?</title>
+<step
+><para
+>Vali <guilabel
+>JPY - Jaapani jeen</guilabel
+>, kui see ei ole juba valitud.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>3000</userinput
+> ja vajuta nuppu <guibutton
+>¥</guibutton
+> või klahvi <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>20</userinput
+> ja vajuta nuppu <guibutton
+>%</guibutton
+> või klahvi <keycap
+>%</keycap
+>. Nagu korrutamise puhul, tuleb ka siin kirjutada väärtus <emphasis
+>enne</emphasis
+> protsendimärki.</para
+></step>
+<step
+><para
+>Vaata tulemust: see on 600 jeeni.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Kui palju on 3000 jeeni pluss 20%?</title>
+<step
+><para
+>Vali <guilabel
+>JPY - Jaapani jeen</guilabel
+>, kui see ei ole juba valitud.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>3000</userinput
+> ja vajuta nuppu <guibutton
+>¥</guibutton
+> või klahvi <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>+</guibutton
+> või klahvi <keycap
+>+</keycap
+>.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>20</userinput
+> ja vajuta nuppu <guibutton
+>%</guibutton
+> või klahvi <keycap
+>%</keycap
+>. Nagu korrutamise puhul, tuleb ka siin kirjutada väärtus <emphasis
+>enne</emphasis
+> protsendimärki.</para
+></step>
+<step
+><para
+>Vaata tulemust: 26,96 € või 3600 ¥ nende ridade kirjutamise ajal.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Kui palju on 3000 jeeni miinus 20%?</title>
+<step
+><para
+>Vali <guilabel
+>JPY - Jaapani jeen</guilabel
+>, kui see ei ole juba valitud.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>3000</userinput
+> ja vajuta nuppu <guibutton
+>¥</guibutton
+> või klahvi <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Vajuta nuppu <guibutton
+>-</guibutton
+> või klahvi <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Kirjuta <userinput
+>20</userinput
+> ja vajuta nuppu <guibutton
+>%</guibutton
+> või klahvi <keycap
+>%</keycap
+>. Nagu korrutamise puhul, tuleb ka siin kirjutada väärtus <emphasis
+>enne</emphasis
+> protsendimärki.</para
+></step>
+<step
+><para
+>Vaata tulemust: 17,97 € või 2400 ¥ nende ridade kirjutamise ajal.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title
+>Vahemälu kasutamine</title>
+
+<procedure>
+<title
+>Kuidas mõningaid väärtusi salvestada ja hiljem uuesti kasutada?</title>
+<step
+><para
+>Soorita oma tehted.</para
+></step>
+<step
+><para
+>Vajuta nuppu <userinput
+>Min</userinput
+> (Memory in ehk Mällu), mis salvestab tsoonis <guilabel
+>Tulemus</guilabel
+> oleva väärtuse. Pane tähele, et nüüd aktiveeruvad ka muud mälu kasutamise võimalused.</para
+></step>
+<step
+><para
+>Soorita kalkulaatoril veel mingeid tehteid.</para
+></step>
+<step
+><para
+>Võta väärtus mälust klõpsuga nupule <guibutton
+>MR</guibutton
+> (Memory Recall ehk Mälustvõtmine).</para
+></step>
+</procedure>
+
+<para
+>Seesmiselt võetakse väärtused kas ühikuta või baasvaluutas (euro), kasutades maksimaalset täpsust, mida võimaldab matemaatikateek. Mõnel haruldasel juhul võib tekkida ümardamisprobleeme, kui salvestatud väärtus on juba ümardatud väärtusega mõnes muus valuutas kui euro.</para>
+
+<procedure>
+<title
+>Kuidas vahemälu puhastada?</title>
+<step
+><para
+>Vajuta nupule <guibutton
+>Lähtesta</guibutton
+>. Palun arvesta, et klõps nupule <guibutton
+>Lähtesta</guibutton
+> puhastab kõik, nii sisendi, tulemuse kui mälu.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Kuidas arvutada 3,1 * 5,2 € + 2,7 * 8,9 €?</title>
+<step
+><para
+>Kõigepealt esimene tehe: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Salvesta see mällu nupuga <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Nüüd teine tehe: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Lisa see mälus olevale väärtusele nupuga <guibutton
+>M+</guibutton
+>.</para
+></step>
+<step
+><para
+>Vaata tulemust klõpsuga nupule <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>Sama tulemuse annab aga näiteks ka <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € + MR</userinput
+>.</para>
+
+<procedure>
+<title
+>Kuidas arvutada 3,1 * 5,2 € - 2,7 * 8,9 €?</title>
+<step
+><para
+>Kõigepealt esimene tehe: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Salvesta see mällu nupuga <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Nüüd teine tehe: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Lahuta tulemus mälust nupuga <guibutton
+>M-</guibutton
+>.</para
+></step>
+<step
+><para
+>Vaata tulemust klõpsuga nupule <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>Vastupidises järjekorras arvutamiseks sisesta <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € - MR</userinput
+></para>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title
+>Käskude seletused</title>
+
+<sect1 id="reference-keys">
+<title
+>Vaikimisi kiirklahvid</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>Lõpetab &keurocalc;i töö</member>
+
+<!--This is changed at runtime by DrClash 
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Displays these help pages</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Goes to the currency selection area</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Displays the <guilabel
+>About</guilabel
+> box</member>
+-->
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Sisendnumbrid</member>
+
+<member
+><keycap
+>.</keycap
+> või <keycap
+>,</keycap
+></member>
+<member
+>Kümnendkohtade eraldaja</member>
+
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> ja <keycap
+>/</keycap
+></member>
+<member
+>Tehtemärgid: liitmine, lahutamine, korrutamine ja jagamine</member>
+
+<member
+>&Enter; ja <keycap
+>Return</keycap
+></member>
+<member
+>Sisendnumbri tunnistamine tavaliseks, rahaühikuta väärtuseks</member>
+
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Sisendnumbri tunnistamine protsendiks</member>
+
+<member
+>&Backspace;</member>
+<member
+>Eemaldab viimati sisestatud numbri, kümnendkoha eraldaja või tehtemärgi</member>
+
+<member
+>&Tab; ja <keycombo action="simul"
+>&Shift; &Tab;</keycombo
+></member>
+<member
+>Liigub ühelt nupult järgmisele või eelmisele</member>
+
+<member
+>Nooleklahvid</member>
+<member
+>Rahaühiku valimise tsoonis liigub ühelt rahaühikult teisele</member>
+
+<member
+>Tühikuklahv</member>
+<member
+>Kui fookuses on vajutatav nupp, siis vajutab seda</member>
+
+<member
+><keycap
+>E</keycap
+> või <keycap
+>$</keycap
+></member>
+<member
+>Sisendnumbri tunnistamine baasvaluutas (euro) väljendatud väärtuseks</member>
+
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Muudab tulemuse märki</member>
+
+<member
+>Suvaline muu klahv</member>
+<member
+>Sisendnumbri tunnistamine muus vääringus väärtuseks</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title
+>Nupud</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><guibutton
+>0</guibutton
+> kuni <guibutton
+>9</guibutton
+></member>
+<member
+>Sisendnumbrid</member>
+
+<member
+><guibutton
+>.</guibutton
+> või <guibutton
+>,</guibutton
+></member>
+<member
+>Kümnendkohtade eraldaja</member>
+
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Eemaldab viimati sisestatud numbri, kümnendkoha eraldaja või tehtemärgi</member>
+
+<member
+><guibutton
+>AC</guibutton
+></member>
+<member
+>Puhastab kõik, nii sisendi- kui tulemuseala</member>
+
+<member
+><guibutton
+>€</guibutton
+> või <guibutton
+>$</guibutton
+></member>
+<member
+>Sisendnumbri tunnistamine baasvaluutas (euro) väljendatud väärtuseks</member>
+
+<member
+>Muu vääringu nimega nupp</member>
+<member
+>Sisendnumbri tunnistamine muus vääringus väärtuseks</member>
+
+<member
+><guibutton
+>Enter</guibutton
+></member>
+<member
+>Sisendnumbri tunnistamine tavaliseks, rahaühikuta väärtuseks</member>
+
+<member
+><guibutton
+>%</guibutton
+></member>
+<member
+>Sisendnumbri tunnistamine protsendiks</member>
+
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Muudab tulemuse märki</member>
+
+<member
+><guibutton
+>Min</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> ja <guibutton
+>M-</guibutton
+></member>
+<member
+>Salvestab väärtuse mällu, võtab selle mälust, liidab tulemuse mälus olevale väärtusele ja lahutab tulemuse mälus olevast väärtusest</member>
+
+<member
+><guibutton
+>/</guibutton
+>, <guibutton
+>X</guibutton
+>, <guibutton
+>-</guibutton
+> ja <guibutton
+>+</guibutton
+></member>
+<member
+>Tehtemärgid: liitmine, lahutamine, korrutamine ja jagamine</member>
+
+<member
+><guibutton
+>Lähtesta</guibutton
+></member>
+<member
+>Puhastab kõik, nii sisendi, tulemuse kui mälu</member>
+
+<member
+><guibutton
+>Info</guibutton
+></member>
+<member
+>Näitab <guilabel
+>info</guilabel
+>kasti</member>
+
+<member
+><guibutton
+>Abi</guibutton
+></member>
+<member
+>Näitab abi (käesolevat käsiraamatut)</member>
+
+<member
+>Hüpikloend valuutakoodide ja -nimedega</member>
+<member
+>Valib kasutatava muu vääringu</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="settings">
+<title
+>Seadistustedialog</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title
+>Baasvaluuta, kursi päritolu</title>
+
+<para
+>See määrab, kust peaks &keurocalc; tõmbama baasvaluuta ja muude valuutade kursi. Võimalikud on järgmised valikud:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Euro, võrguühendusega (ainult fikseeritud kursid)</guilabel
+></term>
+<listitem>
+<para
+>Baasvaluuta on euro. Kursimuutusi ei tõmmata ega kasutata. Kasutada saab ainult rahaühikuid, mille kurss euro suhtes on fikseeritud.</para>
+<para
+>See sobib võrguühenduseta arvutitele.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Euroopa Keskpank</guilabel
+></term>
+<listitem>
+<para
+>Baasvaluuta on euro. Saadaval on fikseeritud kursid. &keurocalc; püüab kursimuutused tõmmata <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Euroopa Keskpangast (EKP)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+<!--varlistentry>
+<term
+><guilabel
+>Dollar, New York Federal Reserve Bank</guilabel
+></term>
+<listitem>
+<para
+>Dollar is the reference currency. There are no fixed exchange rates.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para>
+<para
+>Currently, &keurocalc; has a problem determining the date of the latest
+exchange rates published by that bank, because of time zone offsets and non-working
+days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
+not optimal.</para>
+</listitem>
+</varlistentry-->
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Time Genie</guilabel
+></term>
+<listitem>
+<para
+>Baasvaluuta on euro. Saadaval on fikseeritud kursid. &keurocalc; püüab kursimuutused tõmmata <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Geniest (TG)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title
+>Vaikevaluuta</title>
+
+<para
+>See määrab rahaühiku, mida kasutatakse &keurocalc;i käivitamise järel või siis, kui kasutaja muudab seadistusi.</para>
+
+<para
+>Pane tähele, et valitud valuutakursside allikas ei pruugi seda rahaühikut pakkudagi. Sellisel juhul kasutatakse esimest kättesaadavat rahaühikut loendis.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title
+>Ümardamine</title>
+
+<para
+>See määrab tulemuste esitamise viisi. Seesmiselt sooritatakse kõik arvutused täpsusega, mida võimaldab matemaatikateek, kuid tavaliselt ei ole mõtet näidata sendi murdosi. Kasutada saab järgmisi ümardamismeetodeid:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ametlik ümardamisreegel</guilabel
+></term>
+<listitem>
+<para
+>Kasutatakse euro või muude valuutade ametlikke ümardamisreegleid. See tähendab, et tulemus ümardatakse näiteks Jaapani jeenide või Itaalia liiride korral lähima täisarvuni, euro või dollari korral aga lähimate sajandikeni (<quote
+>sentideni</quote
+>).</para>
+<para
+>Näiteks 158,323 jeeni ümardatakse 158 jeeniks, 12,537 eurot aga 12,54 euroks.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Väikseima mündi meetod</guilabel
+></term>
+<listitem>
+<para
+>Tulemus ümardatakse antud valuutat kasutaval maal käibiva väikseima mündi väärtuseni. Kadunud rahaühikute, näiteks Itaalia liiride korral, kasutatakse väikseimat münti, mis oli käibel enne rahaühiku kadumist (Itaalia liiride puhul oli selleks 50-liirine münt).</para>
+<para
+>Näiteks 1235,9 Itaalia liiri ümardatakse 1250 liiriks, 39,45 Norra krooni aga 39,50 krooniks.</para>
+<para
+>Meil ei ole paraku absoluutselt iga maa kohta andmeid, milline on väikseim käibelolev münt. Palun saada vearaport, kui &keurocalc; kasutab sinu maa korral vigast väikseima mündi väärtust, ja me lisame selle info enda andmebaasi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ei ümardata</guilabel
+></term>
+<listitem>
+<para
+>Leitud väärtus esitatakse muutmata kujul.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-look-and-feel">
+<title
+>Välimus</title>
+
+<para
+>Need seadistused määravad &keurocalc;i välimuse ja käitumise. Siin on järgmised valikud:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Värvi näitamine</guilabel
+></term>
+<listitem>
+<para
+>Nii sisendi kui ka tulemuse näitamise ala taustavärv. Taustavärvi muutmiseks klõpsa nupule <guibutton
+>Muuda...</guibutton
+> See avab tavapärase &kde; värvi valimise dialoogi. Vali uus värv ja klõpsa selle kasutamiseks nupule <guibutton
+>OK</guibutton
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Käivituslogo näitamine</guilabel
+></term>
+<listitem>
+<para
+>Kastist märke eemaldamisel ei näidata &keurocalc;i käivitamise ajal käivituslogo.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Autorid ja litsents</title>
+
+<para
+>&keurocalc;</para>
+
+<para
+>Rakenduse autoriõigus 2001-2012: &keurocalc;i arendajad: <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+> - disain ja teostus</para
+></listitem>
+<listitem
+><para
+>Gil Gross <email
+>ptit.ours@_NOSPAM_gmail.com</email
+> - lisavõimalused</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_NOSPAM_unet.univie.ac.at</email
+> - disain ja testimine</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_NOSPAM_euronet.nl</email
+> - graafiline pool</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>Dokumentatsiooni autoriõigus 2001-2012: Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+>.</para>
+
+<para
+>Dokumentatsiooni korrigeeris: &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@starman.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Paigaldamine</title>
+
+<sect1 id="getting-keurocalc">
+<title
+>&keurocalc;i hankimine</title>
+
+<para
+>&keurocalc; kuulub paketti <ulink url="http://extragear.kde.org/"
+>KDE extragear-utils</ulink
+>. &keurocalc;i uusima versiooni võib alla tõmmata  <ulink url="http://opensource.bureau-cornavin.com/keurocalc/"
+>tema koduleheküljelt</ulink
+>. </para>
+
+</sect1>
+
+<sect1 id="requirements">
+<title
+>Nõuded</title>
+
+<para
+>&keurocalc;i edukaks kasutamiseks on vajalik &kde; 4.</para>
+
+<para
+>Kõik vajalikud teegid leiab &kde; projekti &FTP; saidilt <ulink url="ftp://ftp.kde.org"
+>ftp.kde.org</ulink
+>.</para>
+
+</sect1>
+
+<sect1 id="compilation">
+<title
+>Kompileerimine ja paigaldamine</title>
+
+<para
+>&keurocalc;i kompileerimiseks ja paigaldamiseks anna &keurocalc;i baaskataloogis järgmised käsud: <screen width="40"
+><prompt
+>%</prompt
+> <userinput
+>mkdir build</userinput>
+<prompt
+>%</prompt
+> <userinput
+>cd build</userinput>
+<prompt
+>%</prompt
+> <userinput
+>cmake ..</userinput>
+<prompt
+>%</prompt
+> <userinput
+>make</userinput>
+<prompt
+>%</prompt
+> <userinput
+>make install</userinput
+>
+</screen>
+</para>
+
+<para
+>Kuna CMake tuvastab automaatselt süsteemi seadistused, ei tohiks &keurocalc;i kompileerimisel probleeme tekkida. Kui neid siiski esineb, anna neist palun teada &keurocalc;i autoritele.</para>
+
+</sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

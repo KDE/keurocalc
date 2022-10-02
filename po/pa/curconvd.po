@@ -1,0 +1,75 @@
+# translation of curconvd.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008.
+# A S Alam <aalam@users.sf.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: curconvd\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"PO-Revision-Date: 2009-01-09 09:13+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi <punjabi-l10n@users.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aalam@users.sf.net"
+
+#: converter.cpp:37
+#, kde-format
+msgid "curconvd: waiting for D-Bus requests"
+msgstr ""
+
+#: converter.cpp:46
+#, kde-format
+msgid "curconvd: stopped waiting for D-Bus requests"
+msgstr ""
+
+#: main.cpp:32
+#, kde-format
+msgid "CurConvD"
+msgstr "CurConvD"
+
+#: main.cpp:32
+#, kde-format
+msgid "A currency converter daemon"
+msgstr "ਇੱਕ ਮੁੱਦਰਾ ਬਦਲਣ ਡੈਮਨ"
+
+#: main.cpp:33
+#, fuzzy, kde-format
+#| msgid "(c) 2006-2008, the curconvd developpers"
+msgid "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2008, curconvd ਡਿਵੈਲਪਰ"
+
+#: main.cpp:33
+#, kde-format
+msgid ""
+"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"\n"
+"Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+msgstr ""
+
+#: main.cpp:35
+#, kde-format
+msgid "Éric Bischoff"
+msgstr ""
+
+#: main.cpp:35
+#, kde-format
+msgid "Design and implementation"
+msgstr "ਡਿਜ਼ਾਇਨ ਅਤੇ ਸਥਾਪਨ"

@@ -1,0 +1,1370 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="keurocalc" lang="&language;">
+
+<bookinfo>
+<title
+>El manual de &keurocalc;</title>
+
+<authorgroup>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>ebischoff@_NOSPAM_nerim.net</email
+></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<othercredit role="translator"
+> <firstname
+>Santiago</firstname
+> <surname
+>Fernández Sancho</surname
+> <affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+
+<copyright>
+<year
+>2001-2019</year>
+<holder
+>Éric Bischoff</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2019-06-24</date>
+<releaseinfo
+>1.3.1</releaseinfo>
+
+<abstract>
+<para
+>&keurocalc; es un conversor universal de bolsillo de divisas y una calculadora. Está documentación describe la versión 1.3.1 de &keurocalc;. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>extragear</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>divisa</keyword>
+<keyword
+>conversor</keyword>
+<keyword
+>calculadora</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+
+<para
+>&keurocalc; es un conversor universal de bolsillo de divisas y una calculadora. </para>
+
+<para
+>El 1 de enero de 2002, 12 países europeos unieron sus divisas nacionales en una única, el euro (€). Lo mismo sucede de vez en cuando en menor escala con los nuevos países europeos. &keurocalc; ayuda: <variablelist>
+<varlistentry>
+<term
+>Durante los periodos de transición</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>A comprobar una cuenta bancaria, cuando paga en euros y en la antigua divisa (Liras italianas, por ejemplo).</para
+></listitem>
+<listitem
+><para
+>A comprobar la compra, y calcular el cambio si paga con un billete de la antigua moneda.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Algunos años después de los periodos de transición</term>
+<listitem
+><para
+>Para obtener una idea del valor de las cosas en la antigua divisa en cualquier fase de los cálculos.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>En cualquier momento</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>A hacer las conversiones entre el euro y otras divisas, como la libra británica, de acuerdo con las tasas de cambio diarias publicado por el <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Banco Central Europeo (BCE)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>A hacer conversiones entre cualesquiera dos divisas que formen parte de la lista publicada por el BCE.</para
+></listitem>
+<!--listitem
+><para
+>To do conversions between the US dollar and other currencies
+according to the daily exchange rate published by the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>To do conversions between any two currencies that are part of the list
+published by the NY FRB.</para
+></listitem-->
+<listitem
+><para
+>A hacer las conversiones entre el euro y otras divisas, como la libra británica, de acuerdo con las tasas de cambio diarias publicadas por <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>A hacer conversiones entre cualesquiera dos divisas que formen parte de la lista publicada por el TG.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+
+<para
+>&keurocalc; tiene las siguientes ventajas en términos de comodidad y usabilidad: <itemizedlist>
+<listitem
+><para
+>Verá todos los valores intermedios y el resultado tanto en divisa de referencia (euro) como en la otra divisa.</para
+></listitem>
+<listitem
+><para
+>Tiene un área de entrada separada en la que podrá teclear un nuevo valor teniendo a la vista el resultado anterior.</para
+></listitem>
+<listitem
+><para
+>La ergonomía es muy parecida a la habitual de las calculadoras de bolsillo, a pesar del hecho de que cualquier valor que teclee puede ser un valor en la divisa de referencia (euro), un valor en la otra divisa, un porcentaje o una cantidad sin unidad.</para
+></listitem>
+<listitem
+><para
+>Pulse las teclas en el orden en que las leería en voz alta.</para
+></listitem>
+<listitem
+><para
+>Si comete errores, existe un botón especial de corrección para corregir su último dato introducido, mientras no lo haya validado.</para
+></listitem>
+<listitem
+><para
+>Los números se muestran de acuerdo con su configuración local: con una coma o un punto como separador decimal, de acuerdo con las preferencias de &systemsettings;.</para
+></listitem>
+<listitem
+><para
+>Puede decidir de donde debe descargar &keurocalc; descargar las tasas de conversión, con qué divisa iniciar al ejecutar &keurocalc;, y qué método de redondeo utilizar.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>&keurocalc; permite las siguientes operaciones: <itemizedlist>
+<listitem
+><para
+>Conversiones de y a la divisa de referencia (euro).</para
+></listitem>
+<listitem
+><para
+>Redondeo sistemático del resultado mostrado, pero las operaciones se realizan de acuerdo a la precisión de las bibliotecas matemáticas.</para
+></listitem>
+<listitem
+><para
+>Sumas, restas, multiplicaciones y divisiones.</para
+></listitem>
+<listitem
+><para
+>Aplicar un porcentaje, sumar un porcentaje, o restar un porcentaje.</para
+></listitem>
+<listitem
+><para
+>Posibilidad de guardar valores en una divisa intermedia, o utilizarla para guardar el total acumulado.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>&keurocalc; tiene algunas limitaciones: <itemizedlist>
+<listitem
+><para
+>No admite paréntesis o expresiones complejas.</para
+></listitem>
+<listitem
+><para
+>Algunos redondeos son incorrectos debido a las limitaciones de la biblioteca matemática.</para
+></listitem>
+<listitem
+><para
+>Las divisas inflacionistas no puede manejarse debido al tamaño limitado de la pantalla. Sin embargo, con el cambio de la nueva lira turca y la eliminación de seis ceros en esta divisa, en la práctica no resulta un problema.</para
+></listitem>
+<!-- listitem
+><para
+>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para
+></listitem-->
+</itemizedlist>
+</para>
+
+<warning
+><para
+>&keurocalc; nunca garantizará la exactitud de los cambios ni del resultado. Siempre podrá comprobar sus cálculos de otra forma. Si los resultados no son correctos o no son los esperados los autores no tendrán responsabilidad, de conformidad con <link linkend="credits"
+>licencia</link
+> de acuerdo de los países. Tenga en cuenta que los cambios variables se descargan sin cifrado de las fuentes de datos (Banco Central Europeo y Time Genie) y son fuentes de datos inseguras. Algunas «personas mal intencionadas» pueden confundir &keurocalc; forzando los cambios. Más simple, es posible que se produzca una transmisión errónea.</para
+></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title
+>Utilizar &keurocalc;</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title
+>Realizar conversiones</title>
+
+
+<procedure>
+<title
+>Para convertir 1.000 francos belgas en euros</title>
+<step
+><para
+>Seleccione el elemento <guilabel
+>BEF - Francos belgas</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>) en la lista desplegable de monedas de la parte inferior. Si esta elección no está disponible, pulse el botón <guibutton
+>Preferencias...</guibutton
+> y seleccione <guilabel
+>Euro, sin acceso a red (solo cambios fijos)</guilabel
+> para que aparezca la lista correcta de cambios.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>1000</userinput
+> en el teclado o utilice los botones numéricos. Los dígitos aparecerán mientras escribe en la pantalla <guilabel
+>Entrada</guilabel
+>. Si comete un error al teclear los dígitos, use la tecla &Backspace; o el botón <guibutton
+>&lt;-</guibutton
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>£</guibutton
+> o la tecla <keycap
+>F</keycap
+>. De hecho, cualquier tecla no reservada para algún otro uso validará la entrada como una expresión numérica en la moneda, por eso <keycap
+>B</keycap
+> o <keycap
+>X</keycap
+> funcionarán perfectamente.</para
+></step>
+<step
+><para
+>Lea el resultado en la pantalla <guilabel
+>Resultado</guilabel
+> a la derecha: 24.79 € o 24,79 € de acuerdo con nuestra configuración local.</para
+></step
+> 
+</procedure>
+
+<procedure>
+<title
+>Para convertir 25 euros en francos belgas</title>
+<step
+><para
+>Si están disponibles los cambios fijos, seleccione el elemento <guilabel
+>BEF - Franco belga</guilabel
+> en la lista desplegable de monedas. Puede saltar este paso si la moneda ya está seleccionada.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>25</userinput
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>€</guibutton
+> o la tecla <keycap
+>E</keycap
+>.</para
+></step>
+<step
+><para
+>Lea el resultado en la pantalla <guilabel
+>Resultado</guilabel
+> situada a la derecha: 1,008.50 FB o 1.008,50 FB. El valor exacto es 1.008,4975, pero se redondea a la centena más cercana de un franco belga. El redondeo de unidades depende de la moneda y del método de redondeo: con las reglas de redondeo oficiales, para los francos belgas esto es 0,01 FB, para las liras italianas es 1 L, por ejemplo.</para
+></step>
+</procedure>
+
+<para
+>También puede teclear: <userinput
+>25 Entrar E</userinput
+>.</para>
+
+<procedure>
+<title
+>Para convertir 120 marcos alemanes en pesetas españolas.</title>
+<step
+><para
+>Si están disponibles los cambios fijos de las monedas, seleccione el elemento <guilabel
+>DEM - Marco alemán</guilabel
+> en la lista desplegable de monedas.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>120</userinput
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>DM</guibutton
+> o las teclas <keycap
+>D</keycap
+> o <keycap
+>M</keycap
+>.</para
+></step>
+<step
+><para
+>A continuación seleccione el elemento <guilabel
+>ESP - Peseta española</guilabel
+> para ver la misma cantidad de 61,36 € convertida a pesetas en el área <guilabel
+>Resultado</guilabel
+>.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title
+>Sumando y restando</title>
+
+<procedure>
+<title
+>¿Cuánto es 3 + 5?</title>
+<step
+><para
+>Teclee <userinput
+>3</userinput
+> y pulse <guibutton
+>+</guibutton
+>. Tenga en cuenta que el campo resultado, <computeroutput
+>3</computeroutput
+> es un valor simple mostrado en una línea, sin unidad monetaria.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>5</userinput
+> y pulse el botón <guibutton
+>Introducir</guibutton
+> o la tecla &Enter;. El resultado <computeroutput
+>8</computeroutput
+> aparece a la derecha.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Recibió 100 dólares americanos y pagó 32,50 euros por un libro, ¿Cuánto debe dejar en su cuenta del banco?</title>
+<step
+><para
+>Asegúrese de que están disponibles los cambios variables. Sino lo están, pulse <guibutton
+>Preferencias...</guibutton
+> para seleccionar <guilabel
+>Euro, Banco Central Europeo</guilabel
+> o <guilabel
+>Euro, Time Genie</guilabel
+>. Seleccione los elementos <guilabel
+>USD - Dólar americano</guilabel
+> en el desplegable inferior. Si no tiene acceso a Internet, no estará disponible el elemento y los últimos cambios variables entre el euro y el dólar no se podrán determinar.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>100</userinput
+> y pulse <guibutton
+>$</guibutton
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>-</guibutton
+> o la tecla <keycap
+>-</keycap
+>. Vea el signo <computeroutput
+>-</computeroutput
+> en la parte más a la izquierda de la pantalla <guilabel
+>Entrada</guilabel
+>.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>32,50</userinput
+> o <userinput
+>32.50</userinput
+> y pulse <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Lea el resultado en la pantalla <guilabel
+>Resultado</guilabel
+> situada a la derecha. El valor exacto puede depender del último cambio. Tenga en cuenta que durante todo el cálculo podrá leer los valores tanto en euros como en dólares americanos. Ponga atención en el hecho de que las diferentes fuentes de datos (ECB o TG) pueden no proporcionar el mismo cambio entre el euro y el dólar.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Pagó un libro de 32,50 € con un billete de 500 FF. ¿Cuánto debería devolverle el dependiente en billetes de euro y monedas?</title>
+<step
+><para
+>Seleccione el elemento <guilabel
+>FRF - Franco francés</guilabel
+> en la lista desplegable de las monedas, si es que no lo estaba ya.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>32.50</userinput
+> o <userinput
+>32,50</userinput
+> y pulse <guibutton
+>€</guibutton
+>. También puede teclear <userinput
+>32,5</userinput
+> sin el <userinput
+>0</userinput
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>-</guibutton
+> o la tecla <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>500</userinput
+> y pulse el botón <guibutton
+>FF</guibutton
+> o la tecla <keycap
+>F</keycap
+>.</para
+></step>
+<step
+><para
+>El resultado, <computeroutput
+>-43,72 €</computeroutput
+> es negativo, lo que indica el cambio que tendrá que devolver al comprador. El botón <guibutton
+>+/-</guibutton
+> o la tecla <keycap
+>S</keycap
+> le permitirán cambiar el signo del resultado.</para
+></step>
+</procedure>
+
+<note
+><para
+>No intente sumar euros a los valores simples (sin unidad monetaria): No funcionará, por la misma razón que no podrá sumar 5 metros a 3 kilogramos.</para
+></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title
+>Multiplicar y dividir</title>
+
+<procedure>
+<title
+>Compra 3,2 kilogramos de manzanas a 2 € el kilo. ¿Cuánto cuesta en dólares autralianos?</title>
+<step
+><para
+>Seleccione el elemento <guilabel
+>AUD - Dólar australiano</guilabel
+> si está disponible y no estaba ya seleccionado.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>2</userinput
+> y pulse <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>X</guibutton
+> o la tecla <keycap
+>*</keycap
+>. Note el signo <computeroutput
+>X</computeroutput
+> a la izquierda de la pantalla de <guilabel
+>Entrada</guilabel
+>.</para
+></step>
+<step
+><para
+>Ahora teclee <userinput
+>3,2</userinput
+> seguido del botón <guibutton
+>Introducir</guibutton
+> o la tecla &Enter;: Esto significa «3,2 unidades» a 2 € cada una.</para
+></step>
+<step
+><para
+>El resultado en dólares australianos será <computeroutput
+>6,4 €</computeroutput
+>.</para
+></step>
+</procedure>
+
+<para
+>También puede seguir el siguiente orden: <userinput
+>3,2 = * 2 €</userinput
+> e incluso <userinput
+>3,2 *2 €</userinput
+>.</para>
+
+<note
+><para
+>No es posible multiplicar X euros por Y dólares, de la misma forma que no puede multiplicar 10 dedos por 2 orejas. </para
+></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title
+>Utilizar porcentajes</title>
+
+<procedure>
+<title
+>¿cuánto es el 20% de 3.000 yenes?</title>
+<step
+><para
+>Seleccione el elemento <guilabel
+>JPY - Yen japonés</guilabel
+> si está disponible y no estaba seleccionado.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>3000</userinput
+> y pulse el botón <guibutton
+>¥</guibutton
+> o la tecla <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Introduzca <userinput
+>20</userinput
+> y pulse el botón <guibutton
+>%</guibutton
+> o la tecla <keycap
+>%</keycap
+>. Al igual que en las multiplicaciones, el valor tiene que teclearse <emphasis
+>antes</emphasis
+> del porcentaje.</para
+></step>
+<step
+><para
+>Vea el resultado: es el equivalente a 600 yenes.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>¿Cuánto es 3.000 yenes más el 20%?</title>
+<step
+><para
+>Seleccione el elemento <guilabel
+>JPY - Yen japonés</guilabel
+> si está disponible y no estaba seleccionado.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>3000</userinput
+> y pulse el botón <guibutton
+>¥</guibutton
+> o la tecla <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>+</guibutton
+> o la tecla <keycap
+>+</keycap
+>.</para
+></step>
+<step
+><para
+>Introduzca <userinput
+>20</userinput
+> y pulse el botón <guibutton
+>%</guibutton
+> o la tecla <keycap
+>%</keycap
+>. Al igual que en las multiplicaciones, el valor tiene que teclearse <emphasis
+>antes</emphasis
+> del porcentaje.</para
+></step>
+<step
+><para
+>Vea el resultado: 26,96 € o 3.600 ¥ en el momento de escribir esto.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>¿Cuánto es 3.000 yenes menos el 20%?</title>
+<step
+><para
+>Seleccione el elemento <guilabel
+>JPY - Yen japonés</guilabel
+> si está disponible y no estaba seleccionado.</para
+></step>
+<step
+><para
+>Teclee <userinput
+>3000</userinput
+> y pulse el botón <guibutton
+>¥</guibutton
+> o la tecla <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>-</guibutton
+> o la tecla <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Introduzca <userinput
+>20</userinput
+> y pulse el botón <guibutton
+>%</guibutton
+> o la tecla <keycap
+>%</keycap
+>. Al igual que en las multiplicaciones, el valor tiene que teclearse <emphasis
+>antes</emphasis
+> del porcentaje.</para
+></step>
+<step
+><para
+>Vea el resultado: 17,97 € o 2.400 ¥ en la fecha en que se escribieron estas líneas.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title
+>Utilizar la memoria intermedia</title>
+
+<procedure>
+<title
+>¿Cómo puedo guardar y recuperar después algún valor?</title>
+<step
+><para
+>Haga sus cálculos.</para
+></step>
+<step
+><para
+>Pulse el botón <guibutton
+>Min</guibutton
+> (introducir en memoria) para guardar el valor en el área <guilabel
+>Resultado</guilabel
+>. Vea que ahora están disponibles las demás teclas de memoria.</para
+></step>
+<step
+><para
+>Trabaje un poco más con la calculadora.</para
+></step>
+<step
+><para
+>Recupere el valor de la memoria pulsando el botón <guibutton
+>MR</guibutton
+> (recuperar memoria).</para
+></step>
+</procedure>
+
+<para
+>Internamente, el valor se recupera sin unidades o en la moneda de referencia (euro) con la máxima precisión permitida por la biblioteca matemática. En raros casos, se producirán problemas de redondeo si el valor guardado es un valor redondeado  en una moneda que no es la de referencia.</para>
+
+<procedure>
+<title
+>¿Cómo puedo borrar la memoria?</title>
+<step
+><para
+>Pulse el botón <guibutton
+>Reiniciar</guibutton
+>. Tenga en cuenta que el botón <guibutton
+>Reiniciar</guibutton
+> lo borra todo: la entrada, el resultado y la memoria.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>¿Cómo puedo calcular 3,1 * 5,2 € + 2,7 * 8,9 €?</title>
+<step
+><para
+>Primero calcule la primera mitad: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Guarde el resultado en memoria con el botón <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Calcule la otra mitad: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Sume el resultado a la memoria con el botón <guibutton
+>M+</guibutton
+>.</para
+></step>
+<step
+><para
+>Recupere la suma con el botón <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>También hay otras soluciones como <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € + MR</userinput
+>.</para>
+
+<procedure>
+<title
+>¿Cómo puedo calcular 3,1 * 5,2 € - 2,7 * 8,9 €?</title>
+<step
+><para
+>Primero calcule la primera mitad: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Guarde el resultado en memoria con el botón <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Calcule la otra mitad: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Reste el resultado de la memoria con el botón <guibutton
+>M-</guibutton
+>.</para
+></step>
+<step
+><para
+>Recupere la suma con el botón <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>La secuencia <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € - MR</userinput
+> calculará la diferencia en orden inverso.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title
+>Referencia de órdenes</title>
+
+<sect1 id="reference-keys">
+<title
+>Accesos rápidos predeterminados</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>Sale de &keurocalc;.</member>
+
+<!--This is changed at runtime by DrClash 
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Displays these help pages</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Goes to the currency selection area</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Displays the <guilabel
+>About</guilabel
+> box</member>
+-->
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Dígitos de entrada.</member>
+
+<member
+><keycap
+>.</keycap
+> o <keycap
+>,</keycap
+></member>
+<member
+>Separador decimal.</member>
+
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> y <keycap
+>/</keycap
+></member>
+<member
+>Operadores: suma, resta, multiplicación y división.</member>
+
+<member
+>&Enter; y <keycap
+>Entrar</keycap
+></member>
+<member
+>Validación del número introducido considerado un valor simple, sin unidad.</member>
+
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Validación del número de entrada considerado como un porcentaje.</member>
+
+<member
+>&Backspace;</member>
+<member
+>Elimina la última entrada: dígitos, separador decimal u operador.</member>
+
+<member
+>Teclas &Tab; y <keycombo action="simul"
+>&Shift; &Tab;</keycombo
+></member>
+<member
+>Se mueve de un botón al siguiente o al anterior</member>
+
+<member
+>Teclas de flechas</member>
+<member
+>En el área de selección de moneda, muévase de una moneda a otra.</member>
+
+<member
+>Barra espaciadora</member>
+<member
+>Cuando el foco se encuentra sobre un botón, pulsa este botón.</member>
+
+<member
+><keycap
+>E</keycap
+> o <keycap
+>$</keycap
+></member>
+<member
+>Validación del número introducido considerado como un valor expresado en la moneda de referencia (euro).</member>
+
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Cambia el signo del resultado.</member>
+
+<member
+>Cualquier otra tecla</member>
+<member
+>Valida la entrada del número considerado como un número en la otra moneda.</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title
+>Los botones</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><guibutton
+>0</guibutton
+> a <guibutton
+>9</guibutton
+></member>
+<member
+>Dígitos de entrada.</member>
+
+<member
+><guibutton
+>.</guibutton
+> o <guibutton
+>,</guibutton
+></member>
+<member
+>Separador decimal.</member>
+
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Elimina la última entrada: dígitos, separador decimal u operador.</member>
+
+<member
+><guibutton
+>AC</guibutton
+></member>
+<member
+>Borra todo: las áreas de entrada y de resultado.</member>
+
+<member
+><guibutton
+>€</guibutton
+> o <guibutton
+>$</guibutton
+></member>
+<member
+>Validación del número introducido considerado como un valor expresado en la moneda de referencia (euro).</member>
+
+<member
+>El botón etiquetado con el nombre de otra moneda.</member>
+<member
+>Valida la entrada del número considerado como un número en la otra moneda.</member>
+
+<member
+><guibutton
+>Introducir</guibutton
+></member>
+<member
+>Validación del número introducido considerado un valor simple, sin unidad.</member>
+
+<member
+><guibutton
+>%</guibutton
+></member>
+<member
+>Validación del número de entrada considerado como un porcentaje.</member>
+
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Cambia el signo del resultado.</member>
+
+<member
+><guibutton
+>Min</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> y <guibutton
+>-</guibutton
+></member>
+<member
+>Guarda el resultado en memoria, recupera el resultado de la memoria, suma el resultado a la memoria y resta el resultado de la memoria.</member>
+
+<member
+><guibutton
+>+</guibutton
+>, <guibutton
+>-</guibutton
+>, <guibutton
+>X</guibutton
+> y <guibutton
+>/</guibutton
+></member>
+<member
+>Operadores: suma, resta, multiplicación y división.</member>
+
+<member
+><guibutton
+>Reiniciar</guibutton
+></member>
+<member
+>Reinicia la entrada, el resultado y la memoria.</member>
+
+<member
+><guibutton
+>Acerca de</guibutton
+></member>
+<member
+>Muestra el cuadro <guilabel
+>Acerca de</guilabel
+>.</member>
+
+<member
+><guibutton
+>Ayuda</guibutton
+></member>
+<member
+>Muestra estas páginas de ayuda.</member>
+
+<member
+>La lista desplegable con los códigos de moneda y sus nombres</member>
+<member
+>Seleccione otra moneda para trabajar con ella</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="settings">
+<title
+>El diálogo preferencias</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title
+>Divisa de referencia, origen de las cotizaciones</title>
+
+<para
+>Esta configuración define de dónde debería descargar &keurocalc; los cambios entre la divisa de referencia y otras monedas. Están disponibles las siguientes elecciones:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Euro, sin acceso a red (solo cotizaciones fijas)</guilabel
+></term>
+<listitem>
+<para
+>El euro será la divisa de referencia. No se descargan o se utilizan cambios variables. Las únicas divisas disponibles son aquellas que tienen una conversión fija respecto al euro.</para>
+<para
+>Esta configuración está adaptada para los ordenadores sin acceso a red.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Banco Central Europeo</guilabel
+></term>
+<listitem>
+<para
+>El euro será la divisa de referencia. Estarán disponibles los cambios fijos. &keurocalc; intenta descargar los cambios variables del <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Banco Central Europeo (BCE)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+<!--varlistentry>
+<term
+><guilabel
+>Dollar, New York Federal Reserve Bank</guilabel
+></term>
+<listitem>
+<para
+>Dollar is the reference currency. There are no fixed exchange rates.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para>
+<para
+>Currently, &keurocalc; has a problem determining the date of the latest
+exchange rates published by that bank, because of time zone offsets and non-working
+days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
+not optimal.</para>
+</listitem>
+</varlistentry-->
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Time Genie</guilabel
+></term>
+<listitem>
+<para
+>El euro será la divisa de referencia. Estarán disponibles los cambios fijos. &keurocalc; intenta descargar los cambios variables del <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title
+>Divisa predeterminada</title>
+
+<para
+>Esta configuración define la otra moneda que se utilizará cuando se inicie &keurocalc; o cuando el usuario valide la nueva configuración.</para>
+
+<para
+>Tenga en cuenta que la divisa seleccionada puede no sumunistrarse en las fuentes de cambios seleccionadas. En este caso, se tomará la primera divisa disponible en la lista.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title
+>Redondeo</title>
+
+<para
+>Define cómo debería presentarse el resultado en el área de muestra. Internamente, todos los cálculos se hacen con la precisión ofrecida por la biblioteca matemática, pero no suele tener sentido presentar décimos de céntimos. Están disponibles los siguientes métodos de redondeo:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Reglas de redondeo oficiales</guilabel
+></term>
+<listitem>
+<para
+>Se utilizan las reglas de conversión de la UE u otras reglas de conversión oficial. Esto significa que el resultado se redondea a la unidad más próxima para monedas como el yen japonés o la lira italiana, y a la centésima de unidad («céntimos») para las divisas como el euro o el dólar.</para>
+<para
+>Por ejemplo, 158,323 yenes se redondearían a 158 yenes. 12,537 euros se redondearían a 12,54 euros.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Método de la moneda más pequeña</guilabel
+></term>
+<listitem>
+<para
+>El resultado se redondea al valor más próximo de la moneda más pequeña que circule en el país que use esta moneda. Para las monedas desaparecidas como la lira italiana, se utiliza la moneda más pequeña utilizada antes de que desapareciera: en el caso de la lira italiana, las monedas de 50 liras.</para>
+<para
+>Por ejemplo, 1.235,9 liras italianas se redondearán a 1.250 liras. 39,45 coronas noruegas se redondearán a 39,50 coronas.</para>
+<para
+>Nos falta información sobre la moneda más pequeña existente en cada país. Por favor, envíenos un informe de fallo si &keurocalc; utiliza un valor incorrecto para la moneda más pequeña disponible en su país, e introduciremos esta información.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sin redondeo</guilabel
+></term>
+<listitem>
+<para
+>El valor calculado se muestra sin cambios, como un número de coma flotante.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-look-and-feel">
+<title
+>Aspecto visual</title>
+
+<para
+>Esta configuración define el aspecto y el comportamiento de &keurocalc;. Están disponibles las siguientes funciones:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Color de la pantalla</guilabel
+></term>
+<listitem>
+<para
+>Esta opción se permite cambiar el color del fondo del área de la pantalla (tanto de la entrada como del resultado). Para cambiar el color del fondo, pulse en <guibutton
+>Cambiar...</guibutton
+>. Esto abrirá el diálogo de selección estándar de &kde;. Seleccione un color nuevo, y a continuación pulse <guibutton
+>Aceptar</guibutton
+> para validar la nueva elección.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Activar pantalla de bienvenida</guilabel
+></term>
+<listitem>
+<para
+>Quite la marca de esta casilla si no desea que aparezca la imagen inicial cuando se inicia &keurocalc;.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos y licencia</title>
+
+<para
+>&keurocalc;</para>
+
+<para
+>Copyright del programa 2001-2019, los desarrolladores de &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>e.bischoff@_NOSPAM_noos.fr</email
+> - diseño e implementación.</para
+></listitem>
+<listitem
+><para
+>Gil Gross <email
+>ptit.ours@_NOSPAM_gmail.com</email
+> - funcionalidad adicional.</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_NOSPAM_unet.univie.ac.at</email
+> - diseño y prueba.</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_NOSPAM_euronet.nl</email
+> - diseño artístico.</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>Copyright de la documentación 2001-2019, Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+>.</para>
+
+<para
+>Documentación revisada por &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+<para
+>Traducido por Santiago Fernández Sancho <email
+>santi@kde-es.org</email
+>.</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

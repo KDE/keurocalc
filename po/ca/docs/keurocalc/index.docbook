@@ -1,0 +1,1344 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="keurocalc" lang="&language;">
+
+<bookinfo>
+<title
+>El manual del &keurocalc;</title>
+
+<authorgroup>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>ebischoff@_NOSPAM_nerim.net</email
+></address>
+</affiliation>
+</author>
+</authorgroup>
+
+&traductor.Antoni.Bella; 
+
+<copyright>
+<year
+>2001-2019</year>
+<holder
+>Éric Bischoff</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>24 de juny de 2019</date>
+<releaseinfo
+>1.3.1</releaseinfo>
+
+<abstract>
+<para
+>El &keurocalc; és un convertidor de butxaca universal de moneda i calculadora. Aquesta documentació descriu la versió 1.3.1 del &keurocalc;. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>extragear</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>moneda</keyword>
+<keyword
+>convertidor</keyword>
+<keyword
+>calculadora</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+
+<para
+>El &keurocalc; és un convertidor de butxaca universal de moneda i calculadora. </para>
+
+<para
+>L'1 de gener de 2002, 12 països europeus van unir les seves monedes nacionals en una sola, l'euro (€). El mateix succeeix de tant en tant en menor escala amb els nous països europeus. El &keurocalc; ajuda a: <variablelist>
+<varlistentry>
+<term
+>Durant els períodes de transició</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Per a verificar el compte bancari, en pagar tant en euros com en la moneda anterior (lires italianes, per exemple).</para
+></listitem>
+<listitem
+><para
+>Per a verificar les compres i calcular el canvi si es paga amb una nota del banc etiquetada en la moneda anterior.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Molts anys després dels períodes de transició</term>
+<listitem
+><para
+>Per a tenir una idea del valor de les coses en la moneda antiga en qualsevol etapa del càlcul.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>En qualsevol moment</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Per a realitzar conversions entre l'euro i altres monedes, com la lliura esterlina, segons el tipus de canvi diari publicat pel <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Banc Central Europeu (BCE)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Per a realitzar conversions entre dues monedes que formen part de la llista publicada pel BCE.</para
+></listitem>
+<!--listitem
+><para
+>To do conversions between the US dollar and other currencies
+according to the daily exchange rate published by the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>To do conversions between any two currencies that are part of the list
+published by the NY FRB.</para
+></listitem-->
+<listitem
+><para
+>Per a realitzar conversions entre l'euro i altres monedes, com la lliura esterlina, d'acord amb el tipus de canvi diari publicat pel canvi de divises <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Per a realitzar conversions entre dues monedes que formen part de la llista publicada pel TG.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+
+<para
+>El &keurocalc; té els següents avantatges en termes de comoditat i usabilitat: <itemizedlist>
+<listitem
+><para
+>Veureu cada valor intermedi i el resultat tant en la moneda de referència (euro) com en l'altra moneda.</para
+></listitem>
+<listitem
+><para
+>Hi ha una àrea d'entrada separada on podreu escriure un nou valor sense deixar de veure el resultat anterior.</para
+></listitem>
+<listitem
+><para
+>L'ergonomia és molt propera de les calculadores de butxaca habituals, tot i que qualsevol valor que escriviu podrà ser un valor en la moneda de referència (euro), un valor en l'altra divisa, un percentatge o una quantitat sense unitat.</para
+></listitem>
+<listitem
+><para
+>Premeu les tecles en l'ordre en què parlaríeu en veu alta el que esteu fent.</para
+></listitem>
+<listitem
+><para
+>Si cometeu errors, un botó de correcció especial us permetrà corregir les últimes dades d'entrada, sempre que no les hàgiu validat.</para
+></listitem>
+<listitem
+><para
+>Els números es mostraran d'acord amb la configuració regional: amb una coma o un punt com a decimal, d'acord amb la configuració de l'&systemsettings;.</para
+></listitem>
+<listitem
+><para
+>Podreu decidir des d'on descarregarà el &keurocalc; les taxes de conversió, des de quina moneda començarà quan llanceu el &keurocalc; i quin mètode d'arrodoniment utilitzar.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>El &keurocalc; permet les següents operacions: <itemizedlist>
+<listitem
+><para
+>Conversions des de i cap a la moneda de referència (euro).</para
+></listitem>
+<listitem
+><para
+>Arrodoniment sistemàtic del resultat mostrat, però els càlculs es realitzen internament amb la precisió de les biblioteques matemàtiques.</para
+></listitem>
+<listitem
+><para
+>Sumes, restes, multiplicacions i divisions habituals.</para
+></listitem>
+<listitem
+><para
+>Aplicar un percentatge, afegir un percentatge o restar un percentatge.</para
+></listitem>
+<listitem
+><para
+>Possibilitat d'emmagatzemar valors en una memòria intermèdia, o fer-la servir com un total acumulat.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Aquestes són algunes de les limitacions del &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Sense parèntesis ni expressions complexes.</para
+></listitem>
+<listitem
+><para
+>Alguns arrodoniments surten malament a causa de les limitacions de la biblioteca matemàtica.</para
+></listitem>
+<listitem
+><para
+>Les monedes inflacionistes no es poden gestionar a causa d'una mida de visualització limitada. No obstant això, amb el canvi a la nova lira turca i l'eliminació de sis zeros en aquesta moneda, ja no és un problema pràctic.</para
+></listitem>
+<!-- listitem
+><para
+>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para
+></listitem-->
+</itemizedlist>
+</para>
+
+<warning
+><para
+>El &keurocalc; mai garantirà l'exactitud dels tipus de canvi ni la precisió del resultat. Sempre estareu convidat a verificar els càlculs per algun altre mitjà. Com estableix l'acord de <link linkend="credits"
+>llicència</link
+>, no hi ha responsabilitat dels autors si els resultats no són correctes o com s'esperava. A més, tingueu en compte que els tipus de canvi variables es descarreguen sense encriptar i, per tant, una forma no segura de les fonts de dades (Banc Central Europeu i Time Genie). Alguns atacants <quote
+>algú-en-el-mig</quote
+> podrien fer confondre al &keurocalc; falsificant els tipus de canvi. Més simple, sempre serà possible un error de transmissió.</para
+></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title
+>Usar el &keurocalc;</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title
+>Realitzar les conversions</title>
+
+
+<procedure>
+<title
+>Per a convertir 1.000 francs belgues a euros</title>
+<step
+><para
+>Seleccioneu l'element <guilabel
+>BEF - Franc belga</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>) a la llista desplegable de monedes que hi ha a la part inferior. Si aquesta opció no està disponible, premeu el botó <guibutton
+>Arranjament...</guibutton
+> i seleccioneu <guilabel
+>Euro, sense accés a xarxa (només les cotitzacions fixes)</guilabel
+> perquè aparegui la llista de cotitzacions correcta.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>1000</userinput
+> en el teclat o utilitzeu els botons numèrics corresponents. Mentre escriviu apareixeran els dígits a la pantalla d'<guilabel
+>Entrada</guilabel
+>. Si cometeu un error en escriure els dígits, feu servir la tecla &Retro; o el botó <guibutton
+>&lt;-</guibutton
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>FB</guibutton
+> o la tecla <keycap
+>F</keycap
+>. De fet, qualsevol tecla que no estigui reservada per a algun altre ús, validarà l'entrada com un número expressat en la moneda, de manera que <keycap
+>B</keycap
+> o <keycap
+>X</keycap
+> també funcionaran.</para
+></step>
+<step
+><para
+>Llegiu el resultat a la pantalla <guilabel
+>Resultat</guilabel
+> que hi ha a la dreta: 24.79 € o 24,79 € segons la nostra configuració regional.</para
+></step
+> 
+</procedure>
+
+<procedure>
+<title
+>Per a convertir 25 euros a francs belgues</title>
+<step
+><para
+>Si hi ha disponible les monedes de tipus fix, seleccioneu l'element <guilabel
+>BEF - Franc belga</guilabel
+> a la llista desplegable de monedes que hi ha a la part inferior. Podreu ometre aquest pas si ja és la moneda seleccionada.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>25</userinput
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>€</guibutton
+> o la tecla <keycap
+>E</keycap
+>.</para
+></step>
+<step
+><para
+>Llegiu el resultat a la pantalla de resultats que hi ha a la dreta: 1008.50 FB o 1.008,50 FB. El valor exacte és 1008,4975, però s'arrodoneix a la centena més propera d'un franc belga. La unitat d'arrodoniment dependrà de la moneda i del mètode d'arrodoniment: amb les regles oficials d'arrodoniment, &pex;, per als francs belgues és 0,01 FB, per a les lires italianes és 1 L.</para
+></step>
+</procedure>
+
+<para
+>També es podria haver escrit: <userinput
+>25 Entra E</userinput
+>.</para>
+
+<procedure>
+<title
+>Per a convertir 120 marcs alemanys a pessetes espanyoles</title>
+<step
+><para
+>Si hi ha disponible les monedes de tipus fix, seleccioneu l'element <guilabel
+>DEM - Marc alemany</guilabel
+> a la llista desplegable de monedes.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>120</userinput
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>DM</guibutton
+> o les tecles <keycap
+>D</keycap
+> o <keycap
+>M</keycap
+>.</para
+></step>
+<step
+><para
+>Simplement seleccioneu l'element <guilabel
+>ESP - Pesseta espanyola</guilabel
+> per a veure a l'àrea de resultats la mateixa quantitat de 61,36 € convertida en pessetes.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title
+>Sumar i restar</title>
+
+<procedure>
+<title
+>Quant és 3 + 5?</title>
+<step
+><para
+>Escriviu <userinput
+>3</userinput
+> i després premeu <guibutton
+>+</guibutton
+>. Observeu que en el camp de resultat, 3 és un valor senzill que es mostra en una sola línia, sense unitat monetària.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>5</userinput
+> i després premeu el botó <guibutton
+>Entra</guibutton
+> o la tecla &Intro;. A la dreta apareixerà el <computeroutput
+>8</computeroutput
+> com a resultat.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Heu rebut 100 dòlars nord-americans i heu pagat 32,50 euros per un llibre, quant us queda al vostre compte bancari?</title>
+<step
+><para
+>Assegureu-vos que estiguin disponibles els tipus de canvi variables. Altrament, premeu <guibutton
+>Arranjament...</guibutton
+> per a seleccionar <guilabel
+>Euro, Banc Central Europeu</guilabel
+> o <guilabel
+>Euro, Time Genie</guilabel
+>. Ara seleccioneu l'element <guilabel
+>USD - Dòlar dels Estats Units</guilabel
+> a la llista desplegable que hi ha a la part inferior. Si no teniu accés a Internet, aquest element no estarà disponible perquè no es podran determinar els últims tipus de canvi variables entre l'euro i el dòlar.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>100</userinput
+> i després premeu <guibutton
+>$</guibutton
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>-</guibutton
+> o la tecla <keycap
+>-</keycap
+>. Observeu el signe <computeroutput
+>-</computeroutput
+> a la part més a l'esquerra de la pantalla d'<guilabel
+>Entrada</guilabel
+>.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>32,50</userinput
+> o <userinput
+>32.50</userinput
+> i després premeu <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Llegiu el resultat a la pantalla <guilabel
+>Resultat</guilabel
+> que hi ha a la dreta. El valor exacte pot dependre dels últims tipus de canvi. Recordeu que durant tot el càlcul heu pogut llegir dels valors tant en euros com en dòlars dels Estats Units. Pareu atenció al fet que diferents fonts de dades (BCE o TG) podrien no proporcionar la mateixa taxa de conversió entre l'euro i el dòlar.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Pagueu un llibre de 32.50 € amb un bitllet de 500 FF. Quant se suposa que us ha de retornar l'empleat, en bitllets i monedes en euros?</title>
+<step
+><para
+>Si encara no està seleccionat, seleccioneu l'element <guilabel
+>FRF - Francs francesos</guilabel
+> a la llista desplegable de monedes.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>32.50</userinput
+> o <userinput
+>32,50</userinput
+> i després premeu <guibutton
+>€</guibutton
+>. També podreu escriure <userinput
+>32,5</userinput
+> sense el <userinput
+>0</userinput
+> al final.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>-</guibutton
+> o la tecla <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>500</userinput
+> i premeu el botó <guibutton
+>FF</guibutton
+> o la tecla <keycap
+>F</keycap
+>.</para
+></step>
+<step
+><para
+>El resultat <computeroutput
+>-43,72 €</computeroutput
+> és negatiu, el qual indica que els diners del canvi que s'han de retornar al client. El botó <guibutton
+>+/-</guibutton
+> o la tecla <keycap
+>S</keycap
+> permeten canviar el signe del resultat.</para
+></step>
+</procedure>
+
+<note
+><para
+>No intenteu afegir euros a valors senzills (sense unitat monetària): no funcionarà, per la mateixa raó que no es poden afegir 5 metres a 3 quilograms.</para
+></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title
+>Multiplicar i dividir</title>
+
+<procedure>
+<title
+>Compreu 3,2 quilograms de pomes a 2 € per quilogram. Quant costarà tot en dòlars australians?</title>
+<step
+><para
+>Si encara no està seleccionat, seleccioneu l'element <guilabel
+>AUD - Dòlar australià</guilabel
+> a la llista desplegable de monedes.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>2</userinput
+> i premeu <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>X</guibutton
+> o la tecla <keycap
+>*</keycap
+>. Observeu el signe <computeroutput
+>X</computeroutput
+> a l'esquerra de la pantalla d'<guilabel
+>Entrada</guilabel
+>.</para
+></step>
+<step
+><para
+>Ara escriviu <userinput
+>3,2</userinput
+> seguit del botó <guibutton
+>Entra</guibutton
+> o la tecla &Intro;: això voldrà dir <quote
+>3,2 unitats</quote
+> a 2 € cadascuna.</para
+></step>
+<step
+><para
+>El resultat en dòlars australians coincideix amb <computeroutput
+>6.4 €</computeroutput
+>.</para
+></step>
+</procedure>
+
+<para
+>També es podria haver utilitzat el següent ordre: <userinput
+>3,2 = * 2 €</userinput
+> o fins i tot <userinput
+>3,2 * 2 €</userinput
+>.</para>
+
+<note
+><para
+>No és possible multiplicar «X» euros per «Y» dòlars, així com multiplicar 10 dits per 2 orelles. </para
+></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title
+>Usar percentatges</title>
+
+<procedure>
+<title
+>Quant és el 20% de 3000 iens?</title>
+<step
+><para
+>Si encara no està seleccionat, seleccioneu l'element <guilabel
+>JPY - Ien japonès</guilabel
+> a la llista desplegable de monedes.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>3000</userinput
+> i premeu el botó <guibutton
+>¥</guibutton
+> o la tecla <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Introduïu <userinput
+>20</userinput
+> i premeu el botó <guibutton
+>%</guibutton
+> o la tecla <keycap
+>%</keycap
+>. Com també les multiplicacions, el valor s'haurà d'escriure abans que el percentatge.</para
+></step>
+<step
+><para
+>Mireu el resultat: és equivalent a 600 iens.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Quant són 3.000 iens més el 20%?</title>
+<step
+><para
+>Si encara no està seleccionat, seleccioneu l'element <guilabel
+>JPY - Ien japonès</guilabel
+> a la llista desplegable de monedes.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>3000</userinput
+> i premeu el botó <guibutton
+>¥</guibutton
+> o la tecla <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>+</guibutton
+> o la tecla <keycap
+>+</keycap
+>.</para
+></step>
+<step
+><para
+>Introduïu <userinput
+>20</userinput
+> i premeu el botó <guibutton
+>%</guibutton
+> o la tecla <keycap
+>%</keycap
+>. Com també les multiplicacions, el valor s'haurà d'escriure abans que el percentatge.</para
+></step>
+<step
+><para
+>Mireu el resultat: 26,96 € o 3.600 ¥ a l'hora d'escriure.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Quant són 3.000 iens menys el 20%?</title>
+<step
+><para
+>Si encara no està seleccionat, seleccioneu l'element <guilabel
+>JPY - Ien japonès</guilabel
+> a la llista desplegable de monedes.</para
+></step>
+<step
+><para
+>Escriviu <userinput
+>3000</userinput
+> i premeu el botó <guibutton
+>¥</guibutton
+> o la tecla <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>-</guibutton
+> o la tecla <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Introduïu <userinput
+>20</userinput
+> i premeu el botó <guibutton
+>%</guibutton
+> o la tecla <keycap
+>%</keycap
+>. Com també les multiplicacions, el valor s'haurà d'escriure abans que el percentatge.</para
+></step>
+<step
+><para
+>Mireu el resultat: 17,97 € o 2.400 ¥ a la data d'escriure aquestes línies.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title
+>Usar la memòria intermèdia</title>
+
+<procedure>
+<title
+>Com emmagatzemo ara i recordo més tard algun valor?</title>
+<step
+><para
+>Feu els vostres càlculs.</para
+></step>
+<step
+><para
+>Premeu el botó <guibutton
+>Min</guibutton
+> (Memory in -En memòria-) per a emmagatzemar el valor a l'àrea <guilabel
+>Resultat</guilabel
+>. Recordeu que ara estaran disponibles les altres tecles de memòria.</para
+></step>
+<step
+><para
+>Feu algun altre treball amb la calculadora.</para
+></step>
+<step
+><para
+>Recupereu el valor des de la memòria prement el botó <guibutton
+>MR</guibutton
+> (Memory Recall -Recuperació des de la memòria-).</para
+></step>
+</procedure>
+
+<para
+>Internament, els valors es recuperaran sense unitat o en la moneda de referència (euro) amb la màxima precisió permesa per la biblioteca matemàtica. En alguns casos rars, això pot conduir a problemes d'arrodoniment si el valor emmagatzemat és un valor arrodonit en una moneda que no és de referència.</para>
+
+<procedure>
+<title
+>Com puc esborrar la memòria?</title>
+<step
+><para
+>Premeu el botó <guibutton
+>Restableix</guibutton
+>. Recordeu que el restabliment ho esborrarà tot: l'entrada, el resultat i la memòria.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Com calculo 3,1 * 5,2 € + 2,7 * 8,9 €?</title>
+<step
+><para
+>Primer calculeu la primera meitat: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Emmagatzemeu el resultat en la memòria amb el botó <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Ara calculeu l'altra meitat: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Afegiu el resultat a la memòria amb el botó <guibutton
+>M+</guibutton
+>.</para
+></step>
+<step
+><para
+>Recupereu la suma amb el botó <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>Hi ha altres solucions com <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € + MR</userinput
+>.</para>
+
+<procedure>
+<title
+>Com calculo 3,1 * 5,2 € - 2,7 * 8,9 €?</title>
+<step
+><para
+>Primer calculeu la primera meitat: <userinput
+>3,1 * 5,2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Emmagatzemeu el resultat en la memòria amb el botó <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Ara calculeu l'altra meitat: <userinput
+>2,7 * 8,9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Resteu el resultat de la memòria amb el botó <guibutton
+>M-</guibutton
+>.</para
+></step>
+<step
+><para
+>Recupereu la suma amb el botó <guibutton
+>MR</guibutton
+>.</para
+></step>
+</procedure>
+
+<para
+>La seqüència <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € - MR</userinput
+> calcula la diferència en l'ordre invers.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title
+>Referència d'ordres</title>
+
+<sect1 id="reference-keys">
+<title
+>Dreceres predeterminades</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>Surt del &keurocalc;</member>
+
+<!--This is changed at runtime by DrClash 
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Displays these help pages</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Goes to the currency selection area</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Displays the <guilabel
+>About</guilabel
+> box</member>
+-->
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Introducció dels dígits</member>
+
+<member
+><keycap
+>.</keycap
+> o <keycap
+>,</keycap
+></member>
+<member
+>Separador decimal</member>
+
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> i <keycap
+>/</keycap
+></member>
+<member
+>Operadors: suma, resta, multiplicació i divisió</member>
+
+<member
+>&Intro; i <keycap
+>Entra</keycap
+></member>
+<member
+>Valida l'entrada i retorna el número considerat com un valor senzill, sense unitats</member>
+
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Valida l'entrada i retorna el número considerat com un percentatge</member>
+
+<member
+>&Retro;</member>
+<member
+>Elimina l'última entrada: dígits, separador decimal o operador</member>
+
+<member
+>Tecles &Tab; i <keycombo action="simul"
+>&Maj;&Tab;</keycombo
+></member>
+<member
+>Mou des d'un botó al següent o a l'anterior</member>
+
+<member
+>Tecles de cursor</member>
+<member
+>A l'àrea de selecció de la moneda, es mou d'una moneda a una altra</member>
+
+<member
+>Barra d'espai</member>
+<member
+>Quan el focus es troba en un botó, el prem</member>
+
+<member
+><keycap
+>E</keycap
+> o <keycap
+>$</keycap
+></member>
+<member
+>Valida l'entrada i retorna el número considerat com un valor expressat en la moneda de referència (euro)</member>
+
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Canvia el signe del resultat</member>
+
+<member
+>Qualsevol altra tecla</member>
+<member
+>Valida l'entrada i retorna el número considerat com un número en l'altra moneda</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title
+>Els botons</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><guibutton
+>0</guibutton
+> a <guibutton
+>9</guibutton
+></member>
+<member
+>Introducció dels dígits</member>
+
+<member
+><guibutton
+>.</guibutton
+> o <guibutton
+>,</guibutton
+></member>
+<member
+>Separador decimal</member>
+
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Elimina l'última entrada: dígits, separador decimal o operador</member>
+
+<member
+><guibutton
+>AC</guibutton
+></member>
+<member
+>Ho esborra tot: tant l'àrea d'entrada com la del resultat</member>
+
+<member
+><guibutton
+>€</guibutton
+> o <guibutton
+>$</guibutton
+></member>
+<member
+>Valida l'entrada i retorna el número considerat com un valor expressat en la moneda de referència (euro)</member>
+
+<member
+>El botó etiquetat amb el nom d'una altra moneda</member>
+<member
+>Valida l'entrada i retorna el número considerat com un número en l'altra moneda</member>
+
+<member
+><guibutton
+>Entrada</guibutton
+></member>
+<member
+>Valida l'entrada i retorna el número considerat com un valor senzill, sense unitats</member>
+
+<member
+><guibutton
+>%</guibutton
+></member>
+<member
+>Valida l'entrada i retorna el número considerat com un percentatge</member>
+
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Canvia el signe del resultat</member>
+
+<member
+><guibutton
+>Mín</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> i <guibutton
+>-</guibutton
+></member>
+<member
+>Emmagatzemeu el resultat a la memòria, recupereu la memòria en el resultat, afegiu el resultat a la memòria i resteu el resultat des de la memòria</member>
+
+<member
+><guibutton
+>/</guibutton
+>, <guibutton
+>X</guibutton
+>, <guibutton
+>-</guibutton
+> i <guibutton
+>+</guibutton
+></member>
+<member
+>Operadors: suma, resta, multiplicació i divisió</member>
+
+<member
+><guibutton
+>Inicialitza</guibutton
+></member>
+<member
+>Reinicialitza l'entrada, el resultat i la memòria</member>
+
+<member
+><guibutton
+>Quant al</guibutton
+></member>
+<member
+>Mostra el quadre <guilabel
+>Quant al</guilabel
+></member>
+
+<member
+><guibutton
+>Ajuda</guibutton
+></member>
+<member
+>Mostra aquestes pàgines d'ajuda</member>
+
+<member
+>La llista desplegable amb els codis i noms de la moneda</member>
+<member
+>Selecciona una altra moneda amb la qual treballar</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="settings">
+<title
+>El diàleg de configuració</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title
+>Moneda de referència, cotitzacions d'origen</title>
+
+<para
+>Aquesta configuració defineix des d'on haurà de descarregar el &keurocalc; els tipus de canvi entre la moneda de referència i les altres monedes. Hi ha disponibles les següents opcions:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Euro, sense accés a xarxa (només les cotitzacions fixes)</guilabel
+></term>
+<listitem>
+<para
+>L'euro és la moneda de referència. No es descarregarà o utilitzarà cap tipus de canvi variable. Les úniques monedes disponibles són les que tenen una taxa de conversió fixa amb l'euro.</para>
+<para
+>Aquesta configuració està adaptada a ordinadors sense accés a la xarxa.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Banc Central Europeu</guilabel
+></term>
+<listitem>
+<para
+>L'euro és la moneda de referència. Hi ha disponibles tipus de canvi fixos. El &keurocalc; intentarà descarregar els tipus de canvi variables des del Banc Central Europeu (BCE).</para>
+</listitem>
+</varlistentry>
+
+<!--varlistentry>
+<term
+><guilabel
+>Dollar, New York Federal Reserve Bank</guilabel
+></term>
+<listitem>
+<para
+>Dollar is the reference currency. There are no fixed exchange rates.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para>
+<para
+>Currently, &keurocalc; has a problem determining the date of the latest
+exchange rates published by that bank, because of time zone offsets and non-working
+days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
+not optimal.</para>
+</listitem>
+</varlistentry-->
+
+<varlistentry>
+<term
+><guilabel
+>Euro, Time Genie</guilabel
+></term>
+<listitem>
+<para
+>L'euro és la moneda de referència. Estaran disponibles els tipus de canvi fixos. El &keurocalc; intentarà descarregar els tipus de canvi variables des de <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title
+>Moneda per defecte</title>
+
+<para
+>Aquesta opció de configuració defineix l'altra moneda que s'utilitza quan s'inicia el &keurocalc; o quan l'usuari valida la configuració nova.</para>
+
+<para
+>Recordeu que la moneda seleccionada podria no ser proporcionada per la font de tipus de canvi seleccionat. En aquest cas, s'utilitzarà la primera moneda disponible a la llista.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title
+>Arrodoniment</title>
+
+<para
+>Aquesta configuració definirà com s'hauran de presentar els resultats a l'àrea de visualització. Internament, tots els càlculs es realitzaran amb la precisió que ofereix la biblioteca matemàtica, però generalment no té sentit presentar dècimes de centaus. Hi ha disponibles els següents mètodes d'arrodoniment:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Regles oficials d'arrodoniment</guilabel
+></term>
+<listitem>
+<para
+>S'utilitzaran les regles de conversió de la UE o altres regles de conversió oficials. Vol dir que el resultat s'arrodonirà a la següent unitat per a monedes com el ien japonès o la lira italiana, i s'arrodonirà a la següent centèsima d'unitat (<quote
+>centaus</quote
+>) per a les monedes com l'euro o el dòlar.</para>
+<para
+>Per exemple, 158,323 iens s'arrodoniran a 158 iens. 12,537 euros s'arrodoniran a 12,54 euros.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mètode de la moneda més petita</guilabel
+></term>
+<listitem>
+<para
+>El resultat s'arrodonirà al següent valor de la moneda més petita que circula al país que fa servir aquesta moneda. Per a les monedes desaparegudes com la lira italiana, s'utilitzarà la moneda més petita que solia circular abans que es retirés la moneda: en el cas de la lira italiana, era la moneda de 50 lires.</para>
+<para
+>Per exemple, 1.235,9 lires italianes s'arrodonirà a 1.250 lires. 39,45 corones noruegues s'arrodonirà a 39,50 corones.</para>
+<para
+>Ens falta informació sobre les monedes més petites que existeixen en cada país. Envieu un informe d'error si el &keurocalc; fa servir un valor incorrecte per a la moneda més petita disponible al vostre país, i introduirem aquesta informació.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Sense cap arrodoniment</guilabel
+></term>
+<listitem>
+<para
+>El valor calculat es mostrarà sense canvis, com un número de coma flotant.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-look-and-feel">
+<title
+>Aspecte i comportament</title>
+
+<para
+>Aquesta configuració defineix l'aparença i el comportament del &keurocalc;. Hi ha disponibles les següents opcions:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Color de la pantalla</guilabel
+></term>
+<listitem>
+<para
+>El color de fons de les àrees de visualització (tant entrada com resultat). Per a canviar el color de fons, feu clic a <guibutton
+>Canvia...</guibutton
+>. S'obrirà el diàleg estàndard per a la selecció del color del &kde;. Trieu un color nou, després premeu <guibutton
+>D'acord</guibutton
+> per a validar la nova opció.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Activa la pantalla de presentació</guilabel
+></term>
+<listitem>
+<para
+>Desactiveu aquesta casella si no desitja que aparegui la imatge inicial quan s'iniciï &keurocalc;.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>&keurocalc;</para>
+
+<para
+>Copyright del programa 2001-2019, els desenvolupadors del &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+> - disseny i implementació</para
+></listitem>
+<listitem
+><para
+>Gil Gross <email
+>ptit.ours@_NOSPAM_gmail.com</email
+> - funcionalitat addicional</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_NOSPAM_unet.univie.ac.at</email
+> - disseny i proves</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_NOSPAM_euronet.nl</email
+> - treball artístic gràfic</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>Copyright de la documentació 2001-2019 Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+>.</para>
+
+<para
+>Documentació revisada per en &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
