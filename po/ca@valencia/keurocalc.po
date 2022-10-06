@@ -657,7 +657,7 @@ msgstr "Configura KEuroCalc"
 #: calculator.ui:2518
 #, kde-format
 msgid "&Settings..."
-msgstr "&Configuració..."
+msgstr "Con&figuració..."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, CurrencyList)
 #: calculator.ui:2531
