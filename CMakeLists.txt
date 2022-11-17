@@ -13,7 +13,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 include(ECMInstallIcons)
-
+include(ECMDeprecationSettings)
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
     Widgets
@@ -38,8 +38,7 @@ configure_file(config-keurocalc.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keuro
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054800)
+ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.100.0)
 
 add_subdirectory( keurocalc )
 add_subdirectory( doc )
