@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-06 00:48+0000\n"
-"PO-Revision-Date: 2022-08-16 06:11+0200\n"
+"PO-Revision-Date: 2022-11-28 07:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -526,7 +526,7 @@ msgstr "შეასწორეთ ბოლო ციფრი"
 #: calculator.ui:1968
 #, kde-format
 msgid "Enter value expressed in reference currency"
-msgstr ""
+msgstr "შეიყვანეთ მიმართულ ვალუტაში გამოხატული მნიშვნელობა"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, SlashButton)
 #: calculator.ui:1990
@@ -544,7 +544,7 @@ msgstr "მეხსიერებაში დამახსოვრებ�
 #: calculator.ui:2050
 #, kde-format
 msgid "Reset both input, result and memory"
-msgstr ""
+msgstr "ორივე შეყვანის, პასუხის და მეხსიერების განულება"
 
 #. i18n: ectx: property (text), widget (QPushButton, ResetButton)
 #: calculator.ui:2053
@@ -556,7 +556,7 @@ msgstr "თავიდან"
 #: calculator.ui:2132
 #, kde-format
 msgid "Enter value expressed in currency"
-msgstr ""
+msgstr "შეიყვანეთ ვალუტაში გამოხატული მნიშვნელობა"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, AsteriskButton)
 #: calculator.ui:2157
@@ -574,7 +574,7 @@ msgstr "მეხსერებიდან გახსენება"
 #: calculator.ui:2204
 #, kde-format
 msgid "Display about box"
-msgstr ""
+msgstr "პროგრამის შესახებ ინფორმაციის ფანჯრის ჩვენება"
 
 #. i18n: ectx: property (text), widget (QPushButton, AboutButton)
 #: calculator.ui:2207
@@ -611,7 +611,7 @@ msgstr "მეხსიერებიდან გამოკლება"
 #: calculator.ui:2361
 #, kde-format
 msgid "Display help pages"
-msgstr ""
+msgstr "დახმარების ჩვენება"
 
 #. i18n: ectx: property (text), widget (QPushButton, HelpButton)
 #: calculator.ui:2364
@@ -714,7 +714,7 @@ msgstr "(c) 2001-2019, the KEuroCalc developers"
 #: main.cpp:35
 #, kde-format
 msgid "Cash converter and calculator"
-msgstr ""
+msgstr "ფულის გადამყვანი და კალკულატორი"
 
 #: main.cpp:36
 #, kde-format
@@ -771,7 +771,7 @@ msgstr "Bas Willems"
 #: main.cpp:42
 #, kde-format
 msgid "Graphical artwork"
-msgstr ""
+msgstr "გრაფიკული ნამუშევრები"
 
 #: main.cpp:44
 #, kde-format
@@ -795,13 +795,13 @@ msgstr "მორგება"
 #: settingsdialog.ui:27
 #, kde-format
 msgid "Look and feel"
-msgstr ""
+msgstr "გარეგნობა"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: settingsdialog.ui:35
 #, kde-format
 msgid "Display color"
-msgstr ""
+msgstr "საჩვენებელი ფერი"
 
 #. i18n: ectx: property (text), widget (QLabel, displayColorResult)
 #: settingsdialog.ui:510
@@ -813,64 +813,64 @@ msgstr "215.06 €"
 #: settingsdialog.ui:526
 #, kde-format
 msgid "C&hange..."
-msgstr ""
+msgstr "&შეცვლა..."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxSplashScreen)
 #: settingsdialog.ui:553
 #, kde-format
 msgid "Enable splash screen"
-msgstr ""
+msgstr "საწყისი ეკრანის ჩვენება"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: settingsdialog.ui:581
 #, kde-format
 msgid "Rounding"
-msgstr ""
+msgstr "დამრგვალება"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonOfficialRules)
 #: settingsdialog.ui:587
 #, kde-format
 msgid "Offic&ial rounding rules"
-msgstr ""
+msgstr "დამრგვალების &ოფიციალური წესები"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonSmallestCoin)
 #: settingsdialog.ui:594
 #, kde-format
 msgid "Smallest coin &method"
-msgstr ""
+msgstr "უმცირესი მონეტის &მეთოდი"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonNoRounding)
 #: settingsdialog.ui:601
 #, kde-format
 msgid "&No rounding at all"
-msgstr ""
+msgstr "&დამრგვალების გარეშე"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: settingsdialog.ui:611
 #, kde-format
 msgid "Reference currency, rates origin"
-msgstr ""
+msgstr "მიმართული ვალუტა, საწყისი კურსი"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroFixed)
 #: settingsdialog.ui:617
 #, kde-format
 msgid "Euro, no ne&twork access (fixed rates only)"
-msgstr ""
+msgstr "ევრო, &ქსელთან წვდომის გარეშე (მხოლოდ მითითებული კურსები)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroECB)
 #: settingsdialog.ui:627
 #, kde-format
 msgid "E&uro, European Central Bank"
-msgstr ""
+msgstr "&ევრო, ევროპული ცენტრალური ბანკი"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroTG)
 #: settingsdialog.ui:637
 #, kde-format
 msgid "Euro, Time &Genie"
-msgstr ""
+msgstr "Euro, Time &Genie"
 
 #. i18n: ectx: property (text), widget (QLabel, defaultCurrencyText)
 #: settingsdialog.ui:649
 #, kde-format
 msgid "Default currency"
-msgstr ""
+msgstr "ნაგულისხმები ვალუტა"
