@@ -3,7 +3,7 @@
                              -------------------
     begin                : lun nov 13 11:22:05 CET 2006
     copyright            : (C) 2006-2019 by Éric Bischoff
-    email                : ebischoff@nerim.net
+    email                : bischoff@kde.org
  ***************************************************************************/
 
 /***************************************************************************
@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
 {
 	QCoreApplication a(argc, argv);
     KAboutData aboutData("curconvd", i18n("CurConvD"), "1.3.1", i18n("A currency converter daemon"),
-                 KAboutLicense::GPL, i18n("(c) 2006-2019, the curconvd developers"), i18n("A program by Éric Bischoff <ebischoff@nerim.net>\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"));
+                 KAboutLicense::GPL, i18n("(c) 2006-2019, the curconvd developers"), i18n("A program by Éric Bischoff <bischoff@kde.org>\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"));
 
-	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "ebischoff@nerim.net");
+	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "bischoff@kde.org");
 
 	KAboutData::setApplicationData(aboutData);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)

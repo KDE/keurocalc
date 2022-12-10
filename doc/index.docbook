@@ -15,7 +15,7 @@
 <firstname>Éric</firstname>
 <surname>Bischoff</surname>
 <affiliation>
-<address><email>ebischoff@_NOSPAM_nerim.net</email></address>
+<address><email>bischoff@_NOSPAM_kde.org</email></address>
 </affiliation>
 </author>
 </authorgroup>
@@ -698,14 +698,14 @@ when &keurocalc; starts.</para>
 <para>Program copyright 2001-2019 the &keurocalc; developers:
 
 <itemizedlist>
-<listitem><para>Éric Bischoff <email>ebischoff@_NOSPAM_nerim.net</email> - design and implementation</para></listitem>
+<listitem><para>Éric Bischoff <email>bischoff@_NOSPAM_kde.org</email> - design and implementation</para></listitem>
 <listitem><para>Gil Gross <email>ptit.ours@_NOSPAM_gmail.com</email> - additional functionality</para></listitem>
 <listitem><para>Melchior Franz <email>a8603365@_NOSPAM_unet.univie.ac.at</email> - design and testing</para></listitem>
 <listitem><para>Bas Willems <email>cybersurfer@_NOSPAM_euronet.nl</email> - graphical artwork</para></listitem>
 </itemizedlist></para>
 
 <para>Documentation copyright 2001-2019 Éric Bischoff
-<email>ebischoff@_NOSPAM_nerim.net</email>.</para>
+<email>bischoff@_NOSPAM_kde.org</email>.</para>
 
 <para>Documentation reviewed by &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
