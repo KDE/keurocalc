@@ -1,4 +1,4 @@
-project(curconvd VERSION "1.3.1")
+project(curconvd VERSION "1.3.2")
 
 ########### next target ###############
 

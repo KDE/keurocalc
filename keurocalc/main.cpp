@@ -2,7 +2,7 @@
                           main.cpp  -  main program
                              -------------------
     begin                : sam déc  1 23:40:19 CET 2001
-    copyright            : (C) 2001-2019 by Éric Bischoff
+    copyright            : (C) 2001-2022 by Éric Bischoff
     email                : bischoff@kde.org
  ***************************************************************************/
 
@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 	KLocalizedString::setApplicationDomain("keurocalc");
 
-    const QString copyright = i18n("(c) 2001-2019, the KEuroCalc developers");
+    const QString copyright = i18n("(c) 2001-2022, the KEuroCalc developers");
     const QString description = i18n("Cash converter and calculator");
-    KAboutData aboutData("keurocalc", i18n("KEuroCalc"), "1.3.1", description,
+    KAboutData aboutData("keurocalc", i18n("KEuroCalc"), "1.3.2", description,
                  KAboutLicense::GPL, copyright, i18n("A program by Éric Bischoff <bischoff@kde.org>\n\nThis program is dedicated to all who know that money does not justify anything.\n\nTime Genie exchange rates courtesy of <a href='http://www.timegenie.com/' title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"));
 
 	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "bischoff@kde.org");
