@@ -260,6 +260,7 @@
 		official-rules-precision = "1.0"
 		smallest-coin-precision = "1.0"
 		name = "Croatian kuna"
+		fixed-rate = "7.53450"
 		/>
 	<currency
 		symbol = "Ft"
