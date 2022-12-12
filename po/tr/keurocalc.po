@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: extragear-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-06 00:48+0000\n"
-"PO-Revision-Date: 2022-11-21 22:30+0300\n"
+"PO-Revision-Date: 2022-12-11 14:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Belçika Frangı"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Bulgarian lev"
-msgstr "Bulgaristan Levası"
+msgstr "Bulgar Levası"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -185,7 +185,7 @@ msgstr "Büyük Britanya Sterlini"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Greek drachma"
-msgstr "Yunanistan Frankı"
+msgstr "Yunan Drahmisi"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -235,7 +235,7 @@ msgstr "İran Riyali"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Icelandic krona"
-msgstr "İzlanda Kronası"
+msgstr "İzlanda Kronu"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -265,7 +265,7 @@ msgstr "Kamboçya Rieli"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "South Korean won"
-msgstr "Güney Kore Wonu"
+msgstr "Güney Kore Vonu"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -390,7 +390,7 @@ msgstr "Katar Riyali"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Romanian new leu"
-msgstr "Romanya Yeni Levası"
+msgstr "Yeni Rumen Leyi"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -410,7 +410,7 @@ msgstr "Suudi Arabistan Riyali"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Swedish krona"
-msgstr "İsveç Kronası"
+msgstr "İsveç Kronu"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
