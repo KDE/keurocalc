@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2013-03-26 15:14+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -49,13 +49,13 @@ msgstr "चलन परिवर्तक डीमन"
 
 #: main.cpp:33
 #, kde-format
-msgid "(c) 2006-2019, the curconvd developers"
+msgid "(c) 2006-2022, the curconvd developers"
 msgstr ""
 
 #: main.cpp:33
 #, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"

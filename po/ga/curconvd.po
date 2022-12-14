@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extragear-utils/curconvd.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2008-04-07 13:47-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -50,13 +50,13 @@ msgstr "Deamhan tiontaithe airgeadra"
 #: main.cpp:33
 #, fuzzy, kde-format
 #| msgid "(c) 2006-2012, the curconvd developers"
-msgid "(c) 2006-2019, the curconvd developers"
+msgid "(c) 2006-2022, the curconvd developers"
 msgstr "© 2006-2012, forbróirí curconvd"
 
 #: main.cpp:33
 #, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"

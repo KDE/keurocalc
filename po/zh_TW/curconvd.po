@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2019-07-18 15:12+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -51,14 +51,20 @@ msgid "A currency converter daemon"
 msgstr "貨幣轉換守護程式"
 
 #: main.cpp:33
-#, kde-format
-msgid "(c) 2006-2019, the curconvd developers"
+#, fuzzy, kde-format
+#| msgid "(c) 2006-2019, the curconvd developers"
+msgid "(c) 2006-2022, the curconvd developers"
 msgstr "(c) 2006-2019, Curconvd 開發團隊"
 
 #: main.cpp:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
+#| "\n"
+#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"

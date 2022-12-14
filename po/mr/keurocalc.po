@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-06 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2013-03-06 18:03+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -708,7 +708,7 @@ msgstr ""
 
 #: main.cpp:34
 #, kde-format
-msgid "(c) 2001-2019, the KEuroCalc developers"
+msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr ""
 
 #: main.cpp:35
@@ -724,7 +724,7 @@ msgstr ""
 #: main.cpp:37
 #, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "This program is dedicated to all who know that money does not justify "
 "anything.\n"

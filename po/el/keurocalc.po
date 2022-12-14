@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-06 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2021-09-09 16:51+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -710,8 +710,9 @@ msgid "Not loaded"
 msgstr "Μη φορτωμένο"
 
 #: main.cpp:34
-#, kde-format
-msgid "(c) 2001-2019, the KEuroCalc developers"
+#, fuzzy, kde-format
+#| msgid "(c) 2001-2019, the KEuroCalc developers"
+msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2019, οι προγραμματιστές του KEuroCalc"
 
 #: main.cpp:35
@@ -725,9 +726,17 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
+#| "\n"
+#| "This program is dedicated to all who know that money does not justify "
+#| "anything.\n"
+#| "\n"
+#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "This program is dedicated to all who know that money does not justify "
 "anything.\n"

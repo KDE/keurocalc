@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-06 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2004-12-08 00:42-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team: TAMIL <tamilinix@yahoogroups.com>\n"
@@ -733,7 +733,7 @@ msgstr "எற்றவில்லை"
 
 #: main.cpp:34
 #, fuzzy, kde-format
-msgid "(c) 2001-2019, the KEuroCalc developers"
+msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2004, the KEuroCalc  உருவாக்கிகள்"
 
 #: main.cpp:35
@@ -749,7 +749,7 @@ msgstr "Kயூரோகணிப்பான்"
 #: main.cpp:37
 #, fuzzy, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "This program is dedicated to all who know that money does not justify "
 "anything.\n"

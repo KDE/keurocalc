@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2009-01-09 09:13+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <punjabi-l10n@users.sf.net>\n"
@@ -52,13 +52,13 @@ msgstr "ਇੱਕ ਮੁੱਦਰਾ ਬਦਲਣ ਡੈਮਨ"
 #: main.cpp:33
 #, fuzzy, kde-format
 #| msgid "(c) 2006-2008, the curconvd developpers"
-msgid "(c) 2006-2019, the curconvd developers"
+msgid "(c) 2006-2022, the curconvd developers"
 msgstr "(c) 2006-2008, curconvd ਡਿਵੈਲਪਰ"
 
 #: main.cpp:33
 #, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
