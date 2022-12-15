@@ -23,7 +23,7 @@
 > <affiliation
 > <address
 ><email
->ebischoff@_NOSPAM_nerim.net</email
+>bischoff@_NOSPAM_kde.org</email
 ></address>
 </affiliation>
 </author>
@@ -33,7 +33,7 @@
 
 <copyright>
 <year
->2001-2019</year>
+>2001-2022</year>
 <holder
 >Éric Bischoff</holder>
 </copyright>
@@ -41,13 +41,13 @@
 >&FDLNotice;</legalnotice>
 
 <date
->24 de juny de 2019</date>
+>10 de desembre de 2022</date>
 <releaseinfo
->1.3.1</releaseinfo>
+>1.3.2</releaseinfo>
 
 <abstract>
 <para
->El &keurocalc; és un convertidor de butxaca universal de moneda i calculadora. Aquesta documentació descriu la versió 1.3.1 del &keurocalc;. </para>
+>El &keurocalc; és un convertidor de butxaca universal de moneda i calculadora. Aquesta documentació descriu la versió 1.3.2 del &keurocalc;. </para>
 </abstract>
 
 <keywordset>
@@ -1292,11 +1292,11 @@ not optimal.</para>
 >&keurocalc;</para>
 
 <para
->Copyright del programa 2001-2019, els desenvolupadors del &keurocalc;: <itemizedlist>
+>Copyright del programa 2001-2022, els desenvolupadors del &keurocalc;: <itemizedlist>
 <listitem
 ><para
 >Éric Bischoff <email
->ebischoff@_NOSPAM_nerim.net</email
+>bischoff@_NOSPAM_kde.org</email
 > - disseny i implementació</para
 ></listitem>
 <listitem
@@ -1321,8 +1321,8 @@ not optimal.</para>
 ></para>
 
 <para
->Copyright de la documentació 2001-2019 Éric Bischoff <email
->ebischoff@_NOSPAM_nerim.net</email
+>Copyright de la documentació 2001-2022 Éric Bischoff <email
+>bischoff@_NOSPAM_kde.org</email
 >.</para>
 
 <para

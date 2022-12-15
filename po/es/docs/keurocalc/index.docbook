@@ -23,13 +23,27 @@
 > <affiliation
 > <address
 ><email
->ebischoff@_NOSPAM_nerim.net</email
+>bischoff@_NOSPAM_kde.org</email
 ></address>
 </affiliation>
 </author>
 </authorgroup>
 
 <othercredit role="translator"
+> <firstname
+>Sofía</firstname
+> <surname
+>Priego</surname
+> <affiliation
+><address
+><email
+>spriego@darksylvania.net</email
+></address
+></affiliation
+> <contrib
+>Traductora (actual)</contrib
+> </othercredit
+><othercredit role="translator"
 > <firstname
 >Santiago</firstname
 > <surname
@@ -41,13 +55,13 @@
 ></address
 ></affiliation
 > <contrib
->Traductor</contrib
+>Traductor (anterior)</contrib
 > </othercredit
 > 
 
 <copyright>
 <year
->2001-2019</year>
+>2001-2022</year>
 <holder
 >Éric Bischoff</holder>
 </copyright>
@@ -55,13 +69,13 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2019-06-24</date>
+>2022-12-10</date>
 <releaseinfo
->1.3.1</releaseinfo>
+>1.3.2</releaseinfo>
 
 <abstract>
 <para
->&keurocalc; es un conversor universal de bolsillo de divisas y una calculadora. Está documentación describe la versión 1.3.1 de &keurocalc;. </para>
+>&keurocalc; es un conversor universal de bolsillo de divisas y una calculadora. Está documentación describe la versión 1.3.2 de &keurocalc;. </para>
 </abstract>
 
 <keywordset>
@@ -89,7 +103,7 @@
 >&keurocalc; es un conversor universal de bolsillo de divisas y una calculadora. </para>
 
 <para
->El 1 de enero de 2002, 12 países europeos unieron sus divisas nacionales en una única, el euro (€). Lo mismo sucede de vez en cuando en menor escala con los nuevos países europeos. &keurocalc; ayuda: <variablelist>
+>El 1 de enero de 2002, doce países europeos unieron sus divisas nacionales en una única, el euro (€). Lo mismo sucede de vez en cuando en menor escala con nuevos países europeos. &keurocalc; ayuda: <variablelist>
 <varlistentry>
 <term
 >Durante los periodos de transición</term>
@@ -98,11 +112,11 @@
 ><itemizedlist>
 <listitem
 ><para
->A comprobar una cuenta bancaria, cuando paga en euros y en la antigua divisa (Liras italianas, por ejemplo).</para
+>A comprobar una cuenta bancaria, cuando se paga en euros y en la antigua divisa (liras italianas, por ejemplo).</para
 ></listitem>
 <listitem
 ><para
->A comprobar la compra, y calcular el cambio si paga con un billete de la antigua moneda.</para
+>A comprobar la compra y a calcular el cambio si paga con un billete de la antigua moneda.</para
 ></listitem>
 </itemizedlist
 ></para>
@@ -111,10 +125,10 @@
 
 <varlistentry>
 <term
->Algunos años después de los periodos de transición</term>
+>Muchos años después de los periodos de transición</term>
 <listitem
 ><para
->Para obtener una idea del valor de las cosas en la antigua divisa en cualquier fase de los cálculos.</para
+>Para tener una idea del valor de las cosas en la antigua divisa en cualquier fase de los cálculos.</para
 ></listitem>
 </varlistentry>
 
@@ -132,7 +146,7 @@
 ></listitem>
 <listitem
 ><para
->A hacer conversiones entre cualesquiera dos divisas que formen parte de la lista publicada por el BCE.</para
+>A hacer conversiones entre dos divisas que formen parte de la lista publicada por el BCE.</para
 ></listitem>
 <!--listitem
 ><para
@@ -156,7 +170,7 @@ published by the NY FRB.</para
 ></listitem>
 <listitem
 ><para
->A hacer conversiones entre cualesquiera dos divisas que formen parte de la lista publicada por el TG.</para
+>A hacer conversiones entre dos divisas que formen parte de la lista publicada por el TG.</para
 ></listitem>
 </itemizedlist
 ></para>
@@ -174,11 +188,11 @@ published by the NY FRB.</para
 ></listitem>
 <listitem
 ><para
->Tiene un área de entrada separada en la que podrá teclear un nuevo valor teniendo a la vista el resultado anterior.</para
+>Existe un área de entrada separada donde podrá escribir un nuevo valor teniendo a la vista el resultado anterior.</para
 ></listitem>
 <listitem
 ><para
->La ergonomía es muy parecida a la habitual de las calculadoras de bolsillo, a pesar del hecho de que cualquier valor que teclee puede ser un valor en la divisa de referencia (euro), un valor en la otra divisa, un porcentaje o una cantidad sin unidad.</para
+>La ergonomía es muy parecida a la habitual de las calculadoras de bolsillo, a pesar del hecho de que cualquier valor que escriba puede ser un valor en la divisa de referencia (euro), un valor en la otra divisa, un porcentaje o una cantidad sin unidad.</para
 ></listitem>
 <listitem
 ><para
@@ -186,15 +200,15 @@ published by the NY FRB.</para
 ></listitem>
 <listitem
 ><para
->Si comete errores, existe un botón especial de corrección para corregir su último dato introducido, mientras no lo haya validado.</para
+>Si comete errores, existe un botón especial de corrección para modificar los últimos datos introducidos, siempre que no los haya validado.</para
 ></listitem>
 <listitem
 ><para
->Los números se muestran de acuerdo con su configuración local: con una coma o un punto como separador decimal, de acuerdo con las preferencias de &systemsettings;.</para
+>Los números se muestran según su configuración local: con una coma o con un punto como separador decimal, según las preferencias de &systemsettings;.</para
 ></listitem>
 <listitem
 ><para
->Puede decidir de donde debe descargar &keurocalc; descargar las tasas de conversión, con qué divisa iniciar al ejecutar &keurocalc;, y qué método de redondeo utilizar.</para
+>Puede decidir de dónde debe descargar &keurocalc; las tasas de conversión, con qué divisa se debe empezar al ejecutar &keurocalc; y qué método de redondeo se debe utilizar.</para
 ></listitem>
 </itemizedlist>
 </para>
@@ -207,7 +221,7 @@ published by the NY FRB.</para
 ></listitem>
 <listitem
 ><para
->Redondeo sistemático del resultado mostrado, pero las operaciones se realizan de acuerdo a la precisión de las bibliotecas matemáticas.</para
+>Redondeo sistemático del resultado mostrado, aunque las operaciones se realizan internamente teniendo en cuenta la precisión de las bibliotecas matemáticas.</para
 ></listitem>
 <listitem
 ><para
@@ -215,11 +229,11 @@ published by the NY FRB.</para
 ></listitem>
 <listitem
 ><para
->Aplicar un porcentaje, sumar un porcentaje, o restar un porcentaje.</para
+>Aplicar un porcentaje, sumar un porcentaje o restar un porcentaje.</para
 ></listitem>
 <listitem
 ><para
->Posibilidad de guardar valores en una divisa intermedia, o utilizarla para guardar el total acumulado.</para
+>Posibilidad de guardar valores en una divisa intermedia o utilizarla para guardar el total acumulado.</para
 ></listitem>
 </itemizedlist>
 </para>
@@ -228,7 +242,7 @@ published by the NY FRB.</para
 >&keurocalc; tiene algunas limitaciones: <itemizedlist>
 <listitem
 ><para
->No admite paréntesis o expresiones complejas.</para
+>No admite paréntesis ni expresiones complejas.</para
 ></listitem>
 <listitem
 ><para
@@ -236,7 +250,7 @@ published by the NY FRB.</para
 ></listitem>
 <listitem
 ><para
->Las divisas inflacionistas no puede manejarse debido al tamaño limitado de la pantalla. Sin embargo, con el cambio de la nueva lira turca y la eliminación de seis ceros en esta divisa, en la práctica no resulta un problema.</para
+>Las divisas inflacionistas no pueden manejarse debido al tamaño limitado de la pantalla. Sin embargo, con el cambio de la nueva lira turca y la eliminación de seis ceros en esta divisa, en la práctica no resulta un problema.</para
 ></listitem>
 <!-- listitem
 ><para
@@ -248,16 +262,16 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <warning
 ><para
->&keurocalc; nunca garantizará la exactitud de los cambios ni del resultado. Siempre podrá comprobar sus cálculos de otra forma. Si los resultados no son correctos o no son los esperados los autores no tendrán responsabilidad, de conformidad con <link linkend="credits"
+>&keurocalc; nunca garantiza la exactitud de los cambios ni del resultado. Siempre podrá comprobar sus cálculos de otra forma. Si los resultados no son correctos o no son los esperados, los autores no tendrán responsabilidad, de conformidad con el acuerdo de <link linkend="credits"
 >licencia</link
-> de acuerdo de los países. Tenga en cuenta que los cambios variables se descargan sin cifrado de las fuentes de datos (Banco Central Europeo y Time Genie) y son fuentes de datos inseguras. Algunas «personas mal intencionadas» pueden confundir &keurocalc; forzando los cambios. Más simple, es posible que se produzca una transmisión errónea.</para
+> de los países. Tenga en cuenta también que los cambios variables se descargan sin cifrado (es decir, de forma insegura) de las fuentes de datos (Banco Central Europeo y Time Genie). Algunas «personas mal intencionadas» podrían engañar a &keurocalc; falsificando los cambios. Y todavía más fácil, siempre es posible un error de transmisión.</para
 ></warning>
 
 </chapter>
 
 <chapter id="usage">
 <title
->Utilizar &keurocalc;</title>
+>Uso de &keurocalc;</title>
 
 <mediaobject>
 <imageobject
@@ -278,7 +292,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >BEF - Francos belgas</guilabel
 > (<foreignphrase
 >francs belges</foreignphrase
->) en la lista desplegable de monedas de la parte inferior. Si esta elección no está disponible, pulse el botón <guibutton
+>) en la lista desplegable de monedas de la parte inferior. Si esta opción no está disponible, pulse el botón <guibutton
 >Preferencias...</guibutton
 > y seleccione <guilabel
 >Euro, sin acceso a red (solo cambios fijos)</guilabel
@@ -286,11 +300,11 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >1000</userinput
-> en el teclado o utilice los botones numéricos. Los dígitos aparecerán mientras escribe en la pantalla <guilabel
+> en el teclado o utilice los botones numéricos. Los dígitos aparecerán en el visor <guilabel
 >Entrada</guilabel
->. Si comete un error al teclear los dígitos, use la tecla &Backspace; o el botón <guibutton
+> a medida que los escribe. Si comete algún error al escribirlos, use la tecla &Backspace; o el botón <guibutton
 >&lt;-</guibutton
 >.</para
 ></step>
@@ -300,17 +314,17 @@ during the non-working days (Christmas, Easter, etc.).</para
 >£</guibutton
 > o la tecla <keycap
 >F</keycap
->. De hecho, cualquier tecla no reservada para algún otro uso validará la entrada como una expresión numérica en la moneda, por eso <keycap
+>. De hecho, cualquier tecla no reservada para algún otro uso validará la entrada como una expresión numérica en la divisa, por lo que <keycap
 >B</keycap
 > o <keycap
 >X</keycap
-> funcionarán perfectamente.</para
+> también funcionarán.</para
 ></step>
 <step
 ><para
->Lea el resultado en la pantalla <guilabel
+>Lea el resultado del visor <guilabel
 >Resultado</guilabel
-> a la derecha: 24.79 € o 24,79 € de acuerdo con nuestra configuración local.</para
+> de la derecha: 24.79 € o 24,79 €, según nuestra configuración local.</para
 ></step
 > 
 </procedure>
@@ -326,7 +340,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >25</userinput
 >.</para
 ></step>
@@ -340,14 +354,14 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Lea el resultado en la pantalla <guilabel
+>Lea el resultado del visor <guilabel
 >Resultado</guilabel
-> situada a la derecha: 1,008.50 FB o 1.008,50 FB. El valor exacto es 1.008,4975, pero se redondea a la centena más cercana de un franco belga. El redondeo de unidades depende de la moneda y del método de redondeo: con las reglas de redondeo oficiales, para los francos belgas esto es 0,01 FB, para las liras italianas es 1 L, por ejemplo.</para
+> situado a la derecha: 1,008.50 FB o 1.008,50 FB. El valor exacto es 1.008,4975, pero se redondea a la centena más cercana de un franco belga. El redondeo de unidades depende de la moneda y del método de redondeo: con las reglas de redondeo oficiales, para los francos belgas es 0,01 FB y para las liras italianas es 1 L, por ejemplo.</para
 ></step>
 </procedure>
 
 <para
->También puede teclear: <userinput
+>También puede escribir: <userinput
 >25 Entrar E</userinput
 >.</para>
 
@@ -362,7 +376,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >120</userinput
 >.</para
 ></step>
@@ -390,24 +404,24 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <sect1 id="usage-additions">
 <title
->Sumando y restando</title>
+>Sumas y restas</title>
 
 <procedure>
 <title
 >¿Cuánto es 3 + 5?</title>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >3</userinput
 > y pulse <guibutton
 >+</guibutton
->. Tenga en cuenta que el campo resultado, <computeroutput
+>. Tenga en cuenta que, en el campo de resultado, <computeroutput
 >3</computeroutput
 > es un valor simple mostrado en una línea, sin unidad monetaria.</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >5</userinput
 > y pulse el botón <guibutton
 >Introducir</guibutton
@@ -419,10 +433,10 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <procedure>
 <title
->Recibió 100 dólares americanos y pagó 32,50 euros por un libro, ¿Cuánto debe dejar en su cuenta del banco?</title>
+>Ha recibido 100 dólares americanos y ha pagado 32,50 euros por un libro. ¿Cuánto debe quedar en su cuenta del banco?</title>
 <step
 ><para
->Asegúrese de que están disponibles los cambios variables. Sino lo están, pulse <guibutton
+>Asegúrese de que están disponibles los cambios variables. Si no lo están, pulse <guibutton
 >Preferencias...</guibutton
 > para seleccionar <guilabel
 >Euro, Banco Central Europeo</guilabel
@@ -430,11 +444,11 @@ during the non-working days (Christmas, Easter, etc.).</para
 >Euro, Time Genie</guilabel
 >. Seleccione los elementos <guilabel
 >USD - Dólar americano</guilabel
-> en el desplegable inferior. Si no tiene acceso a Internet, no estará disponible el elemento y los últimos cambios variables entre el euro y el dólar no se podrán determinar.</para
+> en el desplegable inferior. Si no tiene acceso a Internet, no estará disponible este elemento y los últimos cambios variables entre el euro y el dólar no se podrán determinar.</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >100</userinput
 > y pulse <guibutton
 >$</guibutton
@@ -446,15 +460,15 @@ during the non-working days (Christmas, Easter, etc.).</para
 >-</guibutton
 > o la tecla <keycap
 >-</keycap
->. Vea el signo <computeroutput
+>. Observe el signo <computeroutput
 >-</computeroutput
-> en la parte más a la izquierda de la pantalla <guilabel
+> en la parte más a la izquierda del visor <guilabel
 >Entrada</guilabel
 >.</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >32,50</userinput
 > o <userinput
 >32.50</userinput
@@ -464,30 +478,30 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Lea el resultado en la pantalla <guilabel
+>Lea el resultado en el visor <guilabel
 >Resultado</guilabel
-> situada a la derecha. El valor exacto puede depender del último cambio. Tenga en cuenta que durante todo el cálculo podrá leer los valores tanto en euros como en dólares americanos. Ponga atención en el hecho de que las diferentes fuentes de datos (ECB o TG) pueden no proporcionar el mismo cambio entre el euro y el dólar.</para
+> situado a la derecha. El valor exacto puede depender del último cambio. Tenga en cuenta que durante todo el cálculo podrá leer los valores tanto en euros como en dólares americanos. Preste atención al hecho de que es posible que las distintas fuentes de datos (ECB o TG) no proporcionen el mismo cambio entre el euro y el dólar.</para
 ></step>
 </procedure>
 
 <procedure>
 <title
->Pagó un libro de 32,50 € con un billete de 500 FF. ¿Cuánto debería devolverle el dependiente en billetes de euro y monedas?</title>
+>Ha pagado un libro de 32,50 € con un billete de 500 FF. ¿Cuánto debería devolverle el dependiente en billetes y monedas de euro?</title>
 <step
 ><para
 >Seleccione el elemento <guilabel
 >FRF - Franco francés</guilabel
-> en la lista desplegable de las monedas, si es que no lo estaba ya.</para
+> en la lista desplegable de las monedas.</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >32.50</userinput
 > o <userinput
 >32,50</userinput
 > y pulse <guibutton
 >€</guibutton
->. También puede teclear <userinput
+>. También puede escribir <userinput
 >32,5</userinput
 > sin el <userinput
 >0</userinput
@@ -503,7 +517,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >500</userinput
 > y pulse el botón <guibutton
 >FF</guibutton
@@ -525,18 +539,18 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <note
 ><para
->No intente sumar euros a los valores simples (sin unidad monetaria): No funcionará, por la misma razón que no podrá sumar 5 metros a 3 kilogramos.</para
+>No intente sumar euros a valores simples (sin unidad monetaria): no funcionará por la misma razón que no puede sumar 5 metros a 3 kilogramos.</para
 ></note>
 
 </sect1>
 
 <sect1 id="usage-multiplications">
 <title
->Multiplicar y dividir</title>
+>Multiplicación y división</title>
 
 <procedure>
 <title
->Compra 3,2 kilogramos de manzanas a 2 € el kilo. ¿Cuánto cuesta en dólares autralianos?</title>
+>Ha comprado 3,2 kilogramos de manzanas a 2 € el kilo. ¿Cuánto cuesta en dólares australianos?</title>
 <step
 ><para
 >Seleccione el elemento <guilabel
@@ -545,7 +559,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >2</userinput
 > y pulse <guibutton
 >€</guibutton
@@ -557,23 +571,23 @@ during the non-working days (Christmas, Easter, etc.).</para
 >X</guibutton
 > o la tecla <keycap
 >*</keycap
->. Note el signo <computeroutput
+>. Observe el signo <computeroutput
 >X</computeroutput
-> a la izquierda de la pantalla de <guilabel
+> a la izquierda del visor <guilabel
 >Entrada</guilabel
 >.</para
 ></step>
 <step
 ><para
->Ahora teclee <userinput
+>Ahora escriba <userinput
 >3,2</userinput
 > seguido del botón <guibutton
 >Introducir</guibutton
-> o la tecla &Enter;: Esto significa «3,2 unidades» a 2 € cada una.</para
+> o la tecla &Enter;: esto significa «3,2 unidades» a 2 € cada una.</para
 ></step>
 <step
 ><para
->El resultado en dólares australianos será <computeroutput
+>El resultado en dólares australianos se corresponde con <computeroutput
 >6,4 €</computeroutput
 >.</para
 ></step>
@@ -582,7 +596,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 <para
 >También puede seguir el siguiente orden: <userinput
 >3,2 = * 2 €</userinput
-> e incluso <userinput
+>, e incluso <userinput
 >3,2 *2 €</userinput
 >.</para>
 
@@ -595,11 +609,11 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <sect1 id="usage-percentage">
 <title
->Utilizar porcentajes</title>
+>Uso de porcentajes</title>
 
 <procedure>
 <title
->¿cuánto es el 20% de 3.000 yenes?</title>
+>¿Cuánto es el 20% de 3.000 yenes?</title>
 <step
 ><para
 >Seleccione el elemento <guilabel
@@ -608,7 +622,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >3000</userinput
 > y pulse el botón <guibutton
 >¥</guibutton
@@ -624,13 +638,13 @@ during the non-working days (Christmas, Easter, etc.).</para
 >%</guibutton
 > o la tecla <keycap
 >%</keycap
->. Al igual que en las multiplicaciones, el valor tiene que teclearse <emphasis
+>. Al igual que en las multiplicaciones, el valor tiene que escribirse <emphasis
 >antes</emphasis
 > del porcentaje.</para
 ></step>
 <step
 ><para
->Vea el resultado: es el equivalente a 600 yenes.</para
+>Observe el resultado: es el equivalente a 600 yenes.</para
 ></step>
 </procedure>
 
@@ -645,7 +659,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >3000</userinput
 > y pulse el botón <guibutton
 >¥</guibutton
@@ -669,13 +683,13 @@ during the non-working days (Christmas, Easter, etc.).</para
 >%</guibutton
 > o la tecla <keycap
 >%</keycap
->. Al igual que en las multiplicaciones, el valor tiene que teclearse <emphasis
+>. Al igual que en las multiplicaciones, el valor tiene que escribirse <emphasis
 >antes</emphasis
 > del porcentaje.</para
 ></step>
 <step
 ><para
->Vea el resultado: 26,96 € o 3.600 ¥ en el momento de escribir esto.</para
+>Observe el resultado: 26,96 € o 3.600 ¥ en el momento de escribir esto.</para
 ></step>
 </procedure>
 
@@ -690,7 +704,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></step>
 <step
 ><para
->Teclee <userinput
+>Escriba <userinput
 >3000</userinput
 > y pulse el botón <guibutton
 >¥</guibutton
@@ -714,13 +728,13 @@ during the non-working days (Christmas, Easter, etc.).</para
 >%</guibutton
 > o la tecla <keycap
 >%</keycap
->. Al igual que en las multiplicaciones, el valor tiene que teclearse <emphasis
+>. Al igual que en las multiplicaciones, el valor tiene que escribirse <emphasis
 >antes</emphasis
 > del porcentaje.</para
 ></step>
 <step
 ><para
->Vea el resultado: 17,97 € o 2.400 ¥ en la fecha en que se escribieron estas líneas.</para
+>Observe el resultado: 17,97 € o 2.400 ¥ en la fecha en que se escribieron estas líneas.</para
 ></step>
 </procedure>
 
@@ -728,7 +742,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <sect1 id="usage-memory">
 <title
->Utilizar la memoria intermedia</title>
+>Uso de la memoria intermedia</title>
 
 <procedure>
 <title
@@ -741,13 +755,13 @@ during the non-working days (Christmas, Easter, etc.).</para
 ><para
 >Pulse el botón <guibutton
 >Min</guibutton
-> (introducir en memoria) para guardar el valor en el área <guilabel
+> (introducir en memoria) para guardar el valor del área <guilabel
 >Resultado</guilabel
->. Vea que ahora están disponibles las demás teclas de memoria.</para
+>. Observe que ahora están disponibles las demás teclas de memoria.</para
 ></step>
 <step
 ><para
->Trabaje un poco más con la calculadora.</para
+>Haga más operaciones más con la calculadora.</para
 ></step>
 <step
 ><para
@@ -758,7 +772,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 </procedure>
 
 <para
->Internamente, el valor se recupera sin unidades o en la moneda de referencia (euro) con la máxima precisión permitida por la biblioteca matemática. En raros casos, se producirán problemas de redondeo si el valor guardado es un valor redondeado  en una moneda que no es la de referencia.</para>
+>Internamente, el valor se recupera sin unidades o en la moneda de referencia (euro) con la máxima precisión permitida por la biblioteca matemática. En casos raros se producirán problemas de redondeo si el valor guardado es un valor redondeado en una moneda que no es la de referencia.</para>
 
 <procedure>
 <title
@@ -862,7 +876,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <sect1 id="reference-keys">
 <title
->Accesos rápidos predeterminados</title>
+>Atajos de teclado predeterminados</title>
 
 <simplelist type="horiz" columns="2">
 <member
@@ -940,7 +954,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >Entrar</keycap
 ></member>
 <member
->Validación del número introducido considerado un valor simple, sin unidad.</member>
+>Validación del número introducido considerado como valor simple, sin unidad.</member>
 
 <member
 ><keycap
@@ -959,17 +973,17 @@ during the non-working days (Christmas, Easter, etc.).</para
 >&Shift; &Tab;</keycombo
 ></member>
 <member
->Se mueve de un botón al siguiente o al anterior</member>
+>Mueve de un botón al siguiente o al anterior.</member>
 
 <member
 >Teclas de flechas</member>
 <member
->En el área de selección de moneda, muévase de una moneda a otra.</member>
+>En el área de selección de moneda, mueve de una moneda a otra.</member>
 
 <member
 >Barra espaciadora</member>
 <member
->Cuando el foco se encuentra sobre un botón, pulsa este botón.</member>
+>Cuando el foco se encuentra sobre un botón, pulsa dicho botón.</member>
 
 <member
 ><keycap
@@ -1030,7 +1044,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >AC</guibutton
 ></member>
 <member
->Borra todo: las áreas de entrada y de resultado.</member>
+>Borra todo: tanto el área de entrada como el resultado.</member>
 
 <member
 ><guibutton
@@ -1051,7 +1065,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >Introducir</guibutton
 ></member>
 <member
->Validación del número introducido considerado un valor simple, sin unidad.</member>
+>Validación del número introducido considerado como valor simple, sin unidad.</member>
 
 <member
 ><guibutton
@@ -1119,7 +1133,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 <member
 >La lista desplegable con los códigos de moneda y sus nombres</member>
 <member
->Seleccione otra moneda para trabajar con ella</member>
+>Selecciona otra moneda para trabajar con ella</member>
 </simplelist>
 
 </sect1>
@@ -1135,10 +1149,10 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <sect2 id="settings-reference">
 <title
->Divisa de referencia, origen de las cotizaciones</title>
+>Divisa de referencia, fuente de las cotizaciones</title>
 
 <para
->Esta configuración define de dónde debería descargar &keurocalc; los cambios entre la divisa de referencia y otras monedas. Están disponibles las siguientes elecciones:</para>
+>Esta configuración define de dónde debería descargar &keurocalc; los cambios entre la divisa de referencia y otras monedas. Están disponibles las siguientes opciones:</para>
 
 <variablelist>
 <varlistentry>
@@ -1148,9 +1162,9 @@ during the non-working days (Christmas, Easter, etc.).</para
 ></term>
 <listitem>
 <para
->El euro será la divisa de referencia. No se descargan o se utilizan cambios variables. Las únicas divisas disponibles son aquellas que tienen una conversión fija respecto al euro.</para>
+>El euro será la divisa de referencia. No se descargan ni se usan cambios variables. Las únicas divisas disponibles son aquellas que tienen una conversión fija respecto al euro.</para>
 <para
->Esta configuración está adaptada para los ordenadores sin acceso a red.</para>
+>Esta configuración está pensada para equipos sin acceso a la red.</para>
 </listitem>
 </varlistentry>
 
@@ -1213,7 +1227,7 @@ not optimal.</para>
 >Esta configuración define la otra moneda que se utilizará cuando se inicie &keurocalc; o cuando el usuario valide la nueva configuración.</para>
 
 <para
->Tenga en cuenta que la divisa seleccionada puede no sumunistrarse en las fuentes de cambios seleccionadas. En este caso, se tomará la primera divisa disponible en la lista.</para>
+>Tenga en cuenta que es posible que la divisa seleccionada no se proporcione en las fuentes de cambios seleccionadas. En este caso, se usará la primera divisa disponible de la lista.</para>
 
 </sect2>
 
@@ -1222,7 +1236,7 @@ not optimal.</para>
 >Redondeo</title>
 
 <para
->Define cómo debería presentarse el resultado en el área de muestra. Internamente, todos los cálculos se hacen con la precisión ofrecida por la biblioteca matemática, pero no suele tener sentido presentar décimos de céntimos. Están disponibles los siguientes métodos de redondeo:</para>
+>Define cómo debería presentarse el resultado en el visor. Internamente, todos los cálculos se realizan con la precisión ofrecida por la biblioteca matemática, pero no suele tener sentido mostrar décimas de céntimos. Están disponibles los siguientes métodos de redondeo:</para>
 
 <variablelist>
 <varlistentry>
@@ -1232,9 +1246,9 @@ not optimal.</para>
 ></term>
 <listitem>
 <para
->Se utilizan las reglas de conversión de la UE u otras reglas de conversión oficial. Esto significa que el resultado se redondea a la unidad más próxima para monedas como el yen japonés o la lira italiana, y a la centésima de unidad («céntimos») para las divisas como el euro o el dólar.</para>
+>Se utilizan las reglas de conversión de la UE u otras reglas de conversión oficiales. Esto significa que el resultado se redondea a la unidad más próxima para monedas como el yen japonés o la lira italiana, y a la centésima de unidad («céntimos») para las divisas como el euro o el dólar.</para>
 <para
->Por ejemplo, 158,323 yenes se redondearían a 158 yenes. 12,537 euros se redondearían a 12,54 euros.</para>
+>Por ejemplo, 158,323 yenes se redondearían a 158 yenes; 12,537 euros se redondearían a 12,54 euros.</para>
 </listitem>
 </varlistentry>
 
@@ -1245,11 +1259,11 @@ not optimal.</para>
 ></term>
 <listitem>
 <para
->El resultado se redondea al valor más próximo de la moneda más pequeña que circule en el país que use esta moneda. Para las monedas desaparecidas como la lira italiana, se utiliza la moneda más pequeña utilizada antes de que desapareciera: en el caso de la lira italiana, las monedas de 50 liras.</para>
+>El resultado se redondea al valor más próximo de la moneda más pequeña que circule en el país que use esta moneda. Para las monedas desaparecidas, como la lira italiana, se utiliza la moneda más pequeña usada antes de que desapareciera: en el caso de la lira italiana, las monedas de 50 liras.</para>
 <para
->Por ejemplo, 1.235,9 liras italianas se redondearán a 1.250 liras. 39,45 coronas noruegas se redondearán a 39,50 coronas.</para>
+>Por ejemplo, 1.235,9 liras italianas se redondearán a 1.250 liras; 39,45 coronas noruegas se redondearán a 39,50 coronas.</para>
 <para
->Nos falta información sobre la moneda más pequeña existente en cada país. Por favor, envíenos un informe de fallo si &keurocalc; utiliza un valor incorrecto para la moneda más pequeña disponible en su país, e introduciremos esta información.</para>
+>Nos falta información sobre la moneda más pequeña existente en cada país. Por favor, envíenos un informe de fallo si &keurocalc; utiliza un valor incorrecto para la moneda más pequeña disponible en su país, e introduciremos dicha información.</para>
 </listitem>
 </varlistentry>
 
@@ -1273,19 +1287,19 @@ not optimal.</para>
 >Aspecto visual</title>
 
 <para
->Esta configuración define el aspecto y el comportamiento de &keurocalc;. Están disponibles las siguientes funciones:</para>
+>Esta configuración define el aspecto y el comportamiento de &keurocalc;. Están disponibles las siguientes opciones:</para>
 
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Color de la pantalla</guilabel
+>Color del visor</guilabel
 ></term>
 <listitem>
 <para
->Esta opción se permite cambiar el color del fondo del área de la pantalla (tanto de la entrada como del resultado). Para cambiar el color del fondo, pulse en <guibutton
+>Esta opción permite cambiar el color del fondo de los visores (tanto de la entrada como del resultado). Para cambiar el color del fondo, pulse en <guibutton
 >Cambiar...</guibutton
->. Esto abrirá el diálogo de selección estándar de &kde;. Seleccione un color nuevo, y a continuación pulse <guibutton
+>. Esto abrirá el diálogo de selección estándar de &kde;. Seleccione un color nuevo y a continuación pulse <guibutton
 >Aceptar</guibutton
 > para validar la nueva elección.</para>
 </listitem>
@@ -1294,11 +1308,11 @@ not optimal.</para>
 <varlistentry>
 <term
 ><guilabel
->Activar pantalla de bienvenida</guilabel
+>Activar la pantalla de bienvenida</guilabel
 ></term>
 <listitem>
 <para
->Quite la marca de esta casilla si no desea que aparezca la imagen inicial cuando se inicia &keurocalc;.</para>
+>Quite la marca de esta casilla si no desea que aparezca la imagen inicial cuando lance &keurocalc;.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -1316,45 +1330,47 @@ not optimal.</para>
 >&keurocalc;</para>
 
 <para
->Copyright del programa 2001-2019, los desarrolladores de &keurocalc;: <itemizedlist>
+>Copyright del programa 2001-2022, los desarrolladores de &keurocalc;: <itemizedlist>
 <listitem
 ><para
 >Éric Bischoff <email
->e.bischoff@_NOSPAM_noos.fr</email
-> - diseño e implementación.</para
+>bischoff@_NOSPAM_kde.org</email
+>: diseño e implementación.</para
 ></listitem>
 <listitem
 ><para
 >Gil Gross <email
 >ptit.ours@_NOSPAM_gmail.com</email
-> - funcionalidad adicional.</para
+>: funcionalidad adicional.</para
 ></listitem>
 <listitem
 ><para
 >Melchior Franz <email
 >a8603365@_NOSPAM_unet.univie.ac.at</email
-> - diseño y prueba.</para
+>: diseño y prueba.</para
 ></listitem>
 <listitem
 ><para
 >Bas Willems <email
 >cybersurfer@_NOSPAM_euronet.nl</email
-> - diseño artístico.</para
+>: diseño artístico.</para
 ></listitem>
 </itemizedlist
 ></para>
 
 <para
->Copyright de la documentación 2001-2019, Éric Bischoff <email
->ebischoff@_NOSPAM_nerim.net</email
+>Copyright de la documentación 2001-2022, Éric Bischoff <email
+>bischoff@_NOSPAM_kde.org</email
 >.</para>
 
 <para
 >Documentación revisada por &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
 <para
->Traducido por Santiago Fernández Sancho <email
+>Traducido originalmente por Santiago Fernández Sancho <email
 >santi@kde-es.org</email
->.</para
+> y revisado por Sofía Priego <email
+>spriego@darksylvania.net</email
+> (encargada actual de la traducción de esta documentación).</para
 > &underFDL; &underGPL; </chapter>
 
 &documentation.index;

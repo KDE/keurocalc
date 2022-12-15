@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2019-06-27 17:19+0100\n"
+"PO-Revision-Date: 2022-12-14 09:48+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -44,25 +44,19 @@ msgid "A currency converter daemon"
 msgstr "Um servidor de conversão de moedas"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "(c) 2006-2019 da equipa de desenvolvimento do curconvd"
+msgstr "(c) 2006-2022 da equipa de desenvolvimento do curconvd"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Um programa de Éric Bischoff <ebischoff@nerim.net>\n"
+"Um programa de Éric Bischoff <ebischoff@kde.org>\n"
 "\n"
 "As taxas de câmbio do Time Genie são da cortesia da <a href='http://www."
 "timegenie.com/' title='taxas de câmbio estrangeiras da cortesia da Time "
@@ -77,6 +71,3 @@ msgstr "Éric Bischoff"
 #, kde-format
 msgid "Design and implementation"
 msgstr "Desenho e implementação"
-
-#~ msgid "Time Genie exchange rates courtesy of Time Genie"
-#~ msgstr "As taxas de câmbio do Time Genie são da cortesia do Time Genie"

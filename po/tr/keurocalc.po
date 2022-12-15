@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: extragear-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2022-12-11 14:29+0300\n"
+"PO-Revision-Date: 2022-12-14 16:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -711,10 +711,9 @@ msgid "Not loaded"
 msgstr "Yüklenmedi"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2019, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "(c) 2001-2019, KEuroCalc geliştiricileri"
+msgstr "(c) 2001-2022, KEuroCalc geliştiricileri"
 
 #: main.cpp:35
 #, kde-format
@@ -727,15 +726,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to all who know that money does not justify "
-#| "anything.\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -745,10 +736,10 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Éric Bischoff <ebischoff@nerim.net> tarafından yazılan bir program\n"
+"Éric Bischoff <bischoff@kde.org> tarafından yazılan bir program\n"
 "\n"
 "Bu program paranın herhangi bir şeyi haklı çıkarmadığını bilenler için "
-"geçerlidir.\n"
+"yazılmıştır.\n"
 "\n"
 "Time Genie kur oranları <a href='http://www.timegenie.com/' title='foreign "
 "exchange rates courtesy of Time Genie'>Time Genie</a> izni ile "

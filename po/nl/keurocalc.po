@@ -4,26 +4,26 @@
 #
 # Jaap Woldringh <jjh.woldringh@planet.nl>, 2008.
 # Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012, 2014, 2015, 2016, 2018, 2019.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012, 2014, 2015, 2016, 2018, 2019, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2019-06-27 10:15+0200\n"
+"PO-Revision-Date: 2022-12-14 11:17+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "United Arab Emirates dirham"
-msgstr "VAE-Dirham"
+msgstr "Verenigde Arabische Emiraten dirham"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -709,10 +709,9 @@ msgid "Not loaded"
 msgstr "Niet ingelezen"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2019, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "(c) 2001-2019, de ontwikkelaars van KEuroCalc"
+msgstr "(c) 2001-2022, de ontwikkelaars van KEuroCalc"
 
 #: main.cpp:35
 #, kde-format
@@ -725,15 +724,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to all who know that money does not justify "
-#| "anything.\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -743,7 +734,7 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Een programma van Éric Bischoff <ebischoff@nerim.net>\n"
+"Een programma van Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Dit programma wordt opgedragen aan allen die weten dat geld niets kan "
 "rechtvaardigen.\n"
