@@ -4,21 +4,21 @@
 #
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2008.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2012, 2014, 2015, 2019.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2019-07-02 22:57-0300\n"
-"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"PO-Revision-Date: 2022-12-15 11:34-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 19.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,25 +51,19 @@ msgid "A currency converter daemon"
 msgstr "Um servidor de conversão de moedas"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "(c) 2006-2019, desenvolvedores do curconvd"
+msgstr "(c) 2006-2022 desenvolvedores do curconvd"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Um programa de Éric Bischoff <ebischoff@nerim.net>\n"
+"Um programa de Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "As taxas de câmbio do Time Genie são cortesia da <a href='http://www."
 "timegenie.com/' title='taxas de câmbio estrangeiras de cortesia da Time "

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2022-11-30 06:39+0100\n"
+"PO-Revision-Date: 2022-12-15 07:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -707,10 +707,9 @@ msgid "Not loaded"
 msgstr "არ ჩატვირთულა"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2019, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "(c) 2001-2019, the KEuroCalc developers"
+msgstr "(c) 2001-2022, KEuroCalc -ის პროგრამისტები"
 
 #: main.cpp:35
 #, kde-format
@@ -723,15 +722,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to all who know that money does not justify "
-#| "anything.\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -741,7 +732,7 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"პროგრამის ავტორი ერიკ ბიშოფი <ebischoff@nerim.net>\n"
+"პროგრამის ავტორი ერიკ ბიშოფი <bischoff@kde.org>\n"
 "\n"
 "პროგრამა ეძღვნება ყველას, ვინც იცის, რომ ფული ყველაფერს ვერ მოაგვარებს.\n"
 "\n"

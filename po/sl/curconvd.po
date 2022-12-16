@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2015.
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2019.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2019, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: CurConvD\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2020-01-23 15:54+0100\n"
+"PO-Revision-Date: 2022-12-15 07:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -52,25 +52,19 @@ msgid "A currency converter daemon"
 msgstr "Ozadnji program za pretvorbo valut"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "(c) 2006-2019, razvijalci curconvd"
+msgstr "(c) 2006-2022, razvijalci curconvd"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Program je ustvaril Éric Bischoff <ebischoff@nerim.net>\n"
+"Program je ustvaril Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Menjalni tečaji Time Genie z dovoljenjem <a href='http://www.timegenie.com/' "
 "title='Menjalni tečaji Time Genie z dovoljenjem Time Genie'>Time Genie</a>\n"
