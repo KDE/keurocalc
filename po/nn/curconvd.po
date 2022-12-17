@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2020-06-14 13:59+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -52,20 +52,17 @@ msgstr "Ei teneste for valutakonvertering"
 
 #: main.cpp:33
 #, kde-format
-msgid "(c) 2006-2019, the curconvd developers"
-msgstr "© 2006–2019 curconvd-utviklarane"
+msgid "(c) 2006-2022, the curconvd developers"
+msgstr ""
 
 #: main.cpp:33
 #, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Eit program frå Éric Bischoff <ebischoff@nerim.net>\n"
-"\n"
-"Valutakursane kjem frå <a href='http://www.timegenie.com/'>Time Genie</a>.\n"
 
 #: main.cpp:35
 #, kde-format

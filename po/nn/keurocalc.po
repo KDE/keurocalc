@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-06 00:48+0000\n"
+"POT-Creation-Date: 2022-12-14 00:50+0000\n"
 "PO-Revision-Date: 2020-04-26 10:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -710,8 +710,8 @@ msgstr "Ikkje lasta"
 
 #: main.cpp:34
 #, kde-format
-msgid "(c) 2001-2019, the KEuroCalc developers"
-msgstr "© 2001–2019 KEuroCalc-utviklarane"
+msgid "(c) 2001-2022, the KEuroCalc developers"
+msgstr ""
 
 #: main.cpp:35
 #, kde-format
@@ -726,7 +726,7 @@ msgstr "KEuroCalc"
 #: main.cpp:37
 #, kde-format
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "This program is dedicated to all who know that money does not justify "
 "anything.\n"
@@ -734,12 +734,6 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Eit program frå Éric Bischoff <ebischoff@nerim.net>\n"
-"\n"
-"Dette programmet er dedisert alle som veit at pengar aldri kan "
-"rettferdiggjera noko.\n"
-"\n"
-"Valutakursane kjem frå <a href='http://www.timegenie.com/'>Time Genie</a>.\n"
 
 #: main.cpp:39
 #, kde-format
