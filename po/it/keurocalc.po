@@ -2,14 +2,14 @@
 # Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
 # Federico Cozzi <federicocozzi@federicocozzi.it>, 2004.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2004, 2005, 2006, 2009, 2010, 2011, 2012, 2014, 2015.
-# Valter Mura <valtermura@gmail.com>, 2018, 2019.
+# Valter Mura <valtermura@gmail.com>, 2018, 2019, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2019-06-29 11:56+0200\n"
+"PO-Revision-Date: 2022-12-17 20:00+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.04.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -708,10 +708,9 @@ msgid "Not loaded"
 msgstr "Non caricato"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2019, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "© 2001-2019, gli sviluppatori di KEuroCalc"
+msgstr "(c) 2001-2022, gli sviluppatori di KEuroCalc"
 
 #: main.cpp:35
 #, kde-format
@@ -723,16 +722,9 @@ msgstr "Convertitore di valuta e calcolatrice"
 msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
+# VM: https e non http
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to all who know that money does not justify "
-#| "anything.\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -742,13 +734,13 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Un programma di Éric Bischoff <ebischoff@nerim.net>\n"
+"Un programma di Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Questo programma è dedicato a tutti quelli che sanno che il denaro\n"
 "non giustifica niente.\n"
 "\n"
-"Tassi di cambio di Time Genie per gentile concessione di <a href='http://www."
-"timegenie.com/' title='tassi di cambio per gentile concessione di Time "
+"Tassi di cambio di Time Genie per gentile concessione di <a href='https://"
+"www.timegenie.com/' title='tassi di cambio per gentile concessione di Time "
 "Genie'>Time Genie</a>\n"
 
 #: main.cpp:39
@@ -795,13 +787,13 @@ msgstr "Grafica"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Federico Zenith"
+msgstr "Valter Mura,Federico Zenith"
 
 #: main.cpp:45
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "federico.zenith@member.fsf.org"
+msgstr "valtermura@gmail.com,"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SettingsDialog)
 #: settingsdialog.ui:14
