@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2009, 2010, 2011.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2018, 2019.
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2018, 2019, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2019-08-03 15:44+0100\n"
+"PO-Revision-Date: 2022-12-31 15:36+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -707,10 +707,9 @@ msgid "Not loaded"
 msgstr "Not loaded"
 
 #: main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2019, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "(c) 2001-2019, the KEuroCalc developers"
+msgstr "(c) 2001-2022, the KEuroCalc developers"
 
 #: main.cpp:35
 #, kde-format
@@ -723,15 +722,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to all who know that money does not justify "
-#| "anything.\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -741,7 +732,7 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "This program is dedicated to all who know that money does not justify "
 "anything.\n"
