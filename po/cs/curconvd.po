@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2014, 2015, 2018, 2019.
-# Vit Pelcak <vpelcak@suse.cz>, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2021.
 #
 msgid ""
 msgstr ""
@@ -49,28 +49,18 @@ msgid "A currency converter daemon"
 msgstr "Démon pro převod měň"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "(c) 2006-2019, vývojáři curconvd"
+msgstr ""
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Program vytvořil Éric Bischoff <ebischoff@nerim.net>\n"
-"\n"
-"Směnné kurzy Time Genie poskytl <a href='http://www.timegenie.com/' "
-"title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 
 #: main.cpp:35
 #, kde-format
