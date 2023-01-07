@@ -1,586 +1,1189 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY keurocalc '<application>KEuroCalc</application>'>
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+  <!ENTITY % German "INCLUDE"
+><!-- change language only here -->
 ]>
 
 <book id="keurocalc" lang="&language;">
 
 <bookinfo>
-<title>The &keurocalc; Handbook</title>
+<title
+>Das Handbuch zu &keurocalc;</title>
 
 <authorgroup>
-<author>
-<firstname>Éric</firstname>
-<surname>Bischoff</surname>
-<affiliation>
-<address><email>bischoff@_NOSPAM_kde.org</email></address>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>ebischoff@_NOSPAM_nerim.net</email
+></address>
 </affiliation>
 </author>
 </authorgroup>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
 
 <copyright>
-<year>2001-2022</year>
-<holder>Éric Bischoff</holder>
+<year
+>2001-2019</year>
+<holder
+>Éric Bischoff</holder>
 </copyright>
-<legalnotice>&FDLNotice;</legalnotice>
+<legalnotice
+>&FDLNotice;</legalnotice>
 
-<date>2022-12-10</date>
-<releaseinfo>1.3.2</releaseinfo>
+<date
+>2019-06-24</date>
+<releaseinfo
+>1.3.1</releaseinfo>
 
 <abstract>
-<para>
-&keurocalc; is an universal pocket currency converter and calculator.
-This documentation describes &keurocalc; version 1.3.2.
-</para>
+<para
+>&keurocalc; ist ein universeller Währungsumwandler und -rechner. Dieses Handbuch beschreibt &keurocalc; Version 1.3.1. </para>
 </abstract>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>extragear</keyword>
-<keyword>KEuroCalc</keyword>
-<keyword>currency</keyword>
-<keyword>converter</keyword>
-<keyword>calculator</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>extragear</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>Währung</keyword>
+<keyword
+>Umrechnung</keyword>
+<keyword
+>Rechner</keyword>
 </keywordset>
 
 </bookinfo>
 
 <chapter id="introduction">
-<title>Introduction</title>
+<title
+>Einleitung</title>
 
-<para>
-&keurocalc; is an universal pocket currency converter and calculator.
-</para>
+<para
+>&keurocalc; ist ein universeller Währungsumwandler und -rechner. </para>
 
-<para>
-On the 1st of January, 2002, 12 European countries united their national
-currencies into a single one, the euro (€). The same happens from time to
-time on a smaller scale with new European countries. &keurocalc; helps:
-
-<variablelist>
+<para
+>Am 1. Januar 2002 haben 12 europäische Länder ihre nationalen Währungen durch eine gemeinsame Währung, den Euro (€), ersetzt. Das gleiche passiert von Zeit zu Zeit, wenn weitere europäische Länder der Währungsunion beitreten. &keurocalc; unterstützt Sie dann: <variablelist>
 <varlistentry>
-<term>During the transition periods</term>
+<term
+>Während der Übergangszeit</term>
 <listitem>
-<para><itemizedlist>
-<listitem><para>To verify one's bank account, when paying both in euros and
-in the old currency (Italian liras, for example).</para></listitem>
-<listitem><para>To verify one's shopping, and compute the change if paying
-with a banknote labeled in the old currency.</para></listitem>
-</itemizedlist></para>
+<para
+><itemizedlist>
+<listitem
+><para
+>Bei der Überprüfung eines Bankkontos, wenn sowohl in Euro sowie auch in der alten Währung wie zum Beispiel der italienischen Lira gezahlt wird.</para
+></listitem>
+<listitem
+><para
+>Zur Überprüfung von Einkäufen und Ermittlung des Wechselgelds, wenn Sie mit Noten in alten Währungen bezahlen.</para
+></listitem>
+</itemizedlist
+></para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Many years after the transition periods</term>
-<listitem><para>To get an idea of the value of the things in the old
-currency at any stage of calculations.</para></listitem>
+<term
+>Viele Jahre nach der Übergangszeit</term>
+<listitem
+><para
+>Um eine Vorstellung vom Wert vieler Dinge in der alten Währung zu jedem beliebigen Zeitpunkt von Berechnungen zu bekommen.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
-<term>At any time</term>
+<term
+>Zu jeder Zeit</term>
 <listitem>
-<para><itemizedlist>
-<listitem><para>To do conversions between the euro and other currencies,
-like the British Pound, according to the daily exchange rate published by the
-<ulink url="http://www.ecb.int/stats/eurofxref/">European Central Bank (ECB)</ulink>.</para></listitem>
-<listitem><para>To do conversions between any two currencies that are part of the list
-published by the ECB.</para></listitem>
-<!--listitem><para>To do conversions between the US dollar and other currencies
+<para
+><itemizedlist>
+<listitem
+><para
+>Bei der Umwandlung zwischen dem Euro und anderen Währungen wie zum Beispiel dem Britischen Pfund nach den aktuellen Umrechnungskursen der <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Europäischen Zentralbank (EZB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Bei Umrechnungen zwischen zwei beliebigen Währungen, die in der von der EZB herausgegebenen Liste enthalten sind.</para
+></listitem>
+<!--listitem
+><para
+>To do conversions between the US dollar and other currencies
 according to the daily exchange rate published by the
-<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
-Federal Reserve Bank (NY FRB)</ulink>.</para></listitem>
-<listitem><para>To do conversions between any two currencies that are part of the list
-published by the NY FRB.</para></listitem-->
-<listitem><para>To do conversions between the euro and other currencies,
-like the British Pound, according to the daily exchange rate published by the
-<ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex">Time Genie</ulink>
-foreign exchange (TG).</para></listitem>
-<listitem><para>To do conversions between any two currencies that are part of the list
-published by the TG.</para></listitem>
-</itemizedlist></para>
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>To do conversions between any two currencies that are part of the list
+published by the NY FRB.</para
+></listitem-->
+<listitem
+><para
+>Bei Umrechnungen zwischen dem Euro und anderen Währungen wie zum Beispiel dem Britischen Pfund nach den aktuellen Umrechnungskursen der <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Für Umrechnungen zwischen zwei beliebigen Währungen, die in der von TG herausgegebenen Liste enthalten sind.</para
+></listitem>
+</itemizedlist
+></para>
 </listitem>
 </varlistentry>
 
 </variablelist>
 </para>
 
-<para>&keurocalc; has the following advantages in term of comfort and
-usability:
-
-<itemizedlist>
-<listitem><para>You see every intermediate value and the result
-in both the reference currency (euro<!-- or dollar -->)
-and in the other currency.</para></listitem>
-<listitem><para>There is a separate input area where you can
-type a new value while still having the previous result visible.</para></listitem>
-<listitem><para>The ergonomy is very close to usual pocket calculators,
-despite the fact that any value you type can be a value in the reference currency
-(euro<!-- or dollar -->), a value in the other currency,
-a percentage or an unit-less quantity.</para></listitem>
-<listitem><para>You press the keys in the order you would speak
-aloud what you're doing.</para></listitem>
-<listitem><para>If you make mistakes, a special correction button enables you
-to correct your last input data, as long as you didn't validate.</para></listitem>
-<listitem><para>The numbers are displayed according to your locale settings:
-with either a comma or a dot as a decimal point, according to your &systemsettings;
-settings.</para></listitem>
-<listitem><para>You can decide where &keurocalc; should download the conversion
-rates from, which currency to start with when you launch &keurocalc;, and
-which rounding method to use.</para></listitem>
+<para
+>&keurocalc; hat folgende Vorteile in Hinsicht auf Komfort und Bedienungsfreundlichkeit: <itemizedlist>
+<listitem
+><para
+>Jeder Zwischenwert und das Ergebnis wird sowohl in der Referenzwährung (€) wie auch in der anderen Währung angezeigt.</para
+></listitem>
+<listitem
+><para
+>Es gibt ein eigenes Eingabefeld, um neue Werte einzutragen, dabei wird das vorherige Ergebnis immer noch angezeigt.</para
+></listitem>
+<listitem
+><para
+>Die Bedienung ist an die üblichen Taschenrechner angelehnt, mit der Ausnahme, dass jeder eingegebene Wert als Wert in der Referenzwährung Euro, in der anderen Währung, als Prozentwert und als einheitenloser Wert verarbeitet werden kann.</para
+></listitem>
+<listitem
+><para
+>Sie drücken die Tasten in der Reihenfolge, in der Sie beschreiben, was Sie tun.</para
+></listitem>
+<listitem
+><para
+>Bei Fehlern kann das zuletzt eingegebene Datum mit einer speziellen Taste korrigiert werden, solange die Eingabe noch nicht ausgewertet wurde.</para
+></listitem>
+<listitem
+><para
+>Die Zahlen werden entsprechend den Regionaleinstellungen entweder mit einem Komma oder einem Punkt als Dezimaltrennzeichen angezeigt, wie in den &systemsettings; festgelegt.</para
+></listitem>
+<listitem
+><para
+>Es kann eingestellt werden, woher &keurocalc; die Wechselkurse herunterlädt, welche Währung beim Start von &keurocalc; gesetzt ist und welches Rundungsverfahren verwendet wird.</para
+></listitem>
 </itemizedlist>
 </para>
 
-<para>&keurocalc; allows the following operations:
-
-<itemizedlist>
-<listitem><para>Conversions from and to the reference currency
-(euro<!-- or dollar -->).</para></listitem>
-<listitem><para>Systematic rounding of the displayed result, but
-computations done internally with the precision of the mathematical libraries.</para></listitem>
-<listitem><para>Usual additions, subtractions, multiplications and divisions.</para></listitem>
-<listitem><para>Apply a percentage, add a percentage,
-or subtract a percentage.</para></listitem>
-<listitem><para>Possibility to store values in an intermediate memory,
-or use that memory as a running total.</para></listitem>
+<para
+>&keurocalc; ermöglicht die folgenden Operationen: <itemizedlist>
+<listitem
+><para
+>Umrechnungen von und in die Referenzwährung (Euro).</para
+></listitem>
+<listitem
+><para
+>Angezeigte Werte werden systematisch gerundet, intern wird aber mit der Genauigkeit der mathematischen Bibliotheken gerechnet.</para
+></listitem>
+<listitem
+><para
+>Übliche Additionen, Subtraktionen, Multiplikationen und Divisionen.</para
+></listitem>
+<listitem
+><para
+>Prozentwerte anwenden, hinzufügen oder abziehen.</para
+></listitem>
+<listitem
+><para
+>Werte können in einen Zwischenspeicher geladen werden und dieser Speicher kann zur Aufsummierung verwendet werden.</para
+></listitem>
 </itemizedlist>
 </para>
 
-<para>Here are some limitations of &keurocalc;:
-
-<itemizedlist>
-<listitem><para>No parenthesized or complex expressions.</para></listitem>
-<listitem><para>Some roundings go wrong due to the limitations
-of the mathematical library.</para></listitem>
-<listitem><para>Inflationist currencies cannot be handled due to limited
-display size. However, with the change to the new Turkish lira
-and the removal of six zeroes in that currency, it is not a practical
-problem anymore.</para></listitem>
-<!-- listitem><para>New York Federal Reserve Bank rates are not available
-during the non-working days (Christmas, Easter, etc.).</para></listitem-->
+<para
+>Dies sind einige Einschränkungen von &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Keine Klammerausdrücke oder komplexe Ausdrücke.</para
+></listitem>
+<listitem
+><para
+>Einige Rundungen sind fehlerhaft, das liegt an Einschränkungen der verwendeten mathematischen Bibliothek.</para
+></listitem>
+<listitem
+><para
+>Inflationswährungen können wegen der begrenzten Größe der Anzeige nicht verarbeitet werden. Durch den Wechsel zur neuen türkischen Lira, bei der sechs Nullen in dieser Währung gestrichen werden, ist das auch kein wirkliches Problem mehr.</para
+></listitem>
+<!-- listitem
+><para
+>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para
+></listitem-->
 </itemizedlist>
 </para>
 
-<warning><para>&keurocalc; never guarantees the exactness of the exchange rates
-nor the accuracy of the result. You are always invited to verify your
-computations by some other means. As the <link linkend="credits">license</link>
-agreement states, there's no liability of the authors if the results are not
-correct or as expected. Also, please notice that the variable exchange rates
-are downloaded in an unencrypted and therefore insecure manner from the data
-sources (European Central Bank and <!-- New York Federal Reserve Bank --> Time Genie).
-Some <quote>man-in-the-middle</quote> attacker may confuse &keurocalc; by forging
-exchange rates. More simply, a transmission error is always possible.</para></warning>
+<warning
+><para
+>&keurocalc; gibt keine Garantie für die Genauigkeit der Wechselkurse noch für die Richtigkeit der Ergebnisse. Sie sollten die Berechnungen immer auf anderen Wegen überprüfen. Wie in der <link linkend="credits"
+>Lizenz</link
+> gesagt, sind die Autoren nicht dafür verantwortlich, wenn Ergebnisse falsch oder nicht wie erwartet sind. Außerdem werden die aktuellen variablen Wechselkurse durch eine unverschlüsselte und daher unsichere Verbindung von den Datenquellen (Europäische Zentralbank und Time Genie) heruntergeladen. <quote
+>Man-in-the-middle</quote
+>-Angriffe können &keurocalc; durcheinander bringen und es können jederzeit Übertragungsfehler auftreten.</para
+></warning>
 
 </chapter>
 
 <chapter id="usage">
-<title>Using &keurocalc;</title>
+<title
+>&keurocalc; verwenden</title>
 
 <mediaobject>
-<imageobject><imagedata fileref="screenshot.png" format="PNG" /></imageobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
 </mediaobject>
 
 <sect1 id="usage-conversions">
-<title>Performing Conversions</title>
+<title
+>Währungsumrechnungen durchführen</title>
 
 
 <procedure>
-<title>To convert 1000 Belgian francs into euros</title>
-<step><para>Select the <guilabel>BEF - Belgian franc</guilabel> (<foreignphrase>francs
-belges</foreignphrase>) item in the currencies
-drop down list on the bottom. If that choice is not available, press the
-<guibutton>Settings...</guibutton> button and select 
-<guilabel>Euro, no network access (fixed rates only)</guilabel> to make the
-correct rates list appear.</para></step>
-<step><para>Type <userinput>1000</userinput> on the keyboard or use the
-corresponding numerical buttons. The digits appear while you are typing them in
-the <guilabel>Input</guilabel> display. If you make a mistake while typing the digits
-use the &Backspace; key or the <guibutton>&lt;-</guibutton> button.</para></step>
-<step><para>Press the <guibutton>FB</guibutton> button or the <keycap>F</keycap>
-key. In fact, any key that is not already reserved for some other usage
-will validate the input as a number expressed in the currency, so <keycap>B</keycap>
-or <keycap>X</keycap> would have worked as well.</para></step>
-<step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
-24.79 € or 24,79 € according to our locale settings.</para></step> 
+<title
+>Umrechnung von 1000 belgischen Franc in Euro</title>
+<step
+><para
+>Wählen Sie den Eintrag <guilabel
+>BEF - Belgische Franc</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>) im Auswahlfeld für Währungen. Kann dieser Eintrag nicht ausgewählt werden, drücken Sie den Knopf <guibutton
+>Einstellungen ...</guibutton
+> und wählen <guilabel
+>Euro, kein Netzwerkzugriff (nur feste Kurs)</guilabel
+>, damit die Liste mit den richtigen Kursen angezeigt wird.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>1000</userinput
+> über die Tastatur oder mit den entsprechenden Knöpfen für Zahlen ein. Die Ziffern erscheinen sofort im Feld <guilabel
+>Eingabe</guilabel
+>. Um Fehler bei der Eingabe der Ziffern zu korrigieren, verwenden Sie die Taste &Backspace; oder den Knopf <guibutton
+>&lt;-</guibutton
+>.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>FB</guibutton
+> oder die Taste <keycap
+>F</keycap
+>. Tatsächlich wird mit jeder Taste, der nicht bereits eine andere Funktion zugewiesen wurde, die Eingabe als Zahl in der Währung ausgewertet, daher funktionieren <keycap
+>B</keycap
+> or <keycap
+>X</keycap
+> ebenfalls.</para
+></step>
+<step
+><para
+>Im Feld <guilabel
+>Ergebnis</guilabel
+> sehen Sie dann rechts 24.79 € or 24,79 € entsprechend Ihrer Regionaleinstellung.</para
+></step
+> 
 </procedure>
 
 <procedure>
-<title>To convert 25 euros into Belgian francs</title>
-<step><para>If the fixed rates currencies are available, select the
-<guilabel>BEF - Belgian franc</guilabel> item in the
-currencies drop down list on the bottom.
-You can skip this step if it's already the selected currency.</para></step>
-<step><para>Type <userinput>25</userinput>.</para></step>
-<step><para>Press the <guibutton>€</guibutton> button or the <keycap>E</keycap>
-key.</para></step>
-<step><para>Read the result in the <guilabel>Result</guilabel> display on the right:
-1008.50 FB or 1008,50 FB. The exact value is 1008.4975, but it's rounded
-to the closest hundredth of a Belgian franc. The rounding unit depends on
-the currency and on the rounding method: with the official rounding rules,
-for Belgian francs it's 0.01 FB, for Italian liras it's 1 L for example.</para></step>
+<title
+>Umrechnung von 25 Euro in belgischen Franc</title>
+<step
+><para
+>Wenn die festen Währungskurse eingestellt sind, wählen Sie den Eintrag <guilabel
+>BEF - Belgische Franc</guilabel
+> im Auswahlfeld der Währungen. Ist diese Währung bereits ausgewählt, überspringen Sie diesen Schritt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>25</userinput
+> ein.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>€</guibutton
+> oder die Taste <keycap
+>E</keycap
+>.</para
+></step>
+<step
+><para
+>Als <guilabel
+>Ergebnis</guilabel
+> wird rechts 1008.50 FB oder 1008,50 FB angezeigt. Der genaue Wert beträgt 1008,4975, wurde jedoch auf das nächste 1/100 eines belgischen Franc gerundet. Die Rundungseinheit wird durch die Währung und das Rundungsverfahren bestimmt: Mit den offiziellen Rundungsregeln beträgt die Rundungseinheit zum Beispiel 0,01 BF für belgische Franc und 1 Lira für die italienische Währung.</para
+></step>
 </procedure>
 
-<para>You could also have typed: <userinput>25 Enter E</userinput>.</para>
+<para
+>Sie können auch folgendes eingeben: <userinput
+>25 Eingabetaste E</userinput
+>.</para>
 
 <procedure>
-<title>To convert 120 German marks into Spanish pesetas</title>
-<step><para>If the fixed rates currencies are available, select the
-<guilabel>DEM - German deutschmark</guilabel> item in
-the currencies drop down list.</para></step>
-<step><para>Type <userinput>120</userinput>.</para></step>
-<step><para>Press the <guibutton>DM</guibutton> button or the <keycap>D</keycap>
-or <keycap>M</keycap> keys.</para></step>
-<step><para>Just select the <guilabel>ESP - Spanish peseta</guilabel> item
-to see the same amount of 61.36 € converted into pesetas in the
-<guilabel>Result</guilabel> area.</para></step>
+<title
+>Umrechnung von 120 Deutsche Mark in Spanische Peseten.</title>
+<step
+><para
+>Wenn die festen Währungskurse eingestellt sind, wählen Sie den Eintrag <guilabel
+>DM - Deutsche Mark</guilabel
+> im Auswahlfeld der Währungen.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>120</userinput
+> ein.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>DM</guibutton
+> oder die Tasten <keycap
+>D</keycap
+> oder <keycap
+>M</keycap
+>.</para
+></step>
+<step
+><para
+>Nun wählen Sie den Eintrag <guilabel
+>ESP - Spanische Peseten</guilabel
+>, dann wird der gleiche Betrag von 61,36 € umgewandelt in Peseten im Feld <guilabel
+>Ergebnis</guilabel
+> angezeigt.</para
+></step>
 </procedure>
 
 </sect1>
 
 <sect1 id="usage-additions">
-<title>Adding and Subtracting</title>
+<title
+>Addieren und Subtrahieren</title>
 
 <procedure>
-<title>How much is 3 + 5?</title>
-<step><para>Type <userinput>3</userinput> and then press <guibutton>+</guibutton>.
-Notice that in the result field, <computeroutput>3</computeroutput>
-is a simple value displayed on just one line, with no monetary unit.</para></step>
-<step><para>Type <userinput>5</userinput> and then press the
-<guibutton>Enter</guibutton> button or the &Enter; key. The
-result <computeroutput>8</computeroutput> appears on the right.</para></step>
+<title
+>Wieviel ist 3 + 5?</title>
+<step
+><para
+>Geben Sie <userinput
+>3</userinput
+> ein und drücken Sie dann <guibutton
+>+</guibutton
+>. Im Ergebnisfeld wird dann  <computeroutput
+>3</computeroutput
+> als einfacher Wert in einer Zeile ohne Währungseinheit angezeigt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>5</userinput
+> ein und drücken dann den Knopf <guibutton
+>Eingabe</guibutton
+> oder die Taste &Enter;. Als Ergebnis wird rechts <computeroutput
+>8</computeroutput
+> angezeigt.</para
+></step>
 </procedure>
 
 <procedure>
-<title>You received 100 US dollars and paid 32.50 euros for a book,
-how much do you have left in your bank account?</title>
-<step><para>Make sure that the variable exchange rates are available. If not, press
-the <guibutton>Settings...</guibutton> to select either 
-<guilabel>Euro, European Central Bank</guilabel> or
-<guilabel><!-- Dollar, New York Federal Reserve Bank -->Euro, Time Genie</guilabel>.
-Now select the <guilabel>USD - US dollar</guilabel>
-<!-- or the <guilabel>EUR - EU euro</guilabel> -->
-item in the scroll down list on the bottom.
-If you have no Internet access, that item won't be available as the latest variable
-rates between the euro and the dollar cannot be determined.</para></step>
-<step><para>Type <userinput>100</userinput> and then press <guibutton>$</guibutton>.</para></step>
-<step><para>Press the <guibutton>-</guibutton> button or the <keycap>-</keycap> key. Notice
-the <computeroutput>-</computeroutput> sign in the leftmost part of the
-<guilabel>Input</guilabel> display.</para></step>
-<step><para>Type <userinput>32,50</userinput> or <userinput>32.50</userinput>
-and then press <guibutton>€</guibutton>.</para></step>
-<step><para>Read the result in the <guilabel>Result</guilabel> display on the right.
-The exact value might depend on latest exchange rates. Notice that during the whole computation
-you've been able to read the values both in euro and in US dollars. Pay attention to the fact
-that different data sources (ECB or <!-- NY FRB --> TG) might not provide
-the same conversion rate between the euro and the dollar.</para></step>
+<title
+>Sie haben 100 US-Dollar erhalten und 32,50 € für ein Buch ausgegeben, wieviel bleibt noch auf Ihrem Bankkonto?</title>
+<step
+><para
+>Überprüfen Sie, ob die aktuellen variablen Wechselkurse verfügbar sind. Falls nicht, drücken Sie <guibutton
+>Einstellungen ...</guibutton
+> und stellen <guilabel
+>Euro, Europäische Zentralbank</guilabel
+> oder <guilabel
+>Euro, Time Genie</guilabel
+> ein. Wählen Sie nun <guilabel
+>USD - US-Dollar</guilabel
+> im Auswahlfeld Währung. Ohne Internetverbindung ist dieser Eintrag nicht vorhanden, da der neueste variable Wechselkurs zwischen Euro und Dollar nicht bestimmt werden kann.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>100</userinput
+> ein und drücken Sie dann den Knopf <guibutton
+>$</guibutton
+>.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>-</guibutton
+> oder die Taste <keycap
+>-</keycap
+>. Beachten Sie das Zeichen <computeroutput
+>-</computeroutput
+> links vom Feld <guilabel
+>Eingabe</guilabel
+>.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>32,50</userinput
+> oder <userinput
+>32.50</userinput
+> ein und drücken Sie dann den Knopf <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Die Auswertung der Berechnung sehen Sie rechts im Feld <guilabel
+>Ergebnis</guilabel
+>. Der genaue Wert wird durch die aktuellen Wechselkurse bestimmt. Bei der gesamten Berechnung können Sie beide Werte sowohl in Euro als auch in US-Dollar sehen. Beachten Sie, das verschiedene Datenquellen (EZB oder TG) manchmal auch verschiedene Umrechnungskurse zwischen Euro und Dollar angeben. </para
+></step>
 </procedure>
 
 <procedure>
-<title>You pay a 32.50 € book with a 500 FF banknote. How much was the
-clerk supposed to give you back, in euro notes and coins?</title>
-<step><para>Select the <guilabel>FRF - French francs</guilabel> item in the
-currencies drop down list if not already selected.</para></step>
-<step><para>Type <userinput>32.50</userinput> or <userinput>32,50</userinput>
-and then press <guibutton>€</guibutton>. You can also type <userinput>32.5</userinput>
-without the trailing <userinput>0</userinput>.</para></step>
-<step><para>Press the <guibutton>-</guibutton> button or the <keycap>-</keycap> key.</para></step>
-<step><para>Type <userinput>500</userinput> and press the <guibutton>FF</guibutton>
-button or the <keycap>F</keycap> key.</para></step>
-<step><para>The result <computeroutput>-43.72 €</computeroutput> is negative, indicating that
-change money has to be given back to the customer. The <guibutton>+/-</guibutton>
-button or the <keycap>S</keycap> key permit you to change the sign of the result.</para></step>
+<title
+>Sie zahlen 32,50 € für ein Buch mit einer Banknote von 500 französischen Francs. Wieviel erhalten Sie als Noten und Münzen in Euro zurück?</title>
+<step
+><para
+>Wählen Sie den Eintrag <guilabel
+>FRF - Französische Francs</guilabel
+>  im Auswahlfeld für Währungen, falls nicht bereits eingestellt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>32,50</userinput
+> oder <userinput
+>32.50</userinput
+> ein und drücken Sie dann den Knopf <guibutton
+>€</guibutton
+>. Sie können auch <userinput
+>32,5</userinput
+> ohne die angehängte <userinput
+>0</userinput
+> eingeben.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>-</guibutton
+> oder die Taste <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>500</userinput
+> ein und drücken Sie den Knopf <guibutton
+>FF</guibutton
+> oder die Taste <keycap
+>F</keycap
+>.</para
+></step>
+<step
+><para
+>Das Ergebnis <computeroutput
+>-43,72 €</computeroutput
+> ist negativ und zeigt an, dass dem Kunden Wechselgeld zurückgegeben werden muss. Mit dem Knopf <guibutton
+>+/-</guibutton
+> oder der Taste <keycap
+>S</keycap
+> kann das Vorzeichen eines Ergebnisses geändert werden.</para
+></step>
 </procedure>
 
-<note><para>Do not try to add euros to simple values (with no currency unit): it won't work, for
-the same reason you cannot add 5 meters to 3 kilograms.</para></note>
+<note
+><para
+>Versuchen Sie nicht Euros zu einfachen Werten ohne Währungseinheit zu addieren. Das funktioniert nicht, genauso wenig wie die Addition von 5 Metern und 3 Kilogramm.</para
+></note>
 
 </sect1>
 
 <sect1 id="usage-multiplications">
-<title>Multiplying and Dividing</title>
+<title
+>Multiplizieren und Dividieren</title>
 
 <procedure>
-<title>You buy 3.2 kilograms of apples at 2 € per kilogram. How much does
-the whole cost in Australian dollars?</title>
-<step><para>Select the <guilabel>AUD - Australian dollar</guilabel> item if
-available and if not already selected.</para></step>
-<step><para>Type <userinput>2</userinput> and press <guibutton>€</guibutton>.</para></step>
-<step><para>Press the <guibutton>X</guibutton> button or the <keycap>*</keycap>
-key. Notice the <computeroutput>X</computeroutput> sign at the left of
-the <guilabel>Input</guilabel> display.</para></step>
-<step><para>Now type <userinput>3.2</userinput> followed by the <guibutton>Enter</guibutton> button
-or the &Enter; key: this means <quote>3.2 units</quote> at
-2 € each.</para></step>
-<step><para>The result in Australian dollars matches <computeroutput>6.4 €</computeroutput>.</para></step>
+<title
+>Sie kaufen 3,2 Kilogramm Äpfel zum Preis von 2 € je Kilogramm. Wieviel kostet das in australischen Dollar?</title>
+<step
+><para
+>Wählen Sie den Eintrag <guilabel
+>AUD - Australische Dollar</guilabel
+> im Auswahlfeld für Währungen, falls nicht bereits eingestellt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>2</userinput
+> ein und drücken Sie dann den Knopf <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>X</guibutton
+> oder die Taste <keycap
+>*</keycap
+>. Beachten Sie das Zeichen <computeroutput
+>X</computeroutput
+> links vom Feld <guilabel
+>Eingabe</guilabel
+>.</para
+></step>
+<step
+><para
+>Geben Sie nun <userinput
+>3,2</userinput
+> ein und drücken dann den Knopf <guibutton
+>Eingabe</guibutton
+> oder die Taste &Enter;: Die bedeutet <quote
+>3,2 Einheiten</quote
+> zu je 2 €.</para
+></step>
+<step
+><para
+>Das Ergebnis in australischen Dollar entspricht <computeroutput
+>6,4 €</computeroutput
+>.</para
+></step>
 </procedure>
 
-<para>You could also have used the following order:
-<userinput>3.2 = * 2 €</userinput> or even <userinput>3.2 * 2 €</userinput>.</para>
+<para
+>Sie können auch die folgende Reihenfolge benutzen: <userinput
+>3.2 = * 2 €</userinput
+> oder sogar <userinput
+>3.2 * 2 €</userinput
+>.</para>
 
-<note><para>It's not possible to multiply X euros by Y dollars,
-just as you don't multiply 10 fingers by 2 ears.
-</para></note>
+<note
+><para
+>Sie könne keine x € mit y Dollar multiplizieren, genauso wenig wie 10 Finger mit 2 Ohren. </para
+></note>
 
 </sect1>
 
 <sect1 id="usage-percentage">
-<title>Using Percentages</title>
+<title
+>Arbeiten mit Prozenten</title>
 
 <procedure>
-<title>How much is 20% of 3000 yen?</title>
-<step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
-if not already selected.</para></step>
-<step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
-button or the <keycap>Y</keycap> key.</para></step>
-<step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
-button or the <keycap>%</keycap> key. As with multiplications, the
-value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: it is equivalent to 600 yen.</para></step>
+<title
+>Wieviel ist 20 % von 3000 Yen?</title>
+<step
+><para
+>Wählen Sie den Eintrag <guilabel
+>JPY - Japanische Yen</guilabel
+> im Auswahlfeld für Währungen, falls nicht bereits eingestellt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>3000</userinput
+> ein und drücken Sie den Knopf <guibutton
+>¥</guibutton
+> oder die Taste <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>20</userinput
+> ein und drücken Sie den Knopf <guibutton
+>%</guibutton
+> oder die Taste <keycap
+>%</keycap
+>. Wie bei der Multiplikation muss der Wert <emphasis
+>vor</emphasis
+> dem Prozentzeichen eingegeben werden.</para
+></step>
+<step
+><para
+>Als Ergebnis wird 600 Yen angezeigt.</para
+></step>
 </procedure>
 
 <procedure>
-<title>How much is 3000 yen plus 20%?</title>
-<step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
-if not already selected.</para></step>
-<step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
-button or the <keycap>Y</keycap> key.</para></step>
-<step><para>Press the <guibutton>+</guibutton> button or the <keycap>+</keycap> key.</para></step>
-<step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
-button or the <keycap>%</keycap> key. As with multiplications, the
-value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: 26.96 € or 3600 ¥ at
-the time of writing.</para></step>
+<title
+>Wieviel ist 3000 Yen plus 20%?</title>
+<step
+><para
+>Wählen Sie den Eintrag <guilabel
+>JPY - Japanische Yen</guilabel
+> im Auswahlfeld für Währungen, falls nicht bereits eingestellt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>3000</userinput
+> ein und drücken Sie den Knopf <guibutton
+>¥</guibutton
+> oder die Taste <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>+</guibutton
+> oder die Taste <keycap
+>+</keycap
+>.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>20</userinput
+> ein und drücken Sie den Knopf <guibutton
+>%</guibutton
+> oder die Taste <keycap
+>%</keycap
+>. Wie bei der Multiplikation muss der Wert <emphasis
+>vor</emphasis
+> dem Prozentzeichen eingegeben werden.</para
+></step>
+<step
+><para
+>Als Ergebnis wird 26,96 € oder 3600 ¥ angezeigt.</para
+></step>
 </procedure>
 
 <procedure>
-<title>How much is 3000 yen minus 20%?</title>
-<step><para>Select the <guilabel>JPY - Japanese yen</guilabel> item if available and
-if not already selected.</para></step>
-<step><para>Type <userinput>3000</userinput> and press the <guibutton>¥</guibutton>
-button or the <keycap>Y</keycap> key.</para></step>
-<step><para>Press the <guibutton>-</guibutton> button or <keycap>-</keycap> key.</para></step>
-<step><para>Enter <userinput>20</userinput> and press the <guibutton>%</guibutton>
-button or the <keycap>%</keycap> key. As with multiplications, the
-value had to be typed <emphasis>before</emphasis> the percentage.</para></step>
-<step><para>Look at the result: 17.97 € or 2400 ¥ at the date of writing these
-lines.</para></step>
+<title
+>Wieviel ist 3000 Yen minus 20 %?</title>
+<step
+><para
+>Wählen Sie den Eintrag <guilabel
+>JPY - Japanische Yen</guilabel
+> im Auswahlfeld für Währungen, falls nicht bereits eingestellt.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>3000</userinput
+> ein und drücken Sie den Knopf <guibutton
+>¥</guibutton
+> oder die Taste <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>-</guibutton
+> oder die Taste <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Geben Sie <userinput
+>20</userinput
+> ein und drücken Sie den Knopf <guibutton
+>%</guibutton
+> oder die Taste <keycap
+>%</keycap
+>. Wie bei der Multiplikation muss der Wert <emphasis
+>vor</emphasis
+> dem Prozentzeichen eingegeben werden.</para
+></step>
+<step
+><para
+>Als Ergebnis wird 17,97 € oder 2400 ¥ angezeigt.</para
+></step>
 </procedure>
 
 </sect1>
 
 <sect1 id="usage-memory">
-<title>Using Intermediate Memory</title>
+<title
+>Zwischenspeicher verwenden</title>
 
 <procedure>
-<title>How do I store now and recall later some value?</title>
-<step><para>Do your computations.</para></step>
-<step><para>Press <guibutton>Min</guibutton> (Memory in) button to store the
-value in the <guilabel>Result</guilabel> area. Please notice that the
-other memory keys now become available.</para></step>
-<step><para>Do some other work with the calculator.</para></step>
-<step><para>Recall the value from the memory by pressing the <guibutton>MR</guibutton>
-(Memory Recall) button.</para></step>
+<title
+>Wie kann ich einen Wert speichern und später wieder verwenden?</title>
+<step
+><para
+>Führen Sie Ihre Berechnungen durch.</para
+></step>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>Min</guibutton
+> (Memory in), um den Wert des Feldes <guilabel
+>Ergebnis</guilabel
+> zu speichern. Beachten Sie dass dann auch die anderen Knöpfe für den Zwischenspeicher aktiviert werden.</para
+></step>
+<step
+><para
+>Arbeiten Sie weiter mit dem Rechner.</para
+></step>
+<step
+><para
+>Holen Sie den Wert aus dem Speicher mit dem Knopf <guibutton
+>MR</guibutton
+> (Memory Recall) zurück.</para
+></step>
 </procedure>
 
-<para>Internally, the values are recalled with no unit or in the reference currency
-(euro<!-- or dollar -->) with
-the maximum precision allowed by the mathematical library. In some rare cases,
-this might lead to rounding problems if the stored value is a rounded value in a
-non-reference currency.</para>
+<para
+>Intern werden die Werte ohne Einheit oder Bezugswährung mit der maximalen Genauigkeit der mathematischen Bibliothek zurückgeholt. In einigen seltenen Fällen kann dies zu Rundungsproblemen führen, wenn der gespeicherte Wert ein gerundeter Wert mit nicht referenzierter Währung ist.</para>
 
 <procedure>
-<title>How do I clear the memory?</title>
-<step><para>Press the <guibutton>Reset</guibutton> button. Please notice that
-the <guibutton>Reset</guibutton> clears everything: the input, the result and
-the memory.</para></step>
+<title
+>Wie lösche ich den Speicher?</title>
+<step
+><para
+>Drücken Sie den Knopf <guibutton
+>Zurücksetzen</guibutton
+>. Beachten Sie, dass damit alles gelöscht wird: Die Eingabe, das Ergebnis und der Zwischenspeicher.</para
+></step>
 </procedure>
 
 <procedure>
-<title>How do I compute 3.1 * 5.2 € + 2.7 * 8.9 €?</title>
-<step><para>First compute the first half: <userinput>3.1 * 5.2 €</userinput>.</para></step>
-<step><para>Store the result in memory with <guibutton>Min</guibutton> button.</para></step>
-<step><para>Now compute the other half: <userinput>2.7 * 8.9 €</userinput>.</para></step>
-<step><para>Add the result to the memory with <guibutton>M+</guibutton> button.</para></step>
-<step><para>Recall the sum with <guibutton>MR</guibutton> button.</para></step>
+<title
+>Wie berechne ich 3.1 * 5.2 € + 2.7 * 8.9 €?</title>
+<step
+><para
+>Berechnen Sie zuerst den ersten Teil: <userinput
+>3.1 * 5.2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Speichern Sie das Ergebnis mit dem Knopf <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Berechnen Sie jetzt den zweiten Teil: <userinput
+>2.7 * 8.9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Fügen Sie das Ergebnis mit dem Knopf <guibutton
+>M+</guibutton
+> zum Speicher hinzu.</para
+></step>
+<step
+><para
+>Holen Sie die Summe mit <guibutton
+>MR</guibutton
+> zurück.</para
+></step>
 </procedure>
 
-<para>There are other solutions like <userinput>3.1 * 5.2 € Min
-2.7 * 8.9 € + MR</userinput>.</para>
+<para
+>Es gibt andere Möglichkeiten wie <userinput
+>3,1 * 5,2 € Min 2,7 * 8,9 € + MR</userinput
+>.</para>
 
 <procedure>
-<title>How do I compute 3.1 * 5.2 € - 2.7 * 8.9 €?</title>
-<step><para>First compute the first half: <userinput>3.1 * 5.2 €</userinput>.</para></step>
-<step><para>Store the result in memory with <guibutton>Min</guibutton> button.</para></step>
-<step><para>Now compute the other half: <userinput>2.7 * 8.9 €</userinput>.</para></step>
-<step><para>Subtract the result from the memory with <guibutton>M-</guibutton> button.</para></step>
-<step><para>Recall the sum with <guibutton>MR</guibutton> button.</para></step>
+<title
+>Wie berechne ich 3.1 * 5.2 € - 2.7 * 8.9 €?</title>
+<step
+><para
+>Berechnen Sie zuerst den ersten Teil: <userinput
+>3.1 * 5.2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Speichern Sie das Ergebnis mit dem Knopf <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Berechnen Sie jetzt den zweiten Teil: <userinput
+>2.7 * 8.9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Subtrahieren Sie das Ergebnis vom Zwischenspeicher mit dem Knopf <guibutton
+>M-</guibutton
+>.</para
+></step>
+<step
+><para
+>Holen Sie die Summe mit <guibutton
+>MR</guibutton
+> zurück.</para
+></step>
 </procedure>
 
-<para>The sequence <userinput>3.1 * 5.2 € Min 2.7 * 8.9 € - MR</userinput>
-computes the difference in the reverse order.</para>
+<para
+>Die Tastenfolge <userinput
+>3.1 * 5.2 € Min 2.7 * 8.9 € - MR</userinput
+> berechnet die Differenz in umgekehrter Reihenfolge.</para>
 
 </sect1>
 </chapter>
 
 <chapter id="reference">
-<title>Command Reference</title>
+<title
+>Befehlsreferenz</title>
 
 <sect1 id="reference-keys">
-<title>Default Shortcuts</title>
+<title
+>Standard-Tastenkürzel</title>
 
 <simplelist type="horiz" columns="2">
-<member><keycombo action="simul">&Alt; <keycap>F4</keycap></keycombo></member>
-<member>Exits from &keurocalc;</member>
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>&keurocalc; beenden</member>
 
 <!--This is changed at runtime by DrClash 
-<member><keycombo action="simul">&Alt; <keycap>H</keycap></keycombo></member>
-<member>Displays these help pages</member>
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Displays these help pages</member>
 
-<member><keycombo action="simul">&Alt; <keycap>C</keycap></keycombo></member>
-<member>Goes to the currency selection area</member>
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Goes to the currency selection area</member>
 
-<member><keycombo action="simul">&Alt; <keycap>A</keycap></keycombo></member>
-<member>Displays the <guilabel>About</guilabel> box</member>
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Displays the <guilabel
+>About</guilabel
+> box</member>
 -->
-<member><keycap>0</keycap> - <keycap>9</keycap></member>
-<member>Input digits</member>
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Zifferneingabe</member>
 
-<member><keycap>.</keycap> or <keycap>,</keycap></member>
-<member>Decimal separator</member>
+<member
+><keycap
+>.</keycap
+> oder <keycap
+>,</keycap
+></member>
+<member
+>Dezimaltrennzeichen</member>
 
-<member><keycap>+</keycap>, <keycap>-</keycap>, <keycap>*</keycap> and <keycap>/</keycap></member>
-<member>Operators: addition, subtraction, multiplication and division</member>
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> and <keycap
+>/</keycap
+></member>
+<member
+>Operatoren: Addition, Subtraktion, Multiplikation und Division.</member>
 
-<member>&Enter; and <keycap>Return</keycap></member>
-<member>Validation of input number considered as a simple, unitless, value</member>
+<member
+>&Enter; und <keycap
+>Rücktaste</keycap
+></member>
+<member
+>Auswertung der eingegebenen Zahl als einfacher einheitenloser Wert</member>
 
-<member><keycap>%</keycap></member>
-<member>Validation of input number considered as a percentage</member>
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Auswertung der eingegebenen Zahl als Prozentwert</member>
 
-<member>&Backspace;</member>
-<member>Removal of last input: digits, decimal separator or operator</member>
+<member
+>&Backspace;</member>
+<member
+>Entfernt das letzte eingegebene Zeichen: Ziffer, Dezimaltrennzeichen oder Operator</member>
 
-<member>&Tab; and <keycombo action="simul">&Shift; &Tab;</keycombo> keys</member>
-<member>Moves from one button to the next or previous one</member>
+<member
+>Taste &Tab; und die Tastenkombination <keycombo action="simul"
+>&Shift; &Tab;</keycombo
+></member>
+<member
+>Geht zum nächsten oder vorherigen Knopf</member>
 
-<member>Arrow keys</member>
-<member>In the currency selection area, moves from one currency to the other</member>
+<member
+>Pfeiltasten</member>
+<member
+>Wechselt im Auswahlfeld Währung von einer zur anderen Währung.</member>
 
-<member>Space bar</member>
-<member>When focus is on a push button, presses this button</member>
+<member
+>Leertaste</member>
+<member
+>Hat ein Knopf den Fokus, dann wird dieser Knopf gedrückt.</member>
 
-<member><keycap>E</keycap> or <keycap>$</keycap></member>
-<member>Validation of input number considered as a value expressed in the reference currency
-(euro<!-- or dollar -->)</member>
+<member
+><keycap
+>E</keycap
+> oder <keycap
+>$</keycap
+></member>
+<member
+>Auswertung der eingegebenen Zahl als Wert in der Referenzwährung Euro.</member>
 
-<member><keycap>S</keycap></member>
-<member>Change sign of the result</member>
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Ändert das Vorzeichen des Ergebnisses</member>
 
-<member>Any other key</member>
-<member>Validation of input number considered as a number in the other currency</member>
+<member
+>Jede andere Taste</member>
+<member
+>Auswertung der eingegebenen Zahl als Wert in der anderen Währung.</member>
 </simplelist>
 
 </sect1>
 
 <sect1 id="reference-buttons">
-<title>The buttons</title>
+<title
+>Die Knöpfe</title>
 
 <simplelist type="horiz" columns="2">
-<member><guibutton>0</guibutton> to <guibutton>9</guibutton></member>
-<member>Input digits</member>
+<member
+><guibutton
+>0</guibutton
+> bis <guibutton
+>9</guibutton
+></member>
+<member
+>Zifferneingabe</member>
 
-<member><guibutton>.</guibutton> or <guibutton>,</guibutton></member>
-<member>Decimal separator</member>
+<member
+><guibutton
+>.</guibutton
+> oder <guibutton
+>,</guibutton
+></member>
+<member
+>Dezimaltrennzeichen</member>
 
-<member><guibutton>&lt;-</guibutton></member>
-<member>Removal of last input: digits, decimal separator or operator</member>
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Entfernt das letzte eingegebene Zeichen: Ziffer, Dezimaltrennzeichen oder Operator</member>
 
-<member><guibutton>AC</guibutton></member>
-<member>Clear all: both input and result area</member>
+<member
+><guibutton
+>AC</guibutton
+></member>
+<member
+>Löscht alles: Sowohl den Eingabe- wie auch den Ergebnisbereich</member>
 
-<member><guibutton>€</guibutton> or <guibutton>$</guibutton></member>
-<member>Validation of input number considered as a value expressed in the reference currency
-(euro<!-- or dollar -->)</member>
+<member
+><guibutton
+>€</guibutton
+> oder <guibutton
+>$</guibutton
+></member>
+<member
+>Auswertung der eingegebenen Zahl als Wert in der Referenzwährung Euro.</member>
 
-<member>The button labeled with the name of an other currency</member>
-<member>Validation of input number considered as a number in the other currency</member>
+<member
+>Der Knopf mit der Beschriftung des anderen Währung</member>
+<member
+>Auswertung der eingegebenen Zahl als Wert in der anderen Währung.</member>
 
-<member><guibutton>Enter</guibutton></member>
-<member>Validation of input number considered as a simple, unitless, value</member>
+<member
+><guibutton
+>Eingabetaste</guibutton
+></member>
+<member
+>Auswertung der eingegebenen Zahl als einfacher einheitenloser Wert</member>
 
-<member><guibutton>%</guibutton></member>
-<member>Validation of input number considered as a percentage</member>
+<member
+><guibutton
+>%</guibutton
+></member>
+<member
+>Auswertung der eingegebenen Zahl als Prozentwert</member>
 
-<member><guibutton>+/-</guibutton></member>
-<member>Change sign of the result</member>
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Ändert das Vorzeichen des Ergebnisses</member>
 
-<member><guibutton>Min</guibutton>, <guibutton>MR</guibutton>, <guibutton>M+</guibutton> and <guibutton>-</guibutton></member>
-<member>Store result in memory, recall memory into result, add result to memory and subtract result from memory</member>
+<member
+><guibutton
+>Min</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> und <guibutton
+>-</guibutton
+></member>
+<member
+>Speichert das Ergebnis im Zwischenspeicher, holt den Wert in das Ergebnisfeld zurück, addiert Ergebnisse zum Wert im Speicher und subtrahiert Ergebnisse vom Wert im Speicher.</member>
 
-<member><guibutton>/</guibutton>, <guibutton>X</guibutton>, <guibutton>-</guibutton> and <guibutton>+</guibutton></member>
-<member>Operators: addition, subtraction, multiplication and division</member>
+<member
+><guibutton
+>/</guibutton
+>, <guibutton
+>X</guibutton
+>, <guibutton
+>-</guibutton
+> und <guibutton
+>+</guibutton
+></member>
+<member
+>Operatoren: Addition, Subtraktion, Multiplikation und Division.</member>
 
-<member><guibutton>Reset</guibutton></member>
-<member>Reset both input, result and memory</member>
+<member
+><guibutton
+>Zurücksetzen</guibutton
+></member>
+<member
+>Setzt Eingaben, Ergebnis und Zwischenspeicher zurück</member>
 
-<member><guibutton>About</guibutton></member>
-<member>Displays the <guilabel>About</guilabel> box</member>
+<member
+><guibutton
+>Über</guibutton
+></member>
+<member
+>Zeigt den Dialog <guilabel
+>Über</guilabel
+> an</member>
 
-<member><guibutton>Help</guibutton></member>
-<member>Displays these help pages</member>
+<member
+><guibutton
+>Hilfe</guibutton
+></member>
+<member
+>Zeigt dieses Handbuch an</member>
 
-<member>The drop down list with currency codes and names</member>
-<member>Selects an other currency to work with</member>
+<member
+>Das Auswahlfeld mit den Kürzeln und Namen der Währung</member>
+<member
+>Wählt eine andere Währung, um damit zu arbeiten</member>
 </simplelist>
 
 </sect1>
 
 <sect1 id="settings">
-<title>The Settings Dialog</title>
+<title
+>Der Dialog Einstellungen</title>
 
 <mediaobject>
-<imageobject><imagedata fileref="settings.png" format="PNG" /></imageobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
 </mediaobject>
 
 <sect2 id="settings-reference">
-<title>Reference currency, rates origin</title>
+<title
+>Referenzwährung, Ursprung des Umrechnungskurs</title>
 
-<para>This setting defines <!-- the reference currency (euro or dollar),
-and --> from where 
-&keurocalc; should download the exchange rates between the reference currency and
-other currencies. The following choices are available:</para>
+<para
+>Diese Einstellung legt fest, wo &keurocalc; die Wechselkurse zwischen der Referenzwährung € und den anderen Währungen herunterladen soll: Folgendes steht zur Auswahl:</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Euro, no network access (fixed rates only)</guilabel></term>
+<term
+><guilabel
+>Euro, kein Netzwerkzugriff (nur fester Kurs)</guilabel
+></term>
 <listitem>
-<para>Euro is the reference currency. No variable rate is downloaded or used.
-The only available currencies are the ones that have a fixed conversion
-rate with the euro.</para>
-<para>This setting is adapted to computers with no network access.</para>
+<para
+>Der Euro ist die Referenzwährung. Es werden keine aktuellen variablen Währungskurse heruntergeladen oder verwendet. Es sind nur Währungen mit einem festen Wechselkurs zum Euro verfügbar.</para>
+<para
+>Diese Einstellung ist für Rechner ohne Netzwerkanschluß vorgesehen.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Euro, European Central Bank</guilabel></term>
+<term
+><guilabel
+>Euro, Europäische Zentralbank</guilabel
+></term>
 <listitem>
-<para>Euro is the reference currency. The fixed exchange rates are available.
-&keurocalc; attempts to download the variable rates from the
-<ulink url="http://www.ecb.int/stats/eurofxref/">European Central Bank (ECB)</ulink>.</para>
+<para
+>Der Euro ist die Referenzwährung. Die festen Währungskurse sind verfügbar. &keurocalc; versucht die aktuellen variablen Wechselkurse von der <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Europäischen Zentralbank (EZB)</ulink
+> herunterzuladen.</para>
 </listitem>
 </varlistentry>
 
 <!--varlistentry>
-<term><guilabel>Dollar, New York Federal Reserve Bank</guilabel></term>
+<term
+><guilabel
+>Dollar, New York Federal Reserve Bank</guilabel
+></term>
 <listitem>
-<para>Dollar is the reference currency. There are no fixed exchange rates.
+<para
+>Dollar is the reference currency. There are no fixed exchange rates.
 &keurocalc; attempts to download the variable rates from the
-<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm">New York
-Federal Reserve Bank (NY FRB)</ulink>.</para>
-<para>Currently, &keurocalc; has a problem determining the date of the latest
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para>
+<para
+>Currently, &keurocalc; has a problem determining the date of the latest
 exchange rates published by that bank, because of time zone offsets and non-working
 days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
 not optimal.</para>
@@ -588,11 +1191,15 @@ not optimal.</para>
 </varlistentry-->
 
 <varlistentry>
-<term><guilabel>Euro, Time Genie</guilabel></term>
+<term
+><guilabel
+>Euro, Time Genie</guilabel
+></term>
 <listitem>
-<para>Euro is the reference currency. The fixed exchange rates are available.
-&keurocalc; attempts to download the variable rates from the
-<ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex">Time Genie (TG)</ulink>.</para>
+<para
+>Der Euro ist die Referenzwährung. Die festen Währungskurse sind verfügbar. &keurocalc; versucht die aktuellen variablen Wechselkurse von <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+> herunterzuladen.</para>
 </listitem>
 </varlistentry>
 
@@ -601,57 +1208,63 @@ not optimal.</para>
 </sect2>
 
 <sect2 id="settings-default">
-<title>Default currency</title>
+<title
+>Standardwährung</title>
 
-<para>This setting defines the other currency that is used when &keurocalc; starts up or when the
-user validates the new settings.</para>
+<para
+>Diese Einstellung definiert die andere Währung, die in &keurocalc; beim Start des Programms eingestellt ist oder wenn der Benutzer neue Einstellungen auswertet.</para>
 
-<para>Notice that the selected currency might not be provided by the selected
-rates source. In that case, the first available currency in the list is used.</para>
+<para
+>Beachten Sie, dass die ausgewählte Währung möglicherweise nicht in der gewählten Datenquelle vorhanden ist. In diesem Fall wird die erste verfügbare Währung in der Liste verwendet.</para>
 
 </sect2>
 
 <sect2 id="settings-rounding">
-<title>Rounding</title>
+<title
+>Runden</title>
 
-<para>This setting defines how the results should be presented in the display area. Internally,
-all computations are done with the precision offered by the mathematical library, but it
-usually makes no sense presenting tenths of cents. The following rounding methods are
-available:</para>
+<para
+>Diese Einstellung legt fest, wie die Ergebnisse im Anzeigebereich dargestellt werden. Intern werden alle Berechnungen mit der Genauigkeit der verwendeten mathematischen Bibliothek durchgeführt, aber es ist normalerweise nicht sinnvoll 1/10 Cent anzuzeigen. Folgende Rundungsverfahren stehen zur Auswahl:</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Official rounding rules</guilabel></term>
+<term
+><guilabel
+>Offizielle Rundungsregeln</guilabel
+></term>
 <listitem>
-<para>The EU conversion rules or other official conversion rules are used. It
-means that the result is rounded to the next unit for currencies like the
-Japanese yen or the Italian lira, and rounded to the next hundredth of unit
-(<quote>cents</quote>) for currencies like the euro or the dollar.</para>
-<para>For example, 158.323 yen would be rounded to 158 yen. 12.537 euro
-would be rounded to 12.54 euro.</para>
+<para
+>Es werden Umwandlungsregeln der EU oder andere offizielle Rundungsregeln verwendet. &ie; das Ergebnis wird zur nächsten ganzen Einheit von Währungen wie dem japanischen Yen oder der italienischen Lira und zur nächsten 1/100 der Einheit (<quote
+>Cent</quote
+>) für Währungen wie dem Euro oder dem Dollar gerundet.</para>
+<para
+>158,323 Yen werden zum Beispiel zu 158 Yen und 12,537 € zu 12,54 € gerundet.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Smallest coin method</guilabel></term>
+<term
+><guilabel
+>Nach kleinster Münze</guilabel
+></term>
 <listitem>
-<para>The result is rounded to the next value of the smallest coin that
-circulates in the country that uses that currency. For disappeared currencies
-like the Italian lira, it uses the smallest coin that used to circulate before
-the currency has been withdrawn: in the case of the Italian lira, it was the
-50 liras coin.</para>
-<para>For example, 1235.9 Italian liras would be rounded to 1250 liras. 39.45 Norwegian
-crowns would be rounded to 39.50 crowns.</para>
-<para>We lack information about the smallest coins that exist in every country.
-Please send a bug report if &keurocalc; uses an incorrect value for the smallest
-available coin in your country, and we will enter that information.</para>
+<para
+>Das Ergebnis wird zum nächsten Wert der kleinsten Münze gerundet, die im Land mit dieser Währung benutzt wird. Bei veralteten Währungen wie der italienischen Lira wird zur kleinsten verwendeten Münze gerundet, ehe die Währung zurückgezogen wurde: Bei der italienischen Lira war das die 50 Lira-Münze.</para>
+<para
+>1235,9 italienische Lira werden zum Beispiel zu 1250 Lira und 39,45 norwegische Kronen zu 39,50 Kronen gerundet.</para>
+<para
+>Es fehlen Informationen über die kleinsten Münzeinheiten aller Länder. Schicken Sie bitte einen Fehlerbericht, wenn &keurocalc; einen falschen Wert der kleinsten verfügbaren Münzeinheit in Ihrer Währung benutzt. Diese Information wird dann ins Programm eingefügt.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>No rounding at all</guilabel></term>
+<term
+><guilabel
+>Nicht runden</guilabel
+></term>
 <listitem>
-<para>The computed value is displayed unchanged, as a floating point number.</para>
+<para
+>Der berechnete Wert wird unverändert als Gleitkommazahl angezeigt.</para>
 </listitem>
 </varlistentry>
 
@@ -660,27 +1273,36 @@ available coin in your country, and we will enter that information.</para>
 </sect2>
 
 <sect2 id="settings-look-and-feel">
-<title>Look and feel</title>
+<title
+>Erscheinungsbild</title>
 
-<para>This setting defines the appearance and behavior of &keurocalc;.
-The following options are available:</para>
+<para
+>Diese Einstellungen bestimmen das Erscheinungsbild und Verhalten von &keurocalc;. Die folgenden Einstellungen können ausgewählt werden:</para>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Display color</guilabel></term>
+<term
+><guilabel
+>Anzeigenfarbe</guilabel
+></term>
 <listitem>
-<para>The background color of the display areas (both input and result).
-To change the background color, click on <guibutton>Change...</guibutton>.
-This opens the standard &kde; color selection dialog. Choose a new color,
-then press <guibutton>OK</guibutton> to validate the new choice.</para>
+<para
+>Die Hintergrundfarbe der Anzeigenbereiche für die Eingabe und das Ergebnis. Um eine andere Hintergrundfarbe einzustellen, klicken Sie auf <guibutton
+>Ändern ...</guibutton
+> Damit wird der &kde;-Standarddialog zur Farbauswahl geöffnet. Wählen Sie in diesem Dialog eine neue Farbe und drücken Sie <guibutton
+>OK</guibutton
+>, um die Einstellung zu übernehmen.</para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Enable splash screen</guilabel></term>
+<term
+><guilabel
+>Startbildschirm aktivieren</guilabel
+></term>
 <listitem>
-<para>Uncheck this box if you do not want to initial picture to appear
-when &keurocalc; starts.</para>
+<para
+>Schalten Sie diese Einstellung aus, wenn Sie den Startbildschirm bei Aufruf von &keurocalc; nicht anzeigen möchten.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -691,29 +1313,53 @@ when &keurocalc; starts.</para>
 
 <chapter id="credits">
 
-<title>Credits and License</title>
+<title
+>Mitwirkende und Lizenz</title>
 
-<para>&keurocalc;</para>
+<para
+>&keurocalc;</para>
 
-<para>Program copyright 2001-2022 the &keurocalc; developers:
+<para
+>Copyright des Programms 2001-2019 Die &keurocalc;-Entwickler: <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+> - Entwurf und Implementierung</para
+></listitem>
+<listitem
+><para
+>Gil Gross <email
+>ptit.ours@_NOSPAM_gmail.com</email
+> - Zusätzliche Funktionalität</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_NOSPAM_unet.univie.ac.at</email
+> - Aussehen und Tests</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_NOSPAM_euronet.nl</email
+> - Grafische Gestaltung</para
+></listitem>
+</itemizedlist
+></para>
 
-<itemizedlist>
-<listitem><para>Éric Bischoff <email>bischoff@_NOSPAM_kde.org</email> - design and implementation</para></listitem>
-<listitem><para>Gil Gross <email>ptit.ours@_NOSPAM_gmail.com</email> - additional functionality</para></listitem>
-<listitem><para>Melchior Franz <email>a8603365@_NOSPAM_unet.univie.ac.at</email> - design and testing</para></listitem>
-<listitem><para>Bas Willems <email>cybersurfer@_NOSPAM_euronet.nl</email> - graphical artwork</para></listitem>
-</itemizedlist></para>
+<para
+>Copyright der Dokumentation 2001-2019 Éric Bischoff <email
+>ebischoff@_NOSPAM_nerim.net</email
+>.</para>
 
-<para>Documentation copyright 2001-2022 Éric Bischoff
-<email>bischoff@_NOSPAM_kde.org</email>.</para>
-
-<para>Documentation reviewed by &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
-<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-
-&underFDL;
-&underGPL;
-
-</chapter>
+<para
+>Korrekturlesen der Dokumentation durch &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+<para
+>Übersetzung Burkhard Lück <email
+>lueck@hube-lueck.de</email
+></para
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
