@@ -1,13 +1,16 @@
-# Translation of keurocalc into esperanto.
+# Translation of keurocalc.pot into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the keurocalc package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-08 21:45+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -412,16 +415,14 @@ msgid "Singapore dollar"
 msgstr ""
 
 #. i18n: file: ../currencies/currencies.xml
-#, fuzzy, kde-format
-#| msgid "Croatian kuna"
+#, kde-format
 msgid "Slovenian tolar"
-msgstr "Kroata kuna"
+msgstr "Slovena tolar"
 
 #. i18n: file: ../currencies/currencies.xml
-#, fuzzy, kde-format
-#| msgid "Croatian kuna"
+#, kde-format
 msgid "Slovakian koruna"
-msgstr "Kroata kuna"
+msgstr "Slovaka koruno"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -502,7 +503,7 @@ msgstr ""
 #: calculator.ui:14
 #, kde-format
 msgid "Currency Calculator"
-msgstr ""
+msgstr "Valuta Kalkulilo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox4)
 #: calculator.ui:241
@@ -520,7 +521,7 @@ msgstr "Rezulto"
 #: calculator.ui:1930
 #, kde-format
 msgid "Correct last input digit"
-msgstr ""
+msgstr "Koerkti lastan enigvaloron"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, ReferenceButton)
 #: calculator.ui:1968
@@ -532,13 +533,13 @@ msgstr ""
 #: calculator.ui:1990
 #, kde-format
 msgid "Divide"
-msgstr ""
+msgstr "Dividi"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, MInputButton)
 #: calculator.ui:2012
 #, kde-format
 msgid "Store in memory"
-msgstr ""
+msgstr "Stori en memoro"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, ResetButton)
 #: calculator.ui:2050
@@ -550,7 +551,7 @@ msgstr ""
 #: calculator.ui:2053
 #, kde-format
 msgid "Reset"
-msgstr "Restarigu"
+msgstr "Restarigi"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, CurrencyButton)
 #: calculator.ui:2132
@@ -560,9 +561,9 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, AsteriskButton)
 #: calculator.ui:2157
-#, fuzzy, kde-format
+#, kde-format
 msgid "Multiply"
-msgstr "&Divenu ĉefurbon per ĝia regiono..."
+msgstr "Multipliki"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, MRecallButton)
 #: calculator.ui:2182
@@ -580,13 +581,13 @@ msgstr ""
 #: calculator.ui:2207
 #, kde-format
 msgid "&About..."
-msgstr ""
+msgstr "&Pri..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, SimpleValueButton)
 #: calculator.ui:2286
 #, kde-format
 msgid "Enter simple value"
-msgstr ""
+msgstr "Enigi simplan valoron"
 
 #. i18n: ectx: property (text), widget (QPushButton, SimpleValueButton)
 #: calculator.ui:2289
@@ -605,31 +606,31 @@ msgstr "Subtrahi"
 #: calculator.ui:2339
 #, kde-format
 msgid "Subtract from memory"
-msgstr ""
+msgstr "Subtrahi de memoro"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, HelpButton)
 #: calculator.ui:2361
 #, kde-format
 msgid "Display help pages"
-msgstr ""
+msgstr "Montri helpopaĝojn"
 
 #. i18n: ectx: property (text), widget (QPushButton, HelpButton)
 #: calculator.ui:2364
 #, kde-format
 msgid "&Help..."
-msgstr ""
+msgstr "&Helpo..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, PercentButton)
 #: calculator.ui:2421
 #, kde-format
 msgid "Apply percentage value"
-msgstr ""
+msgstr "Apliki elcentan valoron"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, PlusMinusButton)
 #: calculator.ui:2443
 #, kde-format
 msgid "Change sign"
-msgstr "Ŝanĝu signon"
+msgstr "Ŝanĝi signon"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, PlusButton)
 #: calculator.ui:2468
@@ -641,13 +642,13 @@ msgstr "Aldoni"
 #: calculator.ui:2493
 #, kde-format
 msgid "Add to memory"
-msgstr ""
+msgstr "Aldoni al memoro"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, SettingsButton)
 #: calculator.ui:2515
 #, kde-format
 msgid "Configure KEuroCalc"
-msgstr ""
+msgstr "Agordi KEuroCalc"
 
 #. i18n: ectx: property (text), widget (QPushButton, SettingsButton)
 #: calculator.ui:2518
@@ -659,12 +660,12 @@ msgstr "A&gordoj..."
 #: calculator.ui:2531
 #, kde-format
 msgid "Currencies"
-msgstr ""
+msgstr "Valutoj"
 
 #: keurocalc.cpp:75
 #, kde-format
 msgid "Cannot load currencies.xml"
-msgstr ""
+msgstr "Ne eblas ŝargi currencies.xml"
 
 #: keurocalc.cpp:1008
 #, kde-format
@@ -777,13 +778,13 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Axel Rousseau"
+msgstr "Axel Rousseau,Oliver Kellogg"
 
 #: main.cpp:45
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "axel@esperanto-jeunes.org"
+msgstr "axel@esperanto-jeunes.org,okellogg@users.sourceforge.net"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SettingsDialog)
 #: settingsdialog.ui:14
@@ -807,7 +808,7 @@ msgstr ""
 #: settingsdialog.ui:510
 #, kde-format
 msgid "215.06 €"
-msgstr ""
+msgstr "215.06 €"
 
 #. i18n: ectx: property (text), widget (QPushButton, qPushButtonDisplayColor)
 #: settingsdialog.ui:526
@@ -825,13 +826,13 @@ msgstr ""
 #: settingsdialog.ui:581
 #, kde-format
 msgid "Rounding"
-msgstr ""
+msgstr "Rondigo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonOfficialRules)
 #: settingsdialog.ui:587
 #, kde-format
 msgid "Offic&ial rounding rules"
-msgstr ""
+msgstr "Ofic&ialaj rondigreguloj"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonSmallestCoin)
 #: settingsdialog.ui:594
@@ -873,4 +874,4 @@ msgstr ""
 #: settingsdialog.ui:649
 #, kde-format
 msgid "Default currency"
-msgstr ""
+msgstr "Defaŭlta valuto"
