@@ -1,22 +1,23 @@
 # Bulgarian translations for keurocalc package.
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the keurocalc package.
-# Automatically generated, 2022.
 #
+# Automatically generated, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2022-11-21 16:05+0200\n"
-"Last-Translator: Светослав Стефанов <svetlisashkov@yahoo.com>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-10 16:55+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -49,18 +50,12 @@ msgid "A currency converter daemon"
 msgstr "Услуга за конвертиране на валути"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "(c) 2006-2019, разработчиците на curconvd"
+msgstr "(c) 2006-2022, разработчиците на curconvd"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -69,7 +64,7 @@ msgid ""
 msgstr ""
 "Програма на Éric Bischoff <ebischoff@nerim.net>\n"
 "\n"
-"Обменните  куросове Time Genie са предоставани с любезното съгласие на <a "
+"Обменните  куросове Time Genie са предоставани с любезното съгласие на  <a "
 "href='http://www.timegenie.com/' title='foreign exchange rates courtesy of "
 "Time Genie'>Time Genie</a>\n"
 
