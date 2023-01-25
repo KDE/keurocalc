@@ -17,8 +17,8 @@ target_link_libraries(curconvd
     Qt::Core
     Qt::Xml
     Qt::DBus
-    KF5::I18n
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::KIOCore
 )
 
 install(TARGETS curconvd ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

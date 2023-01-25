@@ -21,13 +21,13 @@ add_executable(keurocalc ${keurocalc_SRCS})
 
 target_link_libraries(keurocalc
     Qt::Widgets
-    KF5::ConfigCore
-    KF5::ConfigWidgets
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::KIOCore
-    KF5::XmlGui
-    KF5::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
 )
 
 install(TARGETS keurocalc ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
