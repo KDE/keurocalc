@@ -17,7 +17,6 @@
 
 #include <unistd.h>
 
-#include <QTextCodec>
 #include <QStandardPaths>
 #include <QSplashScreen>
 
@@ -47,8 +46,6 @@ int main(int argc, char *argv[])
 	KAboutData::setApplicationData(aboutData);
 
 	a.setWindowIcon(QIcon::fromTheme("keurocalc", a.windowIcon()));
-
-	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
 
 	QSplashScreen *splash;
 	KEuroCalc *keurocalc;

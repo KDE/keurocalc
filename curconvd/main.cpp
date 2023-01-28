@@ -17,9 +17,6 @@
 
 #include <stdio.h>
 #include <QCoreApplication>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QTextCodec>
-#endif
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -35,9 +32,6 @@ int main(int argc, char *argv[])
 	aboutData.addAuthor(i18n("Éric Bischoff"), i18n("Design and implementation"), "bischoff@kde.org");
 
 	KAboutData::setApplicationData(aboutData);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-	QTextCodec::setCodecForLocale( QTextCodec::codecForName("utf-8") );
-#endif
 	new CurrencyConverter();
 
 	return a.exec();
