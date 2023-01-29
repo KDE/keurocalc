@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2015-01-31 22:36+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -709,23 +709,23 @@ msgstr "Ingen afrunding"
 msgid "Not loaded"
 msgstr "Ikke indlæst"
 
-#: main.cpp:34
+#: main.cpp:33
 #, fuzzy, kde-format
 #| msgid "(c) 2001-2015, the KEuroCalc developers"
 msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2015, KEuroCalc-udviklerne"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
 msgstr "Konvertering af kontanter og regnemaskine"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid ""
 #| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
@@ -752,53 +752,53 @@ msgstr ""
 "Time Genie-vekselkurser med tak til <<a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Design and implementation"
 msgstr "Design og implementering"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Gil Gross"
 msgstr "Gil Gross"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Additional functionality"
 msgstr "Yderligere funktionalitet"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Melchior Franz"
 msgstr "Melchior Franz"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Design and testing"
 msgstr "Design og test"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Bas Willems"
 msgstr "Bas Willems"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Graphical artwork"
 msgstr "Grafisk arbejde"
 
-#: main.cpp:44
+#: main.cpp:43
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Martin Schlander"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

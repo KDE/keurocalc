@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extragear-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2022-12-14 16:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -41,22 +41,22 @@ msgstr "curconvd: D-Bus istekleri bekleniyor"
 msgid "curconvd: stopped waiting for D-Bus requests"
 msgstr "curconvd: D-Bus isteklerini bekleme durduruldu"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "CurConvD"
 msgstr "CurConvD"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "A currency converter daemon"
 msgstr "Para birimi dönüştürme ardalan süreci"
 
-#: main.cpp:33
+#: main.cpp:30
 #, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
 msgstr "(c) 2006-2022, curconvd geliştiricileri"
 
-#: main.cpp:33
+#: main.cpp:30
 #, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -70,12 +70,12 @@ msgstr ""
 "exchange rates courtesy of Time Genie'>Time Genie</a> izni ile "
 "kullanılmaktadır\n"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Design and implementation"
 msgstr "Tasarım ve uyarlama"

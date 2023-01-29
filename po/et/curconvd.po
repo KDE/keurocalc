@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2019-11-20 00:35+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -38,23 +38,23 @@ msgstr "curconvd: oodatakse D-Bus-i päringuid"
 msgid "curconvd: stopped waiting for D-Bus requests"
 msgstr "curconvd: peatatud D-Bus-i päringute ootel"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "CurConvD"
 msgstr "CurConvD"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "A currency converter daemon"
 msgstr "Valuutateisenduste deemon"
 
-#: main.cpp:33
+#: main.cpp:30
 #, fuzzy, kde-format
 #| msgid "(c) 2006-2019, the curconvd developers"
 msgid "(c) 2006-2022, the curconvd developers"
 msgstr "(c) 2006-2019: curconvd arendajad"
 
-#: main.cpp:33
+#: main.cpp:30
 #, fuzzy, kde-format
 #| msgid ""
 #| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
@@ -72,12 +72,12 @@ msgstr ""
 "Time Genie vahetuskursid tänu <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie'le</a>\n"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Design and implementation"
 msgstr "Kujundus ja teostus"

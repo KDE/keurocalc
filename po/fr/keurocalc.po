@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
-"PO-Revision-Date: 2023-01-13 21:24+0100\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
+"PO-Revision-Date: 2023-01-27 18:56+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -119,7 +119,7 @@ msgstr "Yuan chinois"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Cape Verde escudo"
-msgstr "Escudo cap-verdien"
+msgstr "Escudo du Cap-Vert"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "Tengue du Kazakhstan"
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
 msgid "Sri Lankan rupee"
-msgstr "Roupie sri-lankaise"
+msgstr "Roupie du Sri-Lanka"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -715,22 +715,22 @@ msgstr "Aucun arrondi"
 msgid "Not loaded"
 msgstr "Non chargé"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2022 l'équipe de développement de KEuroCalc"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
 msgstr "Convertisseur de monnaie et calculatrice"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -750,53 +750,53 @@ msgstr ""
 "www.timegenie.com/' title='Taux d'échange de Time Genie fournis "
 "gracieusement par Time Genie'>Time Genie</a>\n"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Design and implementation"
 msgstr "Conception et implémentation"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Gil Gross"
 msgstr "Gil Gross"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Additional functionality"
 msgstr "Fonctionnalité additionnelle"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Melchior Franz"
 msgstr "Melchior Franz"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Design and testing"
 msgstr "Conception et test"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Bas Willems"
 msgstr "Bas Willems"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Graphical artwork"
 msgstr "Illustration graphique"
 
-#: main.cpp:44
+#: main.cpp:43
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Cyrille Bieuzent, Guillaume Pujol, Éric Bischoff, Simon Depiets"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2019-02-09 13:33-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -736,23 +736,23 @@ msgstr "ਪੂਰਾ ਨਹੀਂ ਕਰਨਾ"
 msgid "Not loaded"
 msgstr "ਲੋਡ ਨਹੀਂ ਕੀਤਾ"
 
-#: main.cpp:34
+#: main.cpp:33
 #, fuzzy, kde-format
 #| msgid "(c) 2001-2018, the KEuroCalc developers"
 msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2018, the KEuroCalc developers"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
 msgstr "ਨਕਦ ਤਬਾਦਲਾਕਾਰ ਤੇ ਕੈਲਕੂਲੇਟਰ"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -764,53 +764,53 @@ msgid ""
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Éric Bischoff"
 msgstr ""
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Design and implementation"
 msgstr "ਡਿਜ਼ਾਇਨ ਤੇ ਨਿਰਮਾਣ"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Gil Gross"
 msgstr "ਗਿਲ ਗਰੋਸ"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Additional functionality"
 msgstr "ਹੋਰ ਸਹੂਲਤਾਂ"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Melchior Franz"
 msgstr ""
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Design and testing"
 msgstr "ਡਿਜ਼ਾਇਨ ਤੇ ਟੈਸਟਿੰਗ"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Bas Willems"
 msgstr ""
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Graphical artwork"
 msgstr "ਗਰਾਫਿਕਸ ਆਰਟਵਰਕ"
 
-#: main.cpp:44
+#: main.cpp:43
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "ਅ. ਸ. ਆਲਮ"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

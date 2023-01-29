@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2023-01-06 23:17+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -707,22 +707,22 @@ msgstr "Без закръгляне"
 msgid "Not loaded"
 msgstr "Няма заредени данни"
 
-#: main.cpp:34
+#: main.cpp:33
 #, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2022, разработчиците на KEuroCalc"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
 msgstr "Паричен конвертор и калкулатор"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
-#: main.cpp:37
+#: main.cpp:36
 #, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -741,53 +741,53 @@ msgstr ""
 "Обменните курсове Time Genie са от <a href='http://www.timegenie.com/' "
 "title='чуждестранни обменни курсове от Time Genie'>Time Genie</a>\n"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Design and implementation"
 msgstr "Дизайн и внедряване"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Gil Gross"
 msgstr "Gil Gross"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Additional functionality"
 msgstr "Допълнителна функционалност"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Melchior Franz"
 msgstr "Melchior Franz"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Design and testing"
 msgstr "Дизайн и изпитване"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Bas Willems"
 msgstr "Bas Willems"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Graphical artwork"
 msgstr "Графично оформление"
 
-#: main.cpp:44
+#: main.cpp:43
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Златко Попов"
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"

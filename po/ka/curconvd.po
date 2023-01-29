@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2022-12-15 07:11+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -38,22 +38,22 @@ msgstr "curconvd: D-Bus -ის მოთხოვნების მოლო�
 msgid "curconvd: stopped waiting for D-Bus requests"
 msgstr "curconvd: D-Bus -ის მოთხოვნების მოლოდინი შეწყვეტილია"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "CurConvD"
 msgstr "CurConvD"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "A currency converter daemon"
 msgstr "ვალუტის გადამყვანი დემონი"
 
-#: main.cpp:33
+#: main.cpp:30
 #, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
 msgstr "(c) 2006-2022, curconvd -ის პროგრამისტები"
 
-#: main.cpp:33
+#: main.cpp:30
 #, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -66,12 +66,12 @@ msgstr ""
 "Time Genie -ის ვალუტის კურსის მფლობელია <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Design and implementation"
 msgstr "დიზაინი და განხორციელება"

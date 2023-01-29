@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2006-09-04 18:20+0200\n"
 "Last-Translator: محمد سعد  Mohamed SAAD <metehyi@free.fr>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -711,22 +711,22 @@ msgstr "لا تقريب"
 msgid "Not loaded"
 msgstr "غير مُحمًل"
 
-#: main.cpp:34
+#: main.cpp:33
 #, fuzzy, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
 msgstr "(c) 2001-2006, the KEuroCalc developers"
 
-#: main.cpp:35
+#: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
 msgstr "محول عملة و آلة حاسبة"
 
-#: main.cpp:36
+#: main.cpp:35
 #, kde-format
 msgid "KEuroCalc"
 msgstr "حاسبة اليورو"
 
-#: main.cpp:37
+#: main.cpp:36
 #, fuzzy, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -742,53 +742,53 @@ msgstr ""
 "الأهداء للفنان Michael Moore، لأنه \n"
 "يعرف انً المال لا يبرًر أي شيء, \n"
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Éric Bischoff"
 msgstr ""
 
-#: main.cpp:39
+#: main.cpp:38
 #, kde-format
 msgid "Design and implementation"
 msgstr "التصميم و التطبيق"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Gil Gross"
 msgstr ""
 
-#: main.cpp:40
+#: main.cpp:39
 #, fuzzy, kde-format
 msgid "Additional functionality"
 msgstr "وظائف اضافية"
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Melchior Franz"
 msgstr ""
 
-#: main.cpp:41
+#: main.cpp:40
 #, kde-format
 msgid "Design and testing"
 msgstr "التصميم و الفحص"
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Bas Willems"
 msgstr ""
 
-#: main.cpp:42
+#: main.cpp:41
 #, kde-format
 msgid "Graphical artwork"
 msgstr "الفنون الرسومية"
 
-#: main.cpp:44
+#: main.cpp:43
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
