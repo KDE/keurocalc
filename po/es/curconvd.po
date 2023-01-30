@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-14 00:50+0000\n"
+"POT-Creation-Date: 2023-01-29 01:01+0000\n"
 "PO-Revision-Date: 2022-12-14 11:07+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -47,22 +47,22 @@ msgstr "curconvd: esperando solicitudes D-Bus"
 msgid "curconvd: stopped waiting for D-Bus requests"
 msgstr "curconvd: detenido a la espera de peticiones D-Bus"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "CurConvD"
 msgstr "CurConvD"
 
-#: main.cpp:32
+#: main.cpp:29
 #, kde-format
 msgid "A currency converter daemon"
 msgstr "Un demonio de conversión de divisas"
 
-#: main.cpp:33
+#: main.cpp:30
 #, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
 msgstr "© 2006-2022, los desarrolladores de curconvd"
 
-#: main.cpp:33
+#: main.cpp:30
 #, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
@@ -75,12 +75,12 @@ msgstr ""
 "Tasa de cambio Time Genie cortesía de <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Éric Bischoff"
 
-#: main.cpp:35
+#: main.cpp:32
 #, kde-format
 msgid "Design and implementation"
 msgstr "Diseño e implementación"
