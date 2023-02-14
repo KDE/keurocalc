@@ -46,7 +46,7 @@ configure_file(config-keurocalc.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keuro
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.101.0)
+ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.103.0)
 
 add_subdirectory( keurocalc )
 add_subdirectory( doc )
