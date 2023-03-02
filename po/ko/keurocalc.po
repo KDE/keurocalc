@@ -1,14 +1,14 @@
 # Translation of keurocalc to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the keurocalc package.
-# Shinjo Park <kde@peremen.name>, 2008, 2010, 2014, 2016, 2018, 2019, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2008, 2010, 2014, 2016, 2018, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 01:01+0000\n"
-"PO-Revision-Date: 2021-06-06 00:12+0200\n"
+"PO-Revision-Date: 2023-03-01 02:08+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -707,10 +707,9 @@ msgid "Not loaded"
 msgstr "불러오지 않음"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2019, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "(c) 2001-2019, the KEuroCalc developers"
+msgstr "(c) 2001-2022, the KEuroCalc developers"
 
 #: main.cpp:34
 #, kde-format
@@ -723,15 +722,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to all who know that money does not justify "
-#| "anything.\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -741,7 +732,7 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Éric Bischoff <ebischoff@nerim.net>가 짠 프로그램\n"
+"Éric Bischoff <bischoff@kde.org>가 짠 프로그램\n"
 "\n"
 "돈이 모든 것을 정당화하지 않는다고 믿는 모든 이에게\n"
 "이 프로그램을 바칩니다.\n"

@@ -1,14 +1,14 @@
 # Translation of curconvd to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the curconvd package.
-# Shinjo Park <kde@peremen.name>, 2008, 2009, 2010, 2014, 2016, 2018, 2019.
+# Shinjo Park <kde@peremen.name>, 2008, 2009, 2010, 2014, 2016, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 01:01+0000\n"
-"PO-Revision-Date: 2019-07-18 23:44+0200\n"
+"PO-Revision-Date: 2023-03-01 02:09+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -49,25 +49,19 @@ msgid "A currency converter daemon"
 msgstr "통화 변환기 데몬"
 
 #: main.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "(c) 2006-2019, the curconvd developers"
+msgstr "(c) 2006-2022, the curconvd developers"
 
 #: main.cpp:30
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Éric Bischoff <ebischoff@nerim.net>의 프로그램\n"
+"Éric Bischoff <bischoff@kde.org>의 프로그램\n"
 "\n"
 "Time Genie 환율 정보는 <a href='http://www.timegenie.com/' title='foreign "
 "exchange rates courtesy of Time Genie'>Time Genie</a>에서 관리합니다\n"
