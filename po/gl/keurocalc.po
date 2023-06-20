@@ -615,7 +615,7 @@ msgstr "Restar da memoria"
 #: calculator.ui:2361
 #, kde-format
 msgid "Display help pages"
-msgstr "Mostrar as páxinas de axuda"
+msgstr "Amosar as páxinas de axuda"
 
 #. i18n: ectx: property (text), widget (QPushButton, HelpButton)
 #: calculator.ui:2364
