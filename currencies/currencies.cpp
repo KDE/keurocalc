@@ -420,3 +420,5 @@ void Currencies::httpResultTG(KJob *job)
 		endDownload( euroCurrency, date );
 
 }
+
+#include "moc_currencies.cpp"

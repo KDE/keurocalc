@@ -110,3 +110,5 @@ QString CurrencyConverter::LoadSource(const QString &dataSource, const QString &
 
 	return tablePath;
 }
+
+#include "moc_converter.cpp"

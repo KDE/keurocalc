@@ -115,3 +115,5 @@ void Preferences::changeDisplayColor()
 		displayColorResult->setPalette( palette );
 	}
 }
+
+#include "moc_preferences.cpp"

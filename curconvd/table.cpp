@@ -247,3 +247,5 @@ void CurrencyTable::Unload()
 
 	delete this;
 }
+
+#include "moc_table.cpp"

@@ -1363,3 +1363,5 @@ void KEuroCalc::normalize( QString &numberDisplay )
 		unitPos -= 3;
 	}
 }
+
+#include "moc_keurocalc.cpp"
