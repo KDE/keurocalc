@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Stefan Asserhäll <stefan.asserhall@bredband.net>, 2008, 2009, 2010.
-# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2012, 2014, 2015, 2018, 2019.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2012, 2014, 2015, 2018, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: curconvd\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 01:01+0000\n"
-"PO-Revision-Date: 2019-06-28 18:00+0100\n"
+"PO-Revision-Date: 2023-07-31 08:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -50,25 +50,19 @@ msgid "A currency converter daemon"
 msgstr "Ett bakgrundsprogram för valutakonvertering"
 
 #: main.cpp:30
-#, fuzzy, kde-format
-#| msgid "(c) 2006-2019, the curconvd developers"
+#, kde-format
 msgid "(c) 2006-2022, the curconvd developers"
-msgstr "© 2006-2019, curconvd-utvecklarna"
+msgstr "© 2006-2022, curconvd-utvecklarna"
 
 #: main.cpp:30
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Ett program av Éric Bischoff <ebischoff@nerim.net>\n"
+"Ett program av Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "Time Genie valutakurser med benäget tillstånd av <a href='http://www."
 "timegenie.com/' title='valutakurser med benäget tillstånd av Time "
