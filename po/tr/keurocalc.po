@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: extragear-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 01:01+0000\n"
-"PO-Revision-Date: 2023-01-18 22:31+0300\n"
+"PO-Revision-Date: 2023-08-26 12:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -651,7 +651,7 @@ msgstr "Belleğe ekle"
 #: calculator.ui:2515
 #, kde-format
 msgid "Configure KEuroCalc"
-msgstr "KEuroCalc Uygulamasını Yapılandır"
+msgstr "K Para Babası Uygulamasını Yapılandır"
 
 #. i18n: ectx: property (text), widget (QPushButton, SettingsButton)
 #: calculator.ui:2518
@@ -713,17 +713,17 @@ msgstr "Yüklenmedi"
 #: main.cpp:33
 #, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "(c) 2001-2022, KEuroCalc geliştiricileri"
+msgstr "(c) 2001-2022, K Para Babası geliştiricileri"
 
 #: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
-msgstr "Para birimi dönüştürücü ve hesaplayıcı"
+msgstr "Para birimi dönüştürücüsü ve hesaplayıcısı"
 
 #: main.cpp:35
 #, kde-format
 msgid "KEuroCalc"
-msgstr "KEuroCalc"
+msgstr "K Para Babası"
 
 #: main.cpp:36
 #, kde-format
