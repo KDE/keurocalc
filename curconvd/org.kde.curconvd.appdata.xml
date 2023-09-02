@@ -7,7 +7,7 @@
   <name xml:lang="bg">curconvd</name>
   <name xml:lang="ca">CurConvD</name>
   <name xml:lang="ca-valencia">CurConvD</name>
-  <name xml:lang="cs">CurConvD</name>
+  <name xml:lang="cs">curconvd</name>
   <name xml:lang="de">CurConvD</name>
   <name xml:lang="el">curconvd</name>
   <name xml:lang="en-GB">curconvd</name>
@@ -74,6 +74,7 @@
     <p xml:lang="bg">curconvd е услуга на D-Bus за конвертиране между валути.</p>
     <p xml:lang="ca">El «curconvd» és un servei del D-Bus per a convertir entre monedes diferents.</p>
     <p xml:lang="ca-valencia">«curconvd» és un servei de D-Bus per a convertir entre monedes diferents.</p>
+    <p xml:lang="cs">curconvd je služba D-Bus pro převod mezi měnami.</p>
     <p xml:lang="de">CurConvD ist ein D-Bus-Dienst für die Umrechnung von Währungen</p>
     <p xml:lang="el">Το curconvd είναι μια υπηρεσία D-Bus για μετατροπή ανάμεσα στα νομίσματα.</p>
     <p xml:lang="en-GB">curconvd is a D-Bus service for converting between currencies.</p>
