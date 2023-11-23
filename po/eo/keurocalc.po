@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:40+0000\n"
-"PO-Revision-Date: 2023-11-19 20:50+0100\n"
+"PO-Revision-Date: 2023-11-22 21:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -845,7 +845,7 @@ msgstr "Ofic&ialaj rondigreguloj"
 #: settingsdialog.ui:594
 #, kde-format
 msgid "Smallest coin &method"
-msgstr "Plej malgranda monero & metodo"
+msgstr "Plej malgranda monero &metodo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonNoRounding)
 #: settingsdialog.ui:601
