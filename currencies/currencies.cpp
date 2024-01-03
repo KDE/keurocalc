@@ -23,6 +23,7 @@
 #include <QDomDocument>
 #include <QDebug>
 
+#include <KIO/TransferJob>
 #include <KLocalizedString>
 
 static const char
