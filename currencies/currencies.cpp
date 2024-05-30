@@ -217,15 +217,11 @@ void Currencies::httpDataECB(KIO::Job *job, const QByteArray &array)
 	else
 	{
 		QDomDocument document( "rates" );
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         const QDomDocument::ParseResult parseResult = document.setContent(variableRates, QDomDocument::ParseOption::UseNamespaceProcessing);
         if (!parseResult) {
             qDebug() << QStringLiteral("Can't read variableRates\nError: %1 in Line %2, Column %3")
                                    .arg(parseResult.errorMessage).arg(parseResult.errorLine).arg(parseResult.errorColumn);
         }
-#else
-		document.setContent( variableRates, true );
-#endif
 		QDomNodeList ratesList = document.elementsByTagName( "Cube" );
 		int num;
 		double currencyPrecision;
@@ -374,15 +370,11 @@ void Currencies::httpDataTG(KIO::Job *job, const QByteArray &array)
 	else
 	{
 		QDomDocument document( "forex" );
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         const QDomDocument::ParseResult parseResult = document.setContent(variableRates, QDomDocument::ParseOption::UseNamespaceProcessing);
         if (!parseResult) {
             qDebug() << QStringLiteral("Can't read variableRates\nError: %1 in Line %2, Column %3")
                                    .arg(parseResult.errorMessage).arg(parseResult.errorLine).arg(parseResult.errorColumn);
         }
-#else
-        document.setContent( variableRates, true );
-#endif
 
 		QDomNodeList ratesList = document.elementsByTagName( "currency" );
 		int num;
