@@ -25,6 +25,7 @@
 
 #include <KIO/TransferJob>
 #include <KLocalizedString>
+#include <KIO/TransferJob>
 
 static const char
 	*urlECB = "http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml",
