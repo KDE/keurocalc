@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-06-27 02:43+0200\n"
+"POT-Creation-Date: 2023-11-05 12:40+0000\n"
 "PO-Revision-Date: 2017-09-28 17:57+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -664,71 +664,79 @@ msgstr "&Поставке..."
 msgid "Currencies"
 msgstr "Валуте"
 
-#: keurocalc.cpp:76
+#: keurocalc.cpp:75
 #, kde-format
 msgid "Cannot load currencies.xml"
 msgstr "Не могу да учитам currencies.xml"
 
-#: keurocalc.cpp:979
+#: keurocalc.cpp:1008
 #, kde-format
 msgid "Fixed"
 msgstr "Фиксни"
 
-#: keurocalc.cpp:983
+#: keurocalc.cpp:1012
 #, kde-format
 msgid "ECB"
 msgstr "ЕЦБ"
 
-#: keurocalc.cpp:984 keurocalc.cpp:992
+#: keurocalc.cpp:1013 keurocalc.cpp:1021
 #, kde-format
 msgid "Loading..."
 msgstr "Учитавам..."
 
-#: keurocalc.cpp:991
+#: keurocalc.cpp:1020
 #, kde-format
 msgid "TG"
 msgstr "Тајм џини"
 
-#: keurocalc.cpp:997
+#: keurocalc.cpp:1026
 #, kde-format
 msgid "Official rules"
 msgstr "Званична правила"
 
-#: keurocalc.cpp:1000
+#: keurocalc.cpp:1029
 #, kde-format
 msgid "Smallest coin"
 msgstr "Најмањи новчић"
 
-#: keurocalc.cpp:1003
+#: keurocalc.cpp:1032
 #, kde-format
 msgid "No rounding"
 msgstr "Без заокруживања"
 
-#: keurocalc.cpp:1077
+#: keurocalc.cpp:1106
 #, kde-format
 msgid "Not loaded"
 msgstr "Није учитано"
 
-#: main.cpp:30
-#, kde-format
-msgid "KEuroCalc"
-msgstr "K‑еврокалк"
+#: main.cpp:33
+#, fuzzy, kde-format
+#| msgid "(c) 2001-2015, the KEuroCalc developers"
+msgid "(c) 2001-2022, the KEuroCalc developers"
+msgstr "© 2001-2015, програмери K‑еврокалка"
 
-#: main.cpp:31
+#: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
 msgstr "Претварач новца и калкулатор"
 
-#: main.cpp:32
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2015, the KEuroCalc developers"
-msgid "(c) 2001-2019, the KEuroCalc developers"
-msgstr "© 2001-2015, програмери K‑еврокалка"
-
-#: main.cpp:33
+#: main.cpp:35
 #, kde-format
+msgid "KEuroCalc"
+msgstr "K‑еврокалк"
+
+#: main.cpp:36
+#, fuzzy, kde-format
+#| msgid ""
+#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
+#| "\n"
+#| "This program is dedicated to all who know that money does not justify "
+#| "anything.\n"
+#| "\n"
+#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
+#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgid ""
-"A program by Éric Bischoff <ebischoff@nerim.net>\n"
+"A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
 "This program is dedicated to all who know that money does not justify "
 "anything.\n"
@@ -744,53 +752,53 @@ msgstr ""
 "Ажурни курс захваљујући <a href='http://www.timegenie.com/'>Тајм џинију</"
 "a>.\n"
 
-#: main.cpp:43
+#: main.cpp:38
 #, kde-format
 msgid "Éric Bischoff"
 msgstr "Ерик Бишоф"
 
-#: main.cpp:43
+#: main.cpp:38
 #, kde-format
 msgid "Design and implementation"
 msgstr "Пројектовање и изведба"
 
-#: main.cpp:44
+#: main.cpp:39
 #, kde-format
 msgid "Gil Gross"
 msgstr "Жил Грос"
 
-#: main.cpp:44
+#: main.cpp:39
 #, kde-format
 msgid "Additional functionality"
 msgstr "Додатна функционалност"
 
-#: main.cpp:45
+#: main.cpp:40
 #, kde-format
 msgid "Melchior Franz"
 msgstr "Мелхиор Франц"
 
-#: main.cpp:45
+#: main.cpp:40
 #, kde-format
 msgid "Design and testing"
 msgstr "Пројектовање и испробавање"
 
-#: main.cpp:46
+#: main.cpp:41
 #, kde-format
 msgid "Bas Willems"
 msgstr "Бас Вилемс"
 
-#: main.cpp:46
+#: main.cpp:41
 #, kde-format
 msgid "Graphical artwork"
 msgstr "Графичка обрада"
 
-#: main.cpp:48
+#: main.cpp:43
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Слободан Симић,Часлав Илић"
 
-#: main.cpp:49
+#: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
