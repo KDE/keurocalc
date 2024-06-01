@@ -236,9 +236,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ><para
 >El &keurocalc; mai garantirà l'exactitud dels tipus de canvi ni la precisió del resultat. Sempre estareu convidat a verificar els càlculs per algun altre mitjà. Com estableix l'acord de <link linkend="credits"
 >llicència</link
->, no hi ha responsabilitat dels autors si els resultats no són correctes o com s'esperava. A més, tingueu en compte que els tipus de canvi variables es descarreguen sense encriptar i, per tant, una forma no segura de les fonts de dades (Banc Central Europeu i Time Genie). Alguns atacants <quote
->algú-en-el-mig</quote
-> podrien fer confondre al &keurocalc; falsificant els tipus de canvi. Més simple, sempre serà possible un error de transmissió.</para
+>, no hi ha responsabilitat dels autors si els resultats no són correctes o com s'esperava. A més, tingueu en compte que els tipus de canvi variables es descarreguen sense encriptar i, per tant, una forma no segura de les fonts de dades (Banc Central Europeu i Time Genie). Alguns atacants «algú-en-el-mig» podrien fer confondre al &keurocalc; falsificant els tipus de canvi. Més simple, sempre serà possible un error de transmissió.</para
 ></warning>
 
 </chapter>
@@ -551,9 +549,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >3,2</userinput
 > seguit del botó <guibutton
 >Entra</guibutton
-> o la tecla &Intro;: això voldrà dir <quote
->3,2 unitats</quote
-> a 2 € cadascuna.</para
+> o la tecla &Intro;: això voldrà dir «3,2 unitats» a 2 € cadascuna.</para
 ></step>
 <step
 ><para
@@ -1206,9 +1202,7 @@ not optimal.</para>
 ></term>
 <listitem>
 <para
->S'utilitzaran les regles de conversió de la UE o altres regles de conversió oficials. Vol dir que el resultat s'arrodonirà a la següent unitat per a monedes com el ien japonès o la lira italiana, i s'arrodonirà a la següent centèsima d'unitat (<quote
->centaus</quote
->) per a les monedes com l'euro o el dòlar.</para>
+>S'utilitzaran les regles de conversió de la UE o altres regles de conversió oficials. Vol dir que el resultat s'arrodonirà a la següent unitat per a monedes com el ien japonès o la lira italiana, i s'arrodonirà a la següent centèsima d'unitat («centaus») per a les monedes com l'euro o el dòlar.</para>
 <para
 >Per exemple, 158,323 iens s'arrodoniran a 158 iens. 12,537 euros s'arrodoniran a 12,54 euros.</para>
 </listitem>
