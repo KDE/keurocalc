@@ -137,7 +137,7 @@ published by the NY FRB.</para
 <listitem
 ><para
 >À convertir entre l'euro et d'autres devises, comme la livre sterling, conformément aux taux de change quotidiens publiés par <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
->Time Genie</ulink
+>TimeGenie</ulink
 > (TG).</para
 ></listitem>
 <listitem
@@ -236,7 +236,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 ><para
 >&keurocalc; ne garantit jamais l'exactitude des taux de change ni des résultats. Vous êtes toujours invité à vérifier vos calculs par d'autres moyens. Comme l'indique l'accord de <link linkend="credits"
 >licence</link
->, les auteurs ne sont pas responsables dans le cas où les résultats seraient incorrects ou différents de ceux qui étaient attendus. Veuillez également noter que les taux de change variables sont téléchargés de manière non chiffrée et par conséquent non sûre depuis les sources de données (Banque Centrale Européenne et Time Genie). Un attaquant du type « homme au milieu » peut tromper &keurocalc; en fabricant de faux taux de change. De manière plus simple, une erreur de transmission est toujours possible.</para
+>, les auteurs ne sont pas responsables dans le cas où les résultats seraient incorrects ou différents de ceux qui étaient attendus. Veuillez également noter que les taux de change variables sont téléchargés de manière non chiffrée et par conséquent non sûre depuis les sources de données (Banque Centrale Européenne et TimeGenie). Un attaquant du type « homme au milieu » peut tromper &keurocalc; en fabricant de faux taux de change. De manière plus simple, une erreur de transmission est toujours possible.</para
 ></warning>
 
 </chapter>
@@ -411,8 +411,8 @@ during the non-working days (Christmas, Easter, etc.).</para
 > pour choisir soit<guilabel
 >Euro, Banque Centrale Européenne</guilabel
 >, soit <guilabel
->Euro, Time Genie</guilabel
->. Choisissez à présent <guilabel
+>Euro, TimeGenie</guilabel
+>. Sélectionnez à présent <guilabel
 >USD - Dollar US</guilabel
 > dans la liste déroulante en bas. Si vous n'avez pas d'accès à Internet, ces choix ne seront pas disponibles puisque les derniers taux de change entre l'euro et le dollar ne pourront pas être déterminés.</para
 ></step>
@@ -1177,12 +1177,12 @@ not optimal.</para>
 <varlistentry>
 <term
 ><guilabel
->Euro, Time Genie</guilabel
+>Euro, TimeGenie</guilabel
 ></term>
 <listitem>
 <para
 >L'euro est la devise de référence. Les taux de changes fixes sont disponibles. &keurocalc; essaye de télécharger les taux variables depuis <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
->Time Genie (TG)</ulink
+>TimeGenie (TG)</ulink
 ></para>
 </listitem>
 </varlistentry>
