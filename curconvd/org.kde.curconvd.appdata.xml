@@ -19,6 +19,7 @@
   <name xml:lang="fr">curconvd</name>
   <name xml:lang="gl">curconvd</name>
   <name xml:lang="he">curconvd</name>
+  <name xml:lang="hu">curconvd</name>
   <name xml:lang="ia">curconvd</name>
   <name xml:lang="id">curconvd</name>
   <name xml:lang="it">curconvd</name>
@@ -54,6 +55,7 @@
   <summary xml:lang="fr">Service de conversion de devises</summary>
   <summary xml:lang="gl">Servizo de conversión de divisas</summary>
   <summary xml:lang="he">שירות המרת שערי מטבע</summary>
+  <summary xml:lang="hu">Valutaátváltó szolgáltatás</summary>
   <summary xml:lang="ia">Servicio de conversion de numerario</summary>
   <summary xml:lang="id">Layanan pengkonversian mata-uang</summary>
   <summary xml:lang="it">Servizio di conversione valuta</summary>
@@ -92,6 +94,7 @@
     <p xml:lang="fr">curconvd est un service D-Bus de conversion entre devises.</p>
     <p xml:lang="gl">curconvd é un servizo de D-Bus para converter entre divisas.</p>
     <p xml:lang="he">curconvd הוא שירות D-Bus להמרה בין שערי מטבע.</p>
+    <p xml:lang="hu">A curconvd egy D-Bus szolgáltatás valuták közötti váltásra.</p>
     <p xml:lang="ia">curconvd es un servicio de D-Bus per convertir intra numerarios.</p>
     <p xml:lang="id">curconvd adalah sebuah layanan D-Bus untuk mengkonversi antar-mata-uang</p>
     <p xml:lang="it">curconvd è un servizio D-Bus per la conversione tra valute.</p>
