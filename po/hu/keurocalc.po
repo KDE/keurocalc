@@ -2,20 +2,21 @@
 #
 # Tamas Szanto <tszanto@mol.hu>, 2001.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2014.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 3.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:40+0000\n"
-"PO-Revision-Date: 2014-01-20 21:08+0100\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"PO-Revision-Date: 2024-11-16 20:30+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #. i18n: file: ../currencies/currencies.xml
 #, kde-format
@@ -602,8 +603,7 @@ msgstr "Kivonás"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, MMinusButton)
 #: calculator.ui:2339
-#, fuzzy, kde-format
-#| msgid "Substract from memory"
+#, kde-format
 msgid "Subtract from memory"
 msgstr "Kivonás a memóriából"
 
@@ -707,10 +707,9 @@ msgid "Not loaded"
 msgstr "Nincs betöltve"
 
 #: main.cpp:33
-#, fuzzy, kde-format
-#| msgid "(c) 2001-2014, the KEuroCalc developers"
+#, kde-format
 msgid "(c) 2001-2022, the KEuroCalc developers"
-msgstr "© A KEuroCalc fejlesztői, 2001-2014."
+msgstr "© A KEuroCalc fejlesztői, 2001-2022."
 
 #: main.cpp:34
 #, kde-format
@@ -723,15 +722,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to humorist Michael Moore, for he\n"
-#| "knows that money does not justify anything...\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -741,10 +732,9 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Készítette: Éric Bischoff <ebischoff@nerim.net>\n"
+"Készítette: Éric Bischoff <bischoff@kde.org>\n"
 "\n"
-"Ezt a programot Michael Moore-nak, a kitűnő humoristának ajánlom,\n"
-"mert ő tudja, hogy a pénz nem minden…\n"
+"Ezt a programot minden embernek ajánlom, aki tudja, hogy a pénz nem minden.\n"
 "\n"
 "Idődzsinn devizaárfolyamok az <a href='http://www.timegenie.com/' "
 "title='idegen devizaárfolyamok az Idődzsinn szívessége folytán'>Idődzsinn</"
@@ -846,17 +836,15 @@ msgstr "Kerekítés"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonOfficialRules)
 #: settingsdialog.ui:587
-#, fuzzy, kde-format
-#| msgid "Official roundin&g rules"
+#, kde-format
 msgid "Offic&ial rounding rules"
-msgstr "Hivatalos &kerekítési szabályok"
+msgstr "H&ivatalos kerekítési szabályok"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonSmallestCoin)
 #: settingsdialog.ui:594
-#, fuzzy, kde-format
-#| msgid "&Smallest coin method"
+#, kde-format
 msgid "Smallest coin &method"
-msgstr "A &legkisebb érme módszer"
+msgstr "Legkisebb érme &módszer"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonNoRounding)
 #: settingsdialog.ui:601
@@ -878,10 +866,9 @@ msgstr "Euró, hálóza&ti kapcsolat nélkül (fix átváltási arányok)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroECB)
 #: settingsdialog.ui:627
-#, fuzzy, kde-format
-#| msgid "Euro, European Central &Bank"
+#, kde-format
 msgid "E&uro, European Central Bank"
-msgstr "Euró, Európai Központi &Bank"
+msgstr "E&uró, Európai Központi Bank"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroTG)
 #: settingsdialog.ui:637
