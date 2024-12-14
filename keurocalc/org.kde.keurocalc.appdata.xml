@@ -32,6 +32,7 @@
   <name xml:lang="pt-BR">KEuroCalc</name>
   <name xml:lang="ro">KEuroCalc</name>
   <name xml:lang="ru">KEuroCalc</name>
+  <name xml:lang="sa">केयूरोकैल्क</name>
   <name xml:lang="sk">KEuroCalc</name>
   <name xml:lang="sl">KEuroCalc</name>
   <name xml:lang="sv">Keurocalc</name>
@@ -69,6 +70,7 @@
   <summary xml:lang="pt-BR">Conversor de moedas e calculadora</summary>
   <summary xml:lang="ro">Convertor și calculator monetar</summary>
   <summary xml:lang="ru">Валютный конвертер и калькулятор</summary>
+  <summary xml:lang="sa">मुद्रा परिवर्तकः गणकः च</summary>
   <summary xml:lang="sk">Cenový prevodník a kalkulačka</summary>
   <summary xml:lang="sl">Pretvornik valut in kalkulator</summary>
   <summary xml:lang="sv">Valutakonverterare och räknare</summary>
@@ -108,6 +110,7 @@
     <p xml:lang="pt-BR">O KEuroCalc é um conversor universal de moedas e calculadora.</p>
     <p xml:lang="ro">KEuroCalc este un convertor și calculator monetar universal.</p>
     <p xml:lang="ru">KEuroCalc — универсальный валютный конвертер и калькулятор</p>
+    <p xml:lang="sa">KEuroCalc एकः सार्वभौमिकः मुद्रापरिवर्तकः गणकः च अस्ति ।</p>
     <p xml:lang="sk">KEuroCalc je univerzálny konvertor mien a kalkulačka.</p>
     <p xml:lang="sl">KEuroCalc je univerzalni pretvornik valut in kalkulator.</p>
     <p xml:lang="sv">Keurocalc är en universell valutakonverterare och räknare.</p>
@@ -165,6 +168,7 @@
   <developer_name xml:lang="pt-BR">A comunidade KDE</developer_name>
   <developer_name xml:lang="ro">Comunitatea KDE</developer_name>
   <developer_name xml:lang="ru">Сообщество KDE</developer_name>
+  <developer_name xml:lang="sa">केडीई समुदायः</developer_name>
   <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
