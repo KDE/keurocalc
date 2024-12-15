@@ -591,7 +591,7 @@ msgstr "सरलं मूल्यं प्रविशतु"
 #, kde-format
 msgctxt "Enter button"
 msgid "Enter"
-msgstr ""
+msgstr "प्रवेश"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, MinusButton)
 #: calculator.ui:2314
@@ -779,13 +779,13 @@ msgstr "चित्रात्मक कलाकृति"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SettingsDialog)
 #: settingsdialog.ui:14
