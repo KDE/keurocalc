@@ -788,13 +788,13 @@ msgstr "Grafische Gestaltung"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Jannick Kuhr"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #: main.cpp:44
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "jakuhr-linux@gmx.de"
+msgstr "kde-i18n-de@kde.org"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SettingsDialog)
 #: settingsdialog.ui:14
