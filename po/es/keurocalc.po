@@ -1,26 +1,21 @@
-# Translation of keurocalc.po to Spanish
-# translation of keurocalc.po to Español
-# translation of keurocalc.po to
-# Translation of keurocalc to Castilian aka Spanish
+# Spanish translations for keurocalc.po package.
 # This file is distributed under the same license as the keurocalc package.
-# Copyright (C) 2003 Eric Bischoff <e.bischoff@noos.fr>
 #
-# Sofia Priego <spriego@darksylvania.net>, %Y.
-# Eduardo Sanchez <kde@sombragris.org>, 2003.
-# Quique <quique@sindominio.net>, 2004.
-# Rafael Rodríguez <apt-drink@gulic.org>, 2005.
-# santi <santi@kde-es.org>, 2006.
-# Enrique Matias Sanchez <cronopios@gmail.com>, 2008.
-# Israel Garcia Garcia <israelgarcia86@gmail.com>, 2010, 2011.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2012, 2015, 2018, 2019, 2022.
-# Raul Gonzalez <raulgf83@gmail.com>, 2014.
-# Sofía Priego <spriego@darksylvania.net>, %Y.
+# SPDX-FileCopyrightText: 2003 Eduardo Sanchez <kde@sombragris.org>
+# SPDX-FileCopyrightText: 2004 Quique <quique@sindominio.net>
+# SPDX-FileCopyrightText: 2005 Rafael Rodríguez <apt-drink@gulic.org>
+# SPDX-FileCopyrightText: 2006 santi <santi@kde-es.org>
+# SPDX-FileCopyrightText: 2008 Enrique Matias Sanchez <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2011 Israel Garcia Garcia <israelgarcia86@gmail.com>
+# SPDX-FileCopyrightText: 2012, 2015, 2018, 2019, 2022 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014 Raul Gonzalez <raulgf83@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2025 Sofía Priego <spriego@darksylvania.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:40+0000\n"
-"PO-Revision-Date: 2022-12-14 11:08+0100\n"
+"PO-Revision-Date: 2025-03-19 01:22+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -592,7 +587,7 @@ msgstr "Mostrar la caja Acerca de"
 #: calculator.ui:2207
 #, kde-format
 msgid "&About..."
-msgstr "&Acerca de..."
+msgstr "&Acerca de…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, SimpleValueButton)
 #: calculator.ui:2286
@@ -629,7 +624,7 @@ msgstr "Mostrar las páginas de ayuda"
 #: calculator.ui:2364
 #, kde-format
 msgid "&Help..."
-msgstr "&Ayuda..."
+msgstr "&Ayuda…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, PercentButton)
 #: calculator.ui:2421
@@ -665,7 +660,7 @@ msgstr "Configurar KEuroCalc"
 #: calculator.ui:2518
 #, kde-format
 msgid "&Settings..."
-msgstr "Preferencia&s..."
+msgstr "Preferencia&s…"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, CurrencyList)
 #: calculator.ui:2531
@@ -691,7 +686,7 @@ msgstr "BCE"
 #: keurocalc.cpp:1013 keurocalc.cpp:1021
 #, kde-format
 msgid "Loading..."
-msgstr "Cargando..."
+msgstr "Cargando…"
 
 #: keurocalc.cpp:1020
 #, kde-format
@@ -833,7 +828,7 @@ msgstr "215,06 €"
 #: settingsdialog.ui:526
 #, kde-format
 msgid "C&hange..."
-msgstr "C&ambio..."
+msgstr "C&ambio…"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxSplashScreen)
 #: settingsdialog.ui:553
@@ -894,15 +889,3 @@ msgstr "Euro. Time &Genie"
 #, kde-format
 msgid "Default currency"
 msgstr "Divisa predeterminada"
-
-#~ msgid "O&K"
-#~ msgstr "Ace&ptar"
-
-#~ msgid "Cance&l"
-#~ msgstr "Cance&lar"
-
-#~ msgid "NY FRB"
-#~ msgstr "NY FRB"
-
-#~ msgid "&Dollar, New York Federal Reserve Bank"
-#~ msgstr "&Dólar, Banco de la Reserva Federal de Nueva York"
