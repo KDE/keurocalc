@@ -293,7 +293,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 > (<foreignphrase
 >francs belges</foreignphrase
 >) en la lista desplegable de monedas de la parte inferior. Si esta opción no está disponible, pulse el botón <guibutton
->Preferencias...</guibutton
+>Preferencias…</guibutton
 > y seleccione <guilabel
 >Euro, sin acceso a red (solo cambios fijos)</guilabel
 > para que aparezca la lista correcta de cambios.</para
@@ -437,7 +437,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 <step
 ><para
 >Asegúrese de que están disponibles los cambios variables. Si no lo están, pulse <guibutton
->Preferencias...</guibutton
+>Preferencias…</guibutton
 > para seleccionar <guilabel
 >Euro, Banco Central Europeo</guilabel
 > o <guilabel
@@ -1298,7 +1298,7 @@ not optimal.</para>
 <listitem>
 <para
 >Esta opción permite cambiar el color del fondo de los visores (tanto de la entrada como del resultado). Para cambiar el color del fondo, pulse en <guibutton
->Cambiar...</guibutton
+>Cambiar…</guibutton
 >. Esto abrirá el diálogo de selección estándar de &kde;. Seleccione un color nuevo y a continuación pulse <guibutton
 >Aceptar</guibutton
 > para validar la nueva elección.</para>
