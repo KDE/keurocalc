@@ -879,4 +879,4 @@ msgstr "Euro, Time &Genie"
 #: settingsdialog.ui:649
 #, kde-format
 msgid "Default currency"
-msgstr "ნაგულისხმები ვალუტა"
+msgstr "ნაგულისხმევი ვალუტა"
