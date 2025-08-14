@@ -549,7 +549,7 @@ msgstr "احفظ في الذاكرة"
 #: calculator.ui:2050
 #, kde-format
 msgid "Reset both input, result and memory"
-msgstr "محو كلاً من الادخال ، النتيجة و الذاكرة"
+msgstr "محو كلاً من الادخال، النتيجة و الذاكرة"
 
 #. i18n: ectx: property (text), widget (QPushButton, ResetButton)
 #: calculator.ui:2053
@@ -861,13 +861,13 @@ msgstr "&لا تقريب بتا"
 #: settingsdialog.ui:611
 #, kde-format
 msgid "Reference currency, rates origin"
-msgstr "العملة المرجعية ، مصدر النسبيات"
+msgstr "العملة المرجعية، مصدر النسبيات"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroFixed)
 #: settingsdialog.ui:617
 #, kde-format
 msgid "Euro, no ne&twork access (fixed rates only)"
-msgstr "أويرو ، لا اتصال عبر ال&شبكة ( أسعار عملة ثابتة )"
+msgstr "أويرو، لا اتصال عبر ال&شبكة ( أسعار عملة ثابتة )"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButtonEuroECB)
 #: settingsdialog.ui:627
