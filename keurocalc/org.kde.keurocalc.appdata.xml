@@ -4,6 +4,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KEuroCalc</name>
+  <name xml:lang="ar">حاسبة اليورو</name>
   <name xml:lang="bg">KEuroCalc</name>
   <name xml:lang="ca">KEuroCalc</name>
   <name xml:lang="ca-valencia">KEuroCalc</name>
@@ -42,6 +43,7 @@
   <name xml:lang="zh-CN">KEuroCalc</name>
   <name xml:lang="zh-TW">KEuroCalc</name>
   <summary>Currency converter and calculator</summary>
+  <summary xml:lang="ar">محول العملات وحاسبة</summary>
   <summary xml:lang="bg">Конвертиране и калкулатор на валути</summary>
   <summary xml:lang="ca">Un convertidor de moneda i calculadora</summary>
   <summary xml:lang="ca-valencia">Un convertidor de moneda i calculadora</summary>
@@ -83,6 +85,7 @@
     <p>
      KEuroCalc is a universal currency converter and calculator.
     </p>
+    <p xml:lang="ar">حاسبة اليورو هي محول عملات عالمية وحاسبة.</p>
     <p xml:lang="bg">KEuroCalc е универсален валутен конвертор и калкулатор.</p>
     <p xml:lang="ca">El KEuroCalc és un convertidor universal de moneda i calculadora.</p>
     <p xml:lang="ca-valencia">KEuroCalc és un convertidor universal de moneda i calculadora.</p>
@@ -140,6 +143,7 @@
   </screenshots>
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
+  <developer_name xml:lang="ar">مجتمع كِيدِي</developer_name>
   <developer_name xml:lang="bg">Общонстта на KDE</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
