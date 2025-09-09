@@ -38,7 +38,6 @@
   <name xml:lang="sv">curconvd</name>
   <name xml:lang="tr">curconvd</name>
   <name xml:lang="uk">curconvd</name>
-  <name xml:lang="x-test">xxcurconvdxx</name>
   <name xml:lang="zh-CN">curconvd</name>
   <name xml:lang="zh-TW">curconvd</name>
   <summary>Currency conversion service</summary>
@@ -76,7 +75,6 @@
   <summary xml:lang="sv">Valutakonverteringstjänst</summary>
   <summary xml:lang="tr">Para birimi dönüştürme hizmeti</summary>
   <summary xml:lang="uk">Служба перетворення валют</summary>
-  <summary xml:lang="x-test">xxCurrency conversion servicexx</summary>
   <summary xml:lang="zh-CN">汇率转换服务</summary>
   <summary xml:lang="zh-TW">貨幣轉換服務</summary>
   <description>
@@ -117,7 +115,6 @@
     <p xml:lang="sv">curconvd är en D-Bus tjänst för att konvertera mellan valutor.</p>
     <p xml:lang="tr">curconvd, para birimleri arasında dönüştürme yapmak için bir D-Bus hizmetidir.</p>
     <p xml:lang="uk">curconvd — служба D-Bus для перетворення між валютами.</p>
-    <p xml:lang="x-test">xxcurconvd is a D-Bus service for converting between currencies.xx</p>
     <p xml:lang="zh-CN">curconvd 是用于汇率转换的 D-Bus 服务。</p>
     <p xml:lang="zh-TW">curconvd 是一個轉換貨幣用的 D-Bus 服務。</p>
   </description>
