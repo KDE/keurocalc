@@ -266,7 +266,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >Configuration...</guibutton
 > et choisissez <guilabel
 >Euro, sans accès réseau (taux fixes seulement)</guilabel
-> pour faire apparaître la liste de taux correcte.</para
+> pour faire apparaitre la liste de taux correcte.</para
 ></step>
 <step
 ><para
@@ -397,7 +397,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 >Saisir</guibutton
 > ou appuyez sur la touche &Entree;. Le résultat <computeroutput
 >8</computeroutput
-> apparaît sur la droite.</para
+> apparait sur la droite.</para
 ></step>
 </procedure>
 
@@ -1112,7 +1112,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 
 <sect1 id="settings">
 <title
->La boîte de dialogue de configuration</title>
+>La boite de dialogue de configuration</title>
 
 <mediaobject>
 <imageobject
@@ -1271,7 +1271,7 @@ not optimal.</para>
 <para
 >La couleur d'arrière plan dans les différentes zones d'affichages (saisie et résultat). Pour modifier la couleur d'arrière plan, cliquer sur <guibutton
 >Changer...</guibutton
->. Cela ouvre la boîte de sélection des couleurs. Choisissez une nouvelle couleur, appuyez <guibutton
+>. Cela ouvre la boite de sélection des couleurs. Choisissez une nouvelle couleur, appuyez <guibutton
 >Ok</guibutton
 > pour valider le nouveau choix.</para>
 </listitem>
@@ -1284,7 +1284,7 @@ not optimal.</para>
 ></term>
 <listitem>
 <para
->Décocher cette case, si vous ne souhaitez pas voir apparaître l'image au démarrage de &keurocalc;.</para>
+>Décocher cette case, si vous ne souhaitez pas voir apparaitre l'image au démarrage de &keurocalc;.</para>
 </listitem>
 </varlistentry>
 </variablelist>
