@@ -724,15 +724,7 @@ msgid "KEuroCalc"
 msgstr "KEuroCalc"
 
 #: main.cpp:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#| "\n"
-#| "This program is dedicated to humorist Michael Moore, for he\n"
-#| "knows that money does not justify anything...\n"
-#| "\n"
-#| "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
-#| "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
+#, kde-format
 msgid ""
 "A program by Éric Bischoff <bischoff@kde.org>\n"
 "\n"
@@ -742,13 +734,6 @@ msgid ""
 "Time Genie exchange rates courtesy of <a href='http://www.timegenie.com/' "
 "title='foreign exchange rates courtesy of Time Genie'>Time Genie</a>\n"
 msgstr ""
-"Ríomhchlár scríofa ag Éric Bischoff <ebischoff@nerim.net>\n"
-"\n"
-"Cruthaíodh an ríomhchlár seo in ómós fhear grinn Michael Moore,\n"
-"fear a bhfuil a fhios aige gur dúil san airgead is bun do gach olc...\n"
-"\n"
-"Rátaí malartacha Time Genie le caoinchead ó <a href='http://www.timegenie."
-"com/' title='rátaí malartacha le caoinchead ó Time Genie'>Time Genie</a>\n"
 
 #: main.cpp:38
 #, kde-format
@@ -892,15 +877,3 @@ msgstr "Euro, Time &Genie"
 #, kde-format
 msgid "Default currency"
 msgstr "Airgeadra réamhshocraithe"
-
-#~ msgid "O&K"
-#~ msgstr "O&K"
-
-#~ msgid "Cance&l"
-#~ msgstr "Cea&laigh"
-
-#~ msgid "NY FRB"
-#~ msgstr "NY FRB"
-
-#~ msgid "&Dollar, New York Federal Reserve Bank"
-#~ msgstr "&Dollar, An Banc Cúlchiste Feidearálach, Nua-Eabhrac"

@@ -75,6 +75,3 @@ msgstr "Éric Bischoff"
 #, kde-format
 msgid "Design and implementation"
 msgstr "Dearadh agus feidhmiú"
-
-#~ msgid "A program by Éric Bischoff <ebischoff@nerim.net>\n"
-#~ msgstr "Ríomhchlár scríofa ag Éric Bischoff <ebischoff@nerim.net>\n"
