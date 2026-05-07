@@ -23,7 +23,6 @@
 #include <QDomDocument>
 #include <QDebug>
 
-#include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KIO/TransferJob>
 
