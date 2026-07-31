@@ -584,7 +584,7 @@ during the non-working days (Christmas, Easter, etc.).</para
 </procedure>
 
 <para
->Sie können auch die folgende Reihenfolge benutzen: <userinput
+>Sie können auch die folgende Reihenfolge verwenden: <userinput
 >3.2 = * 2 €</userinput
 > oder sogar <userinput
 >3.2 * 2 €</userinput
@@ -1249,11 +1249,11 @@ not optimal.</para>
 ></term>
 <listitem>
 <para
->Das Ergebnis wird zum nächsten Wert der kleinsten Münze gerundet, die im Land mit dieser Währung benutzt wird. Bei veralteten Währungen wie der italienischen Lira wird zur kleinsten verwendeten Münze gerundet, ehe die Währung zurückgezogen wurde: Bei der italienischen Lira war das die 50 Lira-Münze.</para>
+>Das Ergebnis wird zum nächsten Wert der kleinsten Münze gerundet, die im Land mit dieser Währung verwendet wird. Bei veralteten Währungen wie der italienischen Lira wird zur kleinsten verwendeten Münze gerundet, ehe die Währung zurückgezogen wurde: Bei der italienischen Lira war das die 50 Lira-Münze.</para>
 <para
 >1235,9 italienische Lira werden zum Beispiel zu 1250 Lira und 39,45 norwegische Kronen zu 39,50 Kronen gerundet.</para>
 <para
->Es fehlen Informationen über die kleinsten Münzeinheiten aller Länder. Schicken Sie bitte einen Fehlerbericht, wenn &keurocalc; einen falschen Wert der kleinsten verfügbaren Münzeinheit in Ihrer Währung benutzt. Diese Information wird dann ins Programm eingefügt.</para>
+>Es fehlen Informationen über die kleinsten Münzeinheiten aller Länder. Schicken Sie bitte einen Fehlerbericht, wenn &keurocalc; einen falschen Wert der kleinsten verfügbaren Münzeinheit in Ihrer Währung verwendet. Diese Information wird dann ins Programm eingefügt.</para>
 </listitem>
 </varlistentry>
 
