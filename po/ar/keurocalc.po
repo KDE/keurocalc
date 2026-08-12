@@ -545,7 +545,7 @@ msgstr "احفظ في الذاكرة"
 #: calculator.ui:2050
 #, kde-format
 msgid "Reset both input, result and memory"
-msgstr "محو كلاً من الإدخال، النتيجة و الذاكرة"
+msgstr "محو كلًا من الإدخال، النتيجة و الذاكرة"
 
 #. i18n: ectx: property (text), widget (QPushButton, ResetButton)
 #: calculator.ui:2053
