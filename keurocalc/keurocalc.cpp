@@ -176,7 +176,8 @@ void KEuroCalc::readOptions(int &oldReference, int &oldCurrency, int &oldRoundin
 	else oldRounding = OFFICIAL_RULES;
 
 	option = config.readEntry("DiplayColor", "#C0FFFF");
-	oldDisplayColor.setNamedColor(option);
+
+	oldDisplayColor = QColor::fromString(option);
 
 	option = config.readEntry("SplashScreen", "yes");
 	oldSplashScreen = option == "yes";
