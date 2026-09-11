@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:55+0000\n"
+"POT-Creation-Date: 2026-09-11 00:50+0000\n"
 "PO-Revision-Date: 2023-02-04 08:37+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -670,42 +670,42 @@ msgstr "Waluty"
 msgid "Cannot load currencies.xml"
 msgstr "Nie można wczytać pliku currencies.xml"
 
-#: keurocalc.cpp:1008
+#: keurocalc.cpp:1009
 #, kde-format
 msgid "Fixed"
 msgstr "Stały"
 
-#: keurocalc.cpp:1012
+#: keurocalc.cpp:1013
 #, kde-format
 msgid "ECB"
 msgstr "EBC"
 
-#: keurocalc.cpp:1013 keurocalc.cpp:1021
+#: keurocalc.cpp:1014 keurocalc.cpp:1022
 #, kde-format
 msgid "Loading..."
 msgstr "Wczytywanie..."
 
-#: keurocalc.cpp:1020
+#: keurocalc.cpp:1021
 #, kde-format
 msgid "TG"
 msgstr "TG"
 
-#: keurocalc.cpp:1026
+#: keurocalc.cpp:1027
 #, kde-format
 msgid "Official rules"
 msgstr "Oficjalne zasady"
 
-#: keurocalc.cpp:1029
+#: keurocalc.cpp:1030
 #, kde-format
 msgid "Smallest coin"
 msgstr "Najmniejszy nominał"
 
-#: keurocalc.cpp:1032
+#: keurocalc.cpp:1033
 #, kde-format
 msgid "No rounding"
 msgstr "Brak zaokrąglania"
 
-#: keurocalc.cpp:1106
+#: keurocalc.cpp:1107
 #, kde-format
 msgid "Not loaded"
 msgstr "Niewczytane"
