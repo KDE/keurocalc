@@ -1,0 +1,1376 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY keurocalc '<application
+>KEuroCalc</application
+>'>
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="keurocalc" lang="&language;">
+
+<bookinfo>
+<title
+>Руководство пользователя &keurocalc;</title>
+
+<authorgroup>
+<author
+><firstname
+>Éric</firstname
+> <surname
+>Bischoff</surname
+> <affiliation
+> <address
+><email
+>bischoff@_NOSPAM_kde.org</email
+></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<othercredit role="translator"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><affiliation
+><address
+><email
+>kekcuha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+
+<copyright>
+<year
+>2001-2022</year>
+<holder
+>Éric Bischoff</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2022-12-10</date>
+<releaseinfo
+>1.3.2</releaseinfo>
+
+<abstract>
+<para
+>&keurocalc; — универсальный карманный конвертер валют и калькулятор. В этом руководстве описывается &keurocalc; версии 1.3.2. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>extragear</keyword>
+<keyword
+>KEuroCalc</keyword>
+<keyword
+>валюта</keyword>
+<keyword
+>конвертер</keyword>
+<keyword
+>калькулятор</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<para
+>&keurocalc; — универсальный карманный конвертер валют и калькулятор. </para>
+
+<para
+>1 января 2002 года 12 европейских стран объединили свои национальные валюты в единую — евро (€). Время от времени то же самое происходит в меньшем масштабе и с новыми европейскими странами. &keurocalc; помогает: <variablelist>
+<varlistentry>
+<term
+>В течение переходных периодов</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Проверять состояние банковского счёта, когда платите и в евро, и в старой валюте (например, в итальянских лирах).</para
+></listitem>
+<listitem
+><para
+>Проверять покупки и считать сдачу при оплате банкнотой в старой валюте.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Спустя много лет после переходных периодов</term>
+<listitem
+><para
+>Представлять себе стоимость вещей в старой валюте на любом этапе вычислений.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>В любое время</term>
+<listitem>
+<para
+><itemizedlist>
+<listitem
+><para
+>Пересчитывать суммы из евро в другие валюты, например в британский фунт, и обратно по ежедневному курсу, который публикует <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Европейский центральный банк (ЕЦБ)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>Пересчитывать суммы между любыми двумя валютами из списка, который публикует ЕЦБ.</para
+></listitem>
+<!--listitem
+><para
+>To do conversions between the US dollar and other currencies
+according to the daily exchange rate published by the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para
+></listitem>
+<listitem
+><para
+>To do conversions between any two currencies that are part of the list
+published by the NY FRB.</para
+></listitem-->
+<listitem
+><para
+>Пересчитывать суммы из евро в другие валюты, например в британский фунт, и обратно по ежедневному курсу, который публикует служба валютных курсов <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie</ulink
+> (TG).</para
+></listitem>
+<listitem
+><para
+>Пересчитывать суммы между любыми двумя валютами из списка, который публикует TG.</para
+></listitem>
+</itemizedlist
+></para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+
+<para
+>&keurocalc; обладает следующими преимуществами с точки зрения удобства и простоты использования: <itemizedlist>
+<listitem
+><para
+>Показываются все промежуточные значения и результат как в базовой валюте (евро), так и в другой валюте.</para
+></listitem>
+<listitem
+><para
+>Предусмотрена отдельная область ввода, позволяющая ввести новое значение, не скрывая предыдущий результат.</para
+></listitem>
+<listitem
+><para
+>Эргономика очень близка к обычным карманным калькуляторам, несмотря на то, что любое вводимое значение может оказаться значением в базовой валюте (евро), значением в другой валюте, процентом или безразмерной величиной.</para
+></listitem>
+<listitem
+><para
+>Клавиши нажимаются в том порядке, в каком вы проговорили бы действие вслух.</para
+></listitem>
+<listitem
+><para
+>Если вы ошиблись, специальная кнопка исправления позволяет исправить последние введённые данные, пока ввод не подтверждён.</para
+></listitem>
+<listitem
+><para
+>Числа показываются в соответствии с региональными параметрами: десятичным разделителем служит запятая или точка — как задано в приложении «Параметры системы».</para
+></listitem>
+<listitem
+><para
+>Можно указать, откуда &keurocalc; загружает курсы валют, с какой валюты начинать при запуске &keurocalc; и какой способ округления использовать.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>&keurocalc; позволяет выполнять следующие операции: <itemizedlist>
+<listitem
+><para
+>Пересчёт в базовую валюту (евро) и из неё.</para
+></listitem>
+<listitem
+><para
+>Систематическое округление показываемого результата, при этом вычисления выполняются с точностью математических библиотек.</para
+></listitem>
+<listitem
+><para
+>Обычные сложение, вычитание, умножение и деление.</para
+></listitem>
+<listitem
+><para
+>Процент можно применить, прибавить или вычесть.</para
+></listitem>
+<listitem
+><para
+>Значения можно сохранять в промежуточной памяти или использовать эту память как накопительный итог.</para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Ниже перечислены некоторые ограничения &keurocalc;: <itemizedlist>
+<listitem
+><para
+>Скобки и сложные выражения не поддерживаются.</para
+></listitem>
+<listitem
+><para
+>Некоторые округления выполняются неверно из-за ограничений математической библиотеки.</para
+></listitem>
+<listitem
+><para
+>Инфляционные валюты невозможно обработать из-за ограниченного размера дисплея. Однако с переходом на новую турецкую лиру и удалением шести нулей в этой валюте это уже не является практической проблемой.</para
+></listitem>
+<!-- listitem
+><para
+>New York Federal Reserve Bank rates are not available
+during the non-working days (Christmas, Easter, etc.).</para
+></listitem-->
+</itemizedlist>
+</para>
+
+<warning
+><para
+>&keurocalc; не гарантирует точность обменных курсов и правильность результата. Всегда рекомендуется проверять вычисления другими способами. Как указано в <link linkend="credits"
+>лицензионном соглашении</link
+>, авторы не несут ответственности, если результаты окажутся неверными или не такими, как ожидалось. Кроме того, следует учитывать, что переменные обменные курсы загружаются из источников данных (Европейский центральный банк и Time Genie) в незашифрованном и потому небезопасном виде. Злоумышленник, проводящий атаку <quote
+>человек посередине</quote
+>, может подделать обменные курсы и тем самым ввести &keurocalc; в заблуждение. Проще говоря, ошибка при передаче данных всегда возможна.</para
+></warning>
+
+</chapter>
+
+<chapter id="usage">
+<title
+>Использование &keurocalc;</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="screenshot.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect1 id="usage-conversions">
+<title
+>Пересчёт валют</title>
+
+
+<procedure>
+<title
+>Пересчёт 1000 бельгийских франков в евро</title>
+<step
+><para
+>Выберите в раскрывающемся списке валют внизу пункт <guilabel
+>BEF - Бельгийский франк</guilabel
+> (<foreignphrase
+>francs belges</foreignphrase
+>). Если его нет, нажмите кнопку <guibutton
+>Настройка…</guibutton
+> и выберите <guilabel
+>Евро, без доступа к сети (только фиксированный курс)</guilabel
+>, чтобы появился нужный список курсов.</para
+></step>
+<step
+><para
+>Введите <userinput
+>1000</userinput
+> с клавиатуры или воспользуйтесь соответствующими цифровыми кнопками. Цифры показываются по мере ввода в поле <guilabel
+>Ввод</guilabel
+>. Если при вводе цифр допущена ошибка, нажмите клавишу &Backspace; или кнопку <guibutton
+>&lt;-</guibutton
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>FB</guibutton
+> или клавишу <keycap
+>F</keycap
+>. На самом деле любая клавиша, ещё не занятая чем-то другим, подтверждает ввод как число в выбранной валюте, так что подошли бы и <keycap
+>B</keycap
+> или <keycap
+>X</keycap
+>.</para
+></step>
+<step
+><para
+>Результат — в поле <guilabel
+>Результат</guilabel
+> справа: 24.79 € или 24,79 € в зависимости от региональных параметров.</para
+></step
+> 
+</procedure>
+
+<procedure>
+<title
+>Пересчёт 25 евро в бельгийские франки</title>
+<step
+><para
+>Если валюты с фиксированным курсом доступны, выберите в раскрывающемся списке валют внизу пункт <guilabel
+>BEF - Бельгийский франк</guilabel
+>. Если эта валюта уже выбрана, шаг можно пропустить.</para
+></step>
+<step
+><para
+>Введите <userinput
+>25</userinput
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>€</guibutton
+> или клавишу <keycap
+>E</keycap
+>.</para
+></step>
+<step
+><para
+>Результат — в поле <guilabel
+>Результат</guilabel
+> справа: 1008.50 FB или 1008,50 FB. Точное значение — 1008,4975, но оно округлено до сотой доли бельгийского франка. Единица округления зависит от валюты и способа округления: например, по стандартным правилам для бельгийского франка это 0,01 FB, для итальянской лиры — 1 L.</para
+></step>
+</procedure>
+
+<para
+>Можно было также ввести: <userinput
+>25 Enter E</userinput
+>.</para>
+
+<procedure>
+<title
+>Пересчёт 120 немецких марок в испанские песеты</title>
+<step
+><para
+>Если валюты с фиксированным курсом доступны, выберите в раскрывающемся списке валют пункт <guilabel
+>DEM - Немецкая марка</guilabel
+>.</para
+></step>
+<step
+><para
+>Введите <userinput
+>120</userinput
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>DM</guibutton
+> или клавиши <keycap
+>D</keycap
+> либо <keycap
+>M</keycap
+>.</para
+></step>
+<step
+><para
+>Теперь просто выберите пункт <guilabel
+>ESP - Испанская песета</guilabel
+>, и в поле <guilabel
+>Результат</guilabel
+> появится та же сумма 61.36 €, пересчитанная в песеты.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-additions">
+<title
+>Сложение и вычитание</title>
+
+<procedure>
+<title
+>Сколько будет 3 + 5?</title>
+<step
+><para
+>Введите <userinput
+>3</userinput
+>, затем нажмите <guibutton
+>+</guibutton
+>. Обратите внимание, что в поле результата <computeroutput
+>3</computeroutput
+> — простое значение, которое показывается в одну строку, без денежной единицы.</para
+></step>
+<step
+><para
+>Введите <userinput
+>5</userinput
+>, затем нажмите кнопку <guibutton
+>Enter</guibutton
+> или клавишу &Enter;. Справа появится результат <computeroutput
+>8</computeroutput
+>.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Вам пришло 100 долларов США, и вы заплатили 32,50 евро за книгу. Сколько осталось на счёте?</title>
+<step
+><para
+>Убедитесь, что переменные курсы доступны. Если нет, нажмите кнопку <guibutton
+>Настройка…</guibutton
+> и выберите <guilabel
+>Евро, Европейский центральный банк</guilabel
+> или <guilabel
+>Евро, Time Genie</guilabel
+>. Затем выберите в раскрывающемся списке внизу пункт <guilabel
+>USD - Доллар США</guilabel
+>. Без доступа к Интернету этого пункта не будет: последний курс евро к доллару узнать неоткуда.</para
+></step>
+<step
+><para
+>Введите <userinput
+>100</userinput
+>, затем нажмите кнопку <guibutton
+>$</guibutton
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>-</guibutton
+> или клавишу <keycap
+>-</keycap
+>. Обратите внимание на знак <computeroutput
+>-</computeroutput
+> в левой части поля <guilabel
+>Ввод</guilabel
+>.</para
+></step>
+<step
+><para
+>Введите <userinput
+>32,50</userinput
+> или <userinput
+>32.50</userinput
+>, затем нажмите кнопку <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Результат — в поле <guilabel
+>Результат</guilabel
+> справа. Точное значение зависит от последних курсов. Обратите внимание: на протяжении всех вычислений значения были видны и в евро, и в долларах США. Учтите, что разные источники данных (ЕЦБ и TG) могут давать разный курс евро к доллару.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Вы платите за книгу стоимостью 32.50 € банкнотой в 500 FF. Сколько сдачи в евро (банкнотами и монетами) должен был дать кассир?</title>
+<step
+><para
+>Выберите в раскрывающемся списке валют пункт <guilabel
+>FRF - Французский франк</guilabel
+>, если он ещё не выбран.</para
+></step>
+<step
+><para
+>Введите <userinput
+>32.50</userinput
+> или <userinput
+>32,50</userinput
+>, затем нажмите <guibutton
+>€</guibutton
+>. Также допускается ввод <userinput
+>32.5</userinput
+> без завершающего <userinput
+>0</userinput
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>-</guibutton
+> или клавишу <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Введите <userinput
+>500</userinput
+>, затем нажмите кнопку <guibutton
+>FF</guibutton
+> или клавишу <keycap
+>F</keycap
+>.</para
+></step>
+<step
+><para
+>Результат <computeroutput
+>-43.72 €</computeroutput
+> отрицательный, то есть сдачу нужно вернуть покупателю. Кнопка <guibutton
+>+/-</guibutton
+> или клавиша <keycap
+>S</keycap
+> позволяют изменить знак результата.</para
+></step>
+</procedure>
+
+<note
+><para
+>Не следует прибавлять евро к простым значениям (без денежной единицы): это не сработает по той же причине, по которой нельзя прибавить 5 метров к 3 килограммам.</para
+></note>
+
+</sect1>
+
+<sect1 id="usage-multiplications">
+<title
+>Умножение и деление</title>
+
+<procedure>
+<title
+>Вы покупаете 3,2 килограмма яблок по 2 € за килограмм. Сколько стоит вся покупка в австралийских долларах?</title>
+<step
+><para
+>Выберите пункт <guilabel
+>AUD - Австралийский доллар</guilabel
+>, если он доступен и ещё не выбран.</para
+></step>
+<step
+><para
+>Введите <userinput
+>2</userinput
+> и нажмите кнопку <guibutton
+>€</guibutton
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>X</guibutton
+> или клавишу <keycap
+>*</keycap
+>. Обратите внимание на знак <computeroutput
+>X</computeroutput
+> в левой части поля <guilabel
+>Ввод</guilabel
+>.</para
+></step>
+<step
+><para
+>Теперь введите <userinput
+>3.2</userinput
+> и нажмите кнопку <guibutton
+>Enter</guibutton
+> или клавишу &Enter;: это означает <quote
+>3,2 единицы</quote
+> по 2 € каждая.</para
+></step>
+<step
+><para
+>Результат в австралийских долларах соответствует <computeroutput
+>6.4 €</computeroutput
+>.</para
+></step>
+</procedure>
+
+<para
+>Возможен также следующий порядок ввода: <userinput
+>3.2 = * 2 €</userinput
+> или даже <userinput
+>3.2 * 2 €</userinput
+>.</para>
+
+<note
+><para
+>Нельзя умножить X евро на Y долларов — точно так же, как нельзя умножить 10 пальцев на 2 уха. </para
+></note>
+
+</sect1>
+
+<sect1 id="usage-percentage">
+<title
+>Использование процентов</title>
+
+<procedure>
+<title
+>Сколько составляет 20 % от 3000 иен?</title>
+<step
+><para
+>Выберите пункт <guilabel
+>JPY - Японская иена</guilabel
+>, если он доступен и ещё не выбран.</para
+></step>
+<step
+><para
+>Введите <userinput
+>3000</userinput
+>, затем нажмите кнопку <guibutton
+>¥</guibutton
+> или клавишу <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Введите <userinput
+>20</userinput
+>, затем нажмите кнопку <guibutton
+>%</guibutton
+> или клавишу <keycap
+>%</keycap
+>. Как и при умножении, значение требуется ввести <emphasis
+>до</emphasis
+> знака процента.</para
+></step>
+<step
+><para
+>Посмотрите на результат: он эквивалентен 600 иенам.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Сколько будет 3000 иен плюс 20 %?</title>
+<step
+><para
+>Выберите пункт <guilabel
+>JPY - Японская иена</guilabel
+>, если он доступен и ещё не выбран.</para
+></step>
+<step
+><para
+>Введите <userinput
+>3000</userinput
+>, затем нажмите кнопку <guibutton
+>¥</guibutton
+> или клавишу <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>+</guibutton
+> или клавишу <keycap
+>+</keycap
+>.</para
+></step>
+<step
+><para
+>Введите <userinput
+>20</userinput
+>, затем нажмите кнопку <guibutton
+>%</guibutton
+> или клавишу <keycap
+>%</keycap
+>. Как и при умножении, значение требуется ввести <emphasis
+>до</emphasis
+> знака процента.</para
+></step>
+<step
+><para
+>Посмотрите на результат: 26.96 € или 3600 ¥ на момент написания.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Сколько будет 3000 иен минус 20 %?</title>
+<step
+><para
+>Выберите пункт <guilabel
+>JPY - Японская иена</guilabel
+>, если он доступен и ещё не выбран.</para
+></step>
+<step
+><para
+>Введите <userinput
+>3000</userinput
+>, затем нажмите кнопку <guibutton
+>¥</guibutton
+> или клавишу <keycap
+>Y</keycap
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>-</guibutton
+> или клавишу <keycap
+>-</keycap
+>.</para
+></step>
+<step
+><para
+>Введите <userinput
+>20</userinput
+>, затем нажмите кнопку <guibutton
+>%</guibutton
+> или клавишу <keycap
+>%</keycap
+>. Как и при умножении, значение требуется ввести <emphasis
+>до</emphasis
+> знака процента.</para
+></step>
+<step
+><para
+>Посмотрите на результат: 17.97 € или 2400 ¥ на момент написания этих строк.</para
+></step>
+</procedure>
+
+</sect1>
+
+<sect1 id="usage-memory">
+<title
+>Использование промежуточной памяти</title>
+
+<procedure>
+<title
+>Как сохранить значение, чтобы потом вызвать его?</title>
+<step
+><para
+>Выполните вычисления.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>Min</guibutton
+> (Memory in — запись в память), чтобы сохранить значение из поля <guilabel
+>Результат</guilabel
+>. Обратите внимание: теперь доступны и остальные кнопки памяти.</para
+></step>
+<step
+><para
+>Выполните другие действия с помощью калькулятора.</para
+></step>
+<step
+><para
+>Вызовите значение из памяти кнопкой <guibutton
+>MR</guibutton
+> (Memory Recall — вызов из памяти).</para
+></step>
+</procedure>
+
+<para
+>Значения из памяти вызываются без единиц или в базовой валюте (евро) с максимальной точностью, которую допускает математическая библиотека. В редких случаях это может приводить к ошибкам округления, если в памяти сохранено округлённое значение не в базовой валюте.</para>
+
+<procedure>
+<title
+>Как очистить память?</title>
+<step
+><para
+>Нажмите кнопку <guibutton
+>Сбросить</guibutton
+>. Обратите внимание, что <guibutton
+>Сбросить</guibutton
+> очищает всё: ввод, результат и память.</para
+></step>
+</procedure>
+
+<procedure>
+<title
+>Как вычислить 3.1 * 5.2 € + 2.7 * 8.9 €?</title>
+<step
+><para
+>Сначала вычислите первую половину: <userinput
+>3.1 * 5.2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Чтобы сохранить результат в памяти, нажмите кнопку <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Теперь вычислите вторую половину: <userinput
+>2.7 * 8.9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Чтобы добавить результат в память, нажмите кнопку <guibutton
+>M+</guibutton
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>MR</guibutton
+>, чтобы вызвать сумму из памяти.</para
+></step>
+</procedure>
+
+<para
+>Существуют и другие решения, например <userinput
+>3.1 * 5.2 € Min 2.7 * 8.9 € + MR</userinput
+>.</para>
+
+<procedure>
+<title
+>Как вычислить 3.1 * 5.2 € - 2.7 * 8.9 €?</title>
+<step
+><para
+>Сначала вычислите первую половину: <userinput
+>3.1 * 5.2 €</userinput
+>.</para
+></step>
+<step
+><para
+>Чтобы сохранить результат в памяти, нажмите кнопку <guibutton
+>Min</guibutton
+>.</para
+></step>
+<step
+><para
+>Теперь вычислите вторую половину: <userinput
+>2.7 * 8.9 €</userinput
+>.</para
+></step>
+<step
+><para
+>Вычтите результат из значения в памяти с помощью кнопки <guibutton
+>M-</guibutton
+>.</para
+></step>
+<step
+><para
+>Нажмите кнопку <guibutton
+>MR</guibutton
+>, чтобы вызвать сумму из памяти.</para
+></step>
+</procedure>
+
+<para
+>Последовательность <userinput
+>3.1 * 5.2 € Min 2.7 * 8.9 € - MR</userinput
+> вычисляет разность в обратном порядке.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="reference">
+<title
+>Список команд</title>
+
+<sect1 id="reference-keys">
+<title
+>Комбинации клавиш по умолчанию</title>
+
+<simplelist type="horiz" columns="2">
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>F4</keycap
+></keycombo
+></member>
+<member
+>Выход из &keurocalc;</member>
+
+<!--This is changed at runtime by DrClash 
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>H</keycap
+></keycombo
+></member>
+<member
+>Displays these help pages</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>C</keycap
+></keycombo
+></member>
+<member
+>Goes to the currency selection area</member>
+
+<member
+><keycombo action="simul"
+>&Alt; <keycap
+>A</keycap
+></keycombo
+></member>
+<member
+>Displays the <guilabel
+>About</guilabel
+> box</member>
+-->
+<member
+><keycap
+>0</keycap
+> - <keycap
+>9</keycap
+></member>
+<member
+>Ввод цифр</member>
+
+<member
+><keycap
+>.</keycap
+> или <keycap
+>,</keycap
+></member>
+<member
+>Десятичный разделитель</member>
+
+<member
+><keycap
+>+</keycap
+>, <keycap
+>-</keycap
+>, <keycap
+>*</keycap
+> и <keycap
+>/</keycap
+></member>
+<member
+>Операторы: сложение, вычитание, умножение и деление</member>
+
+<member
+>&Enter; и <keycap
+>Return</keycap
+></member>
+<member
+>Подтверждение ввода: число считается простым значением без единиц</member>
+
+<member
+><keycap
+>%</keycap
+></member>
+<member
+>Подтверждение ввода: число считается процентом</member>
+
+<member
+>&Backspace;</member>
+<member
+>Удаление последнего введённого символа: цифры, десятичного разделителя или оператора</member>
+
+<member
+>Клавиши &Tab; и <keycombo action="simul"
+>&Shift; &Tab;</keycombo
+></member>
+<member
+>Переход от одной кнопки к следующей или предыдущей</member>
+
+<member
+>Клавиши со стрелками</member>
+<member
+>В области выбора валюты переключает с одной валюты на другую</member>
+
+<member
+>Пробел</member>
+<member
+>Если фокус находится на кнопке, нажимает эту кнопку</member>
+
+<member
+><keycap
+>E</keycap
+> или <keycap
+>$</keycap
+></member>
+<member
+>Подтверждение ввода: число считается значением в базовой валюте (евро)</member>
+
+<member
+><keycap
+>S</keycap
+></member>
+<member
+>Изменение знака результата</member>
+
+<member
+>Любая другая клавиша</member>
+<member
+>Подтверждение ввода: число считается значением в другой валюте</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="reference-buttons">
+<title
+>Кнопки</title>
+
+<simplelist type="horiz" columns="2">
+<member
+>от <guibutton
+>0</guibutton
+> до <guibutton
+>9</guibutton
+></member>
+<member
+>Ввод цифр</member>
+
+<member
+><guibutton
+>.</guibutton
+> или <guibutton
+>,</guibutton
+></member>
+<member
+>Десятичный разделитель</member>
+
+<member
+><guibutton
+>&lt;-</guibutton
+></member>
+<member
+>Удаление последнего введённого символа: цифры, десятичного разделителя или оператора</member>
+
+<member
+><guibutton
+>AC</guibutton
+></member>
+<member
+>Очистить всё: и ввод, и результат</member>
+
+<member
+><guibutton
+>€</guibutton
+> или <guibutton
+>$</guibutton
+></member>
+<member
+>Подтверждение ввода: число считается значением в базовой валюте (евро)</member>
+
+<member
+>Кнопка с названием другой валюты</member>
+<member
+>Подтверждение ввода: число считается значением в другой валюте</member>
+
+<member
+><guibutton
+>Enter</guibutton
+></member>
+<member
+>Подтверждение ввода: число считается простым значением без единиц</member>
+
+<member
+><guibutton
+>%</guibutton
+></member>
+<member
+>Подтверждение ввода: число считается процентом</member>
+
+<member
+><guibutton
+>+/-</guibutton
+></member>
+<member
+>Изменение знака результата</member>
+
+<member
+><guibutton
+>Min</guibutton
+>, <guibutton
+>MR</guibutton
+>, <guibutton
+>M+</guibutton
+> и <guibutton
+>-</guibutton
+></member>
+<member
+>Сохранение результата в памяти, извлечение значения из памяти в результат, прибавление результата к значению в памяти и вычитание результата из значения в памяти</member>
+
+<member
+><guibutton
+>/</guibutton
+>, <guibutton
+>X</guibutton
+>, <guibutton
+>-</guibutton
+> и <guibutton
+>+</guibutton
+></member>
+<member
+>Операторы: сложение, вычитание, умножение и деление</member>
+
+<member
+><guibutton
+>Сбросить</guibutton
+></member>
+<member
+>Сбросить ввод, результат и память</member>
+
+<member
+><guibutton
+>О программе</guibutton
+></member>
+<member
+>Показывает диалоговое окно <guilabel
+>О программе</guilabel
+></member>
+
+<member
+><guibutton
+>Справка</guibutton
+></member>
+<member
+>Показывает эту справку</member>
+
+<member
+>Раскрывающийся список с кодами и названиями валют</member>
+<member
+>Выбирает другую валюту для работы</member>
+</simplelist>
+
+</sect1>
+
+<sect1 id="settings">
+<title
+>Диалог настройки</title>
+
+<mediaobject>
+<imageobject
+><imagedata fileref="settings.png" format="PNG"/></imageobject>
+</mediaobject>
+
+<sect2 id="settings-reference">
+<title
+>Базовая валюта, источник курса валюты</title>
+
+<para
+>Этот параметр задаёт, откуда &keurocalc; загружает курсы базовой валюты к другим валютам. Возможны следующие варианты:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Евро, без доступа к сети (только фиксированный курс)</guilabel
+></term>
+<listitem>
+<para
+>Базовая валюта — евро. Переменные курсы не загружаются и не используются. Доступны только валюты с фиксированным курсом к евро.</para>
+<para
+>Этот вариант подходит для компьютеров без доступа к сети.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Евро, Европейский центральный банк</guilabel
+></term>
+<listitem>
+<para
+>Базовая валюта — евро. Фиксированные курсы доступны. &keurocalc; пытается загрузить переменные курсы с сайта <ulink url="http://www.ecb.int/stats/eurofxref/"
+>Европейского центрального банка (ЕЦБ)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+<!--varlistentry>
+<term
+><guilabel
+>Dollar, New York Federal Reserve Bank</guilabel
+></term>
+<listitem>
+<para
+>Dollar is the reference currency. There are no fixed exchange rates.
+&keurocalc; attempts to download the variable rates from the
+<ulink url="http://www.ny.frb.org/markets/fxrates/noon.cfm"
+>New York
+Federal Reserve Bank (NY FRB)</ulink
+>.</para>
+<para
+>Currently, &keurocalc; has a problem determining the date of the latest
+exchange rates published by that bank, because of time zone offsets and non-working
+days. For safety, &keurocalc; always asks for yesterday's rates, which is of course
+not optimal.</para>
+</listitem>
+</varlistentry-->
+
+<varlistentry>
+<term
+><guilabel
+>Евро, Time Genie</guilabel
+></term>
+<listitem>
+<para
+>Базовая валюта — евро. Фиксированные курсы доступны. &keurocalc; пытается загрузить переменные курсы с сайта <ulink url="http://rss.timegenie.com/foreign_exchange_rates_forex"
+>Time Genie (TG)</ulink
+>.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-default">
+<title
+>Валюта по умолчанию</title>
+
+<para
+>Этот параметр задаёт вторую валюту, которая выбирается при запуске &keurocalc; и после применения новых параметров.</para>
+
+<para
+>Учтите, что выбранной валюты может не оказаться у выбранного источника курсов. Тогда используется первая доступная валюта из списка.</para>
+
+</sect2>
+
+<sect2 id="settings-rounding">
+<title
+>Округление</title>
+
+<para
+>Этот параметр определяет, как результаты показываются на экране калькулятора. Сами вычисления выполняются с точностью математической библиотеки, но показывать десятые доли цента обычно бессмысленно. Доступны следующие способы округления:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Стандартные правила</guilabel
+></term>
+<listitem>
+<para
+>Используются правила пересчёта ЕС или другие официальные правила. Результат округляется до ближайшей единицы для таких валют, как японская иена или итальянская лира, и до ближайшей сотой доли единицы (<quote
+>цента</quote
+>) для таких валют, как евро или доллар.</para>
+<para
+>Например, 158,323 иены округляется до 158 иен, а 12,537 евро — до 12,54 евро.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Метод наименьшей монеты</guilabel
+></term>
+<listitem>
+<para
+>Результат округляется до ближайшего значения, кратного самой мелкой монете, которая в ходу в стране этой валюты. Для вышедших из обращения валют, таких как итальянская лира, берётся самая мелкая монета, ходившая до изъятия валюты: для итальянской лиры это монета в 50 лир.</para>
+<para
+>Например, 1235,9 итальянской лиры округляется до 1250 лир, а 39,45 норвежской кроны — до 39,50 кроны.</para>
+<para
+>У нас нет сведений о самых мелких монетах во всех странах. Если &keurocalc; использует неверное значение самой мелкой монеты для вашей страны, сообщите об ошибке, и мы внесём эти сведения.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Не округлять</guilabel
+></term>
+<listitem>
+<para
+>Вычисленное значение показывается без изменений, как число с плавающей точкой.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="settings-look-and-feel">
+<title
+>Вид и поведение</title>
+
+<para
+>Этот параметр определяет внешний вид и поведение &keurocalc;. Доступны следующие параметры:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Цвет экрана</guilabel
+></term>
+<listitem>
+<para
+>Цвет фона полей ввода и результата. Чтобы изменить цвет фона, нажмите кнопку <guibutton
+>Выбрать…</guibutton
+>. Откроется стандартный диалог выбора цвета &kde;. Выберите новый цвет и нажмите <guibutton
+>ОК</guibutton
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Показывать экран заставки</guilabel
+></term>
+<listitem>
+<para
+>Снимите этот флажок, чтобы при запуске &keurocalc; не показывалась заставка.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&keurocalc;</para>
+
+<para
+>© Разработчики &keurocalc;, 2001–2022 (программа): <itemizedlist>
+<listitem
+><para
+>Éric Bischoff <email
+>bischoff@_NOSPAM_kde.org</email
+> — создание и реализация</para
+></listitem>
+<listitem
+><para
+>Gil Gross <email
+>ptit.ours@_NOSPAM_gmail.com</email
+> — дополнительная функциональность</para
+></listitem>
+<listitem
+><para
+>Melchior Franz <email
+>a8603365@_NOSPAM_unet.univie.ac.at</email
+> — дизайн и тестирование</para
+></listitem>
+<listitem
+><para
+>Bas Willems <email
+>cybersurfer@_NOSPAM_euronet.nl</email
+> — графика</para
+></listitem>
+</itemizedlist
+></para>
+
+<para
+>© Éric Bischoff <email
+>bischoff@_NOSPAM_kde.org</email
+>, 2001–2022 (документация).</para>
+
+<para
+>Документацию вычитал &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+<para
+>Перевод на русский — Александр Яворский<email
+>kekcuha@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

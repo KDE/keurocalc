@@ -531,7 +531,7 @@ msgstr "Исправить последнюю введённую цифру"
 #: calculator.ui:1968
 #, kde-format
 msgid "Enter value expressed in reference currency"
-msgstr "Ввести отображаемое значение в базовой валюте"
+msgstr "Ввести значение в базовой валюте"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, SlashButton)
 #: calculator.ui:1990
@@ -561,7 +561,7 @@ msgstr "Сбросить"
 #: calculator.ui:2132
 #, kde-format
 msgid "Enter value expressed in currency"
-msgstr "Ввести отображаемое значение в заданной валюте"
+msgstr "Ввести значение в выбранной валюте"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, AsteriskButton)
 #: calculator.ui:2157
@@ -585,7 +585,7 @@ msgstr "Показать диалоговое окно «О программе»
 #: calculator.ui:2207
 #, kde-format
 msgid "&About..."
-msgstr "&О программе..."
+msgstr "&О программе…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, SimpleValueButton)
 #: calculator.ui:2286
@@ -616,13 +616,13 @@ msgstr "Вычесть из памяти"
 #: calculator.ui:2361
 #, kde-format
 msgid "Display help pages"
-msgstr "Показать страницу помощи"
+msgstr "Показать справку"
 
 #. i18n: ectx: property (text), widget (QPushButton, HelpButton)
 #: calculator.ui:2364
 #, kde-format
 msgid "&Help..."
-msgstr "&Справка..."
+msgstr "&Справка…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, PercentButton)
 #: calculator.ui:2421
@@ -658,7 +658,7 @@ msgstr "Настройка KEuroCalc"
 #: calculator.ui:2518
 #, kde-format
 msgid "&Settings..."
-msgstr "&Настройка..."
+msgstr "&Настройка…"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, CurrencyList)
 #: calculator.ui:2531
@@ -684,7 +684,7 @@ msgstr "ЕЦБ"
 #: keurocalc.cpp:1014 keurocalc.cpp:1022
 #, kde-format
 msgid "Loading..."
-msgstr "Загрузка..."
+msgstr "Загрузка…"
 
 #: keurocalc.cpp:1021
 #, kde-format
@@ -719,7 +719,7 @@ msgstr "© Разработчики KEuroCalc, 2001-2022"
 #: main.cpp:34
 #, kde-format
 msgid "Cash converter and calculator"
-msgstr "Конвертатор валют и калькулятор"
+msgstr "Конвертер валют и калькулятор"
 
 #: main.cpp:35
 #, kde-format
@@ -825,13 +825,13 @@ msgstr "215.06 €"
 #: settingsdialog.ui:526
 #, kde-format
 msgid "C&hange..."
-msgstr "В&ыбрать..."
+msgstr "В&ыбрать…"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxSplashScreen)
 #: settingsdialog.ui:553
 #, kde-format
 msgid "Enable splash screen"
-msgstr "Отображать экран заставки"
+msgstr "Показывать экран заставки"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: settingsdialog.ui:581
@@ -855,7 +855,7 @@ msgstr "&Метод наименьшей монеты"
 #: settingsdialog.ui:601
 #, kde-format
 msgid "&No rounding at all"
-msgstr "&Не округлять ничего"
+msgstr "&Не округлять"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: settingsdialog.ui:611
