@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Jaap Woldringh <jjh.woldringh@planet.nl>, 2008.
-# Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012, 2014, 2015, 2016, 2018, 2019, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: keurocalc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:50+0000\n"
-"PO-Revision-Date: 2022-12-14 11:17+0100\n"
+"PO-Revision-Date: 2026-09-30 15:59+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: file: ../currencies/currencies.xml
@@ -706,7 +706,7 @@ msgstr "Geen afronding"
 #: keurocalc.cpp:1107
 #, kde-format
 msgid "Not loaded"
-msgstr "Niet ingelezen"
+msgstr "Niet geladen"
 
 #: main.cpp:33
 #, kde-format
